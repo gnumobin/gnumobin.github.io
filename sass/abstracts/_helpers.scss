@@ -2,3 +2,11 @@
   max-width: 114rem;
   margin: 0 auto;
 }
+.gradient-purple {
+  background-image: var(--gradient-purple);
+  color: transparent;
+  background-clip: text;
+}
+.mg-t-lg {
+  margin-top: 4.1rem;
+}

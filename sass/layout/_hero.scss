@@ -1,0 +1,14 @@
+.section-hero {
+  padding-top: 10rem;
+  text-align: center;
+
+  &__biography {
+    // typography
+    font-size: 1.8rem;
+    font-weight: 300;
+    // alignment
+    max-width: 60%;
+    margin: var(--gap-hero-biography) auto
+      calc(var(--gap-hero-biography) + 1.4rem) auto;
+  }
+}

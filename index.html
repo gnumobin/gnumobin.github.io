@@ -10,6 +10,7 @@
     <header class="header">
       <div class="container">
         <nav class="header-nav">
+          <!-- Website Logo -->
           <div class="logo">
             <img
               src="./assets/imgs/logo.svg"
@@ -17,6 +18,7 @@
               class="logo__img"
             />
           </div>
+          <!-- List & Mobile Menu -->
           <ul class="header-nav__list">
             <li class="header-nav__item header-nav__item--active">
               <a href="#" class="header-nav__link">Home</a>
@@ -34,5 +36,34 @@
         </nav>
       </div>
     </header>
+    <main class="container">
+      <section class="section-hero">
+        <!-- author picture + hover effect -->
+        <div class="profile">
+          <img
+            src="./assets/imgs/me.png"
+            alt="Portrait of Mobin Ghaemi"
+            class="profile__img"
+          />
+        </div>
+        <!-- website primary heading -->
+        <h1 class="heading-primary mg-t-lg">
+          I do code and <br />
+          make content
+          <span class="gradient-purple">about it!</span>
+        </h1>
+        <p class="section-hero__biography">
+          I am a seasoned full-stack software engineer with over 8 years of
+          professional experience, specializing in backend development. My
+          expertise lies in crafting robust and scalable SaaS-based
+          architectures on the Amazon AWS platform.
+        </p>
+        <!-- navigation's -->
+        <div class="section-hero__actions">
+          <a href="#" class="btn btn--primary">Get In Touch</a>
+          <a href="#" class="btn btn--secondary">Download CV</a>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
