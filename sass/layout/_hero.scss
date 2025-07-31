@@ -4,11 +4,17 @@
 
   &__biography {
     // typography
-    font-size: 1.8rem;
+    font-size: var(--font-hero-biography);
     font-weight: 300;
     // alignment
     max-width: 60%;
     margin: var(--gap-hero-biography) auto
       calc(var(--gap-hero-biography) + 1.4rem) auto;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-hero-actions);
   }
 }

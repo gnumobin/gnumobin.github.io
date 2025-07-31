@@ -1,0 +1,81 @@
+$color-text-bold: #fff;
+$color-bg: #161513;
+$neon-color: #e0e0e0;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 1.6rem 3rem;
+  font-weight: 600;
+  font-size: var(--font-btn);
+  text-decoration: none;
+  border: 2px solid var(--color-text-bold);
+  border-radius: 99999px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  will-change: transform, opacity;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    top: 0;
+    left: -50%;
+    right: -50%;
+    height: 0;
+    padding-bottom: 150%;
+    border-radius: 39%;
+    opacity: 0;
+    transition: transform 1.2s ease-out, opacity 0.9s ease-out;
+    backface-visibility: hidden;
+  }
+  &:before {
+    transform: translate3d(-10%, 5em, 0) rotate(330deg);
+    background: linear-gradient(25deg, rgba(224, 224, 224, 0.15), transparent);
+  }
+  &:after {
+    transform: translate3d(10%, 5em, 0) rotate(0deg);
+    background: linear-gradient(70deg, rgba(224, 224, 224, 0.18), transparent);
+  }
+
+  &:hover:before {
+    transform: translate3d(-10%, -1em, 0) rotate(100deg);
+    opacity: 1;
+  }
+  &:hover:after {
+    transform: translate3d(10%, -1em, 0) rotate(180deg);
+    opacity: 1;
+  }
+
+  &--primary {
+    background-color: var(--color-text-bold);
+    color: $color-bg;
+    box-shadow: none;
+    transition: background-color 0.3s ease, color 0.3s ease,
+      box-shadow 1.2s ease;
+
+    &:hover {
+      background-color: darken($color-bg, 10%);
+      color: var(--color-text-bold);
+      box-shadow: 0 0 4px 1.5px lighten($neon-color, 10%),
+        0 0 10px 4px $neon-color, 0 0 20px 8px lighten($neon-color, 20%);
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: var(--color-text-bold);
+    transition: background-color 0.3s ease, color 0.3s ease,
+      box-shadow 1.2s ease;
+
+    &:hover {
+      box-shadow: 0 0 4px 1.5px lighten($neon-color, 10%),
+        0 0 10px 4px $neon-color, 0 0 20px 8px lighten($neon-color, 20%);
+    }
+  }
+}

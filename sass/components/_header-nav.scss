@@ -9,7 +9,7 @@
     gap: var(--gap-header-nav-list);
     // typography
     font-family: "PlusJakartaSans", "poppins", sans-serif;
-    font-size: 1.5rem;
+    font-size: var(--font-header-nav);
     font-weight: 600;
   }
 
