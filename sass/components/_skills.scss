@@ -1,0 +1,12 @@
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1rem, 10rem));
+  margin-top: var(--gap-skills);
+  justify-content: center;
+
+  &__icon {
+    width: 4.4rem;
+    height: 4.4rem;
+    fill: var(--color-text);
+  }
+}

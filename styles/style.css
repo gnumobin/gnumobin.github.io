@@ -132,6 +132,8 @@
   --gap-header-nav-list: 7.1rem;
   --gap-hero-biography: 3.9rem;
   --gap-hero-actions: 1.8rem;
+  --gap-section: 10rem;
+  --gap-skills: 4.8rem;
   --trans-1x: 0.25s;
   --gradient-purple: linear-gradient(to right, #ff8660, #9a33ff);
   --font-header-nav: 1.5rem;
@@ -186,6 +188,13 @@ a:visited {
   font-weight: 900;
   color: var(--color-text-bold);
   line-height: 6.34rem;
+}
+
+.heading-sub {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
 }
 
 .header-nav {
@@ -301,6 +310,18 @@ a:visited {
   box-shadow: 0 0 4px 1.5px rgb(249.5, 249.5, 249.5), 0 0 10px 4px #e0e0e0, 0 0 20px 8px white;
 }
 
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1rem, 10rem));
+  margin-top: var(--gap-skills);
+  justify-content: center;
+}
+.skills__icon {
+  width: 4.4rem;
+  height: 4.4rem;
+  fill: var(--color-text);
+}
+
 .header {
   background-color: var(--color-bg-thin);
 }
@@ -319,6 +340,11 @@ a:visited {
   display: flex;
   justify-content: center;
   gap: var(--gap-hero-actions);
+}
+
+.section-technologies {
+  padding-top: calc(var(--gap-section) - 1.1rem);
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
