@@ -1,0 +1,29 @@
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__list {
+    // alignment
+    display: flex;
+    gap: var(--gap-header-nav-list);
+    // typography
+    font-family: "PlusJakartaSans", "poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  &__item {
+    color: var(--color-text-bold);
+    &--active {
+      color: var(--color-text);
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: inherit;
+    }
+  }
+}

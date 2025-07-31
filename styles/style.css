@@ -62,76 +62,78 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Plus Jakarta";
-  src: url("../assets/fonts/PlusJakarta/Plus Jakarta-Thin.ttf") format("truetype");
+  font-family: "PlusJakartaSans";
+  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-Thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Plus Jakarta";
-  src: url("../assets/fonts/PlusJakarta/Plus Jakarta-ExtraLight.ttf") format("truetype");
+  font-family: "PlusJakartaSans";
+  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-ExtraLight.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Plus Jakarta";
-  src: url("../assets/fonts/PlusJakarta/Plus Jakarta-Light.ttf") format("truetype");
+  font-family: "PlusJakartaSans";
+  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Plus Jakarta";
-  src: url("../assets/fonts/PlusJakarta/Plus Jakarta-Regular.ttf") format("truetype");
+  font-family: "PlusJakartaSans";
+  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Plus Jakarta";
-  src: url("../assets/fonts/PlusJakarta/Plus Jakarta-Medium.ttf") format("truetype");
+  font-family: "PlusJakartaSans";
+  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Plus Jakarta";
-  src: url("../assets/fonts/PlusJakarta/Plus Jakarta-SemiBold.ttf") format("truetype");
+  font-family: "PlusJakartaSans";
+  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Plus Jakarta";
-  src: url("../assets/fonts/PlusJakarta/Plus Jakarta-Bold.ttf") format("truetype");
+  font-family: "PlusJakartaSans";
+  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Plus Jakarta";
-  src: url("../assets/fonts/PlusJakarta/Plus Jakarta-ExtraBold.ttf") format("truetype");
+  font-family: "PlusJakartaSans";
+  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Plus Jakarta";
-  src: url("../assets/fonts/PlusJakarta/Plus Jakarta-Black.ttf") format("truetype");
+  font-family: "PlusJakartaSans";
+  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 :root {
   --color-bg: #161513;
-  --color-bg-thin: #161513;
+  --color-bg-thin: #222;
   --color-text: #c5c5c5;
+  --color-text-bold: #fff;
+  --gap-header-nav-list: 7.1rem;
 }
 
 .container {
-  max-width: 128rem;
+  max-width: 114rem;
   margin: 0 auto;
 }
 
@@ -155,6 +157,37 @@ body {
 
 ul {
   list-style-type: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-nav__list {
+  display: flex;
+  gap: var(--gap-header-nav-list);
+  font-family: "PlusJakartaSans", "poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.header-nav__item {
+  color: var(--color-text-bold);
+}
+.header-nav__item--active {
+  color: var(--color-text);
+}
+.header-nav__link:link, .header-nav__link:visited {
+  color: inherit;
+}
+
+.header {
+  background-color: var(--color-bg-thin);
 }
 
 /*# sourceMappingURL=style.css.map */
