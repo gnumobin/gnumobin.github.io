@@ -7,6 +7,11 @@
   color: transparent;
   background-clip: text;
 }
+.gradient-orange {
+  background-image: var(--gradient-orange);
+  color: transparent !important;
+  background-clip: text;
+}
 .mg-t-lg {
   margin-top: 4.1rem;
 }

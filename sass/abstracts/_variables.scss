@@ -3,18 +3,27 @@
   --color-bg-thin: #222;
   --color-text: #c5c5c5;
   --color-text-bold: #fff;
+  --color-bg-extra-thin: #2a2a2a;
   // spaces
   --gap-header-nav-list: 7.1rem;
   --gap-hero-biography: 3.9rem;
   --gap-hero-actions: 1.8rem;
   --gap-section: 10rem;
   --gap-skills: 4.8rem;
+  --gap-projects-between: 3rem;
+  --gap-projects-top: 2.7rem;
   // transitions
   --trans-1x: 0.25s;
   // gradients
   --gradient-purple: linear-gradient(to right, #ff8660, #9a33ff);
+  --gradient-orange: linear-gradient(to right, #ff8660, #d5491d);
+  --gradient-blue: linear-gradient(to right, #5badff, #1373d1);
   // font sizes
   --font-header-nav: 1.5rem;
   --font-hero-biography: 1.8rem;
   --font-btn: 2.3rem;
+  --font-card-title: 1.9rem;
+  --font-card-title-sub: 1rem;
+  // radiuses
+  --rounded-card: 1.8rem;
 }

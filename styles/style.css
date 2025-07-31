@@ -129,16 +129,24 @@
   --color-bg-thin: #222;
   --color-text: #c5c5c5;
   --color-text-bold: #fff;
+  --color-bg-extra-thin: #2a2a2a;
   --gap-header-nav-list: 7.1rem;
   --gap-hero-biography: 3.9rem;
   --gap-hero-actions: 1.8rem;
   --gap-section: 10rem;
   --gap-skills: 4.8rem;
+  --gap-projects-between: 3rem;
+  --gap-projects-top: 2.7rem;
   --trans-1x: 0.25s;
   --gradient-purple: linear-gradient(to right, #ff8660, #9a33ff);
+  --gradient-orange: linear-gradient(to right, #ff8660, #d5491d);
+  --gradient-blue: linear-gradient(to right, #5badff, #1373d1);
   --font-header-nav: 1.5rem;
   --font-hero-biography: 1.8rem;
   --font-btn: 2.3rem;
+  --font-card-title: 1.9rem;
+  --font-card-title-sub: 1rem;
+  --rounded-card: 1.8rem;
 }
 
 .container {
@@ -149,6 +157,12 @@
 .gradient-purple {
   background-image: var(--gradient-purple);
   color: transparent;
+  background-clip: text;
+}
+
+.gradient-orange {
+  background-image: var(--gradient-orange);
+  color: transparent !important;
   background-clip: text;
 }
 
@@ -188,6 +202,13 @@ a:visited {
   font-weight: 900;
   color: var(--color-text-bold);
   line-height: 6.34rem;
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--color-text-bold);
+  text-transform: uppercase;
 }
 
 .heading-sub {
@@ -322,6 +343,39 @@ a:visited {
   fill: var(--color-text);
 }
 
+.card {
+  max-width: 90rem;
+  border-radius: var(--rounded-card);
+  overflow: hidden;
+  background-color: var(--color-bg-extra-thin);
+}
+.card__img {
+  width: 100%;
+}
+.card__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 2.3rem;
+}
+.card__title {
+  color: var(--color-text-bold);
+  font-size: var(--font-card-title);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.card__title::before {
+  content: "click here to visit";
+  color: var(--color-text);
+  display: block;
+  font-size: var(--font-card-title-sub);
+  font-weight: 800;
+  margin-left: -0.5rem;
+}
+.card__icon {
+  font-size: 2rem;
+}
+
 .header {
   background-color: var(--color-bg-thin);
 }
@@ -345,6 +399,17 @@ a:visited {
 .section-technologies {
   padding-top: calc(var(--gap-section) - 1.1rem);
   text-align: center;
+}
+
+.section-projects {
+  text-align: center;
+  padding-top: var(--gap-section);
+}
+.section-projects__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  gap: var(--gap-projects-between);
+  margin-top: var(--gap-projects-top);
 }
 
 /*# sourceMappingURL=style.css.map */

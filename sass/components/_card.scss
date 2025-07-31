@@ -1,0 +1,35 @@
+.card {
+  max-width: 90rem;
+  border-radius: var(--rounded-card);
+  overflow: hidden;
+  background-color: var(--color-bg-extra-thin);
+
+  &__img {
+    width: 100%;
+  }
+
+  &__content {
+    @include flex;
+    padding: 1.4rem 2.3rem;
+  }
+
+  &__title {
+    color: var(--color-text-bold);
+    font-size: var(--font-card-title);
+    font-weight: 900;
+    text-transform: uppercase;
+
+    &::before {
+      content: "click here to visit";
+      color: var(--color-text);
+      display: block;
+      font-size: var(--font-card-title-sub);
+      font-weight: 800;
+      margin-left: -0.5rem;
+    }
+  }
+
+  &__icon {
+    font-size: 2rem;
+  }
+}

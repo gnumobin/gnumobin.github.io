@@ -2,6 +2,7 @@
 @import "abstracts/fonts";
 @import "abstracts/variables";
 @import "abstracts/helpers";
+@import "abstracts/mixins";
 
 // ################# IMPORT BASE #################
 @import "base/reset";
@@ -13,11 +14,13 @@
 @import "components/logo";
 @import "components/btn";
 @import "components/skills";
+@import "components/card";
 
 // ################# IMPORT LAYOUTS #################
 @import "layout/header";
 @import "layout/hero";
 @import "layout/technologies";
+@import "layout/projects";
 
 // ################# IMPORT PAGES #################
 
