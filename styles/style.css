@@ -261,6 +261,29 @@ a:visited {
   letter-spacing: 0.2rem;
 }
 
+.jelly:hover {
+  transition: all 0.3s ease;
+  will-change: transform;
+  animation: jelly 0.6s ease-in-out;
+}
+
+@keyframes jelly {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-8px) scale(1.05) rotate(5deg);
+  }
+  50% {
+    transform: translateY(4px) scale(0.95) rotate(-3deg);
+  }
+  75% {
+    transform: translateY(-3px) scale(1.02) rotate(3deg);
+  }
+  100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
 .header-nav {
   display: flex;
   justify-content: space-between;
@@ -380,10 +403,16 @@ a:visited {
   margin-top: var(--gap-skills);
   justify-content: center;
 }
+.skills__item {
+  transition: var(--trans-1x);
+}
+.skills__item:hover {
+  color: var(--color-text-bold);
+}
 .skills__icon {
   width: 4.4rem;
   height: 4.4rem;
-  fill: var(--color-text);
+  fill: currentColor;
 }
 
 .card {

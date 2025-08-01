@@ -4,9 +4,17 @@
   margin-top: var(--gap-skills);
   justify-content: center;
 
+  &__item {
+    transition: var(--trans-1x);
+
+    &:hover {
+      color: var(--color-text-bold);
+    }
+  }
+
   &__icon {
     width: 4.4rem;
     height: 4.4rem;
-    fill: var(--color-text);
+    fill: currentColor;
   }
 }
