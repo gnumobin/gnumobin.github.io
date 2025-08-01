@@ -1,4 +1,5 @@
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%;
 
   @include responsive(laptop) {
@@ -9,12 +10,6 @@ html {
   }
   @include responsive(lg-mobile) {
     font-size: 56%;
-  }
-  @include responsive(md-mobile) {
-    font-size: 54%;
-  }
-  @include responsive(sm-mobile) {
-    font-size: 52%;
   }
 }
 body {

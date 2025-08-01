@@ -1,3 +1,5 @@
+"use strict";
+
 const hamMenuBtn = document.getElementById("hamMenuBtn");
 const hamMenu = document.getElementById("hamMenu");
 const overlay = document.getElementById("overlay");

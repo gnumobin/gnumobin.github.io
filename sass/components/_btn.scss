@@ -15,8 +15,13 @@ $neon-color: #e0e0e0;
   text-decoration: none;
   border: 2px solid var(--color-text-bold);
   border-radius: 99999px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s;
   will-change: transform, opacity;
+
+  &:visited,
+  &:active {
+    transform: translateY(0.6rem);
+  }
 
   &:before,
   &:after {
@@ -57,7 +62,7 @@ $neon-color: #e0e0e0;
     color: $color-bg;
     box-shadow: none;
     transition: background-color 0.3s ease, color 0.3s ease,
-      box-shadow 1.2s ease;
+      box-shadow 1.2s ease, transform 0.1s;
 
     &:hover {
       background-color: darken($color-bg, 10%);
@@ -71,7 +76,7 @@ $neon-color: #e0e0e0;
     background-color: transparent;
     color: var(--color-text-bold);
     transition: background-color 0.3s ease, color 0.3s ease,
-      box-shadow 1.2s ease;
+      box-shadow 1.2s ease, transform 0.1s;
 
     &:hover {
       box-shadow: 0 0 4px 1.5px lighten($neon-color, 10%),
