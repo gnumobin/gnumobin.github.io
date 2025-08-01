@@ -17,6 +17,11 @@
     fill: currentColor;
     width: 3.4rem;
     height: 3.2rem;
+
+    @include responsive(port-tablet) {
+      width: 3rem;
+      height: 2.8rem;
+    }
   }
 
   &__title {

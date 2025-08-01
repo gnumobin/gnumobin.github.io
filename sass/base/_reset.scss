@@ -4,6 +4,12 @@ html {
   @include responsive(laptop) {
     font-size: 60%;
   }
+  @include responsive(land-tablet) {
+    font-size: 58%;
+  }
+  @include responsive(lg-mobile) {
+    font-size: 56%;
+  }
 }
 body {
   box-sizing: border-box;

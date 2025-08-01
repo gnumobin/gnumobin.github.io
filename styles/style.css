@@ -39,6 +39,13 @@
     #ea4335 75%
   );
 }
+@media screen and (max-width: 34em) {
+  :root {
+    --font-btn: 2rem;
+    --font-hero-biography: 1.6rem;
+    --gap-section: 8rem;
+  }
+}
 
 .gradient-blue, .gradient-orange, .gradient-purple {
   color: transparent !important;
@@ -231,6 +238,16 @@ html {
     font-size: 60%;
   }
 }
+@media screen and (max-width: 48em) {
+  html {
+    font-size: 58%;
+  }
+}
+@media screen and (max-width: 34em) {
+  html {
+    font-size: 56%;
+  }
+}
 
 body {
   box-sizing: border-box;
@@ -274,6 +291,11 @@ a:visited {
     font-size: 4.5rem;
   }
 }
+@media screen and (max-width: 34em) {
+  .heading-primary {
+    font-size: 4rem;
+  }
+}
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -283,6 +305,11 @@ a:visited {
 @media screen and (max-width: 64em) {
   .heading-secondary {
     font-size: 3rem;
+  }
+}
+@media screen and (max-width: 34em) {
+  .heading-secondary {
+    font-size: 2.5rem;
   }
 }
 
@@ -296,12 +323,22 @@ a:visited {
     font-size: 2rem;
   }
 }
+@media screen and (max-width: 34em) {
+  .heading-tertiary {
+    font-size: 1.8rem;
+  }
+}
 
 .heading-sub {
   font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+}
+@media screen and (max-width: 34em) {
+  .heading-sub {
+    font-size: 1.8rem;
+  }
 }
 
 .jelly:hover {
@@ -390,6 +427,11 @@ a:visited {
   overflow: hidden;
   border-radius: 50%;
   cursor: zoom-in;
+}
+@media screen and (max-width: 34em) {
+  .profile {
+    width: 22.5rem;
+  }
 }
 .profile__img {
   width: 100%;
@@ -556,6 +598,12 @@ a:visited {
   width: 3.4rem;
   height: 3.2rem;
 }
+@media screen and (max-width: 42em) {
+  .experience__icon {
+    width: 3rem;
+    height: 2.8rem;
+  }
+}
 .experience__title {
   color: var(--color-text-bold);
   font-weight: 800;
@@ -648,7 +696,7 @@ a:visited {
 }
 
 .section-hero {
-  padding-top: 10rem;
+  padding-top: var(--gap-section);
   text-align: center;
 }
 .section-hero__biography {
@@ -696,8 +744,8 @@ a:visited {
 .footer {
   background-color: var(--color-bg-dark);
   margin-top: calc(var(--gap-section) + 0.7rem);
-  padding-top: 8.2rem;
-  padding-bottom: 10rem;
+  padding-top: calc(var(--gap-section) - 1.8rem);
+  padding-bottom: var(--gap-section);
   color: var(--color-grey);
   font-size: var(--font-footer-text);
 }

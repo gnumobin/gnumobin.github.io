@@ -44,4 +44,10 @@
     #fbbc05 50%,
     #ea4335 75%
   );
+
+  @include responsive(lg-mobile) {
+    --font-btn: 2rem;
+    --font-hero-biography: 1.6rem;
+    --gap-section: 8rem;
+  }
 }

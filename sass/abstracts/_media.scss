@@ -23,4 +23,16 @@
       @content;
     }
   }
+  // 550px
+  @if $bp == lg-mobile {
+    @media screen and (max-width: 34em) {
+      @content;
+    }
+  }
+  // 500px
+  @if $bp == md-mobile {
+    @media screen and (max-width: 33.3em) {
+      @content;
+    }
+  }
 }

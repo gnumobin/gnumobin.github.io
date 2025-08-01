@@ -1,8 +1,8 @@
 .footer {
   background-color: var(--color-bg-dark);
   margin-top: calc(var(--gap-section) + 0.7rem);
-  padding-top: 8.2rem;
-  padding-bottom: 10rem;
+  padding-top: calc(var(--gap-section) - 1.8rem);
+  padding-bottom: var(--gap-section);
 
   color: var(--color-grey);
   font-size: var(--font-footer-text);
