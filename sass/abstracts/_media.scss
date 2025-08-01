@@ -29,9 +29,15 @@
       @content;
     }
   }
-  // 500px
+  // 480px
   @if $bp == md-mobile {
-    @media screen and (max-width: 33.3em) {
+    @media screen and (max-width: 30em) {
+      @content;
+    }
+  }
+  // 420px
+  @if $bp == sm-mobile {
+    @media screen and (max-width: 26.25em) {
       @content;
     }
   }

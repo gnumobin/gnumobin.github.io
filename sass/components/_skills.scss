@@ -5,6 +5,10 @@
   justify-content: center;
   row-gap: 2.5rem;
 
+  @include responsive(lg-mobile) {
+    grid-template-columns: repeat(auto-fit, minmax(auto, 7rem));
+  }
+
   &__item {
     transition: var(--trans-1x);
 
@@ -17,5 +21,10 @@
     width: 4.4rem;
     height: 4.4rem;
     fill: currentColor;
+
+    // @include responsive(lg-mobile) {
+    //   width: 3rem;
+    //   height: 3rem;
+    // }
   }
 }

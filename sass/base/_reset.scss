@@ -10,6 +10,12 @@ html {
   @include responsive(lg-mobile) {
     font-size: 56%;
   }
+  @include responsive(md-mobile) {
+    font-size: 54%;
+  }
+  @include responsive(sm-mobile) {
+    font-size: 52%;
+  }
 }
 body {
   box-sizing: border-box;

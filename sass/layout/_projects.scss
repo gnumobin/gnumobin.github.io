@@ -4,7 +4,7 @@
 
   &__cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: var(--gap-projects-between);
     margin-top: var(--gap-projects-top);
   }

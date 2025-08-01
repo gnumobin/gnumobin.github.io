@@ -6,4 +6,8 @@
 %heading {
   color: var(--color-text-bold);
   line-height: 6.34rem;
+
+  @include responsive(lg-mobile) {
+    line-height: 4.5rem;
+  }
 }

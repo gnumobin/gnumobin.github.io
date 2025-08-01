@@ -39,11 +39,29 @@
     #ea4335 75%
   );
 }
+@media screen and (max-width: 42em) {
+  :root {
+    --font-experience-title: 2rem;
+  }
+}
 @media screen and (max-width: 34em) {
   :root {
     --font-btn: 2rem;
     --font-hero-biography: 1.6rem;
     --gap-section: 8rem;
+  }
+}
+@media screen and (max-width: 30em) {
+  :root {
+    --font-btn: 1.8rem;
+    --font-hero-biography: 1.5rem;
+    --gap-section: 7rem;
+    --font-experience-title: 1.8rem;
+  }
+}
+@media screen and (max-width: 26.25em) {
+  :root {
+    --font-btn: 1.5rem;
   }
 }
 
@@ -55,6 +73,11 @@
 .heading-tertiary, .heading-secondary, .heading-primary {
   color: var(--color-text-bold);
   line-height: 6.34rem;
+}
+@media screen and (max-width: 34em) {
+  .heading-tertiary, .heading-secondary, .heading-primary {
+    line-height: 4.5rem;
+  }
 }
 
 .container {
@@ -248,6 +271,16 @@ html {
     font-size: 56%;
   }
 }
+@media screen and (max-width: 30em) {
+  html {
+    font-size: 54%;
+  }
+}
+@media screen and (max-width: 26.25em) {
+  html {
+    font-size: 52%;
+  }
+}
 
 body {
   box-sizing: border-box;
@@ -296,6 +329,16 @@ a:visited {
     font-size: 4rem;
   }
 }
+@media screen and (max-width: 30em) {
+  .heading-primary {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 26.25em) {
+  .heading-primary {
+    font-size: 3rem;
+  }
+}
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -310,6 +353,11 @@ a:visited {
 @media screen and (max-width: 34em) {
   .heading-secondary {
     font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 30em) {
+  .heading-secondary {
+    font-size: 2.25rem;
   }
 }
 
@@ -328,6 +376,11 @@ a:visited {
     font-size: 1.8rem;
   }
 }
+@media screen and (max-width: 30em) {
+  .heading-tertiary {
+    font-size: 1.7rem;
+  }
+}
 
 .heading-sub {
   font-size: 2rem;
@@ -338,6 +391,11 @@ a:visited {
 @media screen and (max-width: 34em) {
   .heading-sub {
     font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 30em) {
+  .heading-sub {
+    font-size: 1.7rem;
   }
 }
 
@@ -433,6 +491,11 @@ a:visited {
     width: 22.5rem;
   }
 }
+@media screen and (max-width: 30em) {
+  .profile {
+    width: 20rem;
+  }
+}
 .profile__img {
   width: 100%;
   border-radius: 50%;
@@ -524,6 +587,11 @@ a:visited {
   justify-content: center;
   row-gap: 2.5rem;
 }
+@media screen and (max-width: 34em) {
+  .skills {
+    grid-template-columns: repeat(auto-fit, minmax(auto, 7rem));
+  }
+}
 .skills__item {
   transition: var(--trans-1x);
 }
@@ -592,6 +660,11 @@ a:visited {
   font-size: var(--font-experience-text);
   color: var(--color-grey);
 }
+@media screen and (max-width: 26.25em) {
+  .experience__logo {
+    grid-column: 1/-1;
+  }
+}
 .experience__icon {
   color: var(--color-text-bold);
   fill: currentColor;
@@ -608,11 +681,6 @@ a:visited {
   color: var(--color-text-bold);
   font-weight: 800;
   font-size: var(--font-experience-title);
-}
-@media screen and (max-width: 42em) {
-  .experience__title {
-    font-size: 2rem;
-  }
 }
 @media screen and (max-width: 42em) {
   .experience__time {
@@ -732,7 +800,7 @@ a:visited {
 }
 .section-projects__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: var(--gap-projects-between);
   margin-top: var(--gap-projects-top);
 }

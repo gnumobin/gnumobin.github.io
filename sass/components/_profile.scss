@@ -11,6 +11,10 @@
     width: 22.5rem;
   }
 
+  @include responsive(md-mobile) {
+    width: 20rem;
+  }
+
   &__img {
     width: 100%;
     border-radius: 50%;

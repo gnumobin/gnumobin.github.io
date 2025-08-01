@@ -11,6 +11,12 @@
   @include responsive(lg-mobile) {
     font-size: 4rem;
   }
+  @include responsive(md-mobile) {
+    font-size: 3.5rem;
+  }
+  @include responsive(sm-mobile) {
+    font-size: 3rem;
+  }
 }
 .heading-secondary {
   @extend %heading;
@@ -23,6 +29,9 @@
   }
   @include responsive(lg-mobile) {
     font-size: 2.5rem;
+  }
+  @include responsive(md-mobile) {
+    font-size: 2.25rem;
   }
 }
 .heading-tertiary {
@@ -37,12 +46,18 @@
   @include responsive(lg-mobile) {
     font-size: 1.8rem;
   }
+  @include responsive(md-mobile) {
+    font-size: 1.7rem;
+  }
 }
 .heading-sub {
   @include heading(2rem, 600);
 
   @include responsive(lg-mobile) {
     font-size: 1.8rem;
+  }
+  @include responsive(md-mobile) {
+    font-size: 1.7rem;
   }
 
   text-transform: uppercase;

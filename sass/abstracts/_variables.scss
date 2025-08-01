@@ -45,9 +45,21 @@
     #ea4335 75%
   );
 
+  @include responsive(port-tablet) {
+    --font-experience-title: 2rem;
+  }
   @include responsive(lg-mobile) {
     --font-btn: 2rem;
     --font-hero-biography: 1.6rem;
     --gap-section: 8rem;
+  }
+  @include responsive(md-mobile) {
+    --font-btn: 1.8rem;
+    --font-hero-biography: 1.5rem;
+    --gap-section: 7rem;
+    --font-experience-title: 1.8rem;
+  }
+  @include responsive(sm-mobile) {
+    --font-btn: 1.5rem;
   }
 }

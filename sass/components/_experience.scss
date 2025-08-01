@@ -12,6 +12,12 @@
   font-size: var(--font-experience-text);
   color: var(--color-grey);
 
+  &__logo {
+    @include responsive(sm-mobile) {
+      grid-column: 1 / -1;
+    }
+  }
+
   &__icon {
     color: var(--color-text-bold);
     fill: currentColor;
@@ -28,10 +34,6 @@
     color: var(--color-text-bold);
     font-weight: 800;
     font-size: var(--font-experience-title);
-
-    @include responsive(port-tablet) {
-      font-size: 2rem;
-    }
   }
 
   &__time {
