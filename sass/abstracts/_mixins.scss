@@ -3,3 +3,14 @@
   justify-content: space-between;
   align-items: center;
 }
+
+@mixin heading($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin gradient($color) {
+  background-image: $color;
+  color: transparent;
+  background-clip: text;
+}

@@ -2,21 +2,20 @@
   max-width: 114rem;
   margin: 0 auto;
 }
+
 .gradient-purple {
+  @extend %gradient;
   background-image: var(--gradient-purple);
-  color: transparent;
-  background-clip: text;
 }
 .gradient-orange {
+  @extend %gradient;
   background-image: var(--gradient-orange);
-  color: transparent !important;
-  background-clip: text;
 }
 .gradient-blue {
+  @extend %gradient;
   background-image: var(--gradient-blue);
-  color: transparent !important;
-  background-clip: text;
 }
+
 .mg-t-lg {
   margin-top: 4.1rem;
 }

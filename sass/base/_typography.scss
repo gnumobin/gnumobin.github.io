@@ -1,24 +1,22 @@
 .heading-primary {
-  font-size: 5.5rem;
-  font-weight: 900;
-  color: var(--color-text-bold);
-  line-height: 6.34rem;
+  @extend %heading;
+  @include heading(5.5rem, 900);
 }
 .heading-secondary {
-  font-size: 3.5rem;
-  font-weight: 900;
-  color: var(--color-text-bold);
+  @extend %heading;
+  @include heading(3.5rem, 900);
+
   text-transform: uppercase;
 }
 .heading-tertiary {
-  font-size: 2.25rem;
-  font-weight: 800;
-  color: var(--color-text-bold);
+  @extend %heading;
+  @include heading(2.25rem, 800);
+
   letter-spacing: 0.05rem;
 }
 .heading-sub {
+  @include heading(2rem, 600);
+
   text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: 600;
   letter-spacing: 0.2rem;
 }

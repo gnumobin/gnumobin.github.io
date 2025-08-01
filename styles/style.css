@@ -164,6 +164,16 @@
   );
 }
 
+.gradient-blue, .gradient-orange, .gradient-purple {
+  color: transparent !important;
+  background-clip: text;
+}
+
+.heading-tertiary, .heading-secondary, .heading-primary {
+  color: var(--color-text-bold);
+  line-height: 6.34rem;
+}
+
 .container {
   max-width: 114rem;
   margin: 0 auto;
@@ -171,20 +181,14 @@
 
 .gradient-purple {
   background-image: var(--gradient-purple);
-  color: transparent;
-  background-clip: text;
 }
 
 .gradient-orange {
   background-image: var(--gradient-orange);
-  color: transparent !important;
-  background-clip: text;
 }
 
 .gradient-blue {
   background-image: var(--gradient-blue);
-  color: transparent !important;
-  background-clip: text;
 }
 
 .mg-t-lg {
@@ -236,28 +240,24 @@ a:visited {
 .heading-primary {
   font-size: 5.5rem;
   font-weight: 900;
-  color: var(--color-text-bold);
-  line-height: 6.34rem;
 }
 
 .heading-secondary {
   font-size: 3.5rem;
   font-weight: 900;
-  color: var(--color-text-bold);
   text-transform: uppercase;
 }
 
 .heading-tertiary {
   font-size: 2.25rem;
   font-weight: 800;
-  color: var(--color-text-bold);
   letter-spacing: 0.05rem;
 }
 
 .heading-sub {
-  text-transform: uppercase;
   font-size: 2rem;
   font-weight: 600;
+  text-transform: uppercase;
   letter-spacing: 0.2rem;
 }
 
@@ -499,8 +499,6 @@ a:visited {
 }
 .footer__icon {
   color: var(--color-text-bold);
-  width: 1.8rem;
-  height: 1.8rem;
 }
 .footer__text {
   font-weight: 300;
@@ -521,6 +519,10 @@ a:visited {
 .footer__socials {
   display: flex;
   gap: 2.7rem;
+}
+.footer__socials > a > * {
+  width: 1.8rem;
+  height: 1.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */
