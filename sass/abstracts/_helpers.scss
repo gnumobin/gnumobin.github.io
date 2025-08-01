@@ -36,3 +36,9 @@
   white-space: nowrap;
   border: 0;
 }
+
+.word-wrap {
+  @include responsive(land-tablet) {
+    display: none;
+  }
+}

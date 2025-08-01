@@ -23,6 +23,16 @@
     color: var(--color-text-bold);
     font-weight: 800;
     font-size: var(--font-experience-title);
+
+    @include responsive(port-tablet) {
+      font-size: 2rem;
+    }
+  }
+
+  &__time {
+    @include responsive(port-tablet) {
+      grid-column: 1 / -1;
+    }
   }
 
   &__text {

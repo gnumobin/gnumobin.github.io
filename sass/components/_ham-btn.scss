@@ -6,6 +6,13 @@
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  display: none;
+
+  @include responsive(land-tablet) {
+    display: block;
+  }
+
+  margin-right: -2rem;
 }
 .hamRotate.active {
   transform: rotate(45deg);

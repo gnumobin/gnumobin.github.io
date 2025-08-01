@@ -91,6 +91,12 @@
   border: 0;
 }
 
+@media screen and (max-width: 48em) {
+  .word-wrap {
+    display: none;
+  }
+}
+
 @font-face {
   font-family: "Poppins";
   src: url("../assets/fonts/Poppins/Poppins-Thin.ttf") format("truetype");
@@ -261,6 +267,11 @@ a:visited {
 @media screen and (max-width: 64em) {
   .heading-primary {
     font-size: 5rem;
+  }
+}
+@media screen and (max-width: 48em) {
+  .heading-primary {
+    font-size: 4.5rem;
   }
 }
 
@@ -550,6 +561,16 @@ a:visited {
   font-weight: 800;
   font-size: var(--font-experience-title);
 }
+@media screen and (max-width: 42em) {
+  .experience__title {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 42em) {
+  .experience__time {
+    grid-column: 1/-1;
+  }
+}
 .experience__text {
   grid-column: 1/-1;
 }
@@ -562,6 +583,13 @@ a:visited {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  display: none;
+  margin-right: -2rem;
+}
+@media screen and (max-width: 48em) {
+  .ham {
+    display: block;
+  }
 }
 
 .hamRotate.active {
@@ -632,6 +660,11 @@ a:visited {
 @media screen and (max-width: 64em) {
   .section-hero__biography {
     max-width: 80%;
+  }
+}
+@media screen and (max-width: 48em) {
+  .section-hero__biography {
+    max-width: 100%;
   }
 }
 .section-hero__actions {

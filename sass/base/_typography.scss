@@ -5,6 +5,9 @@
   @include responsive(laptop) {
     font-size: 5rem;
   }
+  @include responsive(land-tablet) {
+    font-size: 4.5rem;
+  }
 }
 .heading-secondary {
   @extend %heading;

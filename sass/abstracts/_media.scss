@@ -17,4 +17,10 @@
       @content;
     }
   }
+  // 670px
+  @if $bp == port-tablet {
+    @media screen and (max-width: 42em) {
+      @content;
+    }
+  }
 }
