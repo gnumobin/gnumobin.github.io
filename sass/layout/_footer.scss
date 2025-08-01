@@ -1,0 +1,42 @@
+.footer {
+  background-color: var(--color-bg-dark);
+  margin-top: calc(var(--gap-section) + 0.7rem);
+  padding-top: 8.2rem;
+  padding-bottom: 10rem;
+
+  color: var(--color-grey);
+  font-size: var(--font-footer-text);
+
+  &__icon {
+    color: var(--color-text-bold);
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  &__text {
+    font-weight: 300;
+    margin-top: 3.4rem;
+    margin-bottom: 2.2rem;
+  }
+
+  &__email {
+    font-weight: 600;
+    font-style: normal;
+
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+
+    margin-bottom: 4.1rem;
+
+    &--link:link,
+    &--link:visited {
+      color: inherit;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 2.7rem;
+  }
+}

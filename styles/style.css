@@ -125,12 +125,13 @@
   font-display: swap;
 }
 :root {
+  --color-bg-dark: #191919;
   --color-bg: #161513;
   --color-bg-thin: #222;
+  --color-bg-extra-thin: #2a2a2a;
   --color-text: #c5c5c5;
   --color-grey: #8491a0;
   --color-text-bold: #fff;
-  --color-bg-extra-thin: #2a2a2a;
   --gap-header-nav-list: 7.1rem;
   --gap-hero-biography: 3.9rem;
   --gap-hero-actions: 1.8rem;
@@ -151,6 +152,7 @@
   --font-card-title-sub: 1rem;
   --font-experience-title: 2.174rem;
   --font-experience-text: 1.449rem;
+  --font-footer-text: 1.412rem;
   --rounded-card: 1.8rem;
   --logo-meta: #0467df;
   --logo-google: linear-gradient(
@@ -243,6 +245,13 @@ a:visited {
   font-weight: 900;
   color: var(--color-text-bold);
   text-transform: uppercase;
+}
+
+.heading-tertiary {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--color-text-bold);
+  letter-spacing: 0.05rem;
 }
 
 .heading-sub {
@@ -478,6 +487,40 @@ a:visited {
 
 .section-experience {
   padding-top: var(--gap-section);
+}
+
+.footer {
+  background-color: var(--color-bg-dark);
+  margin-top: calc(var(--gap-section) + 0.7rem);
+  padding-top: 8.2rem;
+  padding-bottom: 10rem;
+  color: var(--color-grey);
+  font-size: var(--font-footer-text);
+}
+.footer__icon {
+  color: var(--color-text-bold);
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.footer__text {
+  font-weight: 300;
+  margin-top: 3.4rem;
+  margin-bottom: 2.2rem;
+}
+.footer__email {
+  font-weight: 600;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 4.1rem;
+}
+.footer__email--link:link, .footer__email--link:visited {
+  color: inherit;
+}
+.footer__socials {
+  display: flex;
+  gap: 2.7rem;
 }
 
 /*# sourceMappingURL=style.css.map */

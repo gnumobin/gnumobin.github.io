@@ -1,10 +1,11 @@
 :root {
+  --color-bg-dark: #191919;
   --color-bg: #161513;
   --color-bg-thin: #222;
+  --color-bg-extra-thin: #2a2a2a;
   --color-text: #c5c5c5;
   --color-grey: #8491a0;
   --color-text-bold: #fff;
-  --color-bg-extra-thin: #2a2a2a;
   // spaces
   --gap-header-nav-list: 7.1rem;
   --gap-hero-biography: 3.9rem;
@@ -29,6 +30,7 @@
   --font-card-title-sub: 1rem;
   --font-experience-title: 2.174rem;
   --font-experience-text: 1.449rem;
+  --font-footer-text: 1.412rem;
   // radiuses
   --rounded-card: 1.8rem;
   // logo colors
