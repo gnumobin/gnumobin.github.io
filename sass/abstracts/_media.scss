@@ -1,0 +1,14 @@
+@mixin responsive($bp) {
+  // 1220px
+  @if $bp == desktop {
+    @media screen and (max-width: 76.25em) {
+      @content;
+    }
+  }
+  // 1024px
+  @if $bp == laptop {
+    @media screen and (max-width: 64em) {
+      @content;
+    }
+  }
+}

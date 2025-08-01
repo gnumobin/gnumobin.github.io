@@ -1,5 +1,9 @@
 html {
   font-size: 62.5%;
+
+  @include responsive(laptop) {
+    font-size: 60%;
+  }
 }
 body {
   box-sizing: border-box;

@@ -4,6 +4,7 @@
   overflow: hidden;
   background-color: var(--color-bg-extra-thin);
   transition: var(--trans-1x);
+  justify-self: center;
 
   &__img {
     width: 100%;

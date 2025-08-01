@@ -1,6 +1,10 @@
 .container {
   max-width: 114rem;
   margin: 0 auto;
+
+  @include responsive(desktop) {
+    padding: 0 4rem;
+  }
 }
 
 .gradient-purple {

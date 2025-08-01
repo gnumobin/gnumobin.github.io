@@ -10,6 +10,10 @@
     max-width: 60%;
     margin: var(--gap-hero-biography) auto
       calc(var(--gap-hero-biography) + 1.4rem) auto;
+
+    @include responsive(laptop) {
+      max-width: 80%;
+    }
   }
 
   &__actions {

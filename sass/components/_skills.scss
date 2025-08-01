@@ -3,6 +3,7 @@
   grid-template-columns: repeat(auto-fit, minmax(1rem, 10rem));
   margin-top: var(--gap-skills);
   justify-content: center;
+  row-gap: 2.5rem;
 
   &__item {
     transition: var(--trans-1x);

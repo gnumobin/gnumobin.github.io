@@ -1,15 +1,15 @@
 // ################# IMPORT ABSTRACTS #################
-@import "abstracts/fonts";
+@import "abstracts/media";
 @import "abstracts/variables";
 @import "abstracts/extends";
 @import "abstracts/mixins";
 @import "abstracts/helpers";
 
 // ################# IMPORT BASE #################
+@import "base/fonts";
 @import "base/reset";
 @import "base/typography";
 @import "base/animations";
-
 // ################# IMPORT COMPONENTS #################
 @import "components/header-nav";
 @import "components/profile";
