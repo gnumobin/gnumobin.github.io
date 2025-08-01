@@ -1,0 +1,31 @@
+.experiences {
+  margin-top: var(--gap-experiences);
+  display: grid;
+  gap: calc(var(--gap-experiences) - 0.7rem);
+}
+.experience {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: calc(var(--gap-experience) - 1.1rem);
+  row-gap: var(--gap-experience);
+  font-size: var(--font-experience-text);
+  color: var(--color-grey);
+
+  &__icon {
+    color: var(--color-text-bold);
+    fill: currentColor;
+    width: 3.4rem;
+    height: 3.2rem;
+  }
+
+  &__title {
+    color: var(--color-text-bold);
+    font-weight: 800;
+    font-size: var(--font-experience-title);
+  }
+
+  &__text {
+    grid-column: 1 / -1;
+  }
+}

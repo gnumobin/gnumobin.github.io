@@ -2,6 +2,7 @@
   --color-bg: #161513;
   --color-bg-thin: #222;
   --color-text: #c5c5c5;
+  --color-grey: #8491a0;
   --color-text-bold: #fff;
   --color-bg-extra-thin: #2a2a2a;
   // spaces
@@ -12,6 +13,8 @@
   --gap-skills: 4.8rem;
   --gap-projects-between: 3rem;
   --gap-projects-top: 2.7rem;
+  --gap-experience: 2.3rem;
+  --gap-experiences: 5.7rem;
   // transitions
   --trans-1x: 0.25s;
   // gradients
@@ -24,6 +27,17 @@
   --font-btn: 2.3rem;
   --font-card-title: 1.9rem;
   --font-card-title-sub: 1rem;
+  --font-experience-title: 2.174rem;
+  --font-experience-text: 1.449rem;
   // radiuses
   --rounded-card: 1.8rem;
+  // logo colors
+  --logo-meta: #0467df;
+  --logo-google: linear-gradient(
+    90deg,
+    #4285f4 0%,
+    #34a853 25%,
+    #fbbc05 50%,
+    #ea4335 75%
+  );
 }

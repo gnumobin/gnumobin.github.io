@@ -128,6 +128,7 @@
   --color-bg: #161513;
   --color-bg-thin: #222;
   --color-text: #c5c5c5;
+  --color-grey: #8491a0;
   --color-text-bold: #fff;
   --color-bg-extra-thin: #2a2a2a;
   --gap-header-nav-list: 7.1rem;
@@ -137,6 +138,8 @@
   --gap-skills: 4.8rem;
   --gap-projects-between: 3rem;
   --gap-projects-top: 2.7rem;
+  --gap-experience: 2.3rem;
+  --gap-experiences: 5.7rem;
   --trans-1x: 0.25s;
   --gradient-purple: linear-gradient(to right, #ff8660, #9a33ff);
   --gradient-orange: linear-gradient(to right, #ff8660, #d5491d);
@@ -146,7 +149,17 @@
   --font-btn: 2.3rem;
   --font-card-title: 1.9rem;
   --font-card-title-sub: 1rem;
+  --font-experience-title: 2.174rem;
+  --font-experience-text: 1.449rem;
   --rounded-card: 1.8rem;
+  --logo-meta: #0467df;
+  --logo-google: linear-gradient(
+    90deg,
+    #4285f4 0%,
+    #34a853 25%,
+    #fbbc05 50%,
+    #ea4335 75%
+  );
 }
 
 .container {
@@ -166,8 +179,29 @@
   background-clip: text;
 }
 
+.gradient-blue {
+  background-image: var(--gradient-blue);
+  color: transparent !important;
+  background-clip: text;
+}
+
 .mg-t-lg {
   margin-top: 4.1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 html {
@@ -369,11 +403,41 @@ a:visited {
   color: var(--color-text);
   display: block;
   font-size: var(--font-card-title-sub);
-  font-weight: 800;
-  margin-left: -0.5rem;
+  font-weight: 700;
+  text-align: left;
 }
 .card__icon {
   font-size: 2rem;
+}
+
+.experiences {
+  margin-top: var(--gap-experiences);
+  display: grid;
+  gap: calc(var(--gap-experiences) - 0.7rem);
+}
+
+.experience {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: calc(var(--gap-experience) - 1.1rem);
+  row-gap: var(--gap-experience);
+  font-size: var(--font-experience-text);
+  color: var(--color-grey);
+}
+.experience__icon {
+  color: var(--color-text-bold);
+  fill: currentColor;
+  width: 3.4rem;
+  height: 3.2rem;
+}
+.experience__title {
+  color: var(--color-text-bold);
+  font-weight: 800;
+  font-size: var(--font-experience-title);
+}
+.experience__text {
+  grid-column: 1/-1;
 }
 
 .header {
@@ -410,6 +474,10 @@ a:visited {
   grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
   gap: var(--gap-projects-between);
   margin-top: var(--gap-projects-top);
+}
+
+.section-experience {
+  padding-top: var(--gap-section);
 }
 
 /*# sourceMappingURL=style.css.map */
