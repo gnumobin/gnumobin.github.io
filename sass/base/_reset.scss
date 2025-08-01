@@ -20,3 +20,7 @@ a:link,
 a:visited {
   text-decoration: none;
 }
+::selection {
+  background-color: var(--color-grey);
+  color: var(--color-text-bold);
+}

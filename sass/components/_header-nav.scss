@@ -22,6 +22,15 @@
     &:link,
     &:visited {
       color: inherit;
+      transition: all 0.5s;
+      outline: none;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--color-text-bold);
+      text-shadow: 0 0 1rem var(--color-grey), 0 0 2rem var(--color-grey),
+        0 0 3rem var(--color-grey), 0 0 4rem var(--color-grey);
     }
   }
 }

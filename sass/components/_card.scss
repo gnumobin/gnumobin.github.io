@@ -3,6 +3,7 @@
   border-radius: var(--rounded-card);
   overflow: hidden;
   background-color: var(--color-bg-extra-thin);
+  transition: var(--trans-1x);
 
   &__img {
     width: 100%;
@@ -31,5 +32,12 @@
 
   &__icon {
     font-size: 2rem;
+    color: var(--color-text-bold);
+  }
+
+  &:hover {
+    background-color: transparent;
+    transform: translateY(-0.4rem) scale(1.01);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
   }
 }
