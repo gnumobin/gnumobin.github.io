@@ -1,18 +1,30 @@
 .heading-primary {
   @extend %heading;
   @include heading(5.5rem, 900);
+
+  @include responsive(laptop) {
+    font-size: 5rem;
+  }
 }
 .heading-secondary {
   @extend %heading;
   @include heading(3.5rem, 900);
 
   text-transform: uppercase;
+
+  @include responsive(laptop) {
+    font-size: 3rem;
+  }
 }
 .heading-tertiary {
   @extend %heading;
   @include heading(2.25rem, 800);
 
   letter-spacing: 0.05rem;
+
+  @include responsive(laptop) {
+    font-size: 2rem;
+  }
 }
 .heading-sub {
   @include heading(2rem, 600);

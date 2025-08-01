@@ -16,6 +16,7 @@
   --gap-experience: 2.3rem;
   --gap-experiences: 5.7rem;
   --trans-1x: 0.25s;
+  --trans-2x: 0.5s;
   --gradient-purple: linear-gradient(to right, #ff8660, #9a33ff);
   --gradient-orange: linear-gradient(to right, #ff8660, #d5491d);
   --gradient-blue: linear-gradient(to right, #5badff, #1373d1);
@@ -28,6 +29,7 @@
   --font-experience-text: 1.449rem;
   --font-footer-text: 1.412rem;
   --rounded-card: 1.8rem;
+  --rounded-menu: 0.8rem;
   --logo-meta: #0467df;
   --logo-google: linear-gradient(
     90deg,
@@ -256,17 +258,32 @@ a:visited {
   font-size: 5.5rem;
   font-weight: 900;
 }
+@media screen and (max-width: 64em) {
+  .heading-primary {
+    font-size: 5rem;
+  }
+}
 
 .heading-secondary {
   font-size: 3.5rem;
   font-weight: 900;
   text-transform: uppercase;
 }
+@media screen and (max-width: 64em) {
+  .heading-secondary {
+    font-size: 3rem;
+  }
+}
 
 .heading-tertiary {
   font-size: 2.25rem;
   font-weight: 800;
   letter-spacing: 0.05rem;
+}
+@media screen and (max-width: 64em) {
+  .heading-tertiary {
+    font-size: 2rem;
+  }
 }
 
 .heading-sub {
@@ -308,6 +325,7 @@ a:visited {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .header-nav__list {
   display: flex;
@@ -330,6 +348,29 @@ a:visited {
 .header-nav__link:hover, .header-nav__link:active, .header-nav__link:focus {
   color: var(--color-text-bold);
   text-shadow: 0 0 1rem var(--color-grey), 0 0 2rem var(--color-grey), 0 0 3rem var(--color-grey), 0 0 4rem var(--color-grey);
+}
+
+@media screen and (max-width: 48em) {
+  .header-nav__list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color-bg-extra-thin);
+    flex-direction: column;
+    height: 100dvh;
+    width: 66.6%;
+    gap: 2rem;
+    padding: 2rem;
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: var(--trans-2x);
+    z-index: 10;
+  }
+  .header-nav__item {
+    background-color: var(--color-bg);
+    padding: 4rem;
+    border-radius: var(--rounded-menu);
+  }
 }
 
 .profile {
@@ -511,6 +552,67 @@ a:visited {
 }
 .experience__text {
   grid-column: 1/-1;
+}
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: var(--color-text-bold);
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+
+.ham6 .top {
+  stroke-dasharray: 40 172;
+}
+
+.ham6 .middle {
+  stroke-dasharray: 40 111;
+}
+
+.ham6 .bottom {
+  stroke-dasharray: 40 172;
+}
+
+.ham6.active .top {
+  stroke-dashoffset: -132px;
+}
+
+.ham6.active .middle {
+  stroke-dashoffset: -71px;
+}
+
+.ham6.active .bottom {
+  stroke-dashoffset: -132px;
+}
+
+.overlay {
+  position: fixed;
+  background-color: rgba(22, 21, 19, 0.9);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transform: translateX(200%);
+  visibility: hidden;
+  transition: var(--trans-2x);
 }
 
 .header {

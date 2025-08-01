@@ -11,4 +11,10 @@
       @content;
     }
   }
+  // 768px
+  @if $bp == land-tablet {
+    @media screen and (max-width: 48em) {
+      @content;
+    }
+  }
 }
