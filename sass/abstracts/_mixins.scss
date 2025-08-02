@@ -15,16 +15,6 @@
   background-clip: text;
 }
 
-@mixin responsive-heading($sizes...) {
-  $breakpoints: (laptop, land-tablet, lg-mobile, md-mobile, sm-mobile);
-
-  @for $i from 1 through length($sizes) {
-    @include responsive(nth($breakpoints, $i)) {
-      font-size: nth($sizes, $i);
-    }
-  }
-}
-
 @mixin grid-columns($min, $max) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($min, $max));

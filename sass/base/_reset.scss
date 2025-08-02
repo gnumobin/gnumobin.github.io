@@ -15,6 +15,9 @@ html {
   @include responsive(xs-mobile) {
     font-size: 54%;
   }
+  @include responsive(xxs-mobile) {
+    font-size: 50%;
+  }
 }
 
 // Base styles for body

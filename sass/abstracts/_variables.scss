@@ -67,4 +67,8 @@
   @include responsive(xs-mobile) {
     --font-btn: 1.4rem;
   }
+  @include responsive(xxs-mobile) {
+    --gap-section: 6rem;
+    --font-hero-biography: 1.5rem;
+  }
 }

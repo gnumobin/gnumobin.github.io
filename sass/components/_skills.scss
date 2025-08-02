@@ -20,5 +20,18 @@
     width: 4.4rem;
     height: 4.4rem;
     fill: currentColor;
+
+    @include responsive(lg-mobile) {
+      width: 4.2rem;
+      height: 4.2rem;
+    }
+    @include responsive(xs-mobile) {
+      width: 3.6rem;
+      height: 3.6rem;
+    }
+    @include responsive(xxs-mobile) {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
   }
 }

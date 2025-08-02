@@ -71,6 +71,12 @@
     --font-btn: 1.4rem;
   }
 }
+@media screen and (max-width: 20em) {
+  :root {
+    --gap-section: 6rem;
+    --font-hero-biography: 1.5rem;
+  }
+}
 
 .gradient-blue, .gradient-orange, .gradient-purple {
   color: transparent !important;
@@ -297,6 +303,11 @@ html {
 @media screen and (max-width: 23.125em) {
   html {
     font-size: 54%;
+  }
+}
+@media screen and (max-width: 20em) {
+  html {
+    font-size: 50%;
   }
 }
 
@@ -587,6 +598,24 @@ h2.heading-secondary {
   height: 4.4rem;
   fill: currentColor;
 }
+@media screen and (max-width: 34em) {
+  .skills__icon {
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+}
+@media screen and (max-width: 23.125em) {
+  .skills__icon {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+}
+@media screen and (max-width: 20em) {
+  .skills__icon {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
 
 .card {
   max-width: 90rem;
@@ -802,6 +831,12 @@ h2.heading-secondary {
 .footer__icon {
   width: 1.8rem;
   height: 1.8rem;
+}
+@media screen and (max-width: 20em) {
+  .footer__icon {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 .footer__text {
   font-weight: 300;
