@@ -1,3 +1,15 @@
 .header {
   background-color: var(--color-bg-thin);
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  &.sticky {
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+  }
+}
+.some-space {
+  padding-top: calc(var(--gap-section) - 4rem);
 }

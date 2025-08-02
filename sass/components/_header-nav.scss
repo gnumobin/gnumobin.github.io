@@ -11,8 +11,7 @@
 
     @include responsive(land-tablet) {
       position: fixed;
-      top: 0;
-      left: 0;
+      inset: 0;
       background-color: var(--color-bg-extra-thin);
       flex-direction: column;
       height: 100dvh;

@@ -23,3 +23,24 @@ overlay.addEventListener("click", () => {
 
   hamMenuBtn.classList.toggle("active");
 });
+
+const header = document.querySelector(".header");
+const heroSection = document.querySelector(".section-hero");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    const ent = entries[0];
+    if (!ent.isIntersecting) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  }
+);
+
+observer.observe(heroSection);

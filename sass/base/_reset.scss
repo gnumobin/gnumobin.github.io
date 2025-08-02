@@ -47,13 +47,19 @@ a:visited {
   text-decoration: none;
 }
 
-// Remove backdrop styling from full-screen elements
-a::backdrop {
-  display: none;
-}
-
 // Selection color for text highlight
 ::selection {
   background-color: var(--color-grey);
   color: var(--color-text-bold);
+}
+
+// Remove BackFace
+
+a:link,
+a:visited,
+img,
+btn {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-drag: none;
 }

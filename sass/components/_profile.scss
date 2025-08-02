@@ -21,9 +21,7 @@
     will-change: transform;
   }
 
-  &:hover {
-    &__img {
-      transform: scale(1.2);
-    }
+  &:hover &__img {
+    transform: scale(1.2);
   }
 }

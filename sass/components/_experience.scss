@@ -13,10 +13,9 @@
   font-size: var(--font-experience-text);
   color: var(--color-grey);
 
-  &__logo,
   &__time,
   &__text {
-    @include responsive(sm-mobile) {
+    @include responsive(port-tablet) {
       grid-column: 1 / -1;
     }
   }

@@ -49,6 +49,7 @@
     --font-btn: 2rem;
     --font-hero-biography: 1.6rem;
     --gap-section: 8rem;
+    --font-experience-title: 1.9rem;
   }
 }
 @media screen and (max-width: 30em) {
@@ -56,12 +57,13 @@
     --font-btn: 1.8rem;
     --font-hero-biography: 1.5rem;
     --gap-section: 7rem;
-    --font-experience-title: 1.8rem;
+    --font-experience-title: 1.7rem;
   }
 }
 @media screen and (max-width: 26.25em) {
   :root {
     --font-btn: 1.5rem;
+    --font-experience-title: 1.6rem;
   }
 }
 
@@ -70,12 +72,12 @@
   background-clip: text;
 }
 
-.heading-tertiary, .heading-secondary, .heading-primary {
+.heading-tertiary, h2.heading-secondary, h1.heading-primary {
   color: var(--color-text-bold);
   line-height: 6.34rem;
 }
 @media screen and (max-width: 34em) {
-  .heading-tertiary, .heading-secondary, .heading-primary {
+  .heading-tertiary, h2.heading-secondary, h1.heading-primary {
     line-height: 4.5rem;
   }
 }
@@ -311,102 +313,42 @@ a:visited {
   text-decoration: none;
 }
 
-a::backdrop {
-  display: none;
-}
-
 ::selection {
   background-color: var(--color-grey);
   color: var(--color-text-bold);
 }
 
-.heading-primary {
-  font-size: 5.5rem;
-  font-weight: 900;
-}
-@media screen and (max-width: 64em) {
-  .heading-primary {
-    font-size: 5rem;
-  }
-}
-@media screen and (max-width: 48em) {
-  .heading-primary {
-    font-size: 4.5rem;
-  }
-}
-@media screen and (max-width: 34em) {
-  .heading-primary {
-    font-size: 4rem;
-  }
-}
-@media screen and (max-width: 30em) {
-  .heading-primary {
-    font-size: 3.5rem;
-  }
-}
-@media screen and (max-width: 26.25em) {
-  .heading-primary {
-    font-size: 3rem;
-  }
+a:link,
+a:visited,
+img,
+btn {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
-.heading-secondary {
-  font-size: 3.5rem;
+h1.heading-primary {
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  font-weight: 900;
+}
+
+h2.heading-secondary {
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
   font-weight: 900;
   text-transform: uppercase;
-}
-@media screen and (max-width: 64em) {
-  .heading-secondary {
-    font-size: 3rem;
-  }
-}
-@media screen and (max-width: 48em) {
-  .heading-secondary {
-    font-size: 2.5rem;
-  }
-}
-@media screen and (max-width: 34em) {
-  .heading-secondary {
-    font-size: 2.25rem;
-  }
 }
 
 .heading-tertiary {
-  font-size: 2.25rem;
+  font-size: clamp(1.7rem, 3vw, 2.25rem);
   font-weight: 800;
   letter-spacing: 0.05rem;
 }
-@media screen and (max-width: 64em) {
-  .heading-tertiary {
-    font-size: 2rem;
-  }
-}
-@media screen and (max-width: 48em) {
-  .heading-tertiary {
-    font-size: 1.8rem;
-  }
-}
-@media screen and (max-width: 34em) {
-  .heading-tertiary {
-    font-size: 1.7rem;
-  }
-}
 
 .heading-sub {
-  font-size: 2rem;
+  font-size: clamp(1.7rem, 2.5vw, 2rem);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-}
-@media screen and (max-width: 64em) {
-  .heading-sub {
-    font-size: 1.8rem;
-  }
-}
-@media screen and (max-width: 48em) {
-  .heading-sub {
-    font-size: 1.7rem;
-  }
 }
 
 .jelly {
@@ -455,8 +397,7 @@ a::backdrop {
 @media screen and (max-width: 48em) {
   .header-nav__list {
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0;
     background-color: var(--color-bg-extra-thin);
     flex-direction: column;
     height: 100dvh;
@@ -516,7 +457,7 @@ a::backdrop {
   transition: var(--trans-1x);
   will-change: transform;
 }
-.profile:hover__img {
+.profile:hover .profile__img {
   transform: scale(1.2);
 }
 
@@ -675,8 +616,8 @@ a::backdrop {
   font-size: var(--font-experience-text);
   color: var(--color-grey);
 }
-@media screen and (max-width: 26.25em) {
-  .experience__logo, .experience__time, .experience__text {
+@media screen and (max-width: 42em) {
+  .experience__time, .experience__text {
     grid-column: 1/-1;
   }
 }
@@ -753,14 +694,26 @@ a::backdrop {
   position: fixed;
   inset: 0;
   background-color: rgba(255, 255, 255, 0.5);
-  z-index: 1;
+  z-index: 9;
   transform: translateX(200%);
   visibility: hidden;
-  transition: transform var(--trans-2x), visibility 0s linear var(--trans-2x);
+  transition: transform var(--trans-2x), visibility var(--trans-2x) linear;
 }
 
 .header {
   background-color: var(--color-bg-thin);
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.header.sticky {
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.some-space {
+  padding-top: calc(var(--gap-section) - 4rem);
 }
 
 .section-hero {
@@ -817,8 +770,8 @@ a::backdrop {
   font-size: var(--font-footer-text);
 }
 .footer__icon {
-  width: 1.65rem;
-  height: 1.65rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 .footer__text {
   font-weight: 300;
