@@ -1,30 +1,26 @@
 .profile {
-  width: 25rem;
+  // Responsive Width
+  width: clamp(18rem, 5vw + 10rem, 25rem);
   margin: 0 auto;
+  // Etc
   overflow: hidden;
   border-radius: 50%;
   cursor: zoom-in;
 
-  @include responsive(lg-mobile) {
-    width: 22.5rem;
-  }
-
-  @include responsive(md-mobile) {
-    width: 20rem;
-  }
-
-  @include responsive(xs-mobile) {
-    width: 18rem;
-  }
-
   &__img {
+    // Full width, automatic height to keep aspect ratio and radius
     width: 100%;
     height: auto;
     border-radius: 50%;
+
+    // Smooth transform transition on hover
     transition: var(--trans-1x);
+
+    // Hint browser for better animation performance
     will-change: transform;
   }
 
+  // Scale image on hover for zoom effect
   &:hover &__img {
     transform: scale(1.2);
   }

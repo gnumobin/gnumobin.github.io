@@ -1,20 +1,21 @@
 .card {
+  // Main card container with max width, rounded corners, and subtle background
+  background-color: var(--color-bg-extra-thin);
+
   max-width: 90rem;
   border-radius: var(--rounded-card);
-  background-color: var(--color-bg-extra-thin);
   transition: var(--trans-1x);
   overflow: hidden;
   justify-self: center;
 
   &__img {
+    // Responsive full-width image inside card
     width: 100%;
     height: auto;
   }
 
   &__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex;
     padding: 1.4rem 2.3rem;
   }
 
@@ -23,6 +24,7 @@
     font-size: var(--font-card-title);
 
     &::before {
+      // Subtitle hint shown above title
       content: "click here to visit";
       display: block;
       font-size: var(--font-card-title-sub);
@@ -38,6 +40,7 @@
   }
 
   &:hover {
+    // Hover effect: lift card slightly and add shadow
     background-color: transparent;
     transform: translateY(-0.4rem) scale(1.01);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);

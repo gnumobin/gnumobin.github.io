@@ -1,15 +1,19 @@
+// Container with max width and centered alignment
 .container {
   max-width: 114rem;
   margin: 0 auto;
 
+  // Padding adjustment on desktop screens
   @include responsive(desktop) {
     padding: 0 3.5rem;
   }
+  // Padding adjustment on extra small mobile screens
   @include responsive(xs-mobile) {
     padding: 0 2rem;
   }
 }
 
+// Gradient utility classes extending base gradient placeholder
 .gradient-purple {
   @extend %gradient;
   background-image: var(--gradient-purple);
@@ -23,12 +27,15 @@
   background-image: var(--gradient-blue);
 }
 
+// Utility classes for spacing and text alignment
 .mg-t-lg {
   margin-top: 4.1rem;
 }
 .text-center {
   text-align: center;
 }
+
+// Accessibility helper to visually hide elements but keep them accessible for screen readers
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -40,6 +47,7 @@
   border: 0;
 }
 
+// Hide elements on landscape tablet screens and smaller
 .word-wrap {
   @include responsive(land-tablet) {
     display: none;

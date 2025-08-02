@@ -1,5 +1,7 @@
 .header {
   background-color: var(--color-bg-thin);
+
+  // Fix header at top with full width and above other content
   position: fixed;
   z-index: 20;
   width: 100%;
@@ -7,9 +9,12 @@
   left: 0;
 
   &.sticky {
+    // Add subtle shadow when header becomes sticky
     box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
   }
 }
+
 .some-space {
+  // Adds top padding to create spacing below the fixed header
   padding-top: calc(var(--gap-section) - 4rem);
 }

@@ -1,26 +1,31 @@
+// Base gradient text style placeholder (to be extended)
 %gradient {
-  color: transparent !important;
-  background-clip: text;
+  color: transparent !important; // Make text transparent to show background gradient
+  background-clip: text; // Clip background to text shape
 }
 
+// Base heading style placeholder
 %heading {
   color: var(--color-text-bold);
   line-height: 6.34rem;
 
+  // Adjust line height for large mobile screens and smaller
   @include responsive(lg-mobile) {
     line-height: 4.5rem;
   }
 }
 
-// typography partial
+// Typography style for uppercase titles
 %title-uppercase {
   font-weight: 900;
   text-transform: uppercase;
   color: var(--color-text-bold);
 }
 
+// Neon glow color variable
 $neon-color: #e0e0e0;
 
+// Glow effect placeholder for neon-like shadows
 %glow {
   box-shadow: 0 0 4px 1.5px lighten($neon-color, 10%), 0 0 10px 4px $neon-color,
     0 0 20px 8px lighten($neon-color, 20%);

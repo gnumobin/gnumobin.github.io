@@ -1,36 +1,45 @@
 .experiences {
-  margin-top: var(--gap-experiences);
+  // Container for all experience
   display: grid;
+  // Spaces
+  margin-top: var(--gap-experiences);
   gap: calc(var(--gap-experiences) - 0.7rem);
 }
 
+// Define First Row (Icon, Title and Time)
 .experience {
+  // alignment
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
+  // spaces
   column-gap: calc(var(--gap-experience) - 1.1rem);
   row-gap: var(--gap-experience);
+  // font & colors
   font-size: var(--font-experience-text);
   color: var(--color-grey);
 
-  &__time,
-  &__text {
+  &__time {
+    // move to they own row
     @include responsive(port-tablet) {
       grid-column: 1 / -1;
     }
   }
 
   &__logo {
+    // move to they own row
     @include responsive(xs-mobile) {
       grid-column: 1 / -1;
     }
   }
 
   &__text {
+    // Text always spans full width to ensure readability
     grid-column: 1 / -1;
   }
 
   &__icon {
+    // Icon styling with responsive size adjustments
     color: var(--color-text-bold);
     fill: currentColor;
     width: 3.4rem;
@@ -43,8 +52,10 @@
   }
 
   &__title {
+    // Highlighted title style for experience
     color: var(--color-text-bold);
-    font-weight: 800;
+    // Size and Weight
     font-size: var(--font-experience-title);
+    font-weight: 800;
   }
 }

@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Character encoding for the document -->
     <meta charset="UTF-8" />
+
+    <!-- Viewport for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Document Title -->
     <title>Mobin Ghaemi</title>
 
-    <!-- Load prefer -->
-
+    <!-- Preload important images for faster page load -->
     <link rel="preload" as="image" href="/assets/imgs/logo.webp" />
     <link rel="preload" as="image" href="/assets/imgs/me.webp" />
 
-    <!-- Main Styles -->
+    <!-- Link to main CSS stylesheet -->
     <link rel="stylesheet" href="styles/style.css" />
 
-    <!-- Favicon -->
+    <!-- Favicon for the browser tab -->
     <link
       rel="shortcut icon"
       href="./assets/imgs/logo.webp"
       type="image/x-icon"
     />
 
-    <!-- Script -->
+    <!-- Load JavaScript file with defer to execute after parsing HTML -->
     <script src="js/app.js" defer></script>
+
+    <!-- Structured data using JSON-LD for SEO (Person schema) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -38,22 +43,22 @@
       }
     </script>
 
-    <!-- SEO Meta Tags -->
+    <!-- Meta tags for search engine optimization -->
     <meta
       name="description"
-      content="Mobin Ghaemi is a full-stack developer based in Gorgan, Iran. With over 5 years of experience starting from Android development with Java, he now builds modern, scalable web applications using React, Node.js, and Express. Passionate about clean architecture and a daily Arch Linux user."
+      content="Mobin Ghaemi is a full-stack developer from Gorgan, Iran. I build websites, develop mobile and desktop apps, and make tech content on YouTube."
     />
     <meta
       name="keywords"
-      content="Mobin Ghaemi, Full Stack Developer, Software Engineer, React, Node.js, Express.js, Android Developer, Java, Web Developer, Arch Linux, Gorgan Iran, Frontend, Backend, SaaS Developer"
+      content="Mobin Ghaemi, Full Stack Developer, Gorgan, Iran, web developer, mobile apps, desktop apps, YouTube content creator"
     />
     <meta name="author" content="Mobin Ghaemi" />
 
-    <!-- Open Graph (Social Sharing) -->
+    <!-- Open Graph meta tags for social media sharing -->
     <meta property="og:title" content="Mobin Ghaemi | Full-Stack Engineer" />
     <meta
       property="og:description"
-      content="Full-stack developer based in Gorgan, Iran. 5+ years of experience in web and mobile development using React, Node.js, Java, and Express. Arch Linux enthusiast and software architecture advocate."
+      content="Full-stack developer based in Gorgan, Iran. I code and make content about it on YouTube."
     />
     <meta
       property="og:image"
@@ -62,38 +67,43 @@
     <meta property="og:url" content="https://gnumobin.netlify.app" />
     <meta property="og:type" content="website" />
 
-    <!-- Twitter Card -->
+    <!-- Twitter Card meta tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Mobin Ghaemi | Full-Stack Developer" />
     <meta
       name="twitter:description"
-      content="Full-stack developer from Gorgan, Iran with 5+ years of experience in React, Node.js, Express, and Android (Java). Passionate about Linux and clean code."
+      content="Full-stack developer from Gorgan, Iran building websites and apps and making tech content on YouTube."
     />
     <meta
       name="twitter:image"
       content="https://gnumobin.netlify.app/assets/imgs/me.webp"
     />
 
-    <!-- Canonical URL -->
+    <!-- Canonical link to avoid duplicate content issues -->
     <link rel="canonical" href="https://gnumobin.netlify.app" />
 
-    <!-- External Socials -->
+    <!-- Preconnect and DNS prefetch for faster external requests -->
     <link rel="preconnect" href="https://youtube.com" crossorigin />
     <link rel="dns-prefetch" href="https://t.me" />
   </head>
 
   <body>
+    <!-- Overlay for menu or modal -->
     <div class="overlay" id="overlay">&nbsp;</div>
+
+    <!-- Spacer div for layout adjustment -->
     <div class="some-space" aria-hidden="true">&nbsp;</div>
+
+    <!-- Header containing navigation -->
     <header class="header">
-      <div class="container">
+      <div class="container" aria-hidden="true">
         <nav
           class="header-nav"
           id="primaryNav"
           aria-label="Main Navigation"
           role="navigation"
         >
-          <!-- Website Logo -->
+          <!-- Website logo -->
           <div class="logo">
             <img
               src="./assets/imgs/logo.webp"
@@ -103,52 +113,54 @@
               class="logo__img"
             />
           </div>
-          <!-- List & Mobile Menu -->
+
+          <!-- Navigation links -->
           <ul class="header-nav__list" id="hamMenu">
+            <!-- Active page: Home -->
             <li class="header-nav__item header-nav__item--active">
               <a
                 href="#heroSection"
                 class="header-nav__link"
                 aria-current="page"
+                aria-label="Internal link to Hero Section"
+                >Home</a
               >
-                Home
-              </a>
             </li>
+            <!-- Other sections -->
             <li class="header-nav__item">
               <a
                 href="#projectsSection"
                 class="header-nav__link"
-                aria-label="Project Section"
+                aria-label="Internal link to Projects Section"
+                >Projects</a
               >
-                Projects
-              </a>
             </li>
             <li class="header-nav__item">
               <a
                 href="#experienceSection"
-                aria-label="Experience Section"
                 class="header-nav__link"
+                aria-label="Internal link to Experiences Section"
+                >Experience</a
               >
-                Experience
-              </a>
             </li>
             <li class="header-nav__item">
               <a
                 href="#contactSection"
-                aria-label="Contact Section"
                 class="header-nav__link"
+                aria-label="Internal link to Contact Section"
+                >Contact</a
               >
-                Contact
-              </a>
             </li>
           </ul>
-          <!-- Button -->
+
+          <!-- Hamburger button for mobile menu -->
           <svg
             class="ham ham6"
             viewBox="0 0 80 100"
             width="45"
             id="hamMenuBtn"
             aria-expanded="false"
+            role="button"
           >
             <path
               class="line top"
@@ -166,13 +178,15 @@
         </nav>
       </div>
     </header>
+
     <main class="container" role="main">
+      <!-- Hero Section -->
       <section
         class="section-hero"
-        aria-label="Mobin Ghaemi Profile"
         id="heroSection"
+        aria-label="a simple profile of me"
       >
-        <!-- author picture + hover effect -->
+        <!-- Profile image -->
         <div class="profile">
           <img
             src="./assets/imgs/me.webp"
@@ -182,12 +196,14 @@
             height="460"
           />
         </div>
-        <!-- website primary heading -->
+
+        <!-- Hero heading -->
         <h1 class="heading-primary mg-t-lg">
           I do code and <br class="word-wrap" />
-          make content
-          <span class="gradient-purple">about it!</span>
+          make content <span class="gradient-purple">about it!</span>
         </h1>
+
+        <!-- Biography paragraph -->
         <p class="section-hero__biography">
           Hey, I'm Mobin — a curious full-stack developer from Gorgan 🇮🇷 who
           started this coding journey in the world of Android apps with Java.
@@ -195,40 +211,35 @@
           and I’m totally hooked on clean architecture. Also, yes... I run Arch
           Linux (btw 😎). Let’s build something cool!
         </p>
-        <!-- navigation's -->
+
+        <!-- Call-to-action buttons -->
         <div class="section-hero__actions">
           <a
             href="https://t.me/gnuMobin"
             class="btn btn--primary"
-            aria-label="Telegram Profile"
-            rel="noopener noreferrer"
             target="_self"
+            >Get In Touch</a
           >
-            Get In Touch
-          </a>
-          <a
-            href="./assets/etc/cv.pdf"
-            class="btn btn--secondary"
-            aria-label="Download CV"
-            role="button"
-            download
+          <a href="./assets/etc/cv.pdf" class="btn btn--secondary" download
+            >Download CV</a
           >
-            Download CV
-          </a>
         </div>
       </section>
+
+      <!-- Technologies Section -->
       <section
         class="section-technologies"
-        aria-label="What technologies i use"
+        aria-label="What technologies I use"
       >
         <h2 class="heading-sub">EXPERIENCE WITH</h2>
         <ul class="skills">
-          <li class="skills__item jelly jelly">
+          <!-- Each skill icon -->
+          <li class="skills__item jelly">
             <svg
               class="skills__icon"
-              aria-label="HTML Logo"
               role="img"
-              title="html"
+              aria-label="HTML5 Logo"
+              title="HTML5"
             >
               <use xlink:href="./assets/technologies/html.svg"></use>
             </svg>
@@ -236,9 +247,9 @@
           <li class="skills__item jelly">
             <svg
               class="skills__icon"
-              aria-label="css Logo"
               role="img"
-              title="css"
+              aria-label="CSS Logo"
+              title="CSS"
             >
               <use xlink:href="./assets/technologies/css.svg"></use>
             </svg>
@@ -246,9 +257,9 @@
           <li class="skills__item jelly">
             <svg
               class="skills__icon"
-              aria-label="Sass Logo"
               role="img"
-              title="sass"
+              aria-label="Sass Logo"
+              title="Sass"
             >
               <use xlink:href="./assets/technologies/sass.svg"></use>
             </svg>
@@ -256,9 +267,9 @@
           <li class="skills__item jelly">
             <svg
               class="skills__icon"
-              aria-label="TailwindCSS Logo"
               role="img"
-              title="tailwindcss"
+              aria-label="TailwindCSS Logo"
+              title="TailwindCSS"
             >
               <use xlink:href="./assets/technologies/tailwindcss.svg"></use>
             </svg>
@@ -266,19 +277,19 @@
           <li class="skills__item jelly">
             <svg
               class="skills__icon"
-              aria-label="Javascript Logo"
               role="img"
-              title="javascript"
+              aria-label="JavaScript Logo"
+              title="JavaScript"
             >
-              <use xlink:href="./assets/technologies/javascript.svg"></use>
+              <use xlink:href="./assets/technologies/js.svg"></use>
             </svg>
           </li>
           <li class="skills__item jelly">
             <svg
               class="skills__icon"
-              aria-label="React Logo"
               role="img"
-              title="react"
+              aria-label="React.js Logo"
+              title="React.js"
             >
               <use xlink:href="./assets/technologies/react.svg"></use>
             </svg>
@@ -286,19 +297,19 @@
           <li class="skills__item jelly">
             <svg
               class="skills__icon"
-              aria-label="Node.js Logo"
               role="img"
-              title="node.js"
+              aria-label="Node.js Logo"
+              title="Node.js"
             >
-              <use xlink:href="./assets/technologies/nodedotjs.svg"></use>
+              <use xlink:href="./assets/technologies/nodejs.svg"></use>
             </svg>
           </li>
           <li class="skills__item jelly">
             <svg
               class="skills__icon"
-              aria-label="Express.js Logo"
               role="img"
-              title="express"
+              aria-label="Express.js Logo"
+              title="Express.js"
             >
               <use xlink:href="./assets/technologies/express.svg"></use>
             </svg>
@@ -306,9 +317,9 @@
           <li class="skills__item jelly">
             <svg
               class="skills__icon"
-              aria-label="MongoDB Logo"
               role="img"
-              title="mongodb"
+              aria-label="MongoDB Logo"
+              title="MongoDB"
             >
               <use xlink:href="./assets/technologies/mongodb.svg"></use>
             </svg>
@@ -316,8 +327,8 @@
           <li class="skills__item jelly">
             <svg
               class="skills__icon"
-              aria-label="Linux Logo"
               role="img"
+              aria-label="Linux Logo"
               title="Linux"
             >
               <use xlink:href="./assets/technologies/linux.svg"></use>
@@ -326,25 +337,26 @@
         </ul>
       </section>
 
+      <!-- Projects Section -->
       <section
         class="section-projects"
         id="projectsSection"
-        aria-label="My Projects"
+        aria-label="What projects I done"
       >
         <h2 class="heading-secondary gradient-orange">Projects</h2>
 
         <div class="section-projects__cards">
+          <!-- Project Card Example -->
           <a
             href="https://mobin-vpn.netlify.app"
-            role="link"
-            aria-label="MobinVPN project"
-            rel="noopener noreferrer"
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label="external link to MobinVPN"
           >
             <figure class="card">
               <img
                 src="assets/imgs/projects/project-thumbnail-1.webp"
-                alt="Screenshot of Vazheyab project"
+                alt="Mobin VPN project"
                 class="card__img"
                 loading="lazy"
                 width="1920"
@@ -352,67 +364,55 @@
               />
               <figcaption class="card__content">
                 <h3 class="card__title">Mobin VPN</h3>
-                <svg class="card__icon" role="img" aria-hidden="true">
+                <svg class="card__icon" aria-hidden="true" role="img">
                   <use xlink:href="./assets/icons/chevron.svg"></use>
                 </svg>
               </figcaption>
             </figure>
           </a>
-
           <a
-            href="https://gnumobin.github.io"
-            role="link"
-            aria-label="Gnu mobin project"
-            rel="noopener noreferrer"
+            href="https://gnumobin.netlify.app"
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label="external link to mobin-ghaemi portfolio"
           >
             <figure class="card">
               <img
                 src="assets/imgs/projects/project-thumbnail-2.webp"
-                alt="Screenshot of Vecia project"
+                alt="Mobin Documentation Website"
                 class="card__img"
                 loading="lazy"
-                width="1920"
-                height="1080"
               />
               <figcaption class="card__content">
-                <h3 class="card__title">Mobin Portfolio</h3>
-                <svg class="card__icon" role="img" aria-hidden="true">
+                <h3 class="card__title">Mobin Docs</h3>
+                <svg class="card__icon" aria-hidden="true" role="img">
                   <use xlink:href="./assets/icons/chevron.svg"></use>
                 </svg>
               </figcaption>
             </figure>
           </a>
+          <!-- Add more project cards as needed -->
         </div>
       </section>
 
+      <!-- Experience Section -->
       <section
         class="section-experience"
         id="experienceSection"
-        aria-label="My Experiences"
+        aria-label="All my work experiences"
       >
         <h2 class="heading-secondary gradient-blue text-center">Experience</h2>
 
         <div class="experiences">
-          <!-- Google -->
+          <!-- Experience Example: Google -->
           <article class="experience">
             <figure class="experience__logo">
-              <svg
-                aria-label="Google Logo"
-                role="img"
-                class="experience__icon"
-                title="Google"
-              >
+              <svg class="experience__icon" aria-hidden="true" role="img">
                 <use xlink:href="./assets/companies/google.svg"></use>
               </svg>
-              <figcaption aria-label="Google" class="visually-hidden">
-                Google
-              </figcaption>
             </figure>
             <h3 class="experience__title">Lead Software Engineer at Google</h3>
-            <time datetime="2021-01" class="experience__time">
-              Jan 2021 - Present
-            </time>
+            <time datetime="2021-01">Jan 2021 - Present</time>
             <p class="experience__text">
               As a Senior Software Engineer at Google, I played a pivotal role
               in developing innovative solutions for Google's core search
@@ -422,25 +422,15 @@
             </p>
           </article>
 
-          <!-- Apple -->
+          <!-- Experience Example: Apple -->
           <article class="experience">
             <figure class="experience__logo">
-              <svg
-                aria-label="Apple Logo"
-                role="img"
-                class="experience__icon"
-                title="Apple"
-              >
+              <svg class="experience__icon" aria-hidden="true" role="img">
                 <use xlink:href="./assets/companies/apple.svg"></use>
               </svg>
-              <figcaption aria-label="Apple" class="visually-hidden">
-                Apple
-              </figcaption>
             </figure>
-            <h3 class="experience__title">Junior Software Engineer at Apple</h3>
-            <time datetime="2018-06" class="experience__time">
-              Jun 2018 - Dec 2020
-            </time>
+            <h3 class="experience__title">Senior Developer at Apple</h3>
+            <time datetime="2018-05">May 2018 - Dec 2020</time>
             <p class="experience__text">
               During my tenure at Apple, I held the role of Software Architect,
               where I played a key role in shaping the architecture of
@@ -450,25 +440,15 @@
             </p>
           </article>
 
-          <!-- Meta -->
+          <!-- Experience Example: Meta -->
           <article class="experience">
             <figure class="experience__logo">
-              <svg
-                aria-label="Meta Logo"
-                role="img"
-                class="experience__icon"
-                title="Meta"
-              >
+              <svg class="experience__icon" aria-hidden="true" role="img">
                 <use xlink:href="./assets/companies/meta.svg"></use>
               </svg>
-              <figcaption aria-label="Meta" class="visually-hidden">
-                Meta
-              </figcaption>
             </figure>
             <h3 class="experience__title">Software Engineer at Meta</h3>
-            <time datetime="2016-03" class="experience__time">
-              Mar 2016 - May 2018
-            </time>
+            <time datetime="2015-03">Mar 2015 - Apr 2018</time>
             <p class="experience__text">
               At Meta, I worked on large-scale social networking infrastructure,
               improving backend performance and scalability for billions of
@@ -480,10 +460,16 @@
       </section>
     </main>
 
-    <footer class="footer" id="contactSection">
+    <!-- Footer with contact and social links -->
+    <footer
+      class="footer"
+      id="contactSection"
+      aria-label="How contact with Me?"
+    >
       <div class="container">
-        <h3 class="heading-tertiary">Contact</h3>
+        <h2 class="heading-tertiary">Contact</h2>
 
+        <!-- Fun bio paragraph -->
         <p class="footer__text">
           Full-stack wizard 🧙‍♂️ with 5+ years of coding magic ✨ — started
           casting spells in Java ☕ for Android, now conjuring sleek web apps
@@ -492,53 +478,40 @@
           chat! 💬
         </p>
 
+        <!-- Email contact -->
         <address class="footer__email neon">
-          <svg class="footer__icon" role="img" aria-hidden="true">
+          <svg class="footer__icon" aria-hidden="true" role="img">
             <use xlink:href="./assets/icons/email.svg"></use>
           </svg>
           <a
             href="mailto:gnumobin@gmail.com"
             class="footer__email--link"
-            target="_blank"
-            rel="noopener noreferrer"
-            role="link"
+            aria-label="email"
+            >gnumobin@gmail.com</a
           >
-            gnumobin@gmail.com
-          </a>
         </address>
 
+        <!-- Social media icons -->
         <div class="footer__socials">
           <a
-            href="https://youtube.com/@catplantasmr?si=5EPXJxkB3PX9DDMZ"
-            aria-label="Youtube Profile"
+            href="https://youtube.com/@catplantasmr"
             target="_blank"
             rel="noopener noreferrer"
             class="jelly"
-            role="link"
+            aria-label="YouTube channel"
           >
-            <svg
-              class="footer__icon"
-              role="img"
-              title="Youtube"
-              aria-label="Youtube Logo"
-            >
+            <svg class="footer__icon" aria-hidden="true" role="img">
               <use xlink:href="./assets/companies/youtube.svg"></use>
             </svg>
           </a>
           <a
             href="https://t.me/gnuMobin"
-            aria-label="Telegram Profile"
             target="_blank"
             rel="noopener noreferrer"
             class="jelly"
-            role="link"
+            aria-label="Telegram profile"
           >
-            <svg
-              class="footer__icon"
-              role="img"
-              title="Telegram"
-              aria-label="Telegram Logo"
-            >
+            <svg class="footer__icon" aria-hidden="true" role="img">
               <use xlink:href="./assets/companies/telegram.svg"></use>
             </svg>
           </a>

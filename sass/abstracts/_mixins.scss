@@ -1,20 +1,24 @@
+// Flexbox helper for common horizontal layout with spaced items and vertical centering
 @mixin flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+// Heading typography mixin to set size and weight
 @mixin heading($size, $weight) {
   font-size: $size;
   font-weight: $weight;
 }
 
+// Gradient text effect mixin, applies a background gradient clipped to text
 @mixin gradient($color) {
   background-image: $color;
   color: transparent;
   background-clip: text;
 }
 
+// Grid layout helper to create responsive columns with min and max widths
 @mixin grid-columns($min, $max) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($min, $max));

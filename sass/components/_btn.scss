@@ -1,68 +1,86 @@
 $color-text-bold: #fff;
 $color-bg: #161513;
 
+// Button base styles with flexible inline layout and rounded shape
 .btn {
+  // type
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  // positions
   position: relative;
-  overflow: hidden;
-  cursor: pointer;
+  // spaces
   padding: 1.6rem 3rem;
+  overflow: hidden;
+  // typography
   font-weight: 600;
   font-size: var(--font-btn);
   text-decoration: none;
+  // borders
   border: 2px solid var(--color-text-bold);
   border-radius: 99999px;
+  // animations
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s;
   will-change: transform, opacity;
+  cursor: pointer;
 
-  @include responsive(lg-mobile) {
-    padding: 1.4rem 2.4rem;
-  }
+  // // Responsive padding adjustment for smaller screens
+  // @include responsive(lg-mobile) {
+  //   padding: 1.4rem 2.4rem;
+  // }
 
+  // Pressed state: moves button down slightly
   &:visited,
   &:active {
     transform: translateY(0.6rem);
   }
 
+  // Decorative pseudo-elements for subtle animated gradients behind the button
   &::before,
   &::after {
     content: "";
+    // Positions
     position: absolute;
-    z-index: -1;
-    pointer-events: none;
     top: 0;
     left: -50%;
     right: -50%;
+    z-index: -1;
+    // Dimensions
     height: 0;
     padding-bottom: 150%;
+    // Borders
     border-radius: 39%;
+    // Hidden by default
     opacity: 0;
+    // Animations
     transition: transform 1.2s ease-out, opacity 0.9s ease-out;
     backface-visibility: hidden;
+    pointer-events: none;
   }
 
+  // Left gradient shape, initially below the button and rotated
   &::before {
     transform: translate3d(-10%, 5em, 0) rotate(330deg);
     background: linear-gradient(25deg, rgba(224, 224, 224, 0.15), transparent);
   }
 
+  // Right gradient shape, initially below the button and rotated
   &::after {
     transform: translate3d(10%, 5em, 0) rotate(0deg);
     background: linear-gradient(70deg, rgba(224, 224, 224, 0.18), transparent);
   }
 
+  // On hover, gradient shapes move up and become visible, creating a subtle shine effect
   &:hover::before {
     transform: translate3d(-10%, -1em, 0) rotate(100deg);
     opacity: 1;
   }
-
   &:hover::after {
     transform: translate3d(10%, -1em, 0) rotate(180deg);
     opacity: 1;
   }
 
+  // Primary button style: solid background with inverted text color
   &--primary {
     background-color: var(--color-text-bold);
     color: $color-bg;
@@ -73,10 +91,11 @@ $color-bg: #161513;
     &:hover {
       background-color: darken($color-bg, 10%);
       color: var(--color-text-bold);
-      @extend %glow;
+      @extend %glow; // glow effect on hover
     }
   }
 
+  // Secondary button style: transparent background with bold text color
   &--secondary {
     background-color: transparent;
     color: var(--color-text-bold);
@@ -84,7 +103,7 @@ $color-bg: #161513;
       transform 0.1s;
 
     &:hover {
-      @extend %glow;
+      @extend %glow; // glow effect on hover
     }
   }
 }

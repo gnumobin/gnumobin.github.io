@@ -1,53 +1,54 @@
+// Responsive mixin for media queries based on predefined breakpoints
 @mixin responsive($bp) {
-  // 1220px
+  // Desktop breakpoint (1220px)
   @if $bp == desktop {
     @media screen and (max-width: 76.25em) {
       @content;
     }
   }
-  // 1024px
+  // Laptop breakpoint (1024px)
   @if $bp == laptop {
     @media screen and (max-width: 64em) {
       @content;
     }
   }
-  // 768px
+  // Landscape tablet (768px)
   @if $bp == land-tablet {
     @media screen and (max-width: 48em) {
       @content;
     }
   }
-  // 670px
+  // Portrait tablet (670px)
   @if $bp == port-tablet {
     @media screen and (max-width: 42em) {
       @content;
     }
   }
-  // 550px
+  // Large mobile (550px)
   @if $bp == lg-mobile {
     @media screen and (max-width: 34em) {
       @content;
     }
   }
-  // 480px
+  // Medium mobile (480px)
   @if $bp == md-mobile {
     @media screen and (max-width: 30em) {
       @content;
     }
   }
-  // 420px
+  // Small mobile (420px)
   @if $bp == sm-mobile {
     @media screen and (max-width: 26.25em) {
       @content;
     }
   }
-  // 420px
+  // Extra small mobile (370px)
   @if $bp == xs-mobile {
     @media screen and (max-width: 23.125em) {
       @content;
     }
   }
-  // 320px
+  // Extra extra small mobile (320px)
   @if $bp == xxs-mobile {
     @media screen and (max-width: 20em) {
       @content;

@@ -3,26 +3,38 @@
   position: relative;
 
   &__list {
+    // Alignment and gutters
     display: flex;
     gap: var(--gap-header-nav-list);
+    // Typography
     font-family: "PlusJakartaSans", "poppins", sans-serif;
     font-size: var(--font-header-nav);
     font-weight: 600;
 
+    // Mobile menu: fixed sidebar, initially hidden
     @include responsive(land-tablet) {
+      // Positions
       position: fixed;
       z-index: 100;
       top: 0.75rem;
       left: 0.75rem;
+      // Colors
       background-color: var(--color-bg-extra-thin);
+      // Layouts
       flex-direction: column;
+      // Dimensions
       height: 98dvh;
       width: 70%;
+      // Gutters
       gap: 2rem;
+      // Spaces
       padding: 2rem;
+      // Hidden
       transform: translateX(-100%);
       visibility: hidden;
+      // Animations
       transition: var(--trans-2x);
+      // Radius
       border-radius: var(--rounded-menu);
     }
   }
@@ -31,25 +43,32 @@
     color: var(--color-text-bold);
 
     &--active {
+      // Active navigation item style
       color: var(--color-text);
     }
 
     @include responsive(land-tablet) {
+      // Mobile menu item full width styling
+      display: block;
+      width: 100%;
+
       background-color: var(--color-bg);
       padding: 2rem 3rem;
+
       border-radius: var(--rounded-menu);
-      width: 100%;
-      display: block;
     }
   }
 
   &__link {
+    // Basic link styles with transitions
     &:link,
     &:visited {
       color: inherit;
       transition: all 0.5s;
       outline: none;
     }
+
+    // Hover and focus states with glow effect
     &:hover,
     &:active,
     &:focus {

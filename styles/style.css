@@ -83,12 +83,20 @@
   background-clip: text;
 }
 
-.heading-tertiary, h2.heading-secondary, h1.heading-primary {
+.heading-tertiary, h2.heading-secondary, section h1,
+article h1,
+aside h1,
+nav h1,
+header h1 {
   color: var(--color-text-bold);
   line-height: 6.34rem;
 }
 @media screen and (max-width: 34em) {
-  .heading-tertiary, h2.heading-secondary, h1.heading-primary {
+  .heading-tertiary, h2.heading-secondary, section h1,
+  article h1,
+  aside h1,
+  nav h1,
+  header h1 {
     line-height: 4.5rem;
   }
 }
@@ -354,7 +362,11 @@ btn {
   -webkit-user-drag: none;
 }
 
-h1.heading-primary {
+section h1,
+article h1,
+aside h1,
+nav h1,
+header h1 {
   font-size: clamp(3.25rem, 5vw, 5.5rem);
   font-weight: 900;
 }

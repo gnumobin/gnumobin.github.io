@@ -3,14 +3,16 @@
   text-align: center;
 
   &__biography {
-    // typography
+    // Typography styles for biography text
     font-size: var(--font-hero-biography);
     font-weight: 300;
-    // alignment
+
+    // Centered with max width and margin for spacing
     max-width: 60%;
     margin: var(--gap-hero-biography) auto
       calc(var(--gap-hero-biography) + 1.4rem);
 
+    // Responsive adjustments for different screen sizes
     @include responsive(laptop) {
       max-width: 80%;
     }
@@ -20,6 +22,7 @@
   }
 
   &__actions {
+    // Horizontal flex container to center buttons with spacing
     display: flex;
     justify-content: center;
     gap: var(--gap-hero-actions);

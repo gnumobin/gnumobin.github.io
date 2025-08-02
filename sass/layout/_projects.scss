@@ -1,7 +1,9 @@
+// Styles for the Projects section
 .section-projects {
   padding-top: var(--gap-section);
   text-align: center;
 
+  // Grid container for project cards
   &__cards {
     @include grid-columns(25rem, 1fr);
     gap: var(--gap-projects-between);

@@ -1,38 +1,50 @@
 .footer {
   background-color: var(--color-bg-dark);
+
+  // Margin & Padding to separate footer from above content
   margin-top: calc(var(--gap-section) + 0.7rem);
   padding: calc(var(--gap-section) - 1.8rem) 0 var(--gap-section);
 
+  // Text color and font size for footer text
   color: var(--color-grey);
   font-size: var(--font-footer-text);
 
   &__icon {
+    // Default icon size in footer
     width: 1.8rem;
     height: 1.8rem;
 
     @include responsive(xxs-mobile) {
+      // a little bigger than desktop version
       width: 2rem;
       height: 2rem;
     }
   }
 
   &__text {
+    // Light font weight and vertical spacing for footer texts
     font-weight: 300;
     margin: 3.4rem 0 2.2rem;
   }
 
   &__email {
+    // Font Style & Weights
     font-weight: 600;
     font-style: normal;
 
+    // Flex to align icon and text horizontally
     display: flex;
     align-items: center;
     gap: 0.55rem;
+
+    // Spaces
     margin-bottom: 4.1rem;
 
+    // Smooth transition for hover/focus effects
     transition: var(--trans-1x);
 
     &--link {
+      // Link color inherits from parent, no default blue
       &:link,
       &:visited {
         color: inherit;
@@ -41,9 +53,11 @@
   }
 
   &__socials {
+    // Alignment
     display: flex;
     gap: 2.7rem;
 
+    // Set size for SVG icons inside links
     & > a > * {
       width: 1.8rem;
       height: 1.8rem;
