@@ -1,6 +1,7 @@
+// Base font size for responsive scaling
 html {
   scroll-behavior: smooth;
-  font-size: 62.5%;
+  font-size: 62.5%; // 1rem = 10px base
 
   @include responsive(laptop) {
     font-size: 60%;
@@ -12,29 +13,46 @@ html {
     font-size: 56%;
   }
 }
+
+// Base styles for body
 body {
   box-sizing: border-box;
   font-family: "poppins", sans-serif;
   font-weight: 400;
   background-color: var(--color-bg);
   color: var(--color-text);
+  // smoother fonts
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-* {
+
+// Reset margin, padding and inherit box-sizing for all elements
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
 }
+
+// Remove bullet points from all lists
 ul {
   list-style-type: none;
 }
+
+// Remove underline from links
 a:link,
 a:visited {
   text-decoration: none;
 }
+
+// Remove backdrop styling from full-screen elements
 a::backdrop {
   display: none;
 }
 
+// Selection color for text highlight
 ::selection {
   background-color: var(--color-grey);
   color: var(--color-text-bold);

@@ -1,8 +1,12 @@
-.jelly:hover {
+.jelly {
   transition: all 0.3s ease;
   will-change: transform;
-  animation: jelly 0.6s ease-in-out;
+
+  &:hover {
+    animation: jelly 0.6s ease-in-out;
+  }
 }
+
 .neon:hover {
   color: var(--color-text-bold);
   text-shadow: 0 0 1rem var(--color-grey), 0 0 2rem var(--color-grey),

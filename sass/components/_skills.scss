@@ -1,12 +1,11 @@
 .skills {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1rem, 10rem));
+  @include grid-columns(1rem, 10rem);
   margin-top: var(--gap-skills);
   justify-content: center;
   row-gap: 2.5rem;
 
   @include responsive(lg-mobile) {
-    grid-template-columns: repeat(auto-fit, minmax(auto, 7rem));
+    @include grid-columns(auto, 7rem);
   }
 
   &__item {
@@ -21,10 +20,5 @@
     width: 4.4rem;
     height: 4.4rem;
     fill: currentColor;
-
-    // @include responsive(lg-mobile) {
-    //   width: 3rem;
-    //   height: 3rem;
-    // }
   }
 }

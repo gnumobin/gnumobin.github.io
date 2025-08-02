@@ -3,6 +3,7 @@
   display: grid;
   gap: calc(var(--gap-experiences) - 0.7rem);
 }
+
 .experience {
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -12,10 +13,16 @@
   font-size: var(--font-experience-text);
   color: var(--color-grey);
 
-  &__logo {
+  &__logo,
+  &__time,
+  &__text {
     @include responsive(sm-mobile) {
       grid-column: 1 / -1;
     }
+  }
+
+  &__text {
+    grid-column: 1 / -1;
   }
 
   &__icon {
@@ -34,15 +41,5 @@
     color: var(--color-text-bold);
     font-weight: 800;
     font-size: var(--font-experience-title);
-  }
-
-  &__time {
-    @include responsive(port-tablet) {
-      grid-column: 1 / -1;
-    }
-  }
-
-  &__text {
-    grid-column: 1 / -1;
   }
 }

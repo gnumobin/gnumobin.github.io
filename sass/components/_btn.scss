@@ -1,6 +1,5 @@
 $color-text-bold: #fff;
 $color-bg: #161513;
-$neon-color: #e0e0e0;
 
 .btn {
   display: inline-flex;
@@ -23,8 +22,8 @@ $neon-color: #e0e0e0;
     transform: translateY(0.6rem);
   }
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     z-index: -1;
@@ -39,20 +38,23 @@ $neon-color: #e0e0e0;
     transition: transform 1.2s ease-out, opacity 0.9s ease-out;
     backface-visibility: hidden;
   }
-  &:before {
+
+  &::before {
     transform: translate3d(-10%, 5em, 0) rotate(330deg);
     background: linear-gradient(25deg, rgba(224, 224, 224, 0.15), transparent);
   }
-  &:after {
+
+  &::after {
     transform: translate3d(10%, 5em, 0) rotate(0deg);
     background: linear-gradient(70deg, rgba(224, 224, 224, 0.18), transparent);
   }
 
-  &:hover:before {
+  &:hover::before {
     transform: translate3d(-10%, -1em, 0) rotate(100deg);
     opacity: 1;
   }
-  &:hover:after {
+
+  &:hover::after {
     transform: translate3d(10%, -1em, 0) rotate(180deg);
     opacity: 1;
   }
@@ -61,26 +63,24 @@ $neon-color: #e0e0e0;
     background-color: var(--color-text-bold);
     color: $color-bg;
     box-shadow: none;
-    transition: background-color 0.3s ease, color 0.3s ease,
-      box-shadow 1.2s ease, transform 0.1s;
+    transition: background-color 0.3s, color 0.3s, box-shadow 1.2s,
+      transform 0.1s;
 
     &:hover {
       background-color: darken($color-bg, 10%);
       color: var(--color-text-bold);
-      box-shadow: 0 0 4px 1.5px lighten($neon-color, 10%),
-        0 0 10px 4px $neon-color, 0 0 20px 8px lighten($neon-color, 20%);
+      @extend %glow;
     }
   }
 
   &--secondary {
     background-color: transparent;
     color: var(--color-text-bold);
-    transition: background-color 0.3s ease, color 0.3s ease,
-      box-shadow 1.2s ease, transform 0.1s;
+    transition: background-color 0.3s, color 0.3s, box-shadow 1.2s,
+      transform 0.1s;
 
     &:hover {
-      box-shadow: 0 0 4px 1.5px lighten($neon-color, 10%),
-        0 0 10px 4px $neon-color, 0 0 20px 8px lighten($neon-color, 20%);
+      @extend %glow;
     }
   }
 }

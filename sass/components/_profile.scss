@@ -1,8 +1,6 @@
 .profile {
-  // alignment
   width: 25rem;
   margin: 0 auto;
-  // animation effects
   overflow: hidden;
   border-radius: 50%;
   cursor: zoom-in;
@@ -20,9 +18,12 @@
     height: auto;
     border-radius: 50%;
     transition: var(--trans-1x);
+    will-change: transform;
   }
 
-  &:hover &__img {
-    transform: scale(1.2);
+  &:hover {
+    &__img {
+      transform: scale(1.2);
+    }
   }
 }

@@ -1,9 +1,9 @@
 .card {
   max-width: 90rem;
   border-radius: var(--rounded-card);
-  overflow: hidden;
   background-color: var(--color-bg-extra-thin);
   transition: var(--trans-1x);
+  overflow: hidden;
   justify-self: center;
 
   &__img {
@@ -12,29 +12,29 @@
   }
 
   &__content {
-    @include flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1.4rem 2.3rem;
   }
 
   &__title {
-    color: var(--color-text-bold);
+    @extend %title-uppercase;
     font-size: var(--font-card-title);
-    font-weight: 900;
-    text-transform: uppercase;
 
     &::before {
       content: "click here to visit";
-      color: var(--color-text);
       display: block;
       font-size: var(--font-card-title-sub);
       font-weight: 700;
+      color: var(--color-text);
       text-align: left;
     }
   }
 
   &__icon {
-    width: 1.5rem;
-    height: 1.4rem;
+    inline-size: 1.5rem;
+    block-size: 1.4rem;
   }
 
   &:hover {

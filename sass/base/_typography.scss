@@ -1,65 +1,26 @@
 .heading-primary {
   @extend %heading;
   @include heading(5.5rem, 900);
-
-  @include responsive(laptop) {
-    font-size: 5rem;
-  }
-  @include responsive(land-tablet) {
-    font-size: 4.5rem;
-  }
-  @include responsive(lg-mobile) {
-    font-size: 4rem;
-  }
-  @include responsive(md-mobile) {
-    font-size: 3.5rem;
-  }
-  @include responsive(sm-mobile) {
-    font-size: 3rem;
-  }
+  @include responsive-heading(5rem, 4.5rem, 4rem, 3.5rem, 3rem);
 }
+
 .heading-secondary {
   @extend %heading;
   @include heading(3.5rem, 900);
-
   text-transform: uppercase;
-
-  @include responsive(laptop) {
-    font-size: 3rem;
-  }
-  @include responsive(lg-mobile) {
-    font-size: 2.5rem;
-  }
-  @include responsive(md-mobile) {
-    font-size: 2.25rem;
-  }
+  @include responsive-heading(3rem, 2.5rem, 2.25rem);
 }
+
 .heading-tertiary {
   @extend %heading;
   @include heading(2.25rem, 800);
-
   letter-spacing: 0.05rem;
-
-  @include responsive(laptop) {
-    font-size: 2rem;
-  }
-  @include responsive(lg-mobile) {
-    font-size: 1.8rem;
-  }
-  @include responsive(md-mobile) {
-    font-size: 1.7rem;
-  }
+  @include responsive-heading(2rem, 1.8rem, 1.7rem);
 }
+
 .heading-sub {
   @include heading(2rem, 600);
-
-  @include responsive(lg-mobile) {
-    font-size: 1.8rem;
-  }
-  @include responsive(md-mobile) {
-    font-size: 1.7rem;
-  }
-
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  @include responsive-heading(1.8rem, 1.7rem);
 }

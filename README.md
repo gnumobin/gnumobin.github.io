@@ -1,41 +1,32 @@
 # Mobin Ghaemi Portfolio
 
-<!-- **Lasles Landing Page** is a clean, modern website template designed for VPN services, featuring a responsive layout, interactive elements, and clear call-to-action sections. It highlights key benefits like security, speed, and global server access to attract potential customers. -->
+**Personal portfolio website showcasing projects, skills, and contact information. The design is clean, modern, and fully responsive, ensuring great usability across devices.**
 
 ## 🧰 - Technologies used
 
 <section>
-    <img src="https://skillicons.dev/icons?i=html" height="35" alt="html" />
+    <img src="https://skillicons.dev/icons?i=html" height="35" alt="HTML" />
     <img width="2" />
-    <img src="https://skillicons.dev/icons?i=css" height="35" alt="css" />
+    <img src="https://skillicons.dev/icons?i=css" height="35" alt="CSS" />
     <img width="2" />
-    <img src="https://skillicons.dev/icons?i=sass" height="35" alt="sass" />
+    <img src="https://skillicons.dev/icons?i=sass" height="35" alt="Sass" />
+    <img width="2" />
+    <img src="https://skillicons.dev/icons?i=js" height="35" alt="JavaScript" />
 </section>
 
-<!-- ## 📖 - Libraries
+## 📖 - Libraries & Tools
 
-  <section>
-    <img
-      src="https://img.shields.io/badge/Embla%20Carousel-f53838?logo=e&logoColor=white"
-      height="24"
-      alt="Embla Carousel"
-    />
-    <img
-      src="https://img.shields.io/badge/React%20Icons-f53838?logo=icon&logoColor=white"
-      height="24"
-      alt="React Icons"
-    />
-    <img
-      src="https://img.shields.io/badge/Aos%20Animation-f53838?logo=bmw&logoColor=white"
-      height="24"
-      alt="Aos animation"
-    />
-  </section> -->
+<!-- <section>
+    <img src="https://img.shields.io/badge/React-f53838?logo=react&logoColor=white" height="24" alt="React" />
+    <img src="https://img.shields.io/badge/Vite-646cff?logo=vite&logoColor=white" height="24" alt="Vite" />
+    <img src="https://img.shields.io/badge/GSAP-88ce02?logo=greensock&logoColor=white" height="24" alt="GSAP Animation" />
+    <img src="https://img.shields.io/badge/AOS Animation-f53838?logo=aos&logoColor=white" height="24" alt="AOS animation" />
+</section> -->
 
-## 👀 - You wanna see?
+## 👀 - Wanna see it live?
 
-- <a href='https://gnumobin.github.io'>Preview Web!</a>
+- [Preview Web!](https://gnumobin.netlify.app)
 
-## 🤔 - Can I help? Tell me!
+## 🤔 - Want to get in touch?
 
-- <a href='https://t.me/gnuMobin'>Telegram</a>
+- [Telegram](https://t.me/gnuMobin)

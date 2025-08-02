@@ -1,8 +1,7 @@
 .footer {
   background-color: var(--color-bg-dark);
   margin-top: calc(var(--gap-section) + 0.7rem);
-  padding-top: calc(var(--gap-section) - 1.8rem);
-  padding-bottom: var(--gap-section);
+  padding: calc(var(--gap-section) - 1.8rem) 0 var(--gap-section);
 
   color: var(--color-grey);
   font-size: var(--font-footer-text);
@@ -14,8 +13,7 @@
 
   &__text {
     font-weight: 300;
-    margin-top: 3.4rem;
-    margin-bottom: 2.2rem;
+    margin: 3.4rem 0 2.2rem;
   }
 
   &__email {
@@ -25,7 +23,6 @@
     display: flex;
     align-items: center;
     gap: 0.55rem;
-
     margin-bottom: 4.1rem;
 
     transition: var(--trans-1x);

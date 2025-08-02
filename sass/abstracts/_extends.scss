@@ -11,3 +11,17 @@
     line-height: 4.5rem;
   }
 }
+
+// typography partial
+%title-uppercase {
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--color-text-bold);
+}
+
+$neon-color: #e0e0e0;
+
+%glow {
+  box-shadow: 0 0 4px 1.5px lighten($neon-color, 10%), 0 0 10px 4px $neon-color,
+    0 0 20px 8px lighten($neon-color, 20%);
+}
