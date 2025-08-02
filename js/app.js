@@ -3,6 +3,7 @@
 const hamMenuBtn = document.getElementById("hamMenuBtn");
 const hamMenu = document.getElementById("hamMenu");
 const overlay = document.getElementById("overlay");
+const header = document.querySelector(".header");
 
 hamMenuBtn.addEventListener("click", () => {
   hamMenu.style.visibility = "visible";
@@ -12,6 +13,8 @@ hamMenuBtn.addEventListener("click", () => {
   overlay.style.transform = "translateX(0%)";
 
   hamMenuBtn.classList.toggle("active");
+
+  header.style.backgroundColor = "transparent";
 });
 
 overlay.addEventListener("click", () => {
@@ -22,9 +25,16 @@ overlay.addEventListener("click", () => {
   overlay.style.transform = "translateX(200%)";
 
   hamMenuBtn.classList.toggle("active");
+
+  const bg = getComputedStyle(document.documentElement).getPropertyValue(
+    "--color-bg-thin"
+  );
+
+  setTimeout(() => {
+    header.style.backgroundColor = bg;
+  }, 400);
 });
 
-const header = document.querySelector(".header");
 const heroSection = document.querySelector(".section-hero");
 
 const observer = new IntersectionObserver(
