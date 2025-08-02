@@ -31,6 +31,10 @@ a:link,
 a:visited {
   text-decoration: none;
 }
+a::backdrop {
+  display: none;
+}
+
 ::selection {
   background-color: var(--color-grey);
   color: var(--color-text-bold);

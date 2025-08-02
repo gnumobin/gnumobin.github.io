@@ -296,6 +296,10 @@ a:visited {
   text-decoration: none;
 }
 
+a::backdrop {
+  display: none;
+}
+
 ::selection {
   background-color: var(--color-grey);
   color: var(--color-text-bold);
@@ -630,8 +634,8 @@ a:visited {
   text-align: left;
 }
 .card__icon {
-  font-size: 2rem;
-  color: var(--color-text-bold);
+  width: 1.5rem;
+  height: 1.4rem;
 }
 .card:hover {
   background-color: transparent;
@@ -812,7 +816,8 @@ a:visited {
   font-size: var(--font-footer-text);
 }
 .footer__icon {
-  color: var(--color-text-bold);
+  width: 1.65rem;
+  height: 1.65rem;
 }
 .footer__text {
   font-weight: 300;
@@ -838,6 +843,10 @@ a:visited {
 .footer__socials > a > * {
   width: 1.8rem;
   height: 1.8rem;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

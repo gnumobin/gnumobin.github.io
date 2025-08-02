@@ -8,7 +8,6 @@
 
     <!-- Main Styles -->
     <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="assets/icon/css/all.css" />
 
     <!-- Favicon -->
     <link
@@ -30,7 +29,7 @@
           "https://t.me/gnuMobin",
           "https://youtube.com/@catplantasmr"
         ],
-        "image": "https://gnumobin.netlify.app/assets/imgs/me.png"
+        "image": "https://gnumobin.netlify.app/assets/imgs/me.jpg"
       }
     </script>
 
@@ -53,7 +52,7 @@
     />
     <meta
       property="og:image"
-      content="https://gnumobin.netlify.app/assets/imgs/me.png"
+      content="https://gnumobin.netlify.app/assets/imgs/me.jpg"
     />
     <meta property="og:url" content="https://gnumobin.netlify.app" />
     <meta property="og:type" content="website" />
@@ -67,7 +66,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://gnumobin.netlify.app/assets/imgs/me.png"
+      content="https://gnumobin.netlify.app/assets/imgs/me.jpg"
     />
 
     <!-- Canonical URL -->
@@ -132,6 +131,7 @@
             viewBox="0 0 100 100"
             width="60"
             id="hamMenuBtn"
+            aria-expanded="false"
           >
             <path
               class="line top"
@@ -158,7 +158,7 @@
         <!-- author picture + hover effect -->
         <div class="profile">
           <img
-            src="./assets/imgs/me.png"
+            src="./assets/imgs/me.jpg"
             alt="Portrait of Mobin Ghaemi"
             class="profile__img"
             loading="lazy"
@@ -294,6 +294,16 @@
               <use xlink:href="./assets/technologies/mongodb.svg"></use>
             </svg>
           </li>
+          <li class="skills__item jelly">
+            <svg
+              class="skills__icon"
+              aria-label="Linux Logo"
+              role="img"
+              title="Linux"
+            >
+              <use xlink:href="./assets/technologies/linux.svg"></use>
+            </svg>
+          </li>
         </ul>
       </section>
 
@@ -314,13 +324,16 @@
           >
             <figure class="card">
               <img
-                src="assets/imgs/projects/project-thumbnail-1.png"
+                src="assets/imgs/projects/project-thumbnail-1.jpg"
                 alt="Screenshot of Vazheyab project"
                 class="card__img"
+                loading="lazy"
               />
               <figcaption class="card__content">
                 <h3 class="card__title">Mobin VPN</h3>
-                <i class="fa fa-chevron-right card__icon"></i>
+                <svg class="card__icon" role="img" aria-hidden="true">
+                  <use xlink:href="./assets/icons/chevron.svg"></use>
+                </svg>
               </figcaption>
             </figure>
           </a>
@@ -334,13 +347,16 @@
           >
             <figure class="card">
               <img
-                src="assets/imgs/projects/project-thumbnail-2.png"
+                src="assets/imgs/projects/project-thumbnail-2.jpg"
                 alt="Screenshot of Vecia project"
                 class="card__img"
+                loading="lazy"
               />
               <figcaption class="card__content">
                 <h3 class="card__title">Mobin Portfolio</h3>
-                <i class="fa fa-chevron-right card__icon"></i>
+                <svg class="card__icon" role="img" aria-hidden="true">
+                  <use xlink:href="./assets/icons/chevron.svg"></use>
+                </svg>
               </figcaption>
             </figure>
           </a>
@@ -454,7 +470,9 @@
         </p>
 
         <address class="footer__email neon">
-          <i class="fa fa-envelope footer__icon"></i>
+          <svg class="footer__icon" role="img" aria-hidden="true">
+            <use xlink:href="./assets/icons/email.svg"></use>
+          </svg>
           <a
             href="mailto:gnumobin@gmail.com"
             class="footer__email--link"
