@@ -29,7 +29,7 @@
           "https://t.me/gnuMobin",
           "https://youtube.com/@catplantasmr"
         ],
-        "image": "https://gnumobin.netlify.app/assets/imgs/me.jpg"
+        "image": "https://gnumobin.netlify.app/assets/imgs/me.webp"
       }
     </script>
 
@@ -52,7 +52,7 @@
     />
     <meta
       property="og:image"
-      content="https://gnumobin.netlify.app/assets/imgs/me.jpg"
+      content="https://gnumobin.netlify.app/assets/imgs/me.webp"
     />
     <meta property="og:url" content="https://gnumobin.netlify.app" />
     <meta property="og:type" content="website" />
@@ -66,11 +66,29 @@
     />
     <meta
       name="twitter:image"
-      content="https://gnumobin.netlify.app/assets/imgs/me.jpg"
+      content="https://gnumobin.netlify.app/assets/imgs/me.webp"
     />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://gnumobin.netlify.app" />
+
+    <!-- External Socials -->
+    <link rel="preconnect" href="https://youtube.com" crossorigin />
+    <link rel="dns-prefetch" href="https://t.me" />
+
+    <!-- Load prefer -->
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/imgs/logo.webp"
+      type="image/webp"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/imgs/me.webp"
+      type="image/webp"
+    />
   </head>
 
   <body>
@@ -81,7 +99,9 @@
           <!-- Website Logo -->
           <div class="logo">
             <img
-              src="./assets/imgs/logo.svg"
+              src="./assets/imgs/logo.webp"
+              width="250"
+              height="250"
               alt="Mobin Ghaemi personal website logo"
               class="logo__img"
             />
@@ -158,10 +178,11 @@
         <!-- author picture + hover effect -->
         <div class="profile">
           <img
-            src="./assets/imgs/me.jpg"
+            src="./assets/imgs/me.webp"
             alt="Portrait of Mobin Ghaemi"
             class="profile__img"
-            loading="lazy"
+            width="460"
+            height="460"
           />
         </div>
         <!-- website primary heading -->
@@ -189,10 +210,11 @@
             Get In Touch
           </a>
           <a
-            href="#"
+            href="./assets/etc/cv.pdf"
             class="btn btn--secondary"
             aria-label="Download CV"
             role="button"
+            download
           >
             Download CV
           </a>
@@ -324,10 +346,12 @@
           >
             <figure class="card">
               <img
-                src="assets/imgs/projects/project-thumbnail-1.jpg"
+                src="assets/imgs/projects/project-thumbnail-1.webp"
                 alt="Screenshot of Vazheyab project"
                 class="card__img"
                 loading="lazy"
+                width="1920"
+                height="1080"
               />
               <figcaption class="card__content">
                 <h3 class="card__title">Mobin VPN</h3>
@@ -347,10 +371,12 @@
           >
             <figure class="card">
               <img
-                src="assets/imgs/projects/project-thumbnail-2.jpg"
+                src="assets/imgs/projects/project-thumbnail-2.webp"
                 alt="Screenshot of Vecia project"
                 class="card__img"
                 loading="lazy"
+                width="1920"
+                height="1080"
               />
               <figcaption class="card__content">
                 <h3 class="card__title">Mobin Portfolio</h3>

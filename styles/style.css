@@ -493,6 +493,7 @@ a::backdrop {
 }
 .profile__img {
   width: 100%;
+  height: auto;
   border-radius: 50%;
   transition: var(--trans-1x);
 }
@@ -506,6 +507,7 @@ a::backdrop {
 }
 .logo__img {
   width: 100%;
+  height: auto;
 }
 
 .btn {
@@ -612,6 +614,7 @@ a::backdrop {
 }
 .card__img {
   width: 100%;
+  height: auto;
 }
 .card__content {
   display: flex;
@@ -748,7 +751,7 @@ a::backdrop {
 
 .overlay {
   position: fixed;
-  background-color: rgba(22, 21, 19, 0.9);
+  background-color: rgba(255, 255, 255, 0.5);
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -843,10 +846,6 @@ a::backdrop {
 .footer__socials > a > * {
   width: 1.8rem;
   height: 1.8rem;
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
