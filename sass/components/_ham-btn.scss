@@ -3,7 +3,6 @@
   -webkit-tap-highlight-color: transparent;
   transition: transform 400ms;
   display: none;
-  margin-right: -2rem;
 
   @include responsive(land-tablet) {
     display: block;

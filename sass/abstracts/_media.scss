@@ -41,4 +41,10 @@
       @content;
     }
   }
+  // 420px
+  @if $bp == xs-mobile {
+    @media screen and (max-width: 23.125em) {
+      @content;
+    }
+  }
 }

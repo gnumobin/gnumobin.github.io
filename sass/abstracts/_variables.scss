@@ -50,18 +50,21 @@
   }
   @include responsive(lg-mobile) {
     --font-btn: 2rem;
-    --font-hero-biography: 1.6rem;
+    --font-hero-biography: 1.7rem;
     --gap-section: 8rem;
     --font-experience-title: 1.9rem;
   }
   @include responsive(md-mobile) {
     --font-btn: 1.8rem;
-    --font-hero-biography: 1.5rem;
+    --font-hero-biography: 1.6rem;
     --gap-section: 7rem;
     --font-experience-title: 1.7rem;
   }
   @include responsive(sm-mobile) {
-    --font-btn: 1.5rem;
+    --font-btn: 1.6rem;
     --font-experience-title: 1.6rem;
+  }
+  @include responsive(xs-mobile) {
+    --font-btn: 1.4rem;
   }
 }

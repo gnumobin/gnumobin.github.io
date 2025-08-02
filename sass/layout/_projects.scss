@@ -3,7 +3,7 @@
   text-align: center;
 
   &__cards {
-    @include grid-columns(30rem, 1fr);
+    @include grid-columns(25rem, 1fr);
     gap: var(--gap-projects-between);
     margin-top: var(--gap-projects-top);
   }

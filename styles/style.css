@@ -47,7 +47,7 @@
 @media screen and (max-width: 34em) {
   :root {
     --font-btn: 2rem;
-    --font-hero-biography: 1.6rem;
+    --font-hero-biography: 1.7rem;
     --gap-section: 8rem;
     --font-experience-title: 1.9rem;
   }
@@ -55,15 +55,20 @@
 @media screen and (max-width: 30em) {
   :root {
     --font-btn: 1.8rem;
-    --font-hero-biography: 1.5rem;
+    --font-hero-biography: 1.6rem;
     --gap-section: 7rem;
     --font-experience-title: 1.7rem;
   }
 }
 @media screen and (max-width: 26.25em) {
   :root {
-    --font-btn: 1.5rem;
+    --font-btn: 1.6rem;
     --font-experience-title: 1.6rem;
+  }
+}
+@media screen and (max-width: 23.125em) {
+  :root {
+    --font-btn: 1.4rem;
   }
 }
 
@@ -98,7 +103,12 @@
 }
 @media screen and (max-width: 76.25em) {
   .container {
-    padding: 0 4rem;
+    padding: 0 3.5rem;
+  }
+}
+@media screen and (max-width: 23.125em) {
+  .container {
+    padding: 0 2rem;
   }
 }
 
@@ -284,6 +294,11 @@ html {
     font-size: 56%;
   }
 }
+@media screen and (max-width: 23.125em) {
+  html {
+    font-size: 54%;
+  }
+}
 
 body {
   box-sizing: border-box;
@@ -294,6 +309,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
 }
 
 *,
@@ -328,24 +344,24 @@ btn {
 }
 
 h1.heading-primary {
-  font-size: clamp(3rem, 5vw, 5.5rem);
+  font-size: clamp(3.25rem, 5vw, 5.5rem);
   font-weight: 900;
 }
 
 h2.heading-secondary {
-  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .heading-tertiary {
-  font-size: clamp(1.7rem, 3vw, 2.25rem);
+  font-size: clamp(1.8rem, 3vw, 2.25rem);
   font-weight: 800;
   letter-spacing: 0.05rem;
 }
 
 .heading-sub {
-  font-size: clamp(1.7rem, 2.5vw, 2rem);
+  font-size: clamp(1.8rem, 2.5vw, 2rem);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
@@ -450,6 +466,11 @@ h2.heading-secondary {
     width: 20rem;
   }
 }
+@media screen and (max-width: 23.125em) {
+  .profile {
+    width: 18rem;
+  }
+}
 .profile__img {
   width: 100%;
   height: auto;
@@ -487,6 +508,11 @@ h2.heading-secondary {
   border-radius: 99999px;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s;
   will-change: transform, opacity;
+}
+@media screen and (max-width: 34em) {
+  .btn {
+    padding: 1.4rem 2.4rem;
+  }
 }
 .btn:visited, .btn:active {
   transform: translateY(0.6rem);
@@ -621,6 +647,11 @@ h2.heading-secondary {
     grid-column: 1/-1;
   }
 }
+@media screen and (max-width: 23.125em) {
+  .experience__logo {
+    grid-column: 1/-1;
+  }
+}
 .experience__text {
   grid-column: 1/-1;
 }
@@ -647,7 +678,6 @@ h2.heading-secondary {
   -webkit-tap-highlight-color: transparent;
   transition: transform 400ms;
   display: none;
-  margin-right: -2rem;
 }
 @media screen and (max-width: 48em) {
   .ham {
@@ -753,7 +783,7 @@ h2.heading-secondary {
 }
 .section-projects__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: var(--gap-projects-between);
   margin-top: var(--gap-projects-top);
 }

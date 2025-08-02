@@ -16,12 +16,11 @@
 
 ## 📖 - Libraries & Tools
 
-<!-- <section>
-    <img src="https://img.shields.io/badge/React-f53838?logo=react&logoColor=white" height="24" alt="React" />
-    <img src="https://img.shields.io/badge/Vite-646cff?logo=vite&logoColor=white" height="24" alt="Vite" />
-    <img src="https://img.shields.io/badge/GSAP-88ce02?logo=greensock&logoColor=white" height="24" alt="GSAP Animation" />
-    <img src="https://img.shields.io/badge/AOS Animation-f53838?logo=aos&logoColor=white" height="24" alt="AOS animation" />
-</section> -->
+<section>
+    <img src="https://img.shields.io/badge/React-f53838?logo=react&logoColor=white" height="24" alt="SimpleIcons" />
+    <img src="https://img.shields.io/badge/Vite-646cff?logo=vite&logoColor=white" height="24" alt="Figma" />
+
+</section>
 
 ## 👀 - Wanna see it live?
 

@@ -12,6 +12,9 @@ html {
   @include responsive(lg-mobile) {
     font-size: 56%;
   }
+  @include responsive(xs-mobile) {
+    font-size: 54%;
+  }
 }
 
 // Base styles for body
@@ -25,6 +28,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
 }
 
 // Reset margin, padding and inherit box-sizing for all elements

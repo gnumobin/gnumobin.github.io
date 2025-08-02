@@ -17,6 +17,10 @@ $color-bg: #161513;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s;
   will-change: transform, opacity;
 
+  @include responsive(lg-mobile) {
+    padding: 1.4rem 2.4rem;
+  }
+
   &:visited,
   &:active {
     transform: translateY(0.6rem);
