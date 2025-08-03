@@ -4,6 +4,7 @@ const hamMenuBtn = document.getElementById("hamMenuBtn");
 const hamMenu = document.getElementById("hamMenu");
 const overlay = document.getElementById("overlay");
 const header = document.querySelector(".header");
+const stickyBtn = document.querySelector("#stickyBtn");
 
 hamMenuBtn.addEventListener("click", () => {
   hamMenu.style.visibility = "visible";
@@ -42,8 +43,10 @@ const observer = new IntersectionObserver(
     const ent = entries[0];
     if (!ent.isIntersecting) {
       header.classList.add("sticky");
+      stickyBtn.classList.add("active");
     } else {
       header.classList.remove("sticky");
+      stickyBtn.classList.remove("active");
     }
   },
   {
@@ -63,3 +66,9 @@ if ("serviceWorker" in navigator) {
       .catch((err) => console.error("❌ SW registration failed:", err));
   });
 }
+
+stickyBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+  });
+});

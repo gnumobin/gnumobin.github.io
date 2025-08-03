@@ -10,6 +10,7 @@
 @import "base/reset";
 @import "base/typography";
 @import "base/animations";
+
 // ################# IMPORT COMPONENTS #################
 @import "components/header-nav";
 @import "components/profile";
@@ -20,6 +21,7 @@
 @import "components/experience";
 @import "components/ham-btn";
 @import "components/overlay";
+@import "components/sticky-btn";
 
 // ################# IMPORT LAYOUTS #################
 @import "layout/header";

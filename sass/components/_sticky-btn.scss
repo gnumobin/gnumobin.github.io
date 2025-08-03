@@ -1,0 +1,47 @@
+.sticky-btn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: var(--color-bg-extra-thin);
+  color: var(--color-text);
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  font-size: 5.2rem;
+  font-weight: bolder;
+  margin: 3rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 0 1rem var(--color-bg-thin);
+  transition: box-shadow var(--trans-1x), transform var(--trans-1x),
+    opacity var(--trans-2x), visibility var(--trans-2x);
+  will-change: box-shadow, transform, visibility, opacity;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5);
+
+  &__icon {
+    width: 100%;
+  }
+  &__link {
+    &:link,
+    &:visited {
+      color: inherit;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 1rem 1rem var(--color-bg-thin);
+    transform: scale(1.2);
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+}
