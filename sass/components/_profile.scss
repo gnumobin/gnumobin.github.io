@@ -1,6 +1,11 @@
 .profile {
   // Responsive Width
-  width: clamp(18rem, 5vw + 10rem, 25rem);
+  width: clamp(20rem, 5vw + 10rem, 25rem);
+  // Responsive For XXS Mobiles
+  @include responsive(xxs-mobile) {
+    width: clamp(15rem, 1vw + 10rem, 20rem);
+  }
+  // Spaces
   margin: 0 auto;
   // Etc
   overflow: hidden;

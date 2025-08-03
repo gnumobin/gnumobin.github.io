@@ -64,12 +64,15 @@
   @include responsive(sm-mobile) {
     --font-btn: 1.6rem;
     --font-experience-title: 1.6rem;
+    --font-card-title: 1.8rem;
   }
   @include responsive(xs-mobile) {
     --font-btn: 1.4rem;
+    --font-card-title: 1.7rem;
   }
   @include responsive(xxs-mobile) {
     --gap-section: 6rem;
-    --font-hero-biography: 1.5rem;
+    --font-hero-biography: 1.4rem;
+    --font-btn: 1.3rem;
   }
 }

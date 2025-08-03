@@ -1,13 +1,13 @@
 // ################# Clamp for responsive font-sizes!
 
-// General styles for all h1 inside main semantic elements
+// General styles for all h1 inside main semantic elements (WTH Lighthouse? )
 section h1,
 article h1,
 aside h1,
 nav h1,
 header h1 {
   @extend %heading; // apply base heading styles
-  font-size: clamp(3.25rem, 5vw, 5.5rem);
+  font-size: clamp(2.4rem, 7vw, 5.5rem);
   font-weight: 900;
 }
 
@@ -18,7 +18,7 @@ header h1 {
 // Secondary heading style
 h2.heading-secondary {
   @extend %heading;
-  @include heading(clamp(2.4rem, 4vw, 3.5rem), 900);
+  @include heading(clamp(2rem, 6vw, 3.5rem), 900);
   text-transform: uppercase;
 }
 

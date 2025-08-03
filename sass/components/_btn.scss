@@ -24,10 +24,10 @@ $color-bg: #161513;
   will-change: transform, opacity;
   cursor: pointer;
 
-  // // Responsive padding adjustment for smaller screens
-  // @include responsive(lg-mobile) {
-  //   padding: 1.4rem 2.4rem;
-  // }
+  // Responsive padding adjustment for smaller screens
+  @include responsive(xxs-mobile) {
+    padding: 1.2rem 1.8rem;
+  }
 
   // Pressed state: moves button down slightly
   &:visited,

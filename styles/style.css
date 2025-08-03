@@ -64,17 +64,20 @@
   :root {
     --font-btn: 1.6rem;
     --font-experience-title: 1.6rem;
+    --font-card-title: 1.8rem;
   }
 }
 @media screen and (max-width: 23.125em) {
   :root {
     --font-btn: 1.4rem;
+    --font-card-title: 1.7rem;
   }
 }
 @media screen and (max-width: 20em) {
   :root {
     --gap-section: 6rem;
-    --font-hero-biography: 1.5rem;
+    --font-hero-biography: 1.4rem;
+    --font-btn: 1.3rem;
   }
 }
 
@@ -367,12 +370,12 @@ article h1,
 aside h1,
 nav h1,
 header h1 {
-  font-size: clamp(3.25rem, 5vw, 5.5rem);
+  font-size: clamp(2.4rem, 7vw, 5.5rem);
   font-weight: 900;
 }
 
 h2.heading-secondary {
-  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  font-size: clamp(2rem, 6vw, 3.5rem);
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -459,11 +462,11 @@ h2.heading-secondary {
 }
 @media screen and (max-width: 48em) {
   .header-nav__item {
+    display: block;
+    width: 100%;
     background-color: var(--color-bg);
     padding: 2rem 3rem;
     border-radius: var(--rounded-menu);
-    width: 100%;
-    display: block;
   }
 }
 .header-nav__link:link, .header-nav__link:visited {
@@ -477,25 +480,15 @@ h2.heading-secondary {
 }
 
 .profile {
-  width: 25rem;
+  width: clamp(20rem, 5vw + 10rem, 25rem);
   margin: 0 auto;
   overflow: hidden;
   border-radius: 50%;
   cursor: zoom-in;
 }
-@media screen and (max-width: 34em) {
+@media screen and (max-width: 20em) {
   .profile {
-    width: 22.5rem;
-  }
-}
-@media screen and (max-width: 30em) {
-  .profile {
-    width: 20rem;
-  }
-}
-@media screen and (max-width: 23.125em) {
-  .profile {
-    width: 18rem;
+    width: clamp(15rem, 1vw + 10rem, 20rem);
   }
 }
 .profile__img {
@@ -515,9 +508,9 @@ h2.heading-secondary {
 }
 .logo__img {
   display: block;
+  object-fit: contain;
   width: 100%;
   height: 100%;
-  object-fit: contain;
 }
 
 .btn {
@@ -525,9 +518,8 @@ h2.heading-secondary {
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden;
-  cursor: pointer;
   padding: 1.6rem 3rem;
+  overflow: hidden;
   font-weight: 600;
   font-size: var(--font-btn);
   text-decoration: none;
@@ -535,10 +527,11 @@ h2.heading-secondary {
   border-radius: 99999px;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s;
   will-change: transform, opacity;
+  cursor: pointer;
 }
-@media screen and (max-width: 34em) {
+@media screen and (max-width: 20em) {
   .btn {
-    padding: 1.4rem 2.4rem;
+    padding: 1.2rem 1.8rem;
   }
 }
 .btn:visited, .btn:active {
@@ -547,17 +540,17 @@ h2.heading-secondary {
 .btn::before, .btn::after {
   content: "";
   position: absolute;
-  z-index: -1;
-  pointer-events: none;
   top: 0;
   left: -50%;
   right: -50%;
+  z-index: -1;
   height: 0;
   padding-bottom: 150%;
   border-radius: 39%;
   opacity: 0;
   transition: transform 1.2s ease-out, opacity 0.9s ease-out;
   backface-visibility: hidden;
+  pointer-events: none;
 }
 .btn::before {
   transform: translate3d(-10%, 5em, 0) rotate(330deg);
@@ -593,8 +586,8 @@ h2.heading-secondary {
 .skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(1rem, 10rem));
-  margin-top: var(--gap-skills);
   justify-content: center;
+  margin-top: var(--gap-skills);
   row-gap: 2.5rem;
 }
 @media screen and (max-width: 34em) {
@@ -634,9 +627,9 @@ h2.heading-secondary {
 }
 
 .card {
+  background-color: var(--color-bg-extra-thin);
   max-width: 90rem;
   border-radius: var(--rounded-card);
-  background-color: var(--color-bg-extra-thin);
   transition: var(--trans-1x);
   overflow: hidden;
   justify-self: center;
@@ -673,8 +666,8 @@ h2.heading-secondary {
 }
 
 .experiences {
-  margin-top: var(--gap-experiences);
   display: grid;
+  margin-top: var(--gap-experiences);
   gap: calc(var(--gap-experiences) - 0.7rem);
 }
 
@@ -688,7 +681,7 @@ h2.heading-secondary {
   color: var(--color-grey);
 }
 @media screen and (max-width: 42em) {
-  .experience__time, .experience__text {
+  .experience__time {
     grid-column: 1/-1;
   }
 }
@@ -714,15 +707,15 @@ h2.heading-secondary {
 }
 .experience__title {
   color: var(--color-text-bold);
-  font-weight: 800;
   font-size: var(--font-experience-title);
+  font-weight: 800;
 }
 
 .ham {
+  display: none;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   transition: transform 400ms;
-  display: none;
 }
 @media screen and (max-width: 48em) {
   .ham {
@@ -766,9 +759,9 @@ h2.heading-secondary {
 }
 
 .overlay {
+  background-color: rgba(255, 255, 255, 0.5);
   position: fixed;
   inset: 0;
-  background-color: rgba(255, 255, 255, 0.5);
   z-index: 3;
   transform: translateX(200%);
   visibility: hidden;
@@ -789,6 +782,11 @@ h2.heading-secondary {
 
 .some-space {
   padding-top: calc(var(--gap-section) - 4rem);
+}
+@media screen and (max-width: 20em) {
+  .some-space {
+    padding-top: calc(var(--gap-section) - 2rem);
+  }
 }
 
 .section-hero {
