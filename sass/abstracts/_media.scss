@@ -61,3 +61,18 @@
     }
   }
 }
+
+// $breakpoints: (
+//   desktop: 76.25em,
+//   laptop: 64em,
+//   tablet: 48em,
+//   mobile: 34em,
+// );
+
+// @mixin responsive($bp) {
+//   @if map-has-key($breakpoints, $bp) {
+//     @media screen and (max-width: map-get($breakpoints, $bp)) {
+//       @content;
+//     }
+//   }
+// }
