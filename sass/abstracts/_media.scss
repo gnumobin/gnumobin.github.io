@@ -54,4 +54,10 @@
       @content;
     }
   }
+  // Extra extra small mobile (250px)
+  @if $bp == x3-mobile {
+    @media screen and (max-width: 15.62em) {
+      @content;
+    }
+  }
 }

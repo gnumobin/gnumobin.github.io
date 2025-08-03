@@ -75,4 +75,12 @@
     --font-hero-biography: 1.4rem;
     --font-btn: 1.3rem;
   }
+  @include responsive(x3-mobile) {
+    --font-btn: 1.2rem;
+    --font-footer-text: 1.2rem;
+    --font-hero-biography: 1.2rem;
+    --gap-section: 5rem;
+    --font-experience-title: 1.5rem;
+    --font-experience-text: 1.2rem;
+  }
 }

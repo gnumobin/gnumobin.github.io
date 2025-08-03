@@ -80,6 +80,16 @@
     --font-btn: 1.3rem;
   }
 }
+@media screen and (max-width: 15.62em) {
+  :root {
+    --font-btn: 1.2rem;
+    --font-footer-text: 1.2rem;
+    --font-hero-biography: 1.2rem;
+    --gap-section: 5rem;
+    --font-experience-title: 1.5rem;
+    --font-experience-text: 1.2rem;
+  }
+}
 
 .gradient-blue, .gradient-orange, .gradient-purple {
   color: transparent !important;
@@ -128,6 +138,11 @@ header h1 {
     padding: 0 2rem;
   }
 }
+@media screen and (max-width: 15.62em) {
+  .container {
+    padding: 0 1rem;
+  }
+}
 
 .gradient-purple {
   background-image: var(--gradient-purple);
@@ -160,7 +175,7 @@ header h1 {
   border: 0;
 }
 
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 42em) {
   .word-wrap {
     display: none;
   }
@@ -319,6 +334,11 @@ html {
 @media screen and (max-width: 20em) {
   html {
     font-size: 50%;
+  }
+}
+@media screen and (max-width: 15.62em) {
+  html {
+    font-size: 46%;
   }
 }
 
@@ -532,6 +552,11 @@ h2.heading-secondary {
 @media screen and (max-width: 20em) {
   .btn {
     padding: 1.2rem 1.8rem;
+  }
+}
+@media screen and (max-width: 15.62em) {
+  .btn {
+    padding: 1rem 1.4rem;
   }
 }
 .btn:visited, .btn:active {

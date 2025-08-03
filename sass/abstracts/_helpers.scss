@@ -11,6 +11,9 @@
   @include responsive(xs-mobile) {
     padding: 0 2rem;
   }
+  @include responsive(x3-mobile) {
+    padding: 0 1rem;
+  }
 }
 
 // Gradient utility classes extending base gradient placeholder
@@ -49,7 +52,7 @@
 
 // Hide elements on landscape tablet screens and smaller
 .word-wrap {
-  @include responsive(land-tablet) {
+  @include responsive(port-tablet) {
     display: none;
   }
 }

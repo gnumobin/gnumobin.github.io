@@ -28,6 +28,9 @@ $color-bg: #161513;
   @include responsive(xxs-mobile) {
     padding: 1.2rem 1.8rem;
   }
+  @include responsive(x3-mobile) {
+    padding: 1rem 1.4rem;
+  }
 
   // Pressed state: moves button down slightly
   &:visited,
