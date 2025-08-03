@@ -1,16 +1,11 @@
 .skills {
   // Alignment
-  @include grid-columns(1rem, 10rem);
+  @include grid-columns(clamp(1rem, 2vw, 3rem), clamp(7rem, 10vw, 10rem));
   justify-content: center;
 
   // Spaces
   margin-top: var(--gap-skills);
   row-gap: 2.5rem;
-
-  // Responsive adjustment for large mobile screens
-  @include responsive(lg-mobile) {
-    @include grid-columns(auto, 7rem);
-  }
 
   &__item {
     // Smooth transition for hover effects
@@ -24,25 +19,9 @@
 
   &__icon {
     // Sizes
-    width: 4.4rem;
-    height: 4.4rem;
+    width: clamp(3.2rem, 3vw + 1rem, 4.4rem);
+    height: clamp(3.2rem, 3vw + 1rem, 4.4rem);
     // Colors
     fill: currentColor;
-
-    // Slightly smaller icons on large mobile
-    @include responsive(lg-mobile) {
-      width: 4.2rem;
-      height: 4.2rem;
-    }
-    // Smaller icons on extra small mobile
-    @include responsive(xs-mobile) {
-      width: 3.6rem;
-      height: 3.6rem;
-    }
-    // Smallest icons on very small mobile screens
-    @include responsive(xxs-mobile) {
-      width: 3.2rem;
-      height: 3.2rem;
-    }
   }
 }

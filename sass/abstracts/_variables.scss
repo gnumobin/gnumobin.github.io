@@ -7,36 +7,42 @@
   --color-text: #c5c5c5;
   --color-grey: #8491a0;
   --color-text-bold: #fff;
-  // spaces
-  --gap-header-nav-list: 7.1rem;
-  --gap-hero-biography: 3.9rem;
-  --gap-hero-actions: 1.8rem;
-  --gap-section: 10rem;
-  --gap-skills: 4.8rem;
-  --gap-projects-between: 3rem;
-  --gap-projects-top: 2.7rem;
-  --gap-experience: 2.3rem;
-  --gap-experiences: 5.7rem;
-  // transitions
+
+  // Spacing
+  --gap-header-nav-list: clamp(3rem, 5vw, 7.1rem);
+  --gap-hero-biography: clamp(2rem, 3vw, 3.9rem);
+  --gap-hero-actions: clamp(1rem, 2vw, 1.8rem);
+  --gap-section: clamp(7rem, 8vw, 10rem);
+  --gap-skills: clamp(3rem, 5vw, 4.8rem);
+  --gap-projects-between: clamp(1.5rem, 3vw, 3rem);
+  --gap-projects-top: clamp(1.5rem, 2.5vw, 2.7rem);
+  --gap-experience: clamp(3rem, 2vw, 2.3rem);
+  --gap-experiences: clamp(3rem, 4vw, 5.7rem);
+
+  // Transitions
   --trans-1x: 0.25s;
   --trans-2x: 0.5s;
-  // gradients
+
+  // Gradients
   --gradient-purple: linear-gradient(to right, #ff8660, #9a33ff);
   --gradient-orange: linear-gradient(to right, #ff8660, #d5491d);
   --gradient-blue: linear-gradient(to right, #5badff, #1373d1);
-  // font sizes
-  --font-header-nav: 1.5rem;
-  --font-hero-biography: 1.8rem;
-  --font-btn: 2.3rem;
-  --font-card-title: 1.9rem;
-  --font-card-title-sub: 1rem;
-  --font-experience-title: 2.174rem;
-  --font-experience-text: 1.449rem;
-  --font-footer-text: 1.412rem;
-  // radiuses
-  --rounded-card: 1.8rem;
-  --rounded-menu: 0.8rem;
-  // logo colors
+
+  // Font Sizes
+  --font-header-nav: clamp(1.2rem, 1.2vw + 0.5rem, 1.5rem);
+  --font-hero-biography: clamp(1.4rem, 1.5vw + 0.4rem, 1.8rem);
+  --font-btn: clamp(1.2rem, 3vw, 2.3rem);
+  --font-card-title: clamp(1.4rem, 1.2vw + 0.4rem, 1.9rem);
+  --font-card-title-sub: clamp(0.8rem, 0.8vw + 0.2rem, 1rem);
+  --font-experience-title: clamp(1.5rem, 1.6vw + 0.3rem, 2.174rem);
+  --font-experience-text: clamp(1.2rem, 1.2vw + 0.2rem, 1.449rem);
+  --font-footer-text: clamp(1.2rem, 1vw + 0.2rem, 1.412rem);
+
+  // Radiuses
+  --rounded-card: clamp(1rem, 1vw + 0.4rem, 1.8rem);
+  --rounded-menu: clamp(0.5rem, 0.5vw + 0.2rem, 0.8rem);
+
+  // Logo Colors
   --logo-meta: #0467df;
   --logo-google: linear-gradient(
     90deg,
@@ -45,42 +51,4 @@
     #fbbc05 50%,
     #ea4335 75%
   );
-
-  @include responsive(port-tablet) {
-    --font-experience-title: 2rem;
-  }
-  @include responsive(lg-mobile) {
-    --font-btn: 2rem;
-    --font-hero-biography: 1.7rem;
-    --gap-section: 8rem;
-    --font-experience-title: 1.9rem;
-  }
-  @include responsive(md-mobile) {
-    --font-btn: 1.8rem;
-    --font-hero-biography: 1.6rem;
-    --gap-section: 7rem;
-    --font-experience-title: 1.7rem;
-  }
-  @include responsive(sm-mobile) {
-    --font-btn: 1.6rem;
-    --font-experience-title: 1.6rem;
-    --font-card-title: 1.8rem;
-  }
-  @include responsive(xs-mobile) {
-    --font-btn: 1.4rem;
-    --font-card-title: 1.7rem;
-  }
-  @include responsive(xxs-mobile) {
-    --gap-section: 6rem;
-    --font-hero-biography: 1.4rem;
-    --font-btn: 1.3rem;
-  }
-  @include responsive(x3-mobile) {
-    --font-btn: 1.2rem;
-    --font-footer-text: 1.2rem;
-    --font-hero-biography: 1.2rem;
-    --gap-section: 5rem;
-    --font-experience-title: 1.5rem;
-    --font-experience-text: 1.2rem;
-  }
 }

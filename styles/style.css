@@ -6,30 +6,30 @@
   --color-text: #c5c5c5;
   --color-grey: #8491a0;
   --color-text-bold: #fff;
-  --gap-header-nav-list: 7.1rem;
-  --gap-hero-biography: 3.9rem;
-  --gap-hero-actions: 1.8rem;
-  --gap-section: 10rem;
-  --gap-skills: 4.8rem;
-  --gap-projects-between: 3rem;
-  --gap-projects-top: 2.7rem;
-  --gap-experience: 2.3rem;
-  --gap-experiences: 5.7rem;
+  --gap-header-nav-list: clamp(3rem, 5vw, 7.1rem);
+  --gap-hero-biography: clamp(2rem, 3vw, 3.9rem);
+  --gap-hero-actions: clamp(1rem, 2vw, 1.8rem);
+  --gap-section: clamp(7rem, 8vw, 10rem);
+  --gap-skills: clamp(3rem, 5vw, 4.8rem);
+  --gap-projects-between: clamp(1.5rem, 3vw, 3rem);
+  --gap-projects-top: clamp(1.5rem, 2.5vw, 2.7rem);
+  --gap-experience: clamp(3rem, 2vw, 2.3rem);
+  --gap-experiences: clamp(3rem, 4vw, 5.7rem);
   --trans-1x: 0.25s;
   --trans-2x: 0.5s;
   --gradient-purple: linear-gradient(to right, #ff8660, #9a33ff);
   --gradient-orange: linear-gradient(to right, #ff8660, #d5491d);
   --gradient-blue: linear-gradient(to right, #5badff, #1373d1);
-  --font-header-nav: 1.5rem;
-  --font-hero-biography: 1.8rem;
-  --font-btn: 2.3rem;
-  --font-card-title: 1.9rem;
-  --font-card-title-sub: 1rem;
-  --font-experience-title: 2.174rem;
-  --font-experience-text: 1.449rem;
-  --font-footer-text: 1.412rem;
-  --rounded-card: 1.8rem;
-  --rounded-menu: 0.8rem;
+  --font-header-nav: clamp(1.2rem, 1.2vw + 0.5rem, 1.5rem);
+  --font-hero-biography: clamp(1.4rem, 1.5vw + 0.4rem, 1.8rem);
+  --font-btn: clamp(1.2rem, 3vw, 2.3rem);
+  --font-card-title: clamp(1.4rem, 1.2vw + 0.4rem, 1.9rem);
+  --font-card-title-sub: clamp(0.8rem, 0.8vw + 0.2rem, 1rem);
+  --font-experience-title: clamp(1.5rem, 1.6vw + 0.3rem, 2.174rem);
+  --font-experience-text: clamp(1.2rem, 1.2vw + 0.2rem, 1.449rem);
+  --font-footer-text: clamp(1.2rem, 1vw + 0.2rem, 1.412rem);
+  --rounded-card: clamp(1rem, 1vw + 0.4rem, 1.8rem);
+  --rounded-menu: clamp(0.5rem, 0.5vw + 0.2rem, 0.8rem);
   --logo-meta: #0467df;
   --logo-google: linear-gradient(
     90deg,
@@ -39,64 +39,13 @@
     #ea4335 75%
   );
 }
-@media screen and (max-width: 42em) {
-  :root {
-    --font-experience-title: 2rem;
-  }
-}
-@media screen and (max-width: 34em) {
-  :root {
-    --font-btn: 2rem;
-    --font-hero-biography: 1.7rem;
-    --gap-section: 8rem;
-    --font-experience-title: 1.9rem;
-  }
-}
-@media screen and (max-width: 30em) {
-  :root {
-    --font-btn: 1.8rem;
-    --font-hero-biography: 1.6rem;
-    --gap-section: 7rem;
-    --font-experience-title: 1.7rem;
-  }
-}
-@media screen and (max-width: 26.25em) {
-  :root {
-    --font-btn: 1.6rem;
-    --font-experience-title: 1.6rem;
-    --font-card-title: 1.8rem;
-  }
-}
-@media screen and (max-width: 23.125em) {
-  :root {
-    --font-btn: 1.4rem;
-    --font-card-title: 1.7rem;
-  }
-}
-@media screen and (max-width: 20em) {
-  :root {
-    --gap-section: 6rem;
-    --font-hero-biography: 1.4rem;
-    --font-btn: 1.3rem;
-  }
-}
-@media screen and (max-width: 15.62em) {
-  :root {
-    --font-btn: 1.2rem;
-    --font-footer-text: 1.2rem;
-    --font-hero-biography: 1.2rem;
-    --gap-section: 5rem;
-    --font-experience-title: 1.5rem;
-    --font-experience-text: 1.2rem;
-  }
-}
 
 .gradient-blue, .gradient-orange, .gradient-purple {
   color: transparent !important;
   background-clip: text;
 }
 
-.heading-tertiary, h2.heading-secondary, section h1,
+.heading-sub, .heading-tertiary, h2.heading-secondary, section h1,
 article h1,
 aside h1,
 nav h1,
@@ -105,7 +54,7 @@ header h1 {
   line-height: 6.34rem;
 }
 @media screen and (max-width: 34em) {
-  .heading-tertiary, h2.heading-secondary, section h1,
+  .heading-sub, .heading-tertiary, h2.heading-secondary, section h1,
   article h1,
   aside h1,
   nav h1,
@@ -127,21 +76,7 @@ header h1 {
 .container {
   max-width: 114rem;
   margin: 0 auto;
-}
-@media screen and (max-width: 76.25em) {
-  .container {
-    padding: 0 3.5rem;
-  }
-}
-@media screen and (max-width: 23.125em) {
-  .container {
-    padding: 0 2rem;
-  }
-}
-@media screen and (max-width: 15.62em) {
-  .container {
-    padding: 0 1rem;
-  }
+  padding: 0 clamp(1rem, 5vw, 3.5rem);
 }
 
 .gradient-purple {
@@ -310,48 +245,19 @@ header h1 {
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
-}
-@media screen and (max-width: 64em) {
-  html {
-    font-size: 60%;
-  }
-}
-@media screen and (max-width: 48em) {
-  html {
-    font-size: 58%;
-  }
-}
-@media screen and (max-width: 34em) {
-  html {
-    font-size: 56%;
-  }
-}
-@media screen and (max-width: 23.125em) {
-  html {
-    font-size: 54%;
-  }
-}
-@media screen and (max-width: 20em) {
-  html {
-    font-size: 50%;
-  }
-}
-@media screen and (max-width: 15.62em) {
-  html {
-    font-size: 46%;
-  }
+  font-size: clamp(46%, 1.2vw + 0.5rem, 62.5%);
 }
 
 body {
   box-sizing: border-box;
   font-family: "poppins", sans-serif;
   font-weight: 400;
+  line-height: 1.6;
   background-color: var(--color-bg);
   color: var(--color-text);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.6;
 }
 
 *,
@@ -366,11 +272,6 @@ ul {
   list-style-type: none;
 }
 
-a:link,
-a:visited {
-  text-decoration: none;
-}
-
 ::selection {
   background-color: var(--color-grey);
   color: var(--color-text-bold);
@@ -379,7 +280,8 @@ a:visited {
 a:link,
 a:visited,
 img,
-btn {
+button {
+  text-decoration: none;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
   -webkit-user-drag: none;
@@ -392,17 +294,21 @@ nav h1,
 header h1 {
   font-size: clamp(2.4rem, 7vw, 5.5rem);
   font-weight: 900;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 h2.heading-secondary {
   font-size: clamp(2rem, 6vw, 3.5rem);
   font-weight: 900;
   text-transform: uppercase;
+  letter-spacing: 0;
 }
 
 .heading-tertiary {
   font-size: clamp(1.8rem, 3vw, 2.25rem);
   font-weight: 800;
+  text-transform: none;
   letter-spacing: 0.05rem;
 }
 
@@ -413,6 +319,26 @@ h2.heading-secondary {
   letter-spacing: 0.2rem;
 }
 
+.neon-grey:hover {
+  color: var(--color-text-bold);
+  text-shadow: 0 0 1rem var(--color-grey), 0 0 2rem var(--color-grey), 0 0 3rem var(--color-grey), 0 0 4rem var(--color-grey);
+}
+
+.neon-purple:hover {
+  color: var(--color-text-bold);
+  text-shadow: 0 0 1rem #9a33ff, 0 0 2rem #9a33ff, 0 0 3rem #9a33ff, 0 0 4rem #9a33ff;
+}
+
+.neon-orange:hover {
+  color: var(--color-text-bold);
+  text-shadow: 0 0 1rem #ff8660, 0 0 2rem #ff8660, 0 0 3rem #ff8660, 0 0 4rem #ff8660;
+}
+
+.neon-blue:hover {
+  color: var(--color-text-bold);
+  text-shadow: 0 0 1rem #5badff, 0 0 2rem #5badff, 0 0 3rem #5badff, 0 0 4rem #5badff;
+}
+
 .jelly {
   transition: all 0.3s ease;
   will-change: transform;
@@ -421,14 +347,9 @@ h2.heading-secondary {
   animation: jelly 0.6s ease-in-out;
 }
 
-.neon:hover {
-  color: var(--color-text-bold);
-  text-shadow: 0 0 1rem var(--color-grey), 0 0 2rem var(--color-grey), 0 0 3rem var(--color-grey), 0 0 4rem var(--color-grey);
-}
-
 @keyframes jelly {
   0% {
-    transform: translateY(0) scale(1) rotate(0deg);
+    transform: translateY(0) scale(1) rotate(0);
   }
   25% {
     transform: translateY(-8px) scale(1.05) rotate(5deg);
@@ -440,7 +361,7 @@ h2.heading-secondary {
     transform: translateY(-3px) scale(1.02) rotate(3deg);
   }
   100% {
-    transform: translateY(0) scale(1) rotate(0deg);
+    transform: translateY(0) scale(1) rotate(0);
   }
 }
 .header-nav {
@@ -500,16 +421,11 @@ h2.heading-secondary {
 }
 
 .profile {
-  width: clamp(20rem, 5vw + 10rem, 25rem);
+  width: clamp(18rem, 6vw + 10rem, 25rem);
   margin: 0 auto;
   overflow: hidden;
   border-radius: 50%;
   cursor: zoom-in;
-}
-@media screen and (max-width: 20em) {
-  .profile {
-    width: clamp(15rem, 1vw + 10rem, 20rem);
-  }
 }
 .profile__img {
   width: 100%;
@@ -538,7 +454,7 @@ h2.heading-secondary {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 1.6rem 3rem;
+  padding: clamp(1rem, 3vw, 1.6rem) clamp(2rem, 6vw, 3rem);
   overflow: hidden;
   font-weight: 600;
   font-size: var(--font-btn);
@@ -548,16 +464,6 @@ h2.heading-secondary {
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s;
   will-change: transform, opacity;
   cursor: pointer;
-}
-@media screen and (max-width: 20em) {
-  .btn {
-    padding: 1.2rem 1.8rem;
-  }
-}
-@media screen and (max-width: 15.62em) {
-  .btn {
-    padding: 1rem 1.4rem;
-  }
 }
 .btn:visited, .btn:active {
   transform: translateY(0.6rem);
@@ -595,7 +501,7 @@ h2.heading-secondary {
 }
 .btn--primary {
   background-color: var(--color-text-bold);
-  color: #161513;
+  color: var(--color-bg);
   box-shadow: none;
   transition: background-color 0.3s, color 0.3s, box-shadow 1.2s, transform 0.1s;
 }
@@ -606,20 +512,15 @@ h2.heading-secondary {
 .btn--secondary {
   background-color: transparent;
   color: var(--color-text-bold);
+  box-shadow: none;
   transition: background-color 0.3s, color 0.3s, box-shadow 1.2s, transform 0.1s;
 }
 .skills {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1rem, 10rem));
+  grid-template-columns: repeat(auto-fit, minmax(clamp(1rem, 2vw, 3rem), clamp(7rem, 10vw, 10rem)));
   justify-content: center;
   margin-top: var(--gap-skills);
   row-gap: 2.5rem;
-}
-@media screen and (max-width: 34em) {
-  .skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(auto, 7rem));
-  }
 }
 .skills__item {
   transition: var(--trans-1x);
@@ -628,27 +529,9 @@ h2.heading-secondary {
   color: var(--color-text-bold);
 }
 .skills__icon {
-  width: 4.4rem;
-  height: 4.4rem;
+  width: clamp(3.2rem, 3vw + 1rem, 4.4rem);
+  height: clamp(3.2rem, 3vw + 1rem, 4.4rem);
   fill: currentColor;
-}
-@media screen and (max-width: 34em) {
-  .skills__icon {
-    width: 4.2rem;
-    height: 4.2rem;
-  }
-}
-@media screen and (max-width: 23.125em) {
-  .skills__icon {
-    width: 3.6rem;
-    height: 3.6rem;
-  }
-}
-@media screen and (max-width: 20em) {
-  .skills__icon {
-    width: 3.2rem;
-    height: 3.2rem;
-  }
 }
 
 .card {
@@ -721,14 +604,8 @@ h2.heading-secondary {
 .experience__icon {
   color: var(--color-text-bold);
   fill: currentColor;
-  width: 3.4rem;
-  height: 3.2rem;
-}
-@media screen and (max-width: 42em) {
-  .experience__icon {
-    width: 3rem;
-    height: 2.8rem;
-  }
+  width: clamp(2.8rem, 3vw, 3.4rem);
+  height: clamp(2.6rem, 2.5vw, 3.2rem);
 }
 .experience__title {
   color: var(--color-text-bold);
@@ -758,10 +635,10 @@ h2.heading-secondary {
 
 .line {
   fill: none;
-  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
   stroke: var(--color-text-bold);
   stroke-width: 5.5;
   stroke-linecap: round;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
 }
 
 .ham6 .top {

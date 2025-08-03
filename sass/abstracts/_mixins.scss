@@ -5,10 +5,13 @@
   align-items: center;
 }
 
-// Heading typography mixin to set size and weight
-@mixin heading($size, $weight) {
+// Base heading with clamp size & weight
+@mixin responsive-heading($size, $weight: 400, $transform: none, $spacing: 0) {
+  @extend %heading;
   font-size: $size;
   font-weight: $weight;
+  text-transform: $transform;
+  letter-spacing: $spacing;
 }
 
 // Gradient text effect mixin, applies a background gradient clipped to text

@@ -2,25 +2,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%; // 1rem = 10px base
-
-  @include responsive(laptop) {
-    font-size: 60%;
-  }
-  @include responsive(land-tablet) {
-    font-size: 58%;
-  }
-  @include responsive(lg-mobile) {
-    font-size: 56%;
-  }
-  @include responsive(xs-mobile) {
-    font-size: 54%;
-  }
-  @include responsive(xxs-mobile) {
-    font-size: 50%;
-  }
-  @include responsive(x3-mobile) {
-    font-size: 46%;
-  }
+  font-size: clamp(46%, 1.2vw + 0.5rem, 62.5%);
 }
 
 // Base styles for body
@@ -28,13 +10,13 @@ body {
   box-sizing: border-box;
   font-family: "poppins", sans-serif;
   font-weight: 400;
+  line-height: 1.6;
   background-color: var(--color-bg);
   color: var(--color-text);
   // smoother fonts
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.6;
 }
 
 // Reset margin, padding and inherit box-sizing for all elements
@@ -51,24 +33,18 @@ ul {
   list-style-type: none;
 }
 
-// Remove underline from links
-a:link,
-a:visited {
-  text-decoration: none;
-}
-
 // Selection color for text highlight
 ::selection {
   background-color: var(--color-grey);
   color: var(--color-text-bold);
 }
 
-// Remove BackFace
-
+// Remove BackFace & underline from links
 a:link,
 a:visited,
 img,
-btn {
+button {
+  text-decoration: none;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
   -webkit-user-drag: none;

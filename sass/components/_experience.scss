@@ -1,12 +1,10 @@
 .experiences {
   // Container for all experience
   display: grid;
-  // Spaces
   margin-top: var(--gap-experiences);
   gap: calc(var(--gap-experiences) - 0.7rem);
 }
 
-// Define First Row (Icon, Title and Time)
 .experience {
   // alignment
   display: grid;
@@ -20,21 +18,21 @@
   color: var(--color-grey);
 
   &__time {
-    // move to they own row
+    // move to their own row on smaller screens
     @include responsive(port-tablet) {
       grid-column: 1 / -1;
     }
   }
 
   &__logo {
-    // move to they own row
+    // move to their own row on very small screens
     @include responsive(xs-mobile) {
       grid-column: 1 / -1;
     }
   }
 
   &__text {
-    // Text always spans full width to ensure readability
+    // Text always spans full width for readability
     grid-column: 1 / -1;
   }
 
@@ -42,19 +40,13 @@
     // Icon styling with responsive size adjustments
     color: var(--color-text-bold);
     fill: currentColor;
-    width: 3.4rem;
-    height: 3.2rem;
-
-    @include responsive(port-tablet) {
-      width: 3rem;
-      height: 2.8rem;
-    }
+    width: clamp(2.8rem, 3vw, 3.4rem);
+    height: clamp(2.6rem, 2.5vw, 3.2rem);
   }
 
   &__title {
     // Highlighted title style for experience
     color: var(--color-text-bold);
-    // Size and Weight
     font-size: var(--font-experience-title);
     font-weight: 800;
   }

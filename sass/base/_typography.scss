@@ -1,37 +1,28 @@
-// ################# Clamp for responsive font-sizes!
-
-// General styles for all h1 inside main semantic elements (WTH Lighthouse? )
+// Apply for all main section headings
 section h1,
 article h1,
 aside h1,
 nav h1,
 header h1 {
-  @extend %heading; // apply base heading styles
-  font-size: clamp(2.4rem, 7vw, 5.5rem);
-  font-weight: 900;
+  @include responsive-heading(clamp(2.4rem, 7vw, 5.5rem), 900);
 }
 
-// h1.heading-primary {
-//   @include heading(clamp(3.25rem, 5vw, 5.5rem), 900);
-// }
-
-// Secondary heading style
+// Secondary heading
 h2.heading-secondary {
-  @extend %heading;
-  @include heading(clamp(2rem, 6vw, 3.5rem), 900);
-  text-transform: uppercase;
+  @include responsive-heading(clamp(2rem, 6vw, 3.5rem), 900, uppercase);
 }
 
-// Tertiary heading style with slight letter spacing
+// Tertiary heading
 .heading-tertiary {
-  @extend %heading;
-  @include heading(clamp(1.8rem, 3vw, 2.25rem), 800);
-  letter-spacing: 0.05rem;
+  @include responsive-heading(clamp(1.8rem, 3vw, 2.25rem), 800, none, 0.05rem);
 }
 
-// Sub-heading style, uppercase with more letter spacing
+// Sub-heading
 .heading-sub {
-  @include heading(clamp(1.8rem, 2.5vw, 2rem), 600);
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  @include responsive-heading(
+    clamp(1.8rem, 2.5vw, 2rem),
+    600,
+    uppercase,
+    0.2rem
+  );
 }

@@ -2,32 +2,18 @@
 .container {
   max-width: 114rem;
   margin: 0 auto;
-
-  // Padding adjustment on desktop screens
-  @include responsive(desktop) {
-    padding: 0 3.5rem;
-  }
-  // Padding adjustment on extra small mobile screens
-  @include responsive(xs-mobile) {
-    padding: 0 2rem;
-  }
-  @include responsive(x3-mobile) {
-    padding: 0 1rem;
-  }
+  // Spaces
+  padding: 0 clamp(1rem, 5vw, 3.5rem);
 }
 
 // Gradient utility classes extending base gradient placeholder
-.gradient-purple {
-  @extend %gradient;
-  background-image: var(--gradient-purple);
-}
-.gradient-orange {
-  @extend %gradient;
-  background-image: var(--gradient-orange);
-}
-.gradient-blue {
-  @extend %gradient;
-  background-image: var(--gradient-blue);
+$colors: purple, orange, blue;
+
+@each $color in $colors {
+  .gradient-#{$color} {
+    @extend %gradient;
+    background-image: var(--gradient-#{$color});
+  }
 }
 
 // Utility classes for spacing and text alignment

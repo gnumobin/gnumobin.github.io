@@ -1,6 +1,23 @@
 $color-text-bold: #fff;
 $color-bg: #161513;
 
+@mixin pseudoHover($per, $deg) {
+  transform: translate3d($per, -1em, 0) rotate($deg);
+  opacity: 1;
+}
+
+@mixin pseudoDiff($per, $t-deg, $b-deg, $alpha) {
+  transform: translate3d($per, 5em, 0) rotate($t-deg);
+  background: linear-gradient($b-deg, rgba(224, 224, 224, $alpha), transparent);
+}
+
+@mixin secondary($bg, $color) {
+  background-color: $bg;
+  color: $color;
+  box-shadow: none;
+  transition: background-color 0.3s, color 0.3s, box-shadow 1.2s, transform 0.1s;
+}
+
 // Button base styles with flexible inline layout and rounded shape
 .btn {
   // type
@@ -9,8 +26,8 @@ $color-bg: #161513;
   justify-content: center;
   // positions
   position: relative;
-  // spaces
-  padding: 1.6rem 3rem;
+  // spaces — now with responsive clamp()
+  padding: clamp(1rem, 3vw, 1.6rem) clamp(2rem, 6vw, 3rem);
   overflow: hidden;
   // typography
   font-weight: 600;
@@ -23,14 +40,6 @@ $color-bg: #161513;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s;
   will-change: transform, opacity;
   cursor: pointer;
-
-  // Responsive padding adjustment for smaller screens
-  @include responsive(xxs-mobile) {
-    padding: 1.2rem 1.8rem;
-  }
-  @include responsive(x3-mobile) {
-    padding: 1rem 1.4rem;
-  }
 
   // Pressed state: moves button down slightly
   &:visited,
@@ -63,33 +72,25 @@ $color-bg: #161513;
 
   // Left gradient shape, initially below the button and rotated
   &::before {
-    transform: translate3d(-10%, 5em, 0) rotate(330deg);
-    background: linear-gradient(25deg, rgba(224, 224, 224, 0.15), transparent);
+    @include pseudoDiff(-10%, 330deg, 25deg, 0.15);
   }
 
   // Right gradient shape, initially below the button and rotated
   &::after {
-    transform: translate3d(10%, 5em, 0) rotate(0deg);
-    background: linear-gradient(70deg, rgba(224, 224, 224, 0.18), transparent);
+    @include pseudoDiff(10%, 0deg, 70deg, 0.18);
   }
 
   // On hover, gradient shapes move up and become visible, creating a subtle shine effect
   &:hover::before {
-    transform: translate3d(-10%, -1em, 0) rotate(100deg);
-    opacity: 1;
+    @include pseudoHover(-10%, 100deg);
   }
   &:hover::after {
-    transform: translate3d(10%, -1em, 0) rotate(180deg);
-    opacity: 1;
+    @include pseudoHover(10%, 180deg);
   }
 
   // Primary button style: solid background with inverted text color
   &--primary {
-    background-color: var(--color-text-bold);
-    color: $color-bg;
-    box-shadow: none;
-    transition: background-color 0.3s, color 0.3s, box-shadow 1.2s,
-      transform 0.1s;
+    @include secondary(var(--color-text-bold), var(--color-bg));
 
     &:hover {
       background-color: darken($color-bg, 10%);
@@ -100,10 +101,7 @@ $color-bg: #161513;
 
   // Secondary button style: transparent background with bold text color
   &--secondary {
-    background-color: transparent;
-    color: var(--color-text-bold);
-    transition: background-color 0.3s, color 0.3s, box-shadow 1.2s,
-      transform 0.1s;
+    @include secondary(transparent, var(--color-text-bold));
 
     &:hover {
       @extend %glow; // glow effect on hover
