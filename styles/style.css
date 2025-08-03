@@ -51,16 +51,7 @@ aside h1,
 nav h1,
 header h1 {
   color: var(--color-text-bold);
-  line-height: 6.34rem;
-}
-@media screen and (max-width: 34em) {
-  .heading-sub, .heading-tertiary, h2.heading-secondary, section h1,
-  article h1,
-  aside h1,
-  nav h1,
-  header h1 {
-    line-height: 4.5rem;
-  }
+  line-height: clamp(4rem, 6vw + 1rem, 7.2rem);
 }
 
 .card__title {
@@ -108,12 +99,6 @@ header h1 {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-}
-
-@media screen and (max-width: 42em) {
-  .word-wrap {
-    display: none;
-  }
 }
 
 @font-face {
@@ -292,7 +277,7 @@ article h1,
 aside h1,
 nav h1,
 header h1 {
-  font-size: clamp(2.4rem, 7vw, 5.5rem);
+  font-size: clamp(2.4rem, 0.25rem + 6vw, 5.5rem);
   font-weight: 900;
   text-transform: none;
   letter-spacing: 0;
@@ -377,7 +362,7 @@ h2.heading-secondary {
   font-size: var(--font-header-nav);
   font-weight: 600;
 }
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 40em) {
   .header-nav__list {
     position: fixed;
     z-index: 100;
@@ -401,7 +386,7 @@ h2.heading-secondary {
 .header-nav__item--active {
   color: var(--color-text);
 }
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 40em) {
   .header-nav__item {
     display: block;
     width: 100%;
@@ -421,7 +406,7 @@ h2.heading-secondary {
 }
 
 .profile {
-  width: clamp(18rem, 6vw + 10rem, 25rem);
+  width: clamp(18rem, 6vw + 15rem, 25rem);
   margin: 0 auto;
   overflow: hidden;
   border-radius: 50%;
@@ -583,18 +568,13 @@ h2.heading-secondary {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  column-gap: calc(var(--gap-experience) - 1.1rem);
+  column-gap: clamp(var(--gap-experience) - 3rem, 2vw, var(--gap-experience) - 1.1rem);
   row-gap: var(--gap-experience);
   font-size: var(--font-experience-text);
   color: var(--color-grey);
 }
-@media screen and (max-width: 42em) {
+@media screen and (max-width: 30em) {
   .experience__time {
-    grid-column: 1/-1;
-  }
-}
-@media screen and (max-width: 23.125em) {
-  .experience__logo {
     grid-column: 1/-1;
   }
 }
@@ -619,7 +599,7 @@ h2.heading-secondary {
   -webkit-tap-highlight-color: transparent;
   transition: transform 400ms;
 }
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 40em) {
   .ham {
     display: block;
   }
@@ -685,11 +665,6 @@ h2.heading-secondary {
 .some-space {
   padding-top: calc(var(--gap-section) - 4rem);
 }
-@media screen and (max-width: 20em) {
-  .some-space {
-    padding-top: calc(var(--gap-section) - 2rem);
-  }
-}
 
 .section-hero {
   padding-top: var(--gap-section);
@@ -698,13 +673,8 @@ h2.heading-secondary {
 .section-hero__biography {
   font-size: var(--font-hero-biography);
   font-weight: 300;
-  max-width: 60%;
   margin: var(--gap-hero-biography) auto calc(var(--gap-hero-biography) + 1.4rem);
-}
-@media screen and (max-width: 64em) {
-  .section-hero__biography {
-    max-width: 80%;
-  }
+  max-width: 60%;
 }
 @media screen and (max-width: 48em) {
   .section-hero__biography {
@@ -745,14 +715,8 @@ h2.heading-secondary {
   font-size: var(--font-footer-text);
 }
 .footer__icon {
-  width: 1.8rem;
-  height: 1.8rem;
-}
-@media screen and (max-width: 20em) {
-  .footer__icon {
-    width: 2rem;
-    height: 2rem;
-  }
+  width: clamp(1.8rem, 1vw + 1rem, 2rem);
+  height: clamp(1.8rem, 1vw + 1rem, 2rem);
 }
 .footer__text {
   font-weight: 300;

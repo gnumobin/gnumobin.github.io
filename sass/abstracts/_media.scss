@@ -1,78 +1,13 @@
-// Responsive mixin for media queries based on predefined breakpoints
+$breakpoints: (
+  landscape-tablet: 48em,
+  portrait-tablet: 40em,
+  large-mobile: 30em,
+);
+
 @mixin responsive($bp) {
-  // Desktop breakpoint (1220px)
-  @if $bp == desktop {
-    @media screen and (max-width: 76.25em) {
-      @content;
-    }
-  }
-  // Laptop breakpoint (1024px)
-  @if $bp == laptop {
-    @media screen and (max-width: 64em) {
-      @content;
-    }
-  }
-  // Landscape tablet (768px)
-  @if $bp == land-tablet {
-    @media screen and (max-width: 48em) {
-      @content;
-    }
-  }
-  // Portrait tablet (670px)
-  @if $bp == port-tablet {
-    @media screen and (max-width: 42em) {
-      @content;
-    }
-  }
-  // Large mobile (550px)
-  @if $bp == lg-mobile {
-    @media screen and (max-width: 34em) {
-      @content;
-    }
-  }
-  // Medium mobile (480px)
-  @if $bp == md-mobile {
-    @media screen and (max-width: 30em) {
-      @content;
-    }
-  }
-  // Small mobile (420px)
-  @if $bp == sm-mobile {
-    @media screen and (max-width: 26.25em) {
-      @content;
-    }
-  }
-  // Extra small mobile (370px)
-  @if $bp == xs-mobile {
-    @media screen and (max-width: 23.125em) {
-      @content;
-    }
-  }
-  // Extra extra small mobile (320px)
-  @if $bp == xxs-mobile {
-    @media screen and (max-width: 20em) {
-      @content;
-    }
-  }
-  // Extra extra small mobile (250px)
-  @if $bp == x3-mobile {
-    @media screen and (max-width: 15.62em) {
+  @if map-has-key($breakpoints, $bp) {
+    @media screen and (max-width: map-get($breakpoints, $bp)) {
       @content;
     }
   }
 }
-
-// $breakpoints: (
-//   desktop: 76.25em,
-//   laptop: 64em,
-//   tablet: 48em,
-//   mobile: 34em,
-// );
-
-// @mixin responsive($bp) {
-//   @if map-has-key($breakpoints, $bp) {
-//     @media screen and (max-width: map-get($breakpoints, $bp)) {
-//       @content;
-//     }
-//   }
-// }

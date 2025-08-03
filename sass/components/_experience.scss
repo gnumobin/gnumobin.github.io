@@ -11,7 +11,12 @@
   grid-template-columns: auto 1fr auto;
   align-items: center;
   // spaces
-  column-gap: calc(var(--gap-experience) - 1.1rem);
+  column-gap: clamp(
+    calc(var(--gap-experience) - 3rem),
+    2vw,
+    calc(var(--gap-experience) - 1.1rem)
+  );
+
   row-gap: var(--gap-experience);
   // font & colors
   font-size: var(--font-experience-text);
@@ -19,16 +24,16 @@
 
   &__time {
     // move to their own row on smaller screens
-    @include responsive(port-tablet) {
+    @include responsive(large-mobile) {
       grid-column: 1 / -1;
     }
   }
 
   &__logo {
     // move to their own row on very small screens
-    @include responsive(xs-mobile) {
-      grid-column: 1 / -1;
-    }
+    // @include responsive(xs-mobile) {
+    //   grid-column: 1 / -1;
+    // }
   }
 
   &__text {

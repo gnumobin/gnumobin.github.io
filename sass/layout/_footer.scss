@@ -10,15 +10,9 @@
   font-size: var(--font-footer-text);
 
   &__icon {
-    // Default icon size in footer
-    width: 1.8rem;
-    height: 1.8rem;
-
-    @include responsive(xxs-mobile) {
-      // a little bigger than desktop version
-      width: 2rem;
-      height: 2rem;
-    }
+    // Responsive icon size with clamp
+    width: clamp(1.8rem, 1vw + 1rem, 2rem);
+    height: clamp(1.8rem, 1vw + 1rem, 2rem);
   }
 
   &__text {

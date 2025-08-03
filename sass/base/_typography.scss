@@ -4,7 +4,7 @@ article h1,
 aside h1,
 nav h1,
 header h1 {
-  @include responsive-heading(clamp(2.4rem, 7vw, 5.5rem), 900);
+  @include responsive-heading(clamp(2.4rem, 0.25rem + 6vw, 5.5rem), 900);
 }
 
 // Secondary heading

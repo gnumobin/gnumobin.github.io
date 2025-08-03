@@ -7,12 +7,7 @@
 // Base heading style placeholder
 %heading {
   color: var(--color-text-bold);
-  line-height: 6.34rem;
-
-  // Adjust line height for large mobile screens and smaller
-  @include responsive(lg-mobile) {
-    line-height: 4.5rem;
-  }
+  line-height: clamp(4rem, 6vw + 1rem, 7.2rem);
 }
 
 // Typography style for uppercase titles

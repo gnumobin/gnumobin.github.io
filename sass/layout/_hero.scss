@@ -8,15 +8,12 @@
     font-weight: 300;
 
     // Centered with max width and margin for spacing
-    max-width: 60%;
     margin: var(--gap-hero-biography) auto
       calc(var(--gap-hero-biography) + 1.4rem);
 
-    // Responsive adjustments for different screen sizes
-    @include responsive(laptop) {
-      max-width: 80%;
-    }
-    @include responsive(land-tablet) {
+    max-width: 60%;
+
+    @include responsive(landscape-tablet) {
       max-width: 100%;
     }
   }

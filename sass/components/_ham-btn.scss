@@ -5,7 +5,7 @@
   -webkit-tap-highlight-color: transparent;
   transition: transform 400ms;
 
-  @include responsive(land-tablet) {
+  @include responsive(portrait-tablet) {
     display: block;
   }
 }

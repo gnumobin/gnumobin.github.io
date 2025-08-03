@@ -17,8 +17,4 @@
 .some-space {
   // Adds top padding to create spacing below the fixed header
   padding-top: calc(var(--gap-section) - 4rem);
-  // Increase Space Size on the extraSmall Mobiles
-  @include responsive(xxs-mobile) {
-    padding-top: calc(var(--gap-section) - 2rem);
-  }
 }

@@ -12,7 +12,7 @@
     font-weight: 600;
 
     // Mobile menu: fixed sidebar, initially hidden
-    @include responsive(land-tablet) {
+    @include responsive(portrait-tablet) {
       // Positions
       position: fixed;
       z-index: 100;
@@ -47,7 +47,7 @@
       color: var(--color-text);
     }
 
-    @include responsive(land-tablet) {
+    @include responsive(portrait-tablet) {
       // Mobile menu item full width styling
       display: block;
       width: 100%;

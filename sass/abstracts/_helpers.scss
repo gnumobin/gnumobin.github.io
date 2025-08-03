@@ -38,7 +38,7 @@ $colors: purple, orange, blue;
 
 // Hide elements on landscape tablet screens and smaller
 .word-wrap {
-  @include responsive(port-tablet) {
-    display: none;
+  @include responsive(tablet) {
+    // display: none;
   }
 }
