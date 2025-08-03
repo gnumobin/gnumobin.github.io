@@ -22,10 +22,10 @@
   --gradient-blue: linear-gradient(to right, #5badff, #1373d1);
   --font-header-nav: clamp(1.2rem, 1.2vw + 0.5rem, 1.5rem);
   --font-hero-biography: clamp(1.4rem, 1.5vw + 0.4rem, 1.8rem);
-  --font-btn: clamp(1.2rem, 3vw, 2.3rem);
+  --font-btn: clamp(1rem, 4vw, 2.3rem);
   --font-card-title: clamp(1.4rem, 1.2vw + 0.4rem, 1.9rem);
   --font-card-title-sub: clamp(0.8rem, 0.8vw + 0.2rem, 1rem);
-  --font-experience-title: clamp(1.5rem, 1.6vw + 0.3rem, 2.174rem);
+  --font-experience-title: clamp(1.2rem, 3vw + 0.3rem, 2.174rem);
   --font-experience-text: clamp(1.2rem, 1.2vw + 0.2rem, 1.449rem);
   --font-footer-text: clamp(1.2rem, 1vw + 0.2rem, 1.412rem);
   --rounded-card: clamp(1rem, 1vw + 0.4rem, 1.8rem);
@@ -103,126 +103,126 @@ header h1 {
 
 @font-face {
   font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-Thin.ttf") format("truetype");
+  src: url("../assets/fonts/Poppins/Poppins-Thin.woff2") format("truetype");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-ExtraLight.ttf") format("truetype");
+  src: url("../assets/fonts/Poppins/Poppins-ExtraLight.woff2") format("truetype");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-Light.ttf") format("truetype");
+  src: url("../assets/fonts/Poppins/Poppins-Light.woff2") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/Poppins/Poppins-Regular.woff2") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+  src: url("../assets/fonts/Poppins/Poppins-Medium.woff2") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  src: url("../assets/fonts/Poppins/Poppins-SemiBold.woff2") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+  src: url("../assets/fonts/Poppins/Poppins-Bold.woff2") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-ExtraBold.ttf") format("truetype");
+  src: url("../assets/fonts/Poppins/Poppins-ExtraBold.woff2") format("truetype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-Black.ttf") format("truetype");
+  src: url("../assets/fonts/Poppins/Poppins-Black.woff2") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "PlusJakartaSans";
-  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-Thin.ttf") format("truetype");
+  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-Thin.woff2") format("truetype");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "PlusJakartaSans";
-  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-ExtraLight.ttf") format("truetype");
+  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-ExtraLight.woff2") format("truetype");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "PlusJakartaSans";
-  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-Light.ttf") format("truetype");
+  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-Light.woff2") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "PlusJakartaSans";
-  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-Regular.woff2") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "PlusJakartaSans";
-  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-Medium.ttf") format("truetype");
+  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-Medium.woff2") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "PlusJakartaSans";
-  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-SemiBold.ttf") format("truetype");
+  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-SemiBold.woff2") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "PlusJakartaSans";
-  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-Bold.ttf") format("truetype");
+  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-Bold.woff2") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "PlusJakartaSans";
-  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-ExtraBold.ttf") format("truetype");
+  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-ExtraBold.woff2") format("truetype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "PlusJakartaSans";
-  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-Black.ttf") format("truetype");
+  src: url("../assets/fonts/PlusJakarta/PlusJakartaSans-Black.woff2") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -277,7 +277,7 @@ article h1,
 aside h1,
 nav h1,
 header h1 {
-  font-size: clamp(2.4rem, 0.25rem + 6vw, 5.5rem);
+  font-size: clamp(2rem, 0.25rem + 6vw, 5.5rem);
   font-weight: 900;
   text-transform: none;
   letter-spacing: 0;
@@ -575,6 +575,11 @@ h2.heading-secondary {
 }
 @media screen and (max-width: 30em) {
   .experience__time {
+    grid-column: 1/-1;
+  }
+}
+@media screen and (max-width: 20em) {
+  .experience__logo {
     grid-column: 1/-1;
   }
 }

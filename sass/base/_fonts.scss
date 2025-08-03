@@ -22,7 +22,7 @@ $weights: (
   @each $weight, $name in $weights {
     @font-face {
       font-family: "#{$family}";
-      src: url("#{$path}/#{$family}-#{$name}.ttf") format("truetype");
+      src: url("#{$path}/#{$family}-#{$name}.woff2") format("truetype");
       font-weight: #{$weight};
       font-style: normal;
       font-display: swap;

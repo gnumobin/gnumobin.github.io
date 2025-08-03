@@ -2,6 +2,7 @@ $breakpoints: (
   landscape-tablet: 48em,
   portrait-tablet: 40em,
   large-mobile: 30em,
+  small-mobile: 20em,
 );
 
 @mixin responsive($bp) {

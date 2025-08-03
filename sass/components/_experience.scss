@@ -31,9 +31,9 @@
 
   &__logo {
     // move to their own row on very small screens
-    // @include responsive(xs-mobile) {
-    //   grid-column: 1 / -1;
-    // }
+    @include responsive(small-mobile) {
+      grid-column: 1 / -1;
+    }
   }
 
   &__text {
