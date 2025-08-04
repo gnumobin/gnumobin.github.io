@@ -5,6 +5,7 @@
   &__list {
     // Alignment and gutters
     display: flex;
+    align-items: center;
     gap: var(--gap-header-nav-list);
     // Typography
     font-family: "PlusJakartaSans", "poppins", sans-serif;

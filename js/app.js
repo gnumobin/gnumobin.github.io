@@ -17,6 +17,10 @@ const heroSectionEl = document.querySelector(".section-hero");
 const allImagesEl = document.querySelectorAll("img");
 // All buttons define in our html
 const allBtnEl = document.querySelectorAll(".btn");
+// Toggle Theme Btn
+const toggleThemeBtn = document.querySelector("#toggleThemeBtn");
+// Theme
+let darkMode = true;
 
 // CSS Variables
 const bg = getComputedStyle(document.documentElement).getPropertyValue(
@@ -73,14 +77,49 @@ disableContextMenuOnChainElements(allImagesEl);
 window.innerWidth < 480 && disableContextMenuOnChainElements(allBtnEl);
 
 // When Site not focus: just blur everything!
-window.addEventListener("blur", () => document.body.classList.add("blurred"));
-window.addEventListener("focus", () =>
-  document.body.classList.remove("blurred")
-);
+// window.addEventListener("blur", () => document.body.classList.add("blurred"));
+// window.addEventListener("focus", () =>
+//   document.body.classList.remove("blurred")
+// );
 
 // if screen are touchable just disable longPress
 window.addEventListener("touchstart", preventLongPress, { passive: false });
 window.addEventListener("touchend", () => clearTimeout(this.longPressTimer));
+
+// Change Theme
+toggleThemeBtn.addEventListener("change", () => {
+  // change theme scheme
+  darkMode = !darkMode;
+  // change colors
+  document.documentElement.style.setProperty(
+    "--color-bg",
+    darkMode ? "#161513" : "#f9f9f9"
+  );
+  document.documentElement.style.setProperty(
+    "--color-bg-dark",
+    darkMode ? "#191919" : "#e0e0e0"
+  );
+  document.documentElement.style.setProperty(
+    "--color-bg-thin",
+    darkMode ? "#222" : "#d1d1d1"
+  );
+  document.documentElement.style.setProperty(
+    "--color-bg-extra-thin",
+    darkMode ? "#2a2a2a" : "#c2c2c2"
+  );
+  document.documentElement.style.setProperty(
+    "--color-text",
+    darkMode ? "#c5c5c5" : "#333333"
+  );
+  document.documentElement.style.setProperty(
+    "--color-grey	",
+    darkMode ? "#8491a0" : "#6b6b6b"
+  );
+  document.documentElement.style.setProperty(
+    "--color-text-bold",
+    darkMode ? "#fff" : "#000000"
+  );
+});
 
 // ########## Observer ##########
 
