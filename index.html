@@ -11,8 +11,8 @@
     <title>Mobin Ghaemi</title>
 
     <!-- Preload important images for faster page load -->
-    <link rel="preload" as="image" href="/assets/imgs/logo.webp" />
-    <link rel="preload" as="image" href="/assets/imgs/me.webp" />
+    <!-- <link rel="preload" as="image" href="/assets/imgs/logo.webp" />
+    <link rel="preload" as="image" href="/assets/imgs/me.webp" /> -->
 
     <!-- Link PWA -->
     <link rel="manifest" href="manifest.json" />
@@ -43,7 +43,7 @@
           "https://t.me/gnuMobin",
           "https://youtube.com/@catplantasmr"
         ],
-        "image": "https://gnumobin.netlify.app/assets/imgs/me.webp"
+        "image": "https://gnumobin.netlify.app/assets/imgs/author/me-1x.webp"
       }
     </script>
 
@@ -66,7 +66,7 @@
     />
     <meta
       property="og:image"
-      content="https://gnumobin.netlify.app/assets/imgs/me.webp"
+      content="https://gnumobin.netlify.app/assets/imgs/author/me-1x.webp"
     />
     <meta property="og:url" content="https://gnumobin.netlify.app" />
     <meta property="og:type" content="website" />
@@ -80,7 +80,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://gnumobin.netlify.app/assets/imgs/me.webp"
+      content="https://gnumobin.netlify.app/assets/imgs/author/me-1x.webp"
     />
 
     <!-- Canonical link to avoid duplicate content issues -->
@@ -104,10 +104,9 @@
       aria-label="back to top of page btn"
       id="stickyBtn"
     >
-      ↑
-      <!-- <svg class="sticky-btn__icon" aria-hidden="true" role="img">
-        <use xlink:href="./assets/icons/chevron.svg"></use>
-      </svg> -->
+      <svg class="sticky-btn__icon" aria-hidden="true" role="img">
+        <use xlink:href="./assets/icons/arrow-up.svg"></use>
+      </svg>
     </button>
 
     <!-- Header containing navigation -->
@@ -204,13 +203,43 @@
       >
         <!-- Profile image -->
         <div class="profile">
-          <img
+          <picture>
+            <!-- Modern formats first -->
+            <source
+              srcset="
+                ./assets/imgs/author/me-0.5x.webp 0.5x,
+                ./assets/imgs/author/me-1x.webp   1x,
+                ./assets/imgs/author/me-2x.webp   2x
+              "
+              type="image/webp"
+            />
+            <!-- Fallback for browsers that don't support WebP -->
+            <source
+              srcset="
+                ./assets/imgs/author/me-0.5x.jpg 0.5x,
+                ./assets/imgs/author/me-1x.jpg   1x,
+                ./assets/imgs/author/me-2x.jpg   2x
+              "
+              type="image/jpeg"
+            />
+            <!-- Fallback default image -->
+            <img
+              src="./assets/imgs/author/me-1x.jpg"
+              alt="Profile picture"
+              loading="lazy"
+              width="512"
+              height="512"
+              class="profile__img"
+            />
+          </picture>
+
+          <!-- <img
             src="./assets/imgs/me.webp"
             alt="Portrait of Mobin Ghaemi"
             class="profile__img"
             width="460"
             height="460"
-          />
+          /> -->
         </div>
 
         <!-- Hero heading -->
@@ -370,14 +399,67 @@
             aria-label="external link to MobinVPN"
           >
             <figure class="card">
-              <img
-                src="assets/imgs/projects/project-thumbnail-1.webp"
-                alt="Mobin VPN project"
-                class="card__img"
-                loading="lazy"
-                width="1920"
-                height="1080"
-              />
+              <picture>
+                <!-- Mobiles-->
+                <source
+                  media="(max-width: 480px)"
+                  type="image/webp"
+                  srcset="
+                    ./assets/imgs/projects/project-1/project-thumbnail-1-0.5x.webp 1x,
+                    ./assets/imgs/projects/project-1/project-thumbnail-1-1x.webp   2x
+                  "
+                />
+                <source
+                  media="(max-width: 480px)"
+                  type="image/jpeg"
+                  srcset="
+                    ./assets/imgs/projects/project-1/project-thumbnail-1-0.5x.jpg 1x,
+                    ./assets/imgs/projects/project-1/project-thumbnail-1-1x.jpg   2x
+                  "
+                />
+
+                <!-- Tablets -->
+                <source
+                  media="(max-width: 900px)"
+                  type="image/webp"
+                  srcset="
+                    ./assets/imgs/projects/project-1/project-thumbnail-1-1x.webp 1x,
+                    ./assets/imgs/projects/project-1/project-thumbnail-1-2x.webp 2x
+                  "
+                />
+                <source
+                  media="(max-width: 900px)"
+                  type="image/jpeg"
+                  srcset="
+                    ./assets/imgs/projects/project-1/project-thumbnail-1-1x.jpg 1x,
+                    ./assets/imgs/projects/project-1/project-thumbnail-1-2x.jpg 2x
+                  "
+                />
+
+                <!-- Desktops -->
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./assets/imgs/projects/project-1/project-thumbnail-1-2x.webp
+                  "
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="
+                    ./assets/imgs/projects/project-1/project-thumbnail-1-2x.jpg
+                  "
+                />
+
+                <!-- fallback -->
+                <img
+                  src="./assets/imgs/projects/project-1/project-thumbnail-1-1x.webp"
+                  alt="Mobin VPN project"
+                  class="card__img"
+                  loading="lazy"
+                  width="1920"
+                  height="1080"
+                />
+              </picture>
               <figcaption class="card__content">
                 <h3 class="card__title">Mobin VPN</h3>
                 <svg class="card__icon" aria-hidden="true" role="img">
@@ -393,12 +475,68 @@
             aria-label="external link to mobin-ghaemi portfolio"
           >
             <figure class="card">
-              <img
-                src="assets/imgs/projects/project-thumbnail-2.webp"
-                alt="Mobin Documentation Website"
-                class="card__img"
-                loading="lazy"
-              />
+              <picture>
+                <!-- Mobiles-->
+                <source
+                  media="(max-width: 480px)"
+                  type="image/webp"
+                  srcset="
+                    ./assets/imgs/projects/project-2/project-thumbnail-2-0.5x.webp 1x,
+                    ./assets/imgs/projects/project-2/project-thumbnail-2-1x.webp   2x
+                  "
+                />
+                <source
+                  media="(max-width: 480px)"
+                  type="image/jpeg"
+                  srcset="
+                    ./assets/imgs/projects/project-2/project-thumbnail-2-0.5x.jpg 1x,
+                    ./assets/imgs/projects/project-2/project-thumbnail-2-1x.jpg   2x
+                  "
+                />
+
+                <!-- Tablets -->
+                <source
+                  media="(max-width: 900px)"
+                  type="image/webp"
+                  srcset="
+                    ./assets/imgs/projects/project-2/project-thumbnail-2-1x.webp 1x,
+                    ./assets/imgs/projects/project-2/project-thumbnail-2-2x.webp 2x
+                  "
+                />
+                <source
+                  media="(max-width: 900px)"
+                  type="image/jpeg"
+                  srcset="
+                    ./assets/imgs/projects/project-2/project-thumbnail-2-1x.jpg 1x,
+                    ./assets/imgs/projects/project-2/project-thumbnail-2-2x.jpg 2x
+                  "
+                />
+
+                <!-- Desktops -->
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./assets/imgs/projects/project-2/project-thumbnail-2-2x.webp
+                  "
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="
+                    ./assets/imgs/projects/project-2/project-thumbnail-2-2x.jpg
+                  "
+                />
+
+                <!-- fallback -->
+                <img
+                  src="./assets/imgs/projects/project-2/project-thumbnail-2-1x.webp"
+                  alt="Mobin VPN project"
+                  class="card__img"
+                  loading="lazy"
+                  width="1920"
+                  height="1080"
+                />
+              </picture>
+
               <figcaption class="card__content">
                 <h3 class="card__title">Mobin Docs</h3>
                 <svg class="card__icon" aria-hidden="true" role="img">

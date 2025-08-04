@@ -663,25 +663,25 @@ h2.heading-secondary {
   color: var(--color-text);
   width: 6.4rem;
   height: 6.4rem;
+  border: none;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: none;
-  cursor: pointer;
   font-size: 5.2rem;
   font-weight: bolder;
-  margin: 3rem;
-  margin-bottom: 2.5rem;
+  margin: 3.5rem;
   box-shadow: 0 0 1rem var(--color-bg-thin);
   transition: box-shadow var(--trans-1x), transform var(--trans-1x), opacity var(--trans-2x), visibility var(--trans-2x);
   will-change: box-shadow, transform, visibility, opacity;
+  cursor: pointer;
   opacity: 0;
   visibility: hidden;
   transform: scale(0.5);
 }
 .sticky-btn__icon {
-  width: 100%;
+  width: 2.4rem;
+  height: 2.4rem;
 }
 .sticky-btn__link:link, .sticky-btn__link:visited {
   color: inherit;
