@@ -58,14 +58,14 @@ const observer = new IntersectionObserver(
 
 observer.observe(heroSection);
 
-// if ("serviceWorker" in navigator) {
-//   window.addEventListener("load", () => {
-//     navigator.serviceWorker
-//       .register("./js/sw.js")
-//       .then((reg) => console.log("✅ Service Worker registered:", reg.scope))
-//       .catch((err) => console.error("❌ SW registration failed:", err));
-//   });
-// }
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("./js/sw.js")
+      .then((reg) => console.log("✅ Service Worker registered:", reg.scope))
+      .catch((err) => console.error("❌ SW registration failed:", err));
+  });
+}
 
 stickyBtn.addEventListener("click", () => {
   window.scrollTo({
@@ -81,3 +81,15 @@ imgsArr.forEach((img) => {
     e.preventDefault();
   });
 });
+
+const windowWidth = window.innerWidth;
+const allBtn = document.querySelectorAll(".btn");
+const btnArr = allBtn;
+
+if (windowWidth < 480) {
+  btnArr.forEach((btn) => {
+    btn.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+    });
+  });
+}

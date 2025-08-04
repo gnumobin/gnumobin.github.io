@@ -1,11 +1,11 @@
 const CACHE_NAME = "mobin-portfolio-v1";
 const urlsToCache = [
-  "./",
-  "./index.html",
-  "./assets/PWA/logo512.webp",
-  "./assets/PWA/logo192.webp",
-  "./styles/style.css",
-  "./js/app.js",
+  "/",
+  "/index.html",
+  "/assets/PWA/logo512.webp",
+  "/assets/PWA/logo192.webp",
+  "/styles/style.css",
+  "/js/app.js",
   // Add more files as needed
 ];
 

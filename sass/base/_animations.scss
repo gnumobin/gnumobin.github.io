@@ -1,17 +1,9 @@
-// 🔁 Neon Effect via Loop
-$neon-colors: (
-  grey: var(--color-grey),
-  purple: #9a33ff,
-  orange: #ff8660,
-  blue: #5badff,
-);
+// 🔁 Neon Effect
 
-@each $name, $color in $neon-colors {
-  .neon-#{$name}:hover {
-    color: var(--color-text-bold);
-    text-shadow: 0 0 1rem $color, 0 0 2rem $color, 0 0 3rem $color,
-      0 0 4rem $color;
-  }
+.neon:hover {
+  color: var(--color-text-bold);
+  text-shadow: 0 0 1rem var(--color-grey), 0 0 2rem #9a33ff, 0 0 3rem #ff8660,
+    0 0 4rem #5badff;
 }
 
 // 🔧 Utility Classes

@@ -26,6 +26,7 @@
     // move to their own row on smaller screens
     @include responsive(large-mobile) {
       grid-column: 1 / -1;
+      user-select: none;
     }
   }
 
