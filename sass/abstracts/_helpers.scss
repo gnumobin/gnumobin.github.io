@@ -42,3 +42,11 @@ $colors: purple, orange, blue;
     // display: none;
   }
 }
+
+.blurred {
+  filter: blur(0.8rem);
+  transition: 0.25s;
+  will-change: filter;
+  overflow-x: hidden;
+  pointer-events: none;
+}

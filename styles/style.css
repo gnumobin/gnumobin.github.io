@@ -101,6 +101,14 @@ header h1 {
   border: 0;
 }
 
+.blurred {
+  filter: blur(0.8rem);
+  transition: 0.25s;
+  will-change: filter;
+  overflow-x: hidden;
+  pointer-events: none;
+}
+
 @font-face {
   font-family: "Poppins";
   src: url("../assets/fonts/Poppins/Poppins-Thin.woff2") format("truetype");

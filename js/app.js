@@ -28,15 +28,13 @@ const bg = getComputedStyle(document.documentElement).getPropertyValue(
 // Open & Close Mobile Menu
 const toggleShowMenu = (open) => {
   // toggle classLists
+  hamMenuBtn.classList.toggle("active");
   hamMenuEl.classList.toggle("header-nav__list--active");
   overlayEl.classList.toggle("overlay--active");
-  hamMenuBtn.classList.toggle("active");
 
   // if we are close menu change background with subtle delay
   if (open) {
-    setTimeout(() => {
-      headerEl.classList.toggle("header--active");
-    }, 180);
+    setTimeout(() => headerEl.classList.toggle("header--active"), 180);
   } else {
     // if we are open change background immediately
     headerEl.classList.toggle("header--active");
@@ -52,6 +50,14 @@ const disableContextMenuOnChainElements = (els) => {
   });
 };
 
+// Unset longPress on mobiles (annoying vibrate)
+const preventLongPress = (e) => {
+  if (e.touches.length > 1) {
+    e.preventDefault();
+  }
+  this.longPressTimer = setTimeout(() => e.preventDefault(), 500);
+};
+
 // ########## Events ##########
 
 // Open & Close Menu (Overlay, HamburgerBtn)
@@ -65,6 +71,16 @@ stickyBtn.addEventListener("click", () => window.scrollTo({ top: 0 }));
 disableContextMenuOnChainElements(allImagesEl);
 // Disable RightClick menu on button just for smaller screens
 window.innerWidth < 480 && disableContextMenuOnChainElements(allBtnEl);
+
+// When Site not focus: just blur everything!
+window.addEventListener("blur", () => document.body.classList.add("blurred"));
+window.addEventListener("focus", () =>
+  document.body.classList.remove("blurred")
+);
+
+// if screen are touchable just disable longPress
+window.addEventListener("touchstart", preventLongPress, { passive: false });
+window.addEventListener("touchend", () => clearTimeout(this.longPressTimer));
 
 // ########## Observer ##########
 
@@ -97,4 +113,22 @@ if ("serviceWorker" in navigator) {
       .then((reg) => console.log("✅ Service Worker registered:", reg.scope))
       .catch((err) => console.error("❌ SW registration failed:", err));
   });
+}
+
+// ########## Block Translators ##########
+
+const blockList = [
+  "translate.googleusercontent.com",
+  "translatetheweb.com",
+  "bing.com",
+  "translate.yandex.com",
+];
+
+const isTranslatedPage =
+  blockList.some((domain) => location.hostname.includes(domain)) ||
+  window.top !== window.self;
+
+if (isTranslatedPage) {
+  document.body.innerHTML =
+    "<h2 style='text-align:center;margin-top:50px;'>Why do you want translate that?</h2>";
 }
