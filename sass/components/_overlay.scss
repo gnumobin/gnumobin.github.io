@@ -12,4 +12,9 @@
 
   // Set Animations
   transition: transform var(--trans-2x), visibility var(--trans-2x) linear;
+
+  &--active {
+    transform: translateX(0%);
+    visibility: visible;
+  }
 }

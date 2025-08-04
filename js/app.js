@@ -1,51 +1,81 @@
 "use strict";
 
+// ########## Variables ##########
+// Hamburger Menu Btn
 const hamMenuBtn = document.getElementById("hamMenuBtn");
-const hamMenu = document.getElementById("hamMenu");
-const overlay = document.getElementById("overlay");
-const header = document.querySelector(".header");
+// Hamburger Menu
+const hamMenuEl = document.getElementById("hamMenu");
+// Overlay
+const overlayEl = document.getElementById("overlay");
+// HeaderElement
+const headerEl = document.querySelector(".header");
+// Sticky Btn
 const stickyBtn = document.querySelector("#stickyBtn");
+// Hero Section (First Section User can see!)
+const heroSectionEl = document.querySelector(".section-hero");
+// All images define in our html
+const allImagesEl = document.querySelectorAll("img");
+// All buttons define in our html
+const allBtnEl = document.querySelectorAll(".btn");
 
-hamMenuBtn.addEventListener("click", () => {
-  hamMenu.style.visibility = "visible";
-  hamMenu.style.transform = "translateX(0%)";
+// CSS Variables
+const bg = getComputedStyle(document.documentElement).getPropertyValue(
+  "--color-bg-thin"
+);
 
-  overlay.style.visibility = "visible";
-  overlay.style.transform = "translateX(0%)";
+// Functions
 
+// Open & Close Mobile Menu
+const toggleShowMenu = (open) => {
+  // toggle classLists
+  hamMenuEl.classList.toggle("header-nav__list--active");
+  overlayEl.classList.toggle("overlay--active");
   hamMenuBtn.classList.toggle("active");
 
-  header.style.backgroundColor = "transparent";
-});
+  // if we are close menu change background with subtle delay
+  if (open) {
+    setTimeout(() => {
+      headerEl.classList.toggle("header--active");
+    }, 180);
+  } else {
+    // if we are open change background immediately
+    headerEl.classList.toggle("header--active");
+  }
+};
 
-overlay.addEventListener("click", () => {
-  hamMenu.style.visibility = "hidden";
-  hamMenu.style.transform = "translateX(-100%)";
+// Disable contextMenu on chain of elements
+const disableContextMenuOnChainElements = (els) => {
+  els.forEach((el) => {
+    el.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+    });
+  });
+};
 
-  overlay.style.visibility = "hidden";
-  overlay.style.transform = "translateX(200%)";
+// ########## Events ##########
 
-  hamMenuBtn.classList.toggle("active");
+// Open & Close Menu (Overlay, HamburgerBtn)
+hamMenuBtn.addEventListener("click", () => toggleShowMenu(false));
+overlayEl.addEventListener("click", () => toggleShowMenu(true));
 
-  const bg = getComputedStyle(document.documentElement).getPropertyValue(
-    "--color-bg-thin"
-  );
+// StickyBtn => Back to top of page | function in here!
+stickyBtn.addEventListener("click", () => window.scrollTo({ top: 0 }));
 
-  setTimeout(() => {
-    header.style.backgroundColor = bg;
-  }, 400);
-});
+// Disable RightClick menu on all of image
+disableContextMenuOnChainElements(allImagesEl);
+// Disable RightClick menu on button just for smaller screens
+window.innerWidth < 480 && disableContextMenuOnChainElements(allBtnEl);
 
-const heroSection = document.querySelector(".section-hero");
+// ########## Observer ##########
 
 const observer = new IntersectionObserver(
   (entries) => {
     const ent = entries[0];
     if (!ent.isIntersecting) {
-      header.classList.add("sticky");
+      headerEl.classList.add("sticky");
       stickyBtn.classList.add("active");
     } else {
-      header.classList.remove("sticky");
+      headerEl.classList.remove("sticky");
       stickyBtn.classList.remove("active");
     }
   },
@@ -56,7 +86,9 @@ const observer = new IntersectionObserver(
   }
 );
 
-observer.observe(heroSection);
+observer.observe(heroSectionEl);
+
+// ########## ServiceWorker ##########
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
@@ -64,32 +96,5 @@ if ("serviceWorker" in navigator) {
       .register("./js/sw.js")
       .then((reg) => console.log("✅ Service Worker registered:", reg.scope))
       .catch((err) => console.error("❌ SW registration failed:", err));
-  });
-}
-
-stickyBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-  });
-});
-
-const allImages = document.querySelectorAll("img");
-const imgsArr = allImages;
-
-imgsArr.forEach((img) => {
-  img.addEventListener("contextmenu", (e) => {
-    e.preventDefault();
-  });
-});
-
-const windowWidth = window.innerWidth;
-const allBtn = document.querySelectorAll(".btn");
-const btnArr = allBtn;
-
-if (windowWidth < 480) {
-  btnArr.forEach((btn) => {
-    btn.addEventListener("contextmenu", (e) => {
-      e.preventDefault();
-    });
   });
 }

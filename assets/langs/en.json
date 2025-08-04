@@ -1,0 +1,34 @@
+{
+  "primaryNavigation": ["Home", "Projects", "Experience", "Contact"],
+  "primaryHeading": {
+    "prefer": "I do code and",
+    "between": "make content",
+    "gradient": "about it!"
+  },
+  "projectsHeading": "Projects",
+  "skillsHeading": "Experience With",
+  "experiencesHeading": "Experiences",
+  "heroSectionBio": "Hey, I'm Mobin — a curious full-stack developer from Gorgan 🇮🇷 who started this coding journey in the world of Android apps with Java. These days, I craft modern web apps using React, Node.js, and Express, and I’m totally hooked on clean architecture. Also, yes... I run Arch Linux (btw 😎). Let’s build something cool!",
+  "btns": {
+    "primaryBtn": "Get In Touch",
+    "secondaryBtn": "Download CV"
+  },
+  "projectSubtext": "Click here to visit",
+  "project1Heading": "Mobin VPN",
+  "project2Heading": "Mobinfolio",
+
+  "experience1Heading": "Lead Software Engineer at Google",
+  "experience1Time": "Jan 2021 - Present",
+  "experience1Text": "As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.",
+
+  "experience2Heading": "Senior Developer at Apple",
+  "experience2Time": "May 2018 - Dec 2020",
+  "experience2Text": "During my tenure at Apple, I held the role of Software Architect, where I played a key role in shaping the architecture of mission-critical software projects. Responsible for designing scalable and efficient systems, I provided technical leadership to a cross-functional team",
+
+  "experience3Heading": "Software Engineer at Meta",
+  "experience3Time": "Mar 2015 - Apr 2018",
+  "experience3Text": "At Meta, I worked on large-scale social networking infrastructure, improving backend performance and scalability for billions of users. My role involved optimizing APIs, database queries, and integrating new features while maintaining system stability.",
+
+  "footerHeading": "Contact",
+  "footerText": "Full-stack wizard 🧙‍♂️ with 5+ years of coding magic ✨ — started casting spells in Java ☕ for Android, now conjuring sleek web apps with React ⚛️, Node.js 🌐, and Express 🚀. Arch Linux fanboy 🐧 by day, clean code ninja 🥷 by night. Ready to build cool stuff? Let’s chat! 💬"
+}

@@ -37,6 +37,11 @@
       // Radius
       border-radius: var(--rounded-menu);
     }
+
+    &--active {
+      transform: translateX(0%);
+      visibility: visible;
+    }
   }
 
   &__item {

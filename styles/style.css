@@ -376,6 +376,10 @@ h2.heading-secondary {
     border-radius: var(--rounded-menu);
   }
 }
+.header-nav__list--active {
+  transform: translateX(0%);
+  visibility: visible;
+}
 .header-nav__item {
   color: var(--color-text-bold);
 }
@@ -651,6 +655,10 @@ h2.heading-secondary {
   visibility: hidden;
   transition: transform var(--trans-2x), visibility var(--trans-2x) linear;
 }
+.overlay--active {
+  transform: translateX(0%);
+  visibility: visible;
+}
 
 .sticky-btn {
   position: fixed;
@@ -703,6 +711,9 @@ h2.heading-secondary {
 }
 .header.sticky {
   box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+}
+.header--active {
+  background-color: rgba(255, 255, 255, 0.577);
 }
 
 .some-space {
