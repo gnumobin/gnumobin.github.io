@@ -8,6 +8,8 @@
   top: 0;
   left: 0;
 
+  transition: var(--trans-2x);
+
   &.sticky {
     // Add subtle shadow when header becomes sticky
     box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);

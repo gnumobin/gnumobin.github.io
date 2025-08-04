@@ -12,7 +12,7 @@ input {
 .switch__input {
   display: block;
   -webkit-tap-highlight-color: transparent;
-  font-size: calc(60 * (100vw - 320px) / (2560 - 320));
+  font-size: 3rem;
   cursor: pointer;
 }
 .switch {

@@ -62,6 +62,47 @@ const preventLongPress = (e) => {
   this.longPressTimer = setTimeout(() => e.preventDefault(), 500);
 };
 
+// Change Theme
+const changeTheme = () => {
+  // Define Local Variable
+  const darkMode = JSON.parse(localStorage.getItem("darkTheme"));
+
+  if (darkMode) {
+    toggleThemeBtn.setAttribute("checked", "checked");
+  } else {
+    toggleThemeBtn.removeAttribute("checked");
+  }
+  // change colors
+  document.documentElement.style.setProperty(
+    "--color-bg",
+    darkMode ? "#161513" : "#f9f9f9"
+  );
+  document.documentElement.style.setProperty(
+    "--color-bg-dark",
+    darkMode ? "#191919" : "#f3f3f3"
+  );
+  document.documentElement.style.setProperty(
+    "--color-bg-thin",
+    darkMode ? "#222" : "#e5e5e5"
+  );
+  document.documentElement.style.setProperty(
+    "--color-bg-extra-thin",
+    darkMode ? "#2a2a2a" : "#d6d6d6"
+  );
+  document.documentElement.style.setProperty(
+    "--color-text",
+    darkMode ? "#c5c5c5" : "#1a1a1a"
+  );
+  document.documentElement.style.setProperty(
+    "--color-grey	",
+    darkMode ? "#8491a0" : "#5a5a5a"
+  );
+  document.documentElement.style.setProperty(
+    "--color-text-bold",
+    darkMode ? "#fff" : "#000000"
+  );
+};
+
 // ########## Events ##########
 
 // Open & Close Menu (Overlay, HamburgerBtn)
@@ -87,39 +128,13 @@ window.addEventListener("touchstart", preventLongPress, { passive: false });
 window.addEventListener("touchend", () => clearTimeout(this.longPressTimer));
 
 // Change Theme
-toggleThemeBtn.addEventListener("change", () => {
+toggleThemeBtn.addEventListener("change", (e) => {
   // change theme scheme
-  darkMode = !darkMode;
-  // change colors
-  document.documentElement.style.setProperty(
-    "--color-bg",
-    darkMode ? "#161513" : "#f9f9f9"
-  );
-  document.documentElement.style.setProperty(
-    "--color-bg-dark",
-    darkMode ? "#191919" : "#e0e0e0"
-  );
-  document.documentElement.style.setProperty(
-    "--color-bg-thin",
-    darkMode ? "#222" : "#d1d1d1"
-  );
-  document.documentElement.style.setProperty(
-    "--color-bg-extra-thin",
-    darkMode ? "#2a2a2a" : "#c2c2c2"
-  );
-  document.documentElement.style.setProperty(
-    "--color-text",
-    darkMode ? "#c5c5c5" : "#333333"
-  );
-  document.documentElement.style.setProperty(
-    "--color-grey	",
-    darkMode ? "#8491a0" : "#6b6b6b"
-  );
-  document.documentElement.style.setProperty(
-    "--color-text-bold",
-    darkMode ? "#fff" : "#000000"
-  );
+  localStorage.setItem("darkTheme", e.target.checked ? true : false);
+  // Change Theme
+  changeTheme();
 });
+changeTheme();
 
 // ########## Observer ##########
 

@@ -1,5 +1,6 @@
 .footer {
   background-color: var(--color-bg-dark);
+  transition: var(--trans-2x);
 
   // Margin & Padding to separate footer from above content
   margin-top: calc(var(--gap-section) + 0.7rem);

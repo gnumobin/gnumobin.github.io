@@ -17,6 +17,8 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  transition: var(--trans-2x);
 }
 
 // Reset margin, padding and inherit box-sizing for all elements

@@ -251,6 +251,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: var(--trans-2x);
 }
 
 *,
@@ -725,7 +726,7 @@ input {
 .switch__input {
   display: block;
   -webkit-tap-highlight-color: transparent;
-  font-size: calc(60 * (100vw - 320px) / 2240);
+  font-size: 3rem;
   cursor: pointer;
 }
 
@@ -852,6 +853,7 @@ input {
   width: 100%;
   top: 0;
   left: 0;
+  transition: var(--trans-2x);
 }
 .header.sticky {
   box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
@@ -907,6 +909,7 @@ input {
 
 .footer {
   background-color: var(--color-bg-dark);
+  transition: var(--trans-2x);
   margin-top: calc(var(--gap-section) + 0.7rem);
   padding: calc(var(--gap-section) - 1.8rem) 0 var(--gap-section);
   color: var(--color-grey);
