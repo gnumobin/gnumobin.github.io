@@ -43,9 +43,19 @@ ul {
 a:link,
 a:visited,
 img,
-button {
+button,
+h1,
+h2,
+h3 {
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
   -webkit-user-drag: none;
+}
+
+@include responsive(large-mobile) {
+  p {
+    user-select: none;
+    -webkit-user-drag: none;
+  }
 }

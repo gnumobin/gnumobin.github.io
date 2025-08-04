@@ -58,17 +58,26 @@ const observer = new IntersectionObserver(
 
 observer.observe(heroSection);
 
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("./js/sw.js")
-      .then((reg) => console.log("✅ Service Worker registered:", reg.scope))
-      .catch((err) => console.error("❌ SW registration failed:", err));
-  });
-}
+// if ("serviceWorker" in navigator) {
+//   window.addEventListener("load", () => {
+//     navigator.serviceWorker
+//       .register("./js/sw.js")
+//       .then((reg) => console.log("✅ Service Worker registered:", reg.scope))
+//       .catch((err) => console.error("❌ SW registration failed:", err));
+//   });
+// }
 
 stickyBtn.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
+  });
+});
+
+const allImages = document.querySelectorAll("img");
+const imgsArr = allImages;
+
+imgsArr.forEach((img) => {
+  img.addEventListener("contextmenu", (e) => {
+    e.preventDefault();
   });
 });

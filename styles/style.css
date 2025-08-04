@@ -265,13 +265,22 @@ ul {
 a:link,
 a:visited,
 img,
-button {
+button,
+h1,
+h2,
+h3 {
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
   -webkit-user-drag: none;
 }
 
+@media screen and (max-width: 30em) {
+  p {
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+}
 section h1,
 article h1,
 aside h1,
