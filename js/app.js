@@ -161,9 +161,22 @@ changeTheme();
 
 // Disable default ctrl+s action
 document.addEventListener("keydown", function (e) {
-  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "s") {
+  console.log(e.code);
+  if ((e.ctrlKey || e.metaKey) && e.code === "KeyS") {
     e.preventDefault();
-    alert("🙂");
+    alert("Do you work with the browser or with us? 🙂");
+  }
+  if ((e.ctrlKey || e.metaKey) && e.code === "KeyU") {
+    e.preventDefault();
+    alert("Do you work with the browser or with us? 🙂");
+  }
+  if (e.code === "F12") {
+    e.preventDefault();
+    alert("Do you work with the browser or with us? 🙂");
+  }
+  if ((e.ctrlKey || e.metaKey) && e.code === "KeyI") {
+    e.preventDefault();
+    alert("Do you work with the browser or with us? 🙂");
   }
 });
 

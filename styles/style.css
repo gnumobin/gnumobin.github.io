@@ -254,7 +254,8 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: var(--trans-2x);
+  transition: background-color var(--trans-2x), color var(--trans-2x);
+  will-change: background-color, color;
 }
 
 *,
