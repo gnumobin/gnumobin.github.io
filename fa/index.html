@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
   <head>
     <!-- Character encoding for the document -->
     <meta charset="UTF-8" />
@@ -12,36 +12,33 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
     />
+
     <!-- Languages -->
-    <link
-      rel="alternate"
-      hreflang="fa"
-      href="https://gnumobin.netlify.app/fa"
-    />
+    <link rel="alternate" hreflang="en" href="https://gnumobin.netlify.app/" />
 
     <!-- Document Title -->
-    <title>Mobin Ghaemi</title>
+    <title>مبین قائمی</title>
 
     <!-- Preload important images for faster page load -->
-    <!-- <link rel="preload" as="image" href="./assets/imgs/logo/logo.webp" />
+    <!-- <link rel="preload" as="image" href="../assets/imgs/logo/logo.webp" />
     <link rel="preload" as="image" href="/assets/imgs/me.webp" /> -->
 
     <!-- Link PWA -->
     <link rel="manifest" href="manifest.json" />
 
     <!-- Link to main CSS stylesheet -->
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
 
     <!-- Favicon for the browser tab -->
     <link
       rel="shortcut icon"
-      href="./assets/imgs/logo/logo-1x.webp"
+      href="../assets/imgs/logo/logo-1x.webp"
       type="image/x-icon"
     />
 
     <!-- Load JavaScript file with defer to execute after parsing HTML -->
-    <script src="js/sw.js" defer></script>
-    <script src="js/app.js" defer></script>
+    <script src="../js/sw.js" defer></script>
+    <script src="../js/app.js" defer></script>
 
     <!-- Structured data using JSON-LD for SEO (Person schema) -->
     <script type="application/ld+json">
@@ -62,19 +59,19 @@
     <!-- Meta tags for search engine optimization -->
     <meta
       name="description"
-      content="Mobin Ghaemi is a full-stack developer from Gorgan, Iran. I build websites, develop mobile and desktop apps, and make tech content on YouTube."
+      content="مبین قائمی یک توسعه‌دهنده فول‌استک اهل گرگان، ایران است. من وب‌سایت می‌سازم، اپلیکیشن‌های موبایل و دسکتاپ توسعه می‌دهم و در یوتیوب محتوای فناوری تولید می‌کنم.»"
     />
     <meta
       name="keywords"
-      content="Mobin Ghaemi, Full Stack Developer, Gorgan, Iran, web developer, mobile apps, desktop apps, YouTube content creator"
+      content="مبین قائمی، توسعه‌دهنده فول‌استک، گرگان، ایران، توسعه‌دهنده وب، اپلیکیشن‌های موبایل، اپلیکیشن‌های دسکتاپ، تولیدکننده محتوای یوتیوب"
     />
     <meta name="author" content="Mobin Ghaemi" />
 
     <!-- Open Graph meta tags for social media sharing -->
-    <meta property="og:title" content="Mobin Ghaemi | Full-Stack Engineer" />
+    <meta property="og:title" content="مبین قائمی | مهندس فول استک" />
     <meta
       property="og:description"
-      content="Full-stack developer based in Gorgan, Iran. I code and make content about it on YouTube."
+      content="توسعه‌دهنده فول‌استک ساکن گرگان، ایران. کدنویسی می‌کنم و در یوتیوب در موردش محتوا تولید می‌کنم."
     />
     <meta
       property="og:image"
@@ -85,10 +82,10 @@
 
     <!-- Twitter Card meta tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Mobin Ghaemi | Full-Stack Developer" />
+    <meta name="twitter:title" content="مبین قائمی | توسعه‌دهنده فول‌استک" />
     <meta
       name="twitter:description"
-      content="Full-stack developer from Gorgan, Iran building websites and apps and making tech content on YouTube."
+      content="توسعه‌دهنده فول‌استک اهل گرگان، ایران، در زمینه ساخت وب‌سایت و اپلیکیشن و تولید محتوای فناوری در یوتیوب."
     />
     <meta
       name="twitter:image"
@@ -113,19 +110,19 @@
     <!-- EasterEgg -->
     <blockquote class="print" aria-hidden="true">
       <q class="print__text">
-        Miss. Drakulich has a book in which it is written <br />
-        Communism went, we stayed and laughed.
+        خانم دراکولیچ کتابی دارد که در آن نوشته شده است <br />
+        کمونیسم رفت، ما ماندیم و خندیدیم.
       </q>
     </blockquote>
 
     <!-- Sticky Button (For back to top of page) -->
     <button
       class="sticky-btn"
-      aria-label="back to top of page btn"
+      aria-label="دکمه بازگشت به بالای صفحه"
       id="stickyBtn"
     >
       <svg class="sticky-btn__icon" aria-hidden="true" role="img">
-        <use xlink:href="./assets/icons/arrow-up.svg"></use>
+        <use xlink:href="../assets/icons/arrow-up.svg"></use>
       </svg>
     </button>
 
@@ -135,7 +132,7 @@
         <nav
           class="header-nav"
           id="primaryNav"
-          aria-label="Main Navigation"
+          aria-label="ناوبری اصلی"
           role="navigation"
         >
           <!-- Website logo -->
@@ -145,8 +142,8 @@
               <source
                 type="image/webp"
                 srcset="
-                  ./assets/imgs/logo/logo-1x.webp 1x,
-                  ./assets/imgs/logo/logo-2x.webp 2x
+                  ../assets/imgs/logo/logo-1x.webp 1x,
+                  ../assets/imgs/logo/logo-2x.webp 2x
                 "
               />
 
@@ -154,15 +151,15 @@
               <source
                 type="image/png"
                 srcset="
-                  ./assets/imgs/logo/logo-1x.png 1x,
-                  ./assets/imgs/logo/logo-2x.png 2x
+                  ../assets/imgs/logo/logo-1x.png 1x,
+                  ../assets/imgs/logo/logo-2x.png 2x
                 "
               />
 
               <!-- Fallback img tag -->
               <img
-                src="./assets/imgs/logo/logo-1x.png"
-                alt="Website Logo"
+                src="../assets/imgs/logo/logo-1x.png"
+                alt="لوگوی وب سایت"
                 width="100"
                 height="100"
                 decoding="async"
@@ -172,48 +169,14 @@
           </div>
 
           <!-- Navigation links -->
-          <ul class="header-nav__list" id="hamMenu">
-            <!-- Active page: Home -->
-            <li class="header-nav__item header-nav__item--active">
-              <a
-                href="#heroSection"
-                class="header-nav__link"
-                aria-current="page"
-                aria-label="Internal link to Hero Section"
-                >Home</a
-              >
-            </li>
-            <!-- Other sections -->
-            <li class="header-nav__item">
-              <a
-                href="#projectsSection"
-                class="header-nav__link"
-                aria-label="Internal link to Projects Section"
-                >Projects</a
-              >
-            </li>
-            <li class="header-nav__item">
-              <a
-                href="#experienceSection"
-                class="header-nav__link"
-                aria-label="Internal link to Experiences Section"
-                >Experience</a
-              >
-            </li>
-            <li class="header-nav__item">
-              <a
-                href="#contactSection"
-                class="header-nav__link"
-                aria-label="Internal link to Contact Section"
-                >Contact</a
-              >
-            </li>
+          <ul class="header-nav__list" id="hamMenu" dir="rtl">
+            <!-- Toggle Theme Btn -->
             <li>
               <svg
                 display="none"
                 class="toggle-theme"
                 role="button"
-                aria-label="toggle theme"
+                aria-label="تعویض تم"
               >
                 <symbol id="light" viewBox="0 0 24 24">
                   <g
@@ -331,8 +294,47 @@
                     <use href="#dark" />
                   </svg>
                 </span>
-                <span class="switch__sr" role="text">Dark Mode</span>
+                <span class="switch__sr" role="text">حالت تاریک</span>
               </label>
+            </li>
+            <!-- Active page: Home -->
+            <li class="header-nav__item header-nav__item--active">
+              <a
+                href="#heroSection"
+                class="header-nav__link"
+                aria-current="page"
+                aria-label="لینک داخلی به بخش خانه"
+              >
+                خانه
+              </a>
+            </li>
+            <!-- Other sections -->
+            <li class="header-nav__item">
+              <a
+                href="#projectsSection"
+                class="header-nav__link"
+                aria-label="لینک داخلی به بخش پروژه‌ها"
+              >
+                پروژه‌ها
+              </a>
+            </li>
+            <li class="header-nav__item">
+              <a
+                href="#experienceSection"
+                class="header-nav__link"
+                aria-label="پیوند داخلی به بخش سوابق کاری"
+              >
+                سوابق کاری
+              </a>
+            </li>
+            <li class="header-nav__item">
+              <a
+                href="#contactSection"
+                class="header-nav__link"
+                aria-label="لینک داخلی به بخش ارتباط"
+              >
+                ارتباط
+              </a>
             </li>
           </ul>
 
@@ -367,7 +369,8 @@
       <section
         class="section-hero"
         id="heroSection"
-        aria-label="a simple profile of me"
+        aria-label="یه پروفایل ساده از من"
+        dir="rtl"
       >
         <!-- Profile image -->
         <div class="profile">
@@ -375,25 +378,25 @@
             <!-- Modern formats first -->
             <source
               srcset="
-                ./assets/imgs/author/me-0.5x.webp 0.5x,
-                ./assets/imgs/author/me-1x.webp   1x,
-                ./assets/imgs/author/me-2x.webp   2x
+                ../assets/imgs/author/me-0.5x.webp 0.5x,
+                ../assets/imgs/author/me-1x.webp   1x,
+                ../assets/imgs/author/me-2x.webp   2x
               "
               type="image/webp"
             />
             <!-- Fallback for browsers that don't support WebP -->
             <source
               srcset="
-                ./assets/imgs/author/me-0.5x.jpg 0.5x,
-                ./assets/imgs/author/me-1x.jpg   1x,
-                ./assets/imgs/author/me-2x.jpg   2x
+                ../assets/imgs/author/me-0.5x.jpg 0.5x,
+                ../assets/imgs/author/me-1x.jpg   1x,
+                ../assets/imgs/author/me-2x.jpg   2x
               "
               type="image/jpeg"
             />
             <!-- Fallback default image -->
             <img
-              src="./assets/imgs/author/me-1x.jpg"
-              alt="Portrait of Mobin Ghaemi"
+              src="../assets/imgs/author/me-1x.jpg"
+              alt="پرتره مبین قائمی"
               width="512"
               height="512"
               class="profile__img"
@@ -403,37 +406,37 @@
 
         <!-- Hero heading -->
         <h1 class="heading-primary mg-t-lg" data-i18n="primaryHeading">
-          I do code and <br class="word-wrap" />
-          make content <span class="gradient-purple">about it!</span>
+          من کد می میزنم و <br class="word-wrap" />
+          محتوا می‌سازم، <span class="gradient-purple">درباره اون!</span>
         </h1>
 
         <!-- Biography paragraph -->
         <p class="section-hero__biography">
-          Hey, I'm Mobin — a curious full-stack developer from Gorgan 🇮🇷 who
-          started this coding journey in the world of Android apps with Java.
-          These days, I craft modern web apps using React, Node.js, and Express,
-          and I’m totally hooked on clean architecture. Also, yes... I run Arch
-          Linux (btw 😎). Let’s build something cool!
+          سلام، من مبین هستم - یک توسعه‌دهنده‌ی فول‌استک کنجکاو از گرگان 🇮🇷 که
+          این سفر کدنویسی در دنیای اپلیکیشن‌های اندروید را با جاوا شروع کردم.
+          این روزها، من با استفاده از React، Node.js و Express اپلیکیشن‌های وب
+          مدرن می‌سازم، و کاملاً به معماری تمیز علاقه‌مندم. ضمناً، بله... من
+          Arch Linux را اجرا می‌کنم (راستی 😎). بیایید یک چیز جالب بسازیم!
         </p>
 
         <!-- Call-to-action buttons -->
-        <div class="section-hero__actions">
+        <div class="section-hero__actions" dir="ltr">
           <a
             href="https://t.me/gnuMobin"
             class="btn btn--primary dark"
             target="_self"
-            aria-label="Contact with Telegram"
+            aria-label="تماس بگیرید در تلگرام"
           >
-            Get In Touch
+            تماس بگیرید
           </a>
           <a
-            href="./assets/etc/cv.pdf"
+            href="../assets/etc/cv.pdf"
             class="btn btn--secondary dark"
             download
-            aria-label="Download CV"
+            aria-label="دانلود رزومه"
             role="button"
           >
-            Download CV
+            دانلود رزومه
           </a>
         </div>
       </section>
@@ -441,9 +444,9 @@
       <!-- Technologies Section -->
       <section
         class="section-technologies"
-        aria-label="What technologies I use"
+        aria-label="از چه فناوری هایی استفاده می کنم"
       >
-        <h2 class="heading-sub">EXPERIENCE WITH</h2>
+        <h2 class="heading-sub">تجربه با</h2>
         <ul class="skills">
           <!-- Each skill icon -->
           <li class="skills__item jelly">
@@ -453,7 +456,7 @@
               aria-label="HTML5 Logo"
               title="HTML5"
             >
-              <use xlink:href="./assets/technologies/html.svg"></use>
+              <use xlink:href="../assets/technologies/html.svg"></use>
             </svg>
           </li>
           <li class="skills__item jelly">
@@ -463,7 +466,7 @@
               aria-label="CSS Logo"
               title="CSS"
             >
-              <use xlink:href="./assets/technologies/css.svg"></use>
+              <use xlink:href="../assets/technologies/css.svg"></use>
             </svg>
           </li>
           <li class="skills__item jelly">
@@ -473,7 +476,7 @@
               aria-label="Sass Logo"
               title="Sass"
             >
-              <use xlink:href="./assets/technologies/sass.svg"></use>
+              <use xlink:href="../assets/technologies/sass.svg"></use>
             </svg>
           </li>
           <li class="skills__item jelly">
@@ -483,7 +486,7 @@
               aria-label="TailwindCSS Logo"
               title="TailwindCSS"
             >
-              <use xlink:href="./assets/technologies/tailwindcss.svg"></use>
+              <use xlink:href="../assets/technologies/tailwindcss.svg"></use>
             </svg>
           </li>
           <li class="skills__item jelly">
@@ -493,7 +496,7 @@
               aria-label="JavaScript Logo"
               title="JavaScript"
             >
-              <use xlink:href="./assets/technologies/js.svg"></use>
+              <use xlink:href="../assets/technologies/js.svg"></use>
             </svg>
           </li>
           <li class="skills__item jelly">
@@ -503,7 +506,7 @@
               aria-label="React.js Logo"
               title="React.js"
             >
-              <use xlink:href="./assets/technologies/react.svg"></use>
+              <use xlink:href="../assets/technologies/react.svg"></use>
             </svg>
           </li>
           <li class="skills__item jelly">
@@ -513,7 +516,7 @@
               aria-label="Node.js Logo"
               title="Node.js"
             >
-              <use xlink:href="./assets/technologies/nodejs.svg"></use>
+              <use xlink:href="../assets/technologies/nodejs.svg"></use>
             </svg>
           </li>
           <li class="skills__item jelly">
@@ -523,7 +526,7 @@
               aria-label="Express.js Logo"
               title="Express.js"
             >
-              <use xlink:href="./assets/technologies/express.svg"></use>
+              <use xlink:href="../assets/technologies/express.svg"></use>
             </svg>
           </li>
           <li class="skills__item jelly">
@@ -533,7 +536,7 @@
               aria-label="MongoDB Logo"
               title="MongoDB"
             >
-              <use xlink:href="./assets/technologies/mongodb.svg"></use>
+              <use xlink:href="../assets/technologies/mongodb.svg"></use>
             </svg>
           </li>
           <li class="skills__item jelly">
@@ -543,7 +546,7 @@
               aria-label="Linux Logo"
               title="Linux"
             >
-              <use xlink:href="./assets/technologies/linux.svg"></use>
+              <use xlink:href="../assets/technologies/linux.svg"></use>
             </svg>
           </li>
         </ul>
@@ -553,9 +556,9 @@
       <section
         class="section-projects"
         id="projectsSection"
-        aria-label="What projects I done"
+        aria-label="چه پروژه هایی انجام دادم"
       >
-        <h2 class="heading-secondary gradient-orange">Projects</h2>
+        <h2 class="heading-secondary gradient-orange">پروژه ها</h2>
 
         <div class="section-projects__cards">
           <!-- Project Card Example -->
@@ -563,7 +566,7 @@
             href="https://mobin-vpn.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="external link to MobinVPN"
+            aria-label="لینک خارجی به MobinVPN"
           >
             <figure class="card">
               <picture>
@@ -572,16 +575,16 @@
                   media="(max-width: 480px)"
                   type="image/webp"
                   srcset="
-                    ./assets/imgs/projects/project-1/project-thumbnail-1-0.5x.webp 1x,
-                    ./assets/imgs/projects/project-1/project-thumbnail-1-1x.webp   2x
+                    ../assets/imgs/projects/project-1/project-thumbnail-1-0.5x.webp 1x,
+                    ../assets/imgs/projects/project-1/project-thumbnail-1-1x.webp   2x
                   "
                 />
                 <source
                   media="(max-width: 480px)"
                   type="image/jpeg"
                   srcset="
-                    ./assets/imgs/projects/project-1/project-thumbnail-1-0.5x.jpg 1x,
-                    ./assets/imgs/projects/project-1/project-thumbnail-1-1x.jpg   2x
+                    ../assets/imgs/projects/project-1/project-thumbnail-1-0.5x.jpg 1x,
+                    ../assets/imgs/projects/project-1/project-thumbnail-1-1x.jpg   2x
                   "
                 />
 
@@ -590,16 +593,16 @@
                   media="(max-width: 900px)"
                   type="image/webp"
                   srcset="
-                    ./assets/imgs/projects/project-1/project-thumbnail-1-1x.webp 1x,
-                    ./assets/imgs/projects/project-1/project-thumbnail-1-2x.webp 2x
+                    ../assets/imgs/projects/project-1/project-thumbnail-1-1x.webp 1x,
+                    ../assets/imgs/projects/project-1/project-thumbnail-1-2x.webp 2x
                   "
                 />
                 <source
                   media="(max-width: 900px)"
                   type="image/jpeg"
                   srcset="
-                    ./assets/imgs/projects/project-1/project-thumbnail-1-1x.jpg 1x,
-                    ./assets/imgs/projects/project-1/project-thumbnail-1-2x.jpg 2x
+                    ../assets/imgs/projects/project-1/project-thumbnail-1-1x.jpg 1x,
+                    ../assets/imgs/projects/project-1/project-thumbnail-1-2x.jpg 2x
                   "
                 />
 
@@ -607,20 +610,20 @@
                 <source
                   type="image/webp"
                   srcset="
-                    ./assets/imgs/projects/project-1/project-thumbnail-1-2x.webp
+                    ../assets/imgs/projects/project-1/project-thumbnail-1-2x.webp
                   "
                 />
                 <source
                   type="image/jpeg"
                   srcset="
-                    ./assets/imgs/projects/project-1/project-thumbnail-1-2x.jpg
+                    ../assets/imgs/projects/project-1/project-thumbnail-1-2x.jpg
                   "
                 />
 
                 <!-- fallback -->
                 <img
-                  src="./assets/imgs/projects/project-1/project-thumbnail-1-1x.webp"
-                  alt="Mobin VPN project"
+                  src="../assets/imgs/projects/project-1/project-thumbnail-1-1x.webp"
+                  alt="پروژه مبین VPN"
                   class="card__img"
                   loading="lazy"
                   width="1920"
@@ -628,9 +631,9 @@
                 />
               </picture>
               <figcaption class="card__content">
-                <h3 class="card__title">Mobin VPN</h3>
+                <h3 class="card__title">سایت فیلترشکن</h3>
                 <svg class="card__icon" aria-hidden="true" role="img">
-                  <use xlink:href="./assets/icons/chevron.svg"></use>
+                  <use xlink:href="../assets/icons/chevron.svg"></use>
                 </svg>
               </figcaption>
             </figure>
@@ -639,7 +642,7 @@
             href="https://gnumobin.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="external link to mobin-ghaemi portfolio"
+            aria-label="لینک خارجی به سایت شخصی مبین قائمی"
           >
             <figure class="card">
               <picture>
@@ -648,16 +651,16 @@
                   media="(max-width: 480px)"
                   type="image/webp"
                   srcset="
-                    ./assets/imgs/projects/project-2/project-thumbnail-2-0.5x.webp 1x,
-                    ./assets/imgs/projects/project-2/project-thumbnail-2-1x.webp   2x
+                    ../assets/imgs/projects/project-2/project-thumbnail-2-0.5x.webp 1x,
+                    ../assets/imgs/projects/project-2/project-thumbnail-2-1x.webp   2x
                   "
                 />
                 <source
                   media="(max-width: 480px)"
                   type="image/jpeg"
                   srcset="
-                    ./assets/imgs/projects/project-2/project-thumbnail-2-0.5x.jpg 1x,
-                    ./assets/imgs/projects/project-2/project-thumbnail-2-1x.jpg   2x
+                    ../assets/imgs/projects/project-2/project-thumbnail-2-0.5x.jpg 1x,
+                    ../assets/imgs/projects/project-2/project-thumbnail-2-1x.jpg   2x
                   "
                 />
 
@@ -666,16 +669,16 @@
                   media="(max-width: 900px)"
                   type="image/webp"
                   srcset="
-                    ./assets/imgs/projects/project-2/project-thumbnail-2-1x.webp 1x,
-                    ./assets/imgs/projects/project-2/project-thumbnail-2-2x.webp 2x
+                    ../assets/imgs/projects/project-2/project-thumbnail-2-1x.webp 1x,
+                    ../assets/imgs/projects/project-2/project-thumbnail-2-2x.webp 2x
                   "
                 />
                 <source
                   media="(max-width: 900px)"
                   type="image/jpeg"
                   srcset="
-                    ./assets/imgs/projects/project-2/project-thumbnail-2-1x.jpg 1x,
-                    ./assets/imgs/projects/project-2/project-thumbnail-2-2x.jpg 2x
+                    ../assets/imgs/projects/project-2/project-thumbnail-2-1x.jpg 1x,
+                    ../assets/imgs/projects/project-2/project-thumbnail-2-2x.jpg 2x
                   "
                 />
 
@@ -683,19 +686,19 @@
                 <source
                   type="image/webp"
                   srcset="
-                    ./assets/imgs/projects/project-2/project-thumbnail-2-2x.webp
+                    ../assets/imgs/projects/project-2/project-thumbnail-2-2x.webp
                   "
                 />
                 <source
                   type="image/jpeg"
                   srcset="
-                    ./assets/imgs/projects/project-2/project-thumbnail-2-2x.jpg
+                    ../assets/imgs/projects/project-2/project-thumbnail-2-2x.jpg
                   "
                 />
 
                 <!-- fallback -->
                 <img
-                  src="./assets/imgs/projects/project-2/project-thumbnail-2-1x.webp"
+                  src="../assets/imgs/projects/project-2/project-thumbnail-2-1x.webp"
                   alt="Mobin VPN project"
                   class="card__img"
                   loading="lazy"
@@ -705,9 +708,9 @@
               </picture>
 
               <figcaption class="card__content">
-                <h3 class="card__title">Mobin Folio</h3>
+                <h3 class="card__title">وبسایت شخصی</h3>
                 <svg class="card__icon" aria-hidden="true" role="img">
-                  <use xlink:href="./assets/icons/chevron.svg"></use>
+                  <use xlink:href="../assets/icons/chevron.svg"></use>
                 </svg>
               </figcaption>
             </figure>
@@ -720,28 +723,28 @@
       <section
         class="section-experience"
         id="experienceSection"
-        aria-label="All my work experiences"
+        aria-label="تمام تجربیات کاری من"
       >
-        <h2 class="heading-secondary gradient-blue text-center">Experience</h2>
+        <h2 class="heading-secondary gradient-blue text-center">تجربیات من</h2>
 
         <div class="experiences">
           <!-- Experience Example: Google -->
           <article class="experience">
             <figure class="experience__logo">
               <svg class="experience__icon" aria-hidden="true" role="img">
-                <use xlink:href="./assets/companies/google.svg"></use>
+                <use xlink:href="../assets/companies/google.svg"></use>
               </svg>
             </figure>
-            <h3 class="experience__title">Lead Software Engineer at Google</h3>
-            <time class="experience__time" datetime="2021-01"
-              >Jan 2021 - Present</time
-            >
+            <h3 class="experience__title">مهندس ارشد نرم‌افزار در گوگل</h3>
+            <time class="experience__time" datetime="2021-01">
+              ژانویه ۲۰۲۱ - تاکنون
+            </time>
             <p class="experience__text">
-              As a Senior Software Engineer at Google, I played a pivotal role
-              in developing innovative solutions for Google's core search
-              algorithms. Collaborating with a dynamic team of engineers, I
-              contributed to the enhancement of search accuracy and efficiency,
-              optimizing user experiences for millions of users worldwide.
+              به عنوان مهندس ارشد نرم‌افزار در گوگل، من نقش محوری در توسعه
+              راه‌حل‌های نوآورانه برای الگوریتم‌های جستجوی اصلی گوگل داشتم. با
+              همکاری یک تیم پویا از مهندسان، من در افزایش دقت و کارایی جستجو و
+              بهینه‌سازی تجربیات کاربری برای میلیون‌ها کاربر در سراسر جهان
+              مشارکت داشتم.
             </p>
           </article>
 
@@ -749,19 +752,18 @@
           <article class="experience">
             <figure class="experience__logo">
               <svg class="experience__icon" aria-hidden="true" role="img">
-                <use xlink:href="./assets/companies/apple.svg"></use>
+                <use xlink:href="../assets/companies/apple.svg"></use>
               </svg>
             </figure>
-            <h3 class="experience__title">Senior Developer at Apple</h3>
-            <time class="experience__time" datetime="2018-05"
-              >May 2018 - Dec 2020</time
-            >
+            <h3 class="experience__title">توسعه دهنده ارشد در اپل</h3>
+            <time class="experience__time" datetime="2018-05">
+              مه ۲۰۱۸ - دسامبر ۲۰۲۰
+            </time>
             <p class="experience__text">
-              During my tenure at Apple, I held the role of Software Architect,
-              where I played a key role in shaping the architecture of
-              mission-critical software projects. Responsible for designing
-              scalable and efficient systems, I provided technical leadership to
-              a cross-functional team.
+              در طول دوران تصدی‌ام در اپل، نقش معمار نرم‌افزار را بر عهده داشتم،
+              جایی که نقش کلیدی در شکل‌دهی معماری پروژه‌های نرم‌افزاری حیاتی
+              ایفا می‌کردم. من مسئول طراحی سیستم‌های مقیاس‌پذیر و کارآمد بودم و
+              رهبری فنی یک تیم چندوظیفه‌ای را بر عهده داشتم.
             </p>
           </article>
 
@@ -769,18 +771,18 @@
           <article class="experience">
             <figure class="experience__logo">
               <svg class="experience__icon" aria-hidden="true" role="img">
-                <use xlink:href="./assets/companies/meta.svg"></use>
+                <use xlink:href="../assets/companies/meta.svg"></use>
               </svg>
             </figure>
-            <h3 class="experience__title">Software Engineer at Meta</h3>
-            <time class="experience__time" datetime="2015-03"
-              >Mar 2015 - Apr 2018</time
-            >
+            <h3 class="experience__title">مهندس نرم افزار در متا</h3>
+            <time class="experience__time" datetime="2015-03">
+              مارس ۲۰۱۵ - آوریل ۲۰۱۸
+            </time>
             <p class="experience__text">
-              At Meta, I worked on large-scale social networking infrastructure,
-              improving backend performance and scalability for billions of
-              users. My role involved optimizing APIs, database queries, and
-              integrating new features while maintaining system stability.
+              در متا، من روی زیرساخت‌های شبکه‌های اجتماعی در مقیاس بزرگ کار
+              می‌کردم و عملکرد backend و مقیاس‌پذیری را برای میلیاردها کاربر
+              بهبود می‌بخشیدم. نقش من شامل بهینه‌سازی APIها، پرس‌وجوهای پایگاه
+              داده و ادغام ویژگی‌های جدید ضمن حفظ پایداری سیستم بود.
             </p>
           </article>
         </div>
@@ -791,24 +793,25 @@
     <footer
       class="footer"
       id="contactSection"
-      aria-label="How to contact with Me?"
+      aria-label="چگونه با من تماس بگیرید؟"
+      dir="rtl"
     >
       <div class="container">
-        <h2 class="heading-tertiary">Contact</h2>
+        <h2 class="heading-tertiary">تماس بگیرید</h2>
 
         <!-- Fun bio paragraph -->
         <p class="footer__text">
-          Full-stack wizard 🧙‍♂️ with 5+ years of coding magic ✨ — started
-          casting spells in Java ☕ for Android, now conjuring sleek web apps
-          with React ⚛️, Node.js 🌐, and Express 🚀. Arch Linux fanboy 🐧 by
-          day, clean code ninja 🥷 by night. Ready to build cool stuff? Let’s
-          chat! 💬
+          جادوگر فول‌استک 🧙‍♂️ با بیش از ۵ سال جادوی کدنویسی ✨ — شروع به اجرای
+          طلسم‌ها در جاوا ☕ برای اندروید کرد، اکنون با React ⚛️، Node.js 🌐 و
+          Express 🚀 برنامه‌های وب شیکی را خلق می‌کند. روز طرفدار آرچ لینوکس 🐧،
+          شب نینجای کدنویسی تمیز 🥷. آماده‌اید چیزهای جذاب بسازید؟ بیایید گپ
+          بزنیم! 💬
         </p>
 
         <!-- Email contact -->
         <address class="footer__email neon">
           <svg class="footer__icon" aria-hidden="true" role="img">
-            <use xlink:href="./assets/icons/email.svg"></use>
+            <use xlink:href="../assets/icons/email.svg"></use>
           </svg>
           <a
             href="mailto:gnumobin@gmail.com"
@@ -826,10 +829,10 @@
             target="_blank"
             rel="noopener noreferrer"
             class="jelly"
-            aria-label="YouTube channel"
+            aria-label="کانال یوتیوب"
           >
             <svg class="footer__icon" aria-hidden="true" role="img">
-              <use xlink:href="./assets/companies/youtube.svg"></use>
+              <use xlink:href="../assets/companies/youtube.svg"></use>
             </svg>
           </a>
           <a
@@ -837,10 +840,10 @@
             target="_blank"
             rel="noopener noreferrer"
             class="jelly"
-            aria-label="Telegram profile"
+            aria-label="پروفایل تلگرام"
           >
             <svg class="footer__icon" aria-hidden="true" role="img">
-              <use xlink:href="./assets/companies/telegram.svg"></use>
+              <use xlink:href="../assets/companies/telegram.svg"></use>
             </svg>
           </a>
         </div>
