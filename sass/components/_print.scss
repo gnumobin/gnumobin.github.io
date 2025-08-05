@@ -1,0 +1,22 @@
+.print {
+  display: none;
+  font-size: 3rem;
+  font-style: italic;
+}
+@media print {
+  body {
+    height: 100vh !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body * {
+    display: none !important;
+  }
+
+  .print,
+  .print * {
+    display: block !important;
+  }
+}

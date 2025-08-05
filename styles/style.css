@@ -864,6 +864,27 @@ input {
   height: 1px;
 }
 
+.print {
+  display: none;
+  font-size: 3rem;
+  font-style: italic;
+}
+
+@media print {
+  body {
+    height: 100vh !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body * {
+    display: none !important;
+  }
+  .print,
+  .print * {
+    display: block !important;
+  }
+}
 .header {
   background-color: var(--color-bg-thin);
   position: fixed;

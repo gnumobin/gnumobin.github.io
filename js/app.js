@@ -141,10 +141,10 @@ disableContextMenuOnChainElements(allImagesEl);
 window.innerWidth < 480 && disableContextMenuOnChainElements(allBtnEl);
 
 // When Site not focus: just blur everything!
-// window.addEventListener("blur", () => document.body.classList.add("blurred"));
-// window.addEventListener("focus", () =>
-//   document.body.classList.remove("blurred")
-// );
+window.addEventListener("blur", () => document.body.classList.add("blurred"));
+window.addEventListener("focus", () =>
+  document.body.classList.remove("blurred")
+);
 
 // if screen are touchable just disable longPress
 window.addEventListener("touchstart", preventLongPress, { passive: false });
@@ -158,6 +158,14 @@ toggleThemeBtn.addEventListener("change", (e) => {
   changeTheme();
 });
 changeTheme();
+
+// Disable default ctrl+s action
+document.addEventListener("keydown", function (e) {
+  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "s") {
+    e.preventDefault();
+    alert("🙂");
+  }
+});
 
 // ########## Observer ##########
 
