@@ -6,6 +6,9 @@
   --color-text: #c5c5c5;
   --color-grey: #8491a0;
   --color-text-bold: #fff;
+  --color-neon: #e0e0e0;
+  --color-neon-tint: #e3e3e3;
+  --color-neon-tinter: #e6e6e6;
   --gap-header-nav-list: clamp(3rem, 5vw, 7.1rem);
   --gap-hero-biography: clamp(2rem, 3vw, 3.9rem);
   --gap-hero-actions: clamp(1rem, 2vw, 1.8rem);
@@ -61,7 +64,7 @@ header h1 {
 }
 
 .btn--secondary:hover, .btn--primary:hover {
-  box-shadow: 0 0 4px 1.5px rgb(249.5, 249.5, 249.5), 0 0 10px 4px #e0e0e0, 0 0 20px 8px white;
+  box-shadow: 0 0 4px 1.5px var(--color-neon-tint), 0 0 10px 4px var(--color-neon), 0 0 20px 8px var(--color-neon-tinter);
 }
 
 .container {
@@ -478,11 +481,19 @@ h2.heading-secondary {
   backface-visibility: hidden;
   pointer-events: none;
 }
-.btn::before {
+.btn.light::before {
+  transform: translate3d(-10%, 5em, 0) rotate(330deg);
+  background: linear-gradient(25deg, rgba(26, 26, 26, 0.15), transparent);
+}
+.btn.light::after {
+  transform: translate3d(10%, 5em, 0) rotate(0deg);
+  background: linear-gradient(70deg, rgba(26, 26, 26, 0.18), transparent);
+}
+.btn.dark::before {
   transform: translate3d(-10%, 5em, 0) rotate(330deg);
   background: linear-gradient(25deg, rgba(224, 224, 224, 0.15), transparent);
 }
-.btn::after {
+.btn.dark::after {
   transform: translate3d(10%, 5em, 0) rotate(0deg);
   background: linear-gradient(70deg, rgba(224, 224, 224, 0.18), transparent);
 }
@@ -503,6 +514,10 @@ h2.heading-secondary {
 .btn--primary:hover {
   background-color: black;
   color: var(--color-text-bold);
+}
+.btn--primary:hover.light {
+  color: var(--color-text-bold);
+  background-color: transparent;
 }
 .btn--secondary {
   background-color: transparent;
@@ -559,6 +574,9 @@ h2.heading-secondary {
   text-align: left;
 }
 .card__icon {
+  color: var(--color-text-bold);
+  stroke: currentColor;
+  fill: currentColor;
   inline-size: 1.5rem;
   block-size: 1.4rem;
 }
@@ -798,7 +816,7 @@ input {
 }
 
 .switch__input {
-  background-color: var(--color-text-bold);
+  background-color: var(--color-bg);
   border-radius: 0.75em;
   box-shadow: 0 0 0 0.0625em hsla(var(--hue), 90%, 50%, 0), 0 0.125em 0.5em hsla(var(--hue), 10%, 10%, 0.1);
   outline: transparent;

@@ -17,11 +17,8 @@
   color: var(--color-text-bold);
 }
 
-// Neon glow color variable
-$neon-color: #e0e0e0;
-
 // Glow effect placeholder for neon-like shadows
 %glow {
-  box-shadow: 0 0 4px 1.5px lighten($neon-color, 10%), 0 0 10px 4px $neon-color,
-    0 0 20px 8px lighten($neon-color, 20%);
+  box-shadow: 0 0 4px 1.5px var(--color-neon-tint),
+    0 0 10px 4px var(--color-neon), 0 0 20px 8px var(--color-neon-tinter);
 }

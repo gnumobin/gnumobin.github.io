@@ -35,6 +35,9 @@
   }
 
   &__icon {
+    color: var(--color-text-bold);
+    stroke: currentColor;
+    fill: currentColor;
     inline-size: 1.5rem;
     block-size: 1.4rem;
   }

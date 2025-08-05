@@ -83,11 +83,11 @@ const changeTheme = () => {
   );
   document.documentElement.style.setProperty(
     "--color-bg-thin",
-    darkMode ? "#222" : "#e5e5e5"
+    darkMode ? "#222" : "#cccccc"
   );
   document.documentElement.style.setProperty(
     "--color-bg-extra-thin",
-    darkMode ? "#2a2a2a" : "#d6d6d6"
+    darkMode ? "#2a2a2a" : "#e2e2e2"
   );
   document.documentElement.style.setProperty(
     "--color-text",
@@ -101,6 +101,29 @@ const changeTheme = () => {
     "--color-text-bold",
     darkMode ? "#fff" : "#000000"
   );
+  document.documentElement.style.setProperty(
+    "--color-neon",
+    darkMode ? "#e0e0e0" : "#7a7a7a"
+  );
+  document.documentElement.style.setProperty(
+    "--color-neon-tint",
+    darkMode ? "#e3e3e3" : "#888888"
+  );
+  document.documentElement.style.setProperty(
+    "--color-neon-tinter",
+    darkMode ? "#e6e6e6" : "#999999"
+  );
+
+  // Buttons
+  allBtnEl.forEach((btn) => {
+    if (darkMode) {
+      btn.classList.remove("light");
+      btn.classList.add("dark");
+    } else {
+      btn.classList.remove("dark");
+      btn.classList.add("light");
+    }
+  });
 };
 
 // ########## Events ##########

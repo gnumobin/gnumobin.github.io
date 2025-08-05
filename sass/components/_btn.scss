@@ -1,4 +1,4 @@
-$color-text-bold: #fff;
+$color-text-bold: var(--color-text-bold);
 $color-bg: #161513;
 
 @mixin pseudoHover($per, $deg) {
@@ -9,6 +9,11 @@ $color-bg: #161513;
 @mixin pseudoDiff($per, $t-deg, $b-deg, $alpha) {
   transform: translate3d($per, 5em, 0) rotate($t-deg);
   background: linear-gradient($b-deg, rgba(224, 224, 224, $alpha), transparent);
+}
+
+@mixin pseudoDiffLight($per, $t-deg, $b-deg, $alpha) {
+  transform: translate3d($per, 5em, 0) rotate($t-deg);
+  background: linear-gradient($b-deg, rgba(26, 26, 26, $alpha), transparent);
 }
 
 @mixin secondary($bg, $color) {
@@ -70,14 +75,26 @@ $color-bg: #161513;
     pointer-events: none;
   }
 
-  // Left gradient shape, initially below the button and rotated
-  &::before {
-    @include pseudoDiff(-10%, 330deg, 25deg, 0.15);
+  &.light {
+    // Left gradient shape, initially below the button and rotated
+    &::before {
+      @include pseudoDiffLight(-10%, 330deg, 25deg, 0.15);
+    }
+    // Right gradient shape, initially below the button and rotated
+    &::after {
+      @include pseudoDiffLight(10%, 0deg, 70deg, 0.18);
+    }
   }
 
-  // Right gradient shape, initially below the button and rotated
-  &::after {
-    @include pseudoDiff(10%, 0deg, 70deg, 0.18);
+  &.dark {
+    // Left gradient shape, initially below the button and rotated
+    &::before {
+      @include pseudoDiff(-10%, 330deg, 25deg, 0.15);
+    }
+    // Right gradient shape, initially below the button and rotated
+    &::after {
+      @include pseudoDiff(10%, 0deg, 70deg, 0.18);
+    }
   }
 
   // On hover, gradient shapes move up and become visible, creating a subtle shine effect
@@ -96,6 +113,11 @@ $color-bg: #161513;
       background-color: darken($color-bg, 10%);
       color: var(--color-text-bold);
       @extend %glow; // glow effect on hover
+
+      &.light {
+        color: var(--color-text-bold);
+        background-color: transparent;
+      }
     }
   }
 
