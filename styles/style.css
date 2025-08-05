@@ -292,6 +292,9 @@ h3 {
 @media screen and (max-width: 30em) {
   p {
     user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     -webkit-user-drag: none;
   }
 }

@@ -60,6 +60,9 @@ h3 {
 @include responsive(large-mobile) {
   p {
     user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     -webkit-user-drag: none;
   }
 }
