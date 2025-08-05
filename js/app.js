@@ -43,6 +43,14 @@ const toggleShowMenu = (open) => {
     // if we are open change background immediately
     headerEl.classList.toggle("header--active");
   }
+
+  const actionsFlag = hamMenuBtn.classList.contains("active");
+
+  if (actionsFlag) {
+    disableScroll();
+  } else {
+    enableScroll();
+  }
 };
 
 // Disable contextMenu on chain of elements
@@ -147,8 +155,13 @@ window.innerWidth < 480 && disableContextMenuOnChainElements(allBtnEl);
 // );
 
 // if screen are touchable just disable longPress
-window.addEventListener("touchstart", preventLongPress, { passive: false });
-window.addEventListener("touchend", () => clearTimeout(this.longPressTimer));
+document.addEventListener(
+  "touchstart",
+  (e) => {
+    if (e.touches.length > 1) e.preventDefault();
+  },
+  { passive: false }
+);
 
 // Change Theme
 toggleThemeBtn.addEventListener("change", (e) => {
@@ -161,7 +174,6 @@ changeTheme();
 
 // Disable default ctrl+s action
 document.addEventListener("keydown", function (e) {
-  console.log(e.code);
   if ((e.ctrlKey || e.metaKey) && e.code === "KeyS") {
     e.preventDefault();
     alert("Do you work with the browser or with us? 🙂");
@@ -207,7 +219,7 @@ observer.observe(heroSectionEl);
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
-      .register("./js/sw.js")
+      .register("/js/sw.js")
       .then((reg) => console.log("✅ Service Worker registered:", reg.scope))
       .catch((err) => console.error("❌ SW registration failed:", err));
   });
@@ -229,4 +241,52 @@ const isTranslatedPage =
 if (isTranslatedPage) {
   document.body.innerHTML =
     "<h2 style='text-align:center;margin-top:50px;'>Why do you want translate that?</h2>";
+}
+
+// left: 37, up: 38, right: 39, down: 40,
+// spaceBar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
+
+function preventDefaultForScrollKeys(e) {
+  if (keys[e.keyCode]) {
+    preventDefault(e);
+    return false;
+  }
+}
+
+function preventDefault(e) {
+  e.preventDefault();
+}
+// modern Chrome requires { passive: false } when adding event
+var supportsPassive = false;
+try {
+  window.addEventListener(
+    "test",
+    null,
+    Object.defineProperty({}, "passive", {
+      get: function () {
+        supportsPassive = true;
+      },
+    })
+  );
+} catch (e) {}
+
+var wheelOpt = supportsPassive ? { passive: false } : false;
+var wheelEvent =
+  "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
+
+// call this to Disable
+function disableScroll() {
+  window.addEventListener("DOMMouseScroll", preventDefault, false); // older FF
+  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+  window.addEventListener("touchmove", preventDefault, wheelOpt); // mobile
+  window.addEventListener("keydown", preventDefaultForScrollKeys, false);
+}
+
+// call this to Enable
+function enableScroll() {
+  window.removeEventListener("DOMMouseScroll", preventDefault, false);
+  window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
+  window.removeEventListener("touchmove", preventDefault, wheelOpt);
+  window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
 }
