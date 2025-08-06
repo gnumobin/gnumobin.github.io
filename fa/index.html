@@ -47,6 +47,7 @@
 
     <!-- Load JavaScript file with defer to execute after parsing HTML -->
     <script src="/sw.js" defer></script>
+    <script src="/js/lang.js" defer></script>
     <script src="/js/app.js" defer></script>
 
     <!-- Structured data using JSON-LD for SEO (Person schema) -->
@@ -366,7 +367,7 @@
           <!-- Navigation links -->
           <ul class="header-nav__list" id="hamMenu" dir="rtl">
             <!-- Toggle Theme Btn -->
-            <li>
+            <li class="header-nav__some">
               <svg
                 display="none"
                 class="toggle-theme"
@@ -490,6 +491,13 @@
                 </span>
                 <span class="switch__sr" role="text">حالت تم</span>
               </label>
+
+              <!-- Change Langs -->
+              <label for="langSelect" class="sr-only">Select Languages</label>
+              <select id="langSelect">
+                <option value="fa">پارسی</option>
+                <option value="en">انگلیسی</option>
+              </select>
             </li>
             <!-- Active page: Home -->
             <li class="header-nav__item header-nav__item--active">

@@ -65,6 +65,11 @@
     }
   }
 
+  &__some {
+    display: flex;
+    gap: 0.5rem;
+  }
+
   &__link {
     // Basic link styles with transitions
     &:link,

@@ -51,6 +51,7 @@
 
     <!-- Load JavaScript file with defer to execute after parsing HTML -->
     <script src="/sw.js" defer></script>
+    <script defer src="/js/lang.js"></script>
     <script src="./../js/app.js" defer></script>
 
     <!-- Structured data using JSON-LD for SEO (Person schema) -->
@@ -419,7 +420,7 @@
                 >Contact</a
               >
             </li>
-            <li>
+            <li class="header-nav__some">
               <svg
                 display="none"
                 class="toggle-theme"
@@ -543,6 +544,13 @@
                 </span>
                 <span class="switch__sr" role="text">Dark Mode</span>
               </label>
+
+              <!-- Change Langs -->
+              <label for="langSelect" class="sr-only">Select Languages</label>
+              <select id="langSelect">
+                <option value="en">English</option>
+                <option value="fa">Persian</option>
+              </select>
             </li>
           </ul>
 
