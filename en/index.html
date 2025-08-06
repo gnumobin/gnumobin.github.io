@@ -50,7 +50,7 @@
     />
 
     <!-- Load JavaScript file with defer to execute after parsing HTML -->
-    <script src="./../js/sw.js" defer></script>
+    <script src="/sw.js" defer></script>
     <script src="./../js/app.js" defer></script>
 
     <!-- Structured data using JSON-LD for SEO (Person schema) -->
@@ -72,19 +72,21 @@
     <!-- Meta tags for search engine optimization -->
     <meta
       name="description"
-      content="Mobin Ghaemi is a full-stack developer from Gorgan, Iran. I build websites, develop mobile and desktop apps, and make tech content on YouTube."
+      content="Mobin Ghaemi — Full Stack Developer & Arch Linux power user. Building clean, fast, and minimal experiences from backend to frontend."
     />
+
     <meta
       name="keywords"
-      content="Mobin Ghaemi, Full Stack Developer, Gorgan, Iran, web developer, mobile apps, desktop apps, YouTube content creator"
+      content="Mobin Ghaemi, Full Stack Developer, Web Developer, Backend Developer, Frontend Developer, JavaScript Developer, Node.js, React Developer, Mobile App Developer, Desktop App Developer, Progressive Web Apps, Gorgan, Golestan, Iran, Arch Linux, Open Source Contributor, UI/UX, Responsive Web Design, Software Engineer, YouTube Content Creator, Tech Blogger"
     />
+
     <meta name="author" content="Mobin Ghaemi" />
 
     <!-- Open Graph meta tags for social media sharing -->
     <meta property="og:title" content="Mobin Ghaemi | Full-Stack Engineer" />
     <meta
       property="og:description"
-      content="Full-stack developer based in Gorgan, Iran. I code and make content about it on YouTube."
+      content="Mobin Ghaemi — Full Stack Developer & Arch Linux power user. Building clean, fast, and minimal experiences from backend to frontend."
     />
     <meta
       property="og:image"
@@ -98,7 +100,7 @@
     <meta name="twitter:title" content="Mobin Ghaemi | Full-Stack Developer" />
     <meta
       name="twitter:description"
-      content="Full-stack developer from Gorgan, Iran building websites and apps and making tech content on YouTube."
+      content="Mobin Ghaemi — Full Stack Developer & Arch Linux power user. Building clean, fast, and minimal experiences from backend to frontend."
     />
     <meta
       name="twitter:image"
@@ -114,7 +116,7 @@
   </head>
 
   <body>
-    <!-- یکبار بالای صفحه -->
+    <!-- SVG Sprite -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
       <!-- Arrow Up -->
       <symbol
@@ -295,6 +297,19 @@
       >
         <path
           d="M12.001 4.8q-4.8 0-6 4.8 1.8-2.4 4.2-1.8c.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12q4.8 0 6-4.8-1.8 2.4-4.2 1.8c-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8m-6 7.2q-4.8 0-6 4.8 1.8-2.4 4.2-1.8c.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576q4.8 0 6-4.8-1.8 2.4-4.2 1.8c-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12"
+        />
+      </symbol>
+
+      <!-- Github icon -->
+      <symbol
+        id="github-icon"
+        viewBox="0 0 24 24"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>GitHub</title>
+        <path
+          d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
         />
       </symbol>
     </svg>
@@ -1008,16 +1023,28 @@
         </p>
 
         <!-- Email contact -->
-        <address class="footer__email neon">
-          <svg class="footer__icon" aria-hidden="true" role="img">
-            <use href="#mail" xlink:href="#mail"></use>
-          </svg>
+        <address class="footer__links">
+          <!-- Email -->
           <a
             href="mailto:gnumobin@gmail.com"
-            class="footer__email--link"
-            aria-label="email"
+            class="footer__link neon"
+            aria-label="Email"
           >
-            gnumobin@gmail.com
+            <svg class="footer__icon" aria-hidden="true" role="img">
+              <use href="#mail" xlink:href="#mail"></use>
+            </svg>
+            <span>gnumobin@gmail.com</span>
+          </a>
+          <!-- Github Account -->
+          <a
+            href="https://github.com/gnumobin"
+            class="footer__link neon"
+            aria-label="Github Link"
+          >
+            <svg class="footer__icon" aria-hidden="true" role="img">
+              <use href="#github-icon" xlink:href="#github-icon"></use>
+            </svg>
+            <span>github.com/gnumobin</span>
           </a>
         </address>
 

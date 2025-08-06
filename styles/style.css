@@ -967,17 +967,19 @@ input {
   font-weight: 300;
   margin: 3.4rem 0 2.2rem;
 }
-.footer__email {
-  font-weight: 600;
+.footer__links {
   font-style: normal;
+  margin-bottom: 4.5rem;
   display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  margin-bottom: 4.1rem;
-  transition: var(--trans-1x);
+  flex-direction: column;
+  gap: 1rem;
 }
-.footer__email--link:link, .footer__email--link:visited {
-  color: inherit;
+.footer__link {
+  display: flex;
+  gap: 0.55rem;
+  color: var(--color-grey);
+  transition: color var(--trans-1x), box-shadow var(--trans-1x);
+  will-change: color, box-shadow;
 }
 .footer__socials {
   display: flex;
