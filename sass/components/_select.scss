@@ -13,9 +13,9 @@ select {
 select {
   display: flex;
   justify-content: space-between;
-  //   min-width: 300px;
+  min-width: 10rem;
   align-items: center;
-  color: white;
+  color: var(--color-text-bold);
   padding-block: 10px;
   //   padding-inline: 30px 40px;
   border-radius: 9999px;
@@ -72,16 +72,20 @@ select {
         transition-timing-function: ease-out;
 
         background: var(--color-bg-thin);
-        color: white;
+        color: var(--color-text-bold);
         &:where(:hover, :focus, :active) {
           background: var(--color-bg-thin);
-          color: white;
+          color: var(--color-text-bold);
         }
         &::checkmark {
           display: none;
         }
         &:first-child {
           border: 0;
+        }
+        &::-ms-expand {
+          color: red;
+          background-color: red;
         }
       }
     }

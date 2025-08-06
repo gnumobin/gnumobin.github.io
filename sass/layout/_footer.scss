@@ -37,6 +37,7 @@
     color: var(--color-grey);
     transition: color var(--trans-1x), box-shadow var(--trans-1x);
     will-change: color, box-shadow;
+    fill: currentColor;
   }
 
   &__socials {

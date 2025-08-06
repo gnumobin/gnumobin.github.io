@@ -281,7 +281,8 @@ img,
 button,
 h1,
 h2,
-h3 {
+h3,
+select {
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
@@ -700,6 +701,7 @@ h2.heading-secondary {
   position: fixed;
   bottom: 0;
   right: 0;
+  z-index: 3;
   background-color: var(--color-bg-extra-thin);
   color: var(--color-text);
   width: 6.4rem;
@@ -907,8 +909,9 @@ select {
 select {
   display: flex;
   justify-content: space-between;
+  min-width: 10rem;
   align-items: center;
-  color: white;
+  color: var(--color-text-bold);
   padding-block: 10px;
   border-radius: 9999px;
   border: none;
@@ -963,17 +966,21 @@ select {
       transition-duration: 0.2s;
       transition-timing-function: ease-out;
       background: var(--color-bg-thin);
-      color: white;
+      color: var(--color-text-bold);
     }
     select option:where(:hover, :focus, :active) {
       background: var(--color-bg-thin);
-      color: white;
+      color: var(--color-text-bold);
     }
     select option::checkmark {
       display: none;
     }
     select option:first-child {
       border: 0;
+    }
+    select option::-ms-expand {
+      color: red;
+      background-color: red;
     }
   }
 }
@@ -1085,6 +1092,7 @@ select {
   color: var(--color-grey);
   transition: color var(--trans-1x), box-shadow var(--trans-1x);
   will-change: color, box-shadow;
+  fill: currentColor;
 }
 .footer__socials {
   display: flex;

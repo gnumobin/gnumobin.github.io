@@ -178,15 +178,23 @@ document.addEventListener("keydown", function (e) {
     e.preventDefault();
     alert("Do you work with the browser or with us? 🙂");
   }
+  // Ctrl+U (View Source)
   if ((e.ctrlKey || e.metaKey) && e.code === "KeyU") {
     e.preventDefault();
     alert("Do you work with the browser or with us? 🙂");
   }
+  // F12
   if (e.code === "F12") {
     e.preventDefault();
     alert("Do you work with the browser or with us? 🙂");
   }
-  if ((e.ctrlKey || e.metaKey) && e.code === "KeyI") {
+
+  // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
+  if (
+    (e.ctrlKey || e.metaKey) &&
+    e.shiftKey &&
+    ["KeyI", "KeyJ", "KeyC"].includes(e.code)
+  ) {
     e.preventDefault();
     alert("Do you work with the browser or with us? 🙂");
   }
@@ -290,3 +298,24 @@ function enableScroll() {
   window.removeEventListener("touchmove", preventDefault, wheelOpt);
   window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
 }
+
+// Disable Inspector
+let devtoolsOpen = false;
+
+setInterval(() => {
+  const threshold = 160;
+  const widthDiff = window.outerWidth - window.innerWidth;
+  const heightDiff = window.outerHeight - window.innerHeight;
+
+  if (widthDiff > threshold || heightDiff > threshold) {
+    if (!devtoolsOpen) {
+      devtoolsOpen = true;
+      window.location.href = "about:blank";
+      alert(
+        "🔍How beautiful the sky is! 🌌 With stars ✨ or without stars? Ummm 🤔, does it make a difference?"
+      );
+    }
+  } else {
+    devtoolsOpen = false;
+  }
+}, 500);

@@ -1,26 +1,31 @@
 const langSelect = document.getElementById("langSelect");
 const savedLang = localStorage.getItem("preferredLang");
-const currentLang = window.location.pathname.split("/")[1]; // مثلا 'fa' یا 'en'
+const currentLang = window.location.pathname.split("/")[1]; // 'fa' or 'en'
 
-// 1️⃣ بار اول: اگر زبان ذخیره‌شده نداری، از مرورگر تشخیص بده
-if (!savedLang) {
-  const userLang = navigator.language || navigator.userLanguage;
-  const initialLang = userLang.startsWith("fa") ? "fa" : "en";
-  localStorage.setItem("preferredLang", initialLang);
+// Get user langs (os lang)
+const browserLang = (
+  (navigator.languages && navigator.languages[0]) ||
+  navigator.language ||
+  navigator.userLanguage ||
+  "en"
+).toLowerCase();
 
-  if (currentLang !== initialLang) {
-    window.location.replace(`/${initialLang}/`);
+// Update lS with URL
+if (currentLang === "fa" || currentLang === "en") {
+  if (savedLang !== currentLang) {
+    localStorage.setItem("preferredLang", currentLang);
   }
 }
-// 2️⃣ اگر زبان ذخیره شده هست ولی مسیر فعلی متفاوت است → هدایت کن
-else if (savedLang && currentLang !== savedLang) {
-  window.location.replace(`/${savedLang}/`);
+// Auto redirect (if ls not been define)
+else {
+  const langToGo = savedLang || (browserLang.startsWith("fa") ? "fa" : "en");
+  window.location.replace(`/${langToGo}/`);
 }
 
-// 3️⃣ ست کردن انتخابگر روی زبان فعلی
-langSelect.value = savedLang || currentLang;
+// Set lang
+langSelect.value = currentLang || savedLang || "en";
 
-// 4️⃣ وقتی کاربر زبان رو عوض کرد
+// change lang manually with select tag
 langSelect.addEventListener("change", function () {
   const lang = this.value;
   localStorage.setItem("preferredLang", lang);
