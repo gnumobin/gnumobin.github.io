@@ -73,7 +73,7 @@ const preventLongPress = (e) => {
 // Change Theme
 const changeTheme = () => {
   // Define Local Variable
-  const darkMode = JSON.parse(localStorage.getItem("darkTheme"));
+  const darkMode = JSON.parse(localStorage.getItem("darkTheme")) ?? true;
 
   if (darkMode) {
     toggleThemeBtn.setAttribute("checked", "checked");
@@ -102,7 +102,7 @@ const changeTheme = () => {
     darkMode ? "#c5c5c5" : "#1a1a1a"
   );
   document.documentElement.style.setProperty(
-    "--color-grey	",
+    "--color-grey",
     darkMode ? "#8491a0" : "#5a5a5a"
   );
   document.documentElement.style.setProperty(

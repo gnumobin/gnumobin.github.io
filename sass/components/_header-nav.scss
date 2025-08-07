@@ -11,6 +11,10 @@
     font-family: "PlusJakartaSans", "poppins", sans-serif;
     font-size: var(--font-header-nav);
     font-weight: 600;
+    // Animations
+    transition: transform var(--trans-2x), visibility var(--trans-2x),
+      background-color var(--trans-2x), color var(--trans-2x);
+    will-change: transform, visibility, background-color, color;
 
     // Mobile menu: fixed sidebar, initially hidden
     @include responsive(portrait-tablet) {
@@ -33,8 +37,6 @@
       // Hidden
       transform: translateX(-100%);
       visibility: hidden;
-      // Animations
-      transition: var(--trans-2x);
       // Radius
       border-radius: var(--rounded-menu);
     }

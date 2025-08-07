@@ -3,6 +3,8 @@ html {
   scroll-behavior: smooth;
   font-size: 62.5%; // 1rem = 10px base
   font-size: clamp(46%, 1.2vw + 0.5rem, 62.5%);
+  transition: background-color var(--trans-2x), color var(--trans-2x);
+  will-change: background-color, color;
 }
 
 // Base styles for body
@@ -18,8 +20,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  transition: background-color var(--trans-2x), color var(--trans-2x);
-  will-change: background-color, color;
+  transition: background-color var(--trans-2x);
+  // will-change: background-color, color;
 }
 
 // Reset margin, padding and inherit box-sizing for all elements
