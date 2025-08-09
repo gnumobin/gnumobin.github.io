@@ -1,9 +1,12 @@
 .print {
+  // Hidden on screen by default
   display: none;
   font-size: 3rem;
   font-style: italic;
 }
+
 @media print {
+  // Center content vertically and horizontally in print view
   body {
     height: 100vh !important;
     display: flex;
@@ -11,10 +14,12 @@
     align-items: center;
   }
 
+  // Hide all elements on the page during print
   body * {
     display: none !important;
   }
 
+  // Show only elements with .print class during print
   .print,
   .print * {
     display: block !important;

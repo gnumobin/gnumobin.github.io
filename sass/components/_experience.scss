@@ -1,29 +1,30 @@
 .experiences {
-  // Container for all experience
+  // Wrapper container for all experience items with grid layout and spacing
   display: grid;
   margin-top: var(--gap-experiences);
   gap: calc(var(--gap-experiences) - 0.7rem);
 }
 
 .experience {
-  // alignment
+  // Grid layout for individual experience: 3 columns with automatic and flexible widths
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  // spaces
+
+  // Horizontal and vertical spacing between grid items
   column-gap: clamp(
     calc(var(--gap-experience) - 3rem),
     2vw,
     calc(var(--gap-experience) - 1.1rem)
   );
-
   row-gap: var(--gap-experience);
-  // font & colors
+
+  // Font size and color for experience text
   font-size: var(--font-experience-text);
   color: var(--color-grey);
 
   &__time {
-    // move to their own row on smaller screens
+    // On large mobile screens, time element spans full row and disables text selection
     @include responsive(large-mobile) {
       grid-column: 1 / -1;
       user-select: none;
@@ -31,19 +32,19 @@
   }
 
   &__logo {
-    // move to their own row on very small screens
+    // On small mobile screens, logo spans full row
     @include responsive(small-mobile) {
       grid-column: 1 / -1;
     }
   }
 
   &__text {
-    // Text always spans full width for readability
+    // Text content spans the full grid width for better readability
     grid-column: 1 / -1;
   }
 
   &__icon {
-    // Icon styling with responsive size adjustments
+    // Icon color and size with responsive clamp for scalability
     color: var(--color-text-bold);
     fill: currentColor;
     width: clamp(2.8rem, 3vw, 3.4rem);
@@ -51,7 +52,7 @@
   }
 
   &__title {
-    // Highlighted title style for experience
+    // Title style: bold and highlighted text for experience titles
     color: var(--color-text-bold);
     font-size: var(--font-experience-title);
     font-weight: 800;

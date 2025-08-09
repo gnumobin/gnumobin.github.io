@@ -1,273 +1,176 @@
 "use strict";
 
-// ########## Variables ##########
-// Hamburger Menu Btn
-const hamMenuBtn = document.getElementById("hamMenuBtn");
-// Hamburger Menu
-const hamMenuEl = document.getElementById("hamMenu");
-// Overlay
-const overlayEl = document.getElementById("overlay");
-// HeaderElement
-const headerEl = document.querySelector(".header");
-// Sticky Btn
-const stickyBtn = document.querySelector("#stickyBtn");
-// Hero Section (First Section User can see!)
-const heroSectionEl = document.querySelector(".section-hero");
-// All images define in our html
-const allImagesEl = document.querySelectorAll("img");
-// All buttons define in our html
-const allBtnEl = document.querySelectorAll(".btn");
-// Toggle Theme Btn
-const toggleThemeBtn = document.querySelector("#toggleThemeBtn");
-// Theme
-let darkMode = true;
+// ########## Elements ##########
+const $ = (sel, all = false) =>
+  all ? document.querySelectorAll(sel) : document.querySelector(sel);
 
-// CSS Variables
-const bg = getComputedStyle(document.documentElement).getPropertyValue(
-  "--color-bg-thin"
-);
-
-// Functions
-
-// Open & Close Mobile Menu
-const toggleShowMenu = (open) => {
-  // toggle classLists
-  hamMenuBtn.classList.toggle("active");
-  hamMenuEl.classList.toggle("header-nav__list--active");
-  overlayEl.classList.toggle("overlay--active");
-
-  // if we are close menu change background with subtle delay
-  if (open) {
-    setTimeout(() => headerEl.classList.toggle("header--active"), 180);
-  } else {
-    // if we are open change background immediately
-    headerEl.classList.toggle("header--active");
-  }
-
-  const actionsFlag = hamMenuBtn.classList.contains("active");
-
-  actionsFlag ? disableScroll() : enableScroll();
+const els = {
+  hamMenuBtn: $("#hamMenuBtn"),
+  hamMenu: $("#hamMenu"),
+  overlay: $("#overlay"),
+  header: $(".header"),
+  stickyBtn: $("#stickyBtn"),
+  heroSection: $(".section-hero"),
+  allImages: $("img", true),
+  allBtns: $(".btn", true),
+  toggleThemeBtn: $("#toggleThemeBtn"),
 };
 
-// Disable contextMenu on chain of elements
-const disableContextMenuOnChainElements = (els) => {
-  els.forEach((el) => {
-    el.addEventListener("contextmenu", (e) => {
-      e.preventDefault();
-    });
-  });
+// ########## State ##########
+let darkMode = JSON.parse(localStorage.getItem("darkTheme")) ?? true;
+
+// ########## Helpers ##########
+const setCSSVars = (vars) =>
+  Object.entries(vars).forEach(([k, v]) =>
+    document.documentElement.style.setProperty(k, v)
+  );
+
+const disableContextMenu = (elements) =>
+  elements.forEach((el) =>
+    el.addEventListener("contextmenu", (e) => e.preventDefault())
+  );
+
+const preventDefault = (e) => e.preventDefault();
+
+const preventDefaultForScrollKeys = (e) => {
+  if ([37, 38, 39, 40].includes(e.keyCode)) preventDefault(e);
 };
 
-// Change Theme
-const changeTheme = () => {
-  // Define Local Variable
-  const darkMode = JSON.parse(localStorage.getItem("darkTheme")) ?? true;
+const supportsPassive = (() => {
+  let passive = false;
+  try {
+    window.addEventListener(
+      "test",
+      null,
+      Object.defineProperty({}, "passive", {
+        get: () => (passive = true),
+      })
+    );
+  } catch {}
+  return passive;
+})();
 
-  if (darkMode) {
-    toggleThemeBtn.setAttribute("checked", "checked");
-  } else {
-    toggleThemeBtn.removeAttribute("checked");
-  }
-  // change colors
-  document.documentElement.style.setProperty(
-    "--color-bg",
-    darkMode ? "#161513" : "#f9f9f9"
-  );
-  document.documentElement.style.setProperty(
-    "--color-bg-dark",
-    darkMode ? "#191919" : "#f3f3f3"
-  );
-  document.documentElement.style.setProperty(
-    "--color-bg-thin",
-    darkMode ? "#222" : "#cccccc"
-  );
-  document.documentElement.style.setProperty(
-    "--color-bg-extra-thin",
-    darkMode ? "#2a2a2a" : "#e2e2e2"
-  );
-  document.documentElement.style.setProperty(
-    "--color-text",
-    darkMode ? "#c5c5c5" : "#1a1a1a"
-  );
-  document.documentElement.style.setProperty(
-    "--color-grey",
-    darkMode ? "#8491a0" : "#5a5a5a"
-  );
-  document.documentElement.style.setProperty(
-    "--color-text-bold",
-    darkMode ? "#fff" : "#000000"
-  );
-  document.documentElement.style.setProperty(
-    "--color-neon",
-    darkMode ? "#e0e0e0" : "#7a7a7a"
-  );
-  document.documentElement.style.setProperty(
-    "--color-neon-tint",
-    darkMode ? "#e3e3e3" : "#888888"
-  );
-  document.documentElement.style.setProperty(
-    "--color-neon-tinter",
-    darkMode ? "#e6e6e6" : "#999999"
+const wheelOpt = supportsPassive ? { passive: false } : false;
+const wheelEvent =
+  "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
+
+// ########## Scroll Lock ##########
+const disableScroll = () => {
+  [
+    ["DOMMouseScroll", preventDefault],
+    [wheelEvent, preventDefault],
+    ["touchmove", preventDefault],
+    ["keydown", preventDefaultForScrollKeys],
+  ].forEach(([ev, fn]) => window.addEventListener(ev, fn, wheelOpt));
+};
+
+const enableScroll = () => {
+  [
+    ["DOMMouseScroll", preventDefault],
+    [wheelEvent, preventDefault],
+    ["touchmove", preventDefault],
+    ["keydown", preventDefaultForScrollKeys],
+  ].forEach(([ev, fn]) => window.removeEventListener(ev, fn, wheelOpt));
+};
+
+// ########## UI Actions ##########
+const toggleMenu = (close) => {
+  els.hamMenuBtn.classList.toggle("active");
+  els.hamMenu.classList.toggle("header-nav__list--active");
+  els.overlay.classList.toggle("overlay--active");
+
+  setTimeout(
+    () => els.header.classList.toggle("header--active"),
+    close ? 180 : 0
   );
 
-  // Buttons
-  allBtnEl.forEach((btn) => {
-    if (darkMode) {
-      btn.classList.remove("light");
-      btn.classList.add("dark");
-    } else {
-      btn.classList.remove("dark");
-      btn.classList.add("light");
-    }
+  els.hamMenuBtn.classList.contains("active")
+    ? disableScroll()
+    : enableScroll();
+};
+
+const updateTheme = () => {
+  els.toggleThemeBtn.checked = darkMode;
+  setCSSVars({
+    "--color-bg": darkMode ? "#161513" : "#f9f9f9",
+    "--color-bg-dark": darkMode ? "#191919" : "#f3f3f3",
+    "--color-bg-thin": darkMode ? "#222" : "#cccccc",
+    "--color-bg-extra-thin": darkMode ? "#2a2a2a" : "#e2e2e2",
+    "--color-text": darkMode ? "#c5c5c5" : "#1a1a1a",
+    "--color-grey": darkMode ? "#8491a0" : "#5a5a5a",
+    "--color-text-bold": darkMode ? "#fff" : "#000",
+    "--color-neon": darkMode ? "#e0e0e0" : "#7a7a7a",
+    "--color-neon-tint": darkMode ? "#e3e3e3" : "#888888",
+    "--color-neon-tinter": darkMode ? "#e6e6e6" : "#999999",
   });
+
+  els.allBtns.forEach(
+    (btn) =>
+      btn.classList.toggle("dark", darkMode) ||
+      btn.classList.toggle("light", !darkMode)
+  );
 };
 
 // ########## Events ##########
+els.hamMenuBtn.addEventListener("click", () => toggleMenu(false));
+els.overlay.addEventListener("click", () => toggleMenu(true));
+els.stickyBtn.addEventListener("click", () => window.scrollTo({ top: 0 }));
 
-// Open & Close Menu (Overlay, HamburgerBtn)
-hamMenuBtn.addEventListener("click", () => toggleShowMenu(false));
-overlayEl.addEventListener("click", () => toggleShowMenu(true));
+disableContextMenu(els.allImages);
+if (window.innerWidth < 480) disableContextMenu(els.allBtns);
 
-// StickyBtn => Back to top of page | function in here!
-stickyBtn.addEventListener("click", () => window.scrollTo({ top: 0 }));
-
-// Disable RightClick menu on all of image
-disableContextMenuOnChainElements(allImagesEl);
-// Disable RightClick menu on button just for smaller screens
-window.innerWidth < 480 && disableContextMenuOnChainElements(allBtnEl);
-
-// Change Theme
-toggleThemeBtn.addEventListener("change", (e) => {
-  // change theme scheme
-  localStorage.setItem("darkTheme", e.target.checked ? true : false);
-  // Change Theme
-  changeTheme();
+els.toggleThemeBtn.addEventListener("change", (e) => {
+  darkMode = e.target.checked;
+  localStorage.setItem("darkTheme", darkMode);
+  updateTheme();
 });
-changeTheme();
+updateTheme();
 
-// Disable default ctrl+s action
-document.addEventListener("keydown", function (e) {
-  if ((e.ctrlKey || e.metaKey) && e.code === "KeyS") {
-    e.preventDefault();
-    alert("Do you work with the browser or with us? 🙂");
-  }
-  // Ctrl+U (View Source)
-  if ((e.ctrlKey || e.metaKey) && e.code === "KeyU") {
-    e.preventDefault();
-    alert("Do you work with the browser or with us? 🙂");
-  }
-  // F12
-  if (e.code === "F12") {
-    e.preventDefault();
-    alert("Do you work with the browser or with us? 🙂");
-  }
-
-  // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
-  if (
+// Disable default Ctrl+S, Ctrl+U, F12, DevTools shortcuts
+document.addEventListener("keydown", (e) => {
+  const blockKeys = [
+    (e.ctrlKey || e.metaKey) && ["KeyS", "KeyU"].includes(e.code),
+    e.code === "F12",
     (e.ctrlKey || e.metaKey) &&
-    e.shiftKey &&
-    ["KeyI", "KeyJ", "KeyC"].includes(e.code)
-  ) {
+      e.shiftKey &&
+      ["KeyI", "KeyJ", "KeyC"].includes(e.code),
+  ];
+  if (blockKeys.some(Boolean)) {
     e.preventDefault();
     alert("Do you work with the browser or with us? 🙂");
   }
 });
 
-// ########## Observer ##########
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    const ent = entries[0];
-    if (!ent.isIntersecting) {
-      headerEl.classList.add("sticky");
-      stickyBtn.classList.add("active");
-    } else {
-      headerEl.classList.remove("sticky");
-      stickyBtn.classList.remove("active");
-    }
+// ########## Sticky Header ##########
+new IntersectionObserver(
+  ([entry]) => {
+    els.header.classList.toggle("sticky", !entry.isIntersecting);
+    els.stickyBtn.classList.toggle("active", !entry.isIntersecting);
   },
-  {
-    root: null,
-    threshold: 0,
-    rootMargin: "-80px",
-  }
-);
-
-observer.observe(heroSectionEl);
+  { rootMargin: "-80px" }
+).observe(els.heroSection);
 
 // ########## ServiceWorker ##########
-
 if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
+  window.addEventListener("load", () =>
     navigator.serviceWorker
       .register("/sw.js")
       .then((reg) => console.log("✅ Service Worker registered:", reg.scope))
-      .catch((err) => console.error("❌ SW registration failed:", err));
-  });
+      .catch((err) => console.error("❌ SW registration failed:", err))
+  );
 }
 
 // ########## Block Translators ##########
-
 const blockList = [
   "translate.googleusercontent.com",
   "translatetheweb.com",
   "bing.com",
   "translate.yandex.com",
 ];
-
-const isTranslatedPage =
+if (
   blockList.some((domain) => location.hostname.includes(domain)) ||
-  window.top !== window.self;
-
-if (isTranslatedPage) {
+  window.top !== window.self
+) {
   document.body.innerHTML =
     "<h2 style='text-align:center;margin-top:50px;'>Why do you want translate that?</h2>";
-}
-
-// left: 37, up: 38, right: 39, down: 40,
-// spaceBar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
-
-function preventDefaultForScrollKeys(e) {
-  if (keys[e.keyCode]) {
-    preventDefault(e);
-    return false;
-  }
-}
-
-function preventDefault(e) {
-  e.preventDefault();
-}
-// modern Chrome requires { passive: false } when adding event
-var supportsPassive = false;
-try {
-  window.addEventListener(
-    "test",
-    null,
-    Object.defineProperty({}, "passive", {
-      get: function () {
-        supportsPassive = true;
-      },
-    })
-  );
-} catch (e) {}
-
-var wheelOpt = supportsPassive ? { passive: false } : false;
-var wheelEvent =
-  "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
-
-// call this to Disable
-function disableScroll() {
-  window.addEventListener("DOMMouseScroll", preventDefault, false); // older FF
-  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-  window.addEventListener("touchmove", preventDefault, wheelOpt); // mobile
-  window.addEventListener("keydown", preventDefaultForScrollKeys, false);
-}
-
-// call this to Enable
-function enableScroll() {
-  window.removeEventListener("DOMMouseScroll", preventDefault, false);
-  window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
-  window.removeEventListener("touchmove", preventDefault, wheelOpt);
-  window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
 }

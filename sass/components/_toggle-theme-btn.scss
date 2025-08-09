@@ -1,18 +1,26 @@
 :root {
+  // Define base hue and primary color for consistent theming
   --hue: 223;
   --primary: hsl(var(--hue), 90%, 50%);
+  // Transition settings for smooth animations
   --trans-dur: 0.6s;
   --trans-timing: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 input {
+  // Set font size and line height for inputs to be readable and consistent
   font: 1em/1.5 sans-serif;
 }
 
 .switch {
+  // Center horizontally and relative positioning for internal absolute elements
   margin: auto;
   position: relative;
+
+  // Larger font size for easier tap targets on mobile
   font-size: 3rem;
+
+  // Indicate clickable area and disable text selection for UX
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
@@ -20,31 +28,42 @@ input {
   -webkit-tap-highlight-color: transparent;
 
   &__input {
+    // Hide default appearance to customize toggle
     display: block;
     width: 2.75em;
     height: 1.5em;
     appearance: none;
     -webkit-appearance: none;
+
+    // Background and shape of the switch track
     background-color: var(--color-bg);
     border-radius: 0.75em;
     outline: transparent;
+
+    // Subtle shadow for depth and polish
     box-shadow: 0 0 0 0.0625em hsla(var(--hue), 90%, 50%, 0),
       0 0.125em 0.5em hsla(var(--hue), 10%, 10%, 0.1);
+
+    // Smooth background and shadow transition on interaction
     transition: background-color var(--trans-dur), box-shadow var(--trans-dur);
     will-change: background-color, box-shadow;
 
     &:checked {
+      // Darken background when toggled on
       background-color: hsl(var(--hue), 10%, 10%);
 
+      // Change icon color to indicate toggled state
       ~ .switch__icon {
         color: hsla(var(--hue), 10%, 40%);
       }
 
+      // Move inner sliding elements to the right (toggle effect)
       ~ .switch__inner:before,
       ~ .switch__inner-icons {
         transform: translateX(1.25em);
       }
 
+      // Animate icons with rotation when toggled
       ~ .switch__inner-icons {
         .switch__icon {
           &:first-of-type {
@@ -59,23 +78,30 @@ input {
     }
 
     &:focus-visible {
+      // Highlight outline on keyboard focus for accessibility
       box-shadow: 0 0 0 0.0625em hsla(var(--hue), 90%, 50%, 1),
         0 0.125em 0.5em hsla(var(--hue), 10%, 10%, 0.1);
     }
   }
 
   &__icon {
+    // Position icons absolutely inside the switch container
     position: absolute;
     top: 0.375em;
     left: 0.375em;
     width: 0.75em;
     height: 0.75em;
+
+    // Default color and disable pointer events for icons
     color: hsla(var(--hue), 10%, 80%);
     pointer-events: none;
+
+    // Smooth color and transform transitions
     transition: color var(--trans-dur),
       transform var(--trans-dur) var(--trans-timing);
 
     &:nth-of-type(2) {
+      // Position second icon on the right side
       left: auto;
       right: 0.375em;
     }
@@ -83,6 +109,7 @@ input {
 
   &__inner,
   &__inner-icons {
+    // Containers for sliding backgrounds and icons
     position: absolute;
     top: 0.25em;
     left: 0.25em;
@@ -94,24 +121,33 @@ input {
   }
 
   &__inner {
+    // Sliding colored background inside the switch
     &:before {
       content: "";
       display: block;
       width: 100%;
       height: 100%;
+
+      // Use the primary color from root
       background-color: var(--primary);
+
+      // Inherit border radius for smooth edges
       border-radius: inherit;
+
+      // Start shifted left, slide right on toggle
       transform: translateX(-1.25em);
       transition: transform var(--trans-dur) var(--trans-timing);
     }
   }
 
   &__inner-icons {
+    // Container for toggle icons, slides in sync with background
     pointer-events: none;
     transform: translateX(-1.25em);
     transition: transform var(--trans-dur) var(--trans-timing);
 
     .switch__icon {
+      // Icon default position (hidden to the right)
       position: absolute;
       top: 0.125em;
       left: 0.125em;
@@ -119,6 +155,7 @@ input {
       transform: translateX(1.25em);
 
       &:nth-child(2) {
+        // Position second icon to the right
         left: auto;
         right: 0.125em;
       }
@@ -126,6 +163,7 @@ input {
   }
 
   &__sr {
+    // Visually hidden element for screen readers
     position: absolute;
     width: 1px;
     height: 1px;

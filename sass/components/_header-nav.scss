@@ -3,77 +3,76 @@
   position: relative;
 
   &__list {
-    // Alignment and gutters
+    // Navigation list: horizontal flex with spacing and typography
     display: flex;
     align-items: center;
     gap: var(--gap-header-nav-list);
-    // Typography
+
     font-family: "PlusJakartaSans", "poppins", sans-serif;
     font-size: var(--font-header-nav);
     font-weight: 600;
-    // Animations
+
+    // Smooth transition for transform, visibility, colors
     transition: transform var(--trans-2x), visibility var(--trans-2x),
       background-color var(--trans-2x), color var(--trans-2x);
     will-change: transform, visibility, background-color, color;
 
-    // Mobile menu: fixed sidebar, initially hidden
+    // Mobile sidebar menu styling (hidden by default)
     @include responsive(portrait-tablet) {
-      // Positions
       position: fixed;
       z-index: 100;
       top: 0.75rem;
       left: 0.75rem;
-      // Colors
+
       background-color: var(--color-bg-extra-thin);
-      // Layouts
       flex-direction: column;
-      // Dimensions
       height: 98dvh;
       width: 70%;
-      // Gutters
+
       gap: 2rem;
-      // Spaces
       padding: 2rem;
-      // Hidden
+      border-radius: var(--rounded-menu);
+
+      // Hide sidebar off-canvas initially
       transform: translateX(-100%);
       visibility: hidden;
-      // Radius
-      border-radius: var(--rounded-menu);
     }
 
     &--active {
+      // Show sidebar when active (menu open)
       transform: translateX(0%);
       visibility: visible;
     }
   }
 
   &__item {
+    // Navigation item default color
     color: var(--color-text-bold);
 
     &--active {
-      // Active navigation item style
+      // Highlight active navigation item
       color: var(--color-text);
     }
 
     @include responsive(portrait-tablet) {
-      // Mobile menu item full width styling
+      // Full-width items for mobile sidebar
       display: block;
       width: 100%;
 
       background-color: var(--color-bg);
       padding: 2rem 3rem;
-
       border-radius: var(--rounded-menu);
     }
   }
 
   &__some {
+    // Container for grouped items/icons with spacing
     display: flex;
     gap: 0.5rem;
   }
 
   &__link {
-    // Basic link styles with transitions
+    // Basic link styling with smooth transition
     &:link,
     &:visited {
       color: inherit;
@@ -81,7 +80,7 @@
       outline: none;
     }
 
-    // Hover and focus states with glow effect
+    // Hover, active, focus states with glow effect
     &:hover,
     &:active,
     &:focus {

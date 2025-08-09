@@ -315,13 +315,13 @@
       </symbol>
     </svg>
 
-    <!-- Overlay for menu or modal -->
+    <!-- Overlay element for modals or menus, initially hidden -->
     <div class="overlay" id="overlay">&nbsp;</div>
 
-    <!-- Spacer div for layout adjustment -->
+    <!-- Spacer to offset fixed header height for proper layout -->
     <div class="some-space" aria-hidden="true">&nbsp;</div>
 
-    <!-- EasterEgg -->
+    <!-- Hidden Easter Egg quote, only visible when printing -->
     <blockquote class="print" aria-hidden="true">
       <q class="print__text">
         Miss. Drakulich has a book in which it is written <br />
@@ -329,19 +329,19 @@
       </q>
     </blockquote>
 
-    <!-- Sticky Button (For back to top of page) -->
+    <!-- Sticky button for scrolling back to the top -->
     <button
       class="sticky-btn"
       aria-label="back to top of page btn"
       id="stickyBtn"
     >
       <svg class="sticky-btn__icon" aria-hidden="true" role="img">
-        <!-- <use xlink:href="./../assets/icons/arrow-up.svg"></use> -->
+        <!-- Using SVG symbol for arrow up icon -->
         <use href="#arrow-up" xlink:href="#arrow-up"></use>
       </svg>
     </button>
 
-    <!-- Header containing navigation -->
+    <!-- Header section containing site navigation -->
     <header class="header">
       <div class="container">
         <nav
@@ -350,10 +350,10 @@
           aria-label="Main Navigation"
           role="navigation"
         >
-          <!-- Website logo -->
+          <!-- Website logo with responsive images using <picture> -->
           <div class="logo">
             <picture>
-              <!-- WebP format for modern browsers -->
+              <!-- WebP images for modern browsers -->
               <source
                 type="image/webp"
                 srcset="
@@ -361,8 +361,7 @@
                   ./../assets/imgs/logo/logo-2x.webp 2x
                 "
               />
-
-              <!-- PNG fallback for browsers that don't support WebP -->
+              <!-- PNG fallback for older browsers -->
               <source
                 type="image/png"
                 srcset="
@@ -370,8 +369,7 @@
                   ./../assets/imgs/logo/logo-2x.png 2x
                 "
               />
-
-              <!-- Fallback img tag -->
+              <!-- Fallback img tag with alt and async decoding -->
               <img
                 src="./../assets/imgs/logo/logo-1x.png"
                 alt="Website Logo"
@@ -383,9 +381,9 @@
             </picture>
           </div>
 
-          <!-- Navigation links -->
+          <!-- Navigation menu list -->
           <ul class="header-nav__list" id="hamMenu">
-            <!-- Active page: Home -->
+            <!-- Active navigation item (Home) with ARIA for current page -->
             <li class="header-nav__item header-nav__item--active">
               <a
                 href="#heroSection"
@@ -395,7 +393,7 @@
                 >Home</a
               >
             </li>
-            <!-- Other sections -->
+            <!-- Other navigation items -->
             <li class="header-nav__item">
               <a
                 href="#projectsSection"
@@ -420,19 +418,24 @@
                 >Contact</a
               >
             </li>
+
+            <!-- Theme toggle and language selection grouped here -->
             <li class="header-nav__some">
+              <!-- Hidden SVG symbols for theme icons -->
               <svg
                 display="none"
                 class="toggle-theme"
                 role="button"
                 aria-label="toggle theme"
               >
+                <!-- Light theme icon -->
                 <symbol id="light" viewBox="0 0 24 24">
                   <g
                     stroke="currentColor"
                     stroke-width="2"
                     stroke-linecap="round"
                   >
+                    <!-- Sun rays rotated at different angles -->
                     <line
                       x1="12"
                       y1="17"
@@ -492,6 +495,8 @@
                   </g>
                   <circle fill="currentColor" cx="12" cy="12" r="5" />
                 </symbol>
+
+                <!-- Dark theme icon -->
                 <symbol id="dark" viewBox="0 0 24 24">
                   <path
                     fill="currentColor"
@@ -499,6 +504,8 @@
                   />
                 </symbol>
               </svg>
+
+              <!-- Theme toggle switch with accessible label and icons -->
               <label class="switch">
                 <input
                   class="switch__input"
@@ -546,16 +553,16 @@
                 <span class="switch__sr" role="text">Dark Mode</span>
               </label>
 
-              <!-- Change Langs -->
+              <!-- Language selector with visually hidden label for accessibility -->
               <label for="langSelect" class="sr-only">Select Languages</label>
-              <select id="langSelect">
+              <select id="langSelect" aria-label="Select language">
                 <option value="en">English</option>
                 <option value="fa">Persian</option>
               </select>
             </li>
           </ul>
 
-          <!-- Hamburger button for mobile menu -->
+          <!-- Hamburger button for toggling mobile menu -->
           <svg
             class="ham ham6"
             viewBox="0 0 80 100"
@@ -563,6 +570,7 @@
             id="hamMenuBtn"
             aria-expanded="false"
             role="button"
+            aria-label="Toggle menu"
           >
             <path
               class="line top"
@@ -582,16 +590,16 @@
     </header>
 
     <main class="container" role="main">
-      <!-- Hero Section -->
+      <!-- Hero Section: Personal introduction and key actions -->
       <section
         class="section-hero"
         id="heroSection"
-        aria-label="a simple profile of me"
+        aria-label="Simple profile introduction of Mobin Ghaemi"
       >
-        <!-- Profile image -->
+        <!-- Profile image with responsive sources and fallback -->
         <div class="profile">
           <picture>
-            <!-- Modern formats first -->
+            <!-- Use modern WebP images first for better compression -->
             <source
               srcset="
                 ./../assets/imgs/author/me-0.5x.webp 0.5x,
@@ -600,7 +608,7 @@
               "
               type="image/webp"
             />
-            <!-- Fallback for browsers that don't support WebP -->
+            <!-- JPEG fallback for browsers without WebP support -->
             <source
               srcset="
                 ./../assets/imgs/author/me-0.5x.jpg 0.5x,
@@ -609,24 +617,26 @@
               "
               type="image/jpeg"
             />
-            <!-- Fallback default image -->
+            <!-- Default image with alt text for accessibility -->
             <img
               src="./../assets/imgs/author/me-1x.jpg"
               alt="Portrait of Mobin Ghaemi"
               width="512"
               height="512"
               class="profile__img"
+              decoding="async"
+              loading="lazy"
             />
           </picture>
         </div>
 
-        <!-- Hero heading -->
+        <!-- Main heading: introduction with semantic clarity -->
         <h1 class="heading-primary mg-t-lg" data-i18n="primaryHeading">
           I do code and <br class="word-wrap" />
           make content <span class="gradient-purple">about it!</span>
         </h1>
 
-        <!-- Biography paragraph -->
+        <!-- Brief biography paragraph with friendly, personal tone -->
         <p class="section-hero__biography">
           Hey, I'm Mobin — a curious full-stack developer from Gorgan 🇮🇷 who
           started this coding journey in the world of Android apps with Java.
@@ -635,13 +645,13 @@
           Linux (btw 😎). Let’s build something cool!
         </p>
 
-        <!-- Call-to-action buttons -->
+        <!-- Call-to-action buttons for contact and CV download -->
         <div class="section-hero__actions">
           <a
             href="https://t.me/gnuMobin"
             class="btn btn--primary dark"
             target="_self"
-            aria-label="Contact with Telegram"
+            aria-label="Contact via Telegram"
           >
             Get In Touch
           </a>
@@ -657,15 +667,18 @@
         </div>
       </section>
 
-      <!-- Technologies Section -->
+      <!-- Technologies Section: showcasing skills and tools used -->
       <section
         class="section-technologies"
         aria-label="What technologies I use"
       >
+        <!-- Section subtitle for semantic clarity -->
         <h2 class="heading-sub">EXPERIENCE WITH</h2>
+
+        <!-- Skills list as a grid of icons with clear roles and labels for accessibility -->
         <ul class="skills">
-          <!-- Each skill icon -->
-          <li class="skills__item jelly">
+          <!-- Each skill item with role and label to help screen readers -->
+          <li class="skills__item jelly" role="listitem">
             <svg
               class="skills__icon"
               role="img"
@@ -675,7 +688,7 @@
               <use href="#html-icon" xlink:href="#html-icon"></use>
             </svg>
           </li>
-          <li class="skills__item jelly">
+          <li class="skills__item jelly" role="listitem">
             <svg
               class="skills__icon"
               role="img"
@@ -685,7 +698,7 @@
               <use href="#css-icon" xlink:href="#css-icon"></use>
             </svg>
           </li>
-          <li class="skills__item jelly">
+          <li class="skills__item jelly" role="listitem">
             <svg
               class="skills__icon"
               role="img"
@@ -695,7 +708,7 @@
               <use href="#sass-icon" xlink:href="#sass-icon"></use>
             </svg>
           </li>
-          <li class="skills__item jelly">
+          <li class="skills__item jelly" role="listitem">
             <svg
               class="skills__icon"
               role="img"
@@ -705,7 +718,7 @@
               <use href="#tailwind-icon" xlink:href="#tailwind-icon"></use>
             </svg>
           </li>
-          <li class="skills__item jelly">
+          <li class="skills__item jelly" role="listitem">
             <svg
               class="skills__icon"
               role="img"
@@ -715,7 +728,7 @@
               <use href="#javascript-icon" xlink:href="#javascript-icon"></use>
             </svg>
           </li>
-          <li class="skills__item jelly">
+          <li class="skills__item jelly" role="listitem">
             <svg
               class="skills__icon"
               role="img"
@@ -725,7 +738,7 @@
               <use href="#react-icon" xlink:href="#react-icon"></use>
             </svg>
           </li>
-          <li class="skills__item jelly">
+          <li class="skills__item jelly" role="listitem">
             <svg
               class="skills__icon"
               role="img"
@@ -735,7 +748,7 @@
               <use href="#nodejs-icon" xlink:href="#nodejs-icon"></use>
             </svg>
           </li>
-          <li class="skills__item jelly">
+          <li class="skills__item jelly" role="listitem">
             <svg
               class="skills__icon"
               role="img"
@@ -745,7 +758,7 @@
               <use href="#express-icon" xlink:href="#express-icon"></use>
             </svg>
           </li>
-          <li class="skills__item jelly">
+          <li class="skills__item jelly" role="listitem">
             <svg
               class="skills__icon"
               role="img"
@@ -755,7 +768,7 @@
               <use href="#mongodb-icon" xlink:href="#mongodb-icon"></use>
             </svg>
           </li>
-          <li class="skills__item jelly">
+          <li class="skills__item jelly" role="listitem">
             <svg
               class="skills__icon"
               role="img"
@@ -769,24 +782,29 @@
       </section>
 
       <!-- Projects Section -->
+      <!-- Projects Section: showcases completed projects with accessible links -->
       <section
         class="section-projects"
         id="projectsSection"
-        aria-label="What projects I done"
+        aria-label="List of completed projects"
       >
+        <!-- Section heading with gradient accent -->
         <h2 class="heading-secondary gradient-orange">Projects</h2>
 
+        <!-- Container for all project cards -->
         <div class="section-projects__cards">
-          <!-- Project Card Example -->
+          <!-- Individual Project Card: external link opens in new tab safely -->
           <a
             href="https://mobin-vpn.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="external link to MobinVPN"
+            aria-label="External link to MobinVPN project"
           >
             <figure class="card">
               <picture>
-                <!-- Mobiles-->
+                <!-- Responsive images: serve smaller images for mobile devices -->
+
+                <!-- WebP sources for mobile -->
                 <source
                   media="(max-width: 480px)"
                   type="image/webp"
@@ -795,6 +813,7 @@
                     ./../assets/imgs/projects/project-1/project-thumbnail-1-1x.webp   2x
                   "
                 />
+                <!-- JPEG fallback for mobile -->
                 <source
                   media="(max-width: 480px)"
                   type="image/jpeg"
@@ -804,7 +823,7 @@
                   "
                 />
 
-                <!-- Tablets -->
+                <!-- WebP sources for tablets -->
                 <source
                   media="(max-width: 900px)"
                   type="image/webp"
@@ -813,6 +832,7 @@
                     ./../assets/imgs/projects/project-1/project-thumbnail-1-2x.webp 2x
                   "
                 />
+                <!-- JPEG fallback for tablets -->
                 <source
                   media="(max-width: 900px)"
                   type="image/jpeg"
@@ -822,13 +842,14 @@
                   "
                 />
 
-                <!-- Desktops -->
+                <!-- WebP for desktops -->
                 <source
                   type="image/webp"
                   srcset="
                     ./../assets/imgs/projects/project-1/project-thumbnail-1-2x.webp
                   "
                 />
+                <!-- JPEG fallback for desktops -->
                 <source
                   type="image/jpeg"
                   srcset="
@@ -836,33 +857,43 @@
                   "
                 />
 
-                <!-- fallback -->
+                <!-- Fallback image with alt text for accessibility -->
                 <img
                   src="./../assets/imgs/projects/project-1/project-thumbnail-1-1x.webp"
-                  alt="Mobin VPN project"
+                  alt="Screenshot of Mobin VPN project"
                   class="card__img"
                   loading="lazy"
                   width="1920"
                   height="1080"
+                  decoding="async"
                 />
               </picture>
+
+              <!-- Project title and icon to indicate link -->
               <figcaption class="card__content">
                 <h3 class="card__title">Mobin VPN</h3>
-                <svg class="card__icon" aria-hidden="true" role="img">
+                <svg
+                  class="card__icon"
+                  aria-hidden="true"
+                  role="img"
+                  focusable="false"
+                >
                   <use href="#arrow-right" xlink:href="#arrow-right"></use>
                 </svg>
               </figcaption>
             </figure>
           </a>
+
+          <!-- Repeat project card for another project -->
           <a
             href="https://gnumobin.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="external link to mobin-ghaemi portfolio"
+            aria-label="External link to Mobin Folio portfolio"
           >
             <figure class="card">
               <picture>
-                <!-- Mobiles-->
+                <!-- Mobile WebP -->
                 <source
                   media="(max-width: 480px)"
                   type="image/webp"
@@ -871,6 +902,7 @@
                     ./../assets/imgs/projects/project-2/project-thumbnail-2-1x.webp   2x
                   "
                 />
+                <!-- Mobile JPEG -->
                 <source
                   media="(max-width: 480px)"
                   type="image/jpeg"
@@ -880,7 +912,7 @@
                   "
                 />
 
-                <!-- Tablets -->
+                <!-- Tablet WebP -->
                 <source
                   media="(max-width: 900px)"
                   type="image/webp"
@@ -889,6 +921,7 @@
                     ./../assets/imgs/projects/project-2/project-thumbnail-2-2x.webp 2x
                   "
                 />
+                <!-- Tablet JPEG -->
                 <source
                   media="(max-width: 900px)"
                   type="image/jpeg"
@@ -898,13 +931,14 @@
                   "
                 />
 
-                <!-- Desktops -->
+                <!-- Desktop WebP -->
                 <source
                   type="image/webp"
                   srcset="
                     ./../assets/imgs/projects/project-2/project-thumbnail-2-2x.webp
                   "
                 />
+                <!-- Desktop JPEG -->
                 <source
                   type="image/jpeg"
                   srcset="
@@ -912,51 +946,77 @@
                   "
                 />
 
-                <!-- fallback -->
+                <!-- Fallback image -->
                 <img
                   src="./../assets/imgs/projects/project-2/project-thumbnail-2-1x.webp"
-                  alt="Mobin VPN project"
+                  alt="Screenshot of Mobin Folio portfolio"
                   class="card__img"
                   loading="lazy"
                   width="1920"
                   height="1080"
+                  decoding="async"
                 />
               </picture>
 
+              <!-- Project title and arrow icon -->
               <figcaption class="card__content">
                 <h3 class="card__title">Mobin Folio</h3>
-                <svg class="card__icon" aria-hidden="true" role="img">
+                <svg
+                  class="card__icon"
+                  aria-hidden="true"
+                  role="img"
+                  focusable="false"
+                >
                   <use href="#arrow-right" xlink:href="#arrow-right"></use>
                 </svg>
               </figcaption>
             </figure>
           </a>
-          <!-- Add more project cards as needed -->
+
+          <!-- Additional project cards can be added here following the same pattern -->
         </div>
       </section>
 
       <!-- Experience Section -->
+      <!-- Experience Section: highlights professional work history -->
       <section
         class="section-experience"
         id="experienceSection"
         aria-label="All my work experiences"
       >
+        <!-- Section heading centered with blue gradient -->
         <h2 class="heading-secondary gradient-blue text-center">Experience</h2>
 
+        <!-- Container wrapping individual experience entries -->
         <div class="experiences">
-          <!-- Experience Example: Google -->
-          <article class="experience">
+          <!-- Single experience card: Google -->
+          <article
+            class="experience"
+            role="region"
+            aria-label="Lead Software Engineer at Google"
+          >
+            <!-- Company logo for visual identification -->
             <figure class="experience__logo">
               <img
                 class="experience__icon"
                 src="./../assets/companies/google.svg"
                 alt="Google Logo"
+                decoding="async"
+                loading="lazy"
+                width="64"
+                height="64"
               />
             </figure>
+
+            <!-- Job title -->
             <h3 class="experience__title">Lead Software Engineer at Google</h3>
-            <time class="experience__time" datetime="2021-01"
-              >Jan 2021 - Present</time
-            >
+
+            <!-- Employment period with machine-readable date -->
+            <time class="experience__time" datetime="2021-01">
+              Jan 2021 - Present
+            </time>
+
+            <!-- Description of role and contributions -->
             <p class="experience__text">
               As a Senior Software Engineer at Google, I played a pivotal role
               in developing innovative solutions for Google's core search
@@ -966,19 +1026,29 @@
             </p>
           </article>
 
-          <!-- Experience Example: Apple -->
-          <article class="experience">
+          <!-- Single experience card: Apple -->
+          <article
+            class="experience"
+            role="region"
+            aria-label="Senior Developer at Apple"
+          >
             <figure class="experience__logo">
               <img
                 class="experience__icon"
                 src="./../assets/companies/apple.svg"
                 alt="Apple Logo"
+                decoding="async"
+                loading="lazy"
+                width="64"
+                height="64"
               />
             </figure>
+
             <h3 class="experience__title">Senior Developer at Apple</h3>
-            <time class="experience__time" datetime="2018-05"
-              >May 2018 - Dec 2020</time
-            >
+            <time class="experience__time" datetime="2018-05">
+              May 2018 - Dec 2020
+            </time>
+
             <p class="experience__text">
               During my tenure at Apple, I held the role of Software Architect,
               where I played a key role in shaping the architecture of
@@ -988,19 +1058,29 @@
             </p>
           </article>
 
-          <!-- Experience Example: Meta -->
-          <article class="experience">
+          <!-- Single experience card: Meta -->
+          <article
+            class="experience"
+            role="region"
+            aria-label="Software Engineer at Meta"
+          >
             <figure class="experience__logo">
               <img
                 class="experience__icon"
                 src="./../assets/companies/meta.svg"
                 alt="Meta Logo"
+                decoding="async"
+                loading="lazy"
+                width="64"
+                height="64"
               />
             </figure>
+
             <h3 class="experience__title">Software Engineer at Meta</h3>
-            <time class="experience__time" datetime="2015-03"
-              >Mar 2015 - Apr 2018</time
-            >
+            <time class="experience__time" datetime="2015-03">
+              Mar 2015 - Apr 2018
+            </time>
+
             <p class="experience__text">
               At Meta, I worked on large-scale social networking infrastructure,
               improving backend performance and scalability for billions of
@@ -1013,15 +1093,17 @@
     </main>
 
     <!-- Footer with contact and social links -->
+    <!-- Footer Section: contact info and social links -->
     <footer
       class="footer"
       id="contactSection"
       aria-label="How to contact with Me?"
     >
       <div class="container">
+        <!-- Section heading with tertiary style -->
         <h2 class="heading-tertiary">Contact</h2>
 
-        <!-- Fun bio paragraph -->
+        <!-- Personal, friendly intro text — بیان شخصی و جذاب -->
         <p class="footer__text">
           Full-stack wizard 🧙‍♂️ with 5+ years of coding magic ✨ — started
           casting spells in Java ☕ for Android, now conjuring sleek web apps
@@ -1030,53 +1112,69 @@
           chat! 💬
         </p>
 
-        <!-- Email contact -->
+        <!-- Contact info wrapped in <address> for semantics -->
         <address class="footer__links">
-          <!-- Email -->
+          <!-- Email link with icon, aria-label for screen readers -->
           <a
             href="mailto:gnumobin@gmail.com"
             class="footer__link neon"
-            aria-label="Email"
+            aria-label="Send email to Mobin"
           >
-            <svg class="footer__icon" aria-hidden="true" role="img">
+            <svg
+              class="footer__icon"
+              aria-hidden="true"
+              role="img"
+              focusable="false"
+            >
               <use href="#mail" xlink:href="#mail"></use>
             </svg>
             <span>gnumobin@gmail.com</span>
           </a>
-          <!-- Github Account -->
+
+          <!-- Github profile link -->
           <a
             href="https://github.com/gnumobin"
             class="footer__link neon"
-            aria-label="Github Link"
+            aria-label="GitHub profile of Mobin"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <svg class="footer__icon" aria-hidden="true" role="img">
+            <svg
+              class="footer__icon"
+              aria-hidden="true"
+              role="img"
+              focusable="false"
+            >
               <use href="#github-icon" xlink:href="#github-icon"></use>
             </svg>
             <span>github.com/gnumobin</span>
           </a>
         </address>
 
-        <!-- Social media icons -->
+        <!-- Social media icons container -->
         <div class="footer__socials">
+          <!-- YouTube channel link -->
           <a
             href="https://youtube.com/@catplantasmr"
-            target="_blank"
-            rel="noopener noreferrer"
             class="jelly"
             aria-label="YouTube channel"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <svg class="icon">
+            <svg class="icon" aria-hidden="true" role="img" focusable="false">
               <use href="#youtube-logo" xlink:href="#youtube-logo"></use>
             </svg>
           </a>
+
+          <!-- Telegram profile link -->
           <a
             href="https://t.me/gnuMobin"
-            target="_blank"
-            rel="noopener noreferrer"
             class="jelly"
             aria-label="Telegram profile"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <svg class="icon">
+            <svg class="icon" aria-hidden="true" role="img" focusable="false">
               <use href="#telegram-logo" xlink:href="#telegram-logo"></use>
             </svg>
           </a>

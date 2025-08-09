@@ -1,29 +1,31 @@
 .footer {
+  // Background color and smooth transition for theme changes
   background-color: var(--color-bg-dark);
   transition: var(--trans-2x);
 
-  // Margin & Padding to separate footer from above content
+  // Vertical spacing: separates footer from preceding sections
   margin-top: calc(var(--gap-section) + 0.7rem);
   padding: calc(var(--gap-section) - 1.8rem) 0 var(--gap-section);
 
-  // Text color and font size for footer text
+  // Text styling for footer content
   color: var(--color-grey);
   font-size: var(--font-footer-text);
 
   &__icon {
-    // Responsive icon size with clamp
+    // Icon size with slight scale down for subtlety
     width: 2.4rem;
     height: 2.4rem;
     transform: scale(0.8);
   }
 
   &__text {
-    // Light font weight and vertical spacing for footer texts
+    // Light-weight font and vertical margin for readability and breathing space
     font-weight: 300;
     margin: 3.4rem 0 2.2rem;
   }
 
   &__links {
+    // Container for links in footer, vertical stacking with spacing
     font-style: normal;
     margin-bottom: 4.5rem;
     display: flex;
@@ -32,21 +34,22 @@
   }
 
   &__link {
+    // Each link layout with gap and color transition on hover/focus
     display: flex;
     gap: 0.55rem;
     color: var(--color-grey);
     transition: color var(--trans-1x), box-shadow var(--trans-1x);
     will-change: color, box-shadow;
-    fill: currentColor;
-    width: max-content;
+    fill: currentColor; // For SVG icons inside links to inherit current text color
+    width: max-content; // Prevent links from stretching unnecessarily
   }
 
   &__socials {
-    // Alignment
+    // Horizontal layout for social media icons with spacing
     display: flex;
     gap: 2.7rem;
 
-    // Set size for SVG icons inside links
+    // Size constraint for SVG icons inside social links
     & > a > * {
       width: 1.8rem;
       height: 1.8rem;

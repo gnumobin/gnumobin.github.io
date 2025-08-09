@@ -1,5 +1,5 @@
 .ham {
-  // Hamburger icon, hidden by default, shown on tablet and smaller
+  // Hamburger icon hidden by default; visible on tablets and smaller screens
   display: none;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -10,7 +10,7 @@
   }
 }
 
-// Rotation effects on active state
+// Rotation transforms for active hamburger states
 .hamRotate.active {
   transform: rotate(45deg);
 }
@@ -19,7 +19,7 @@
 }
 
 .line {
-  // Hamburger lines with stroke animations
+  // Hamburger lines style with stroke and smooth dash animation
   fill: none;
   stroke: var(--color-text-bold);
   stroke-width: 5.5;
@@ -27,7 +27,9 @@
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
 }
 
+// Hamburger variant with animated stroke dash offsets
 .ham6 {
+  // Define dash arrays for each line
   .top {
     stroke-dasharray: 40 172;
   }
@@ -39,7 +41,7 @@
   }
 
   &.active {
-    // Animate stroke dash offset on active
+    // Animate dash offset for each line when active (menu toggled)
     .top {
       stroke-dashoffset: -132px;
     }

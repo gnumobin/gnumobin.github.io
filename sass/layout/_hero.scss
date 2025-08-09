@@ -1,25 +1,28 @@
 .section-hero {
+  // Top padding to separate hero section from top elements
   padding-top: var(--gap-section);
+
+  // Center-align all text inside hero section
   text-align: center;
 
   &__biography {
-    // Typography styles for biography text
+    // Light font weight for a clean, readable bio
     font-size: var(--font-hero-biography);
     font-weight: 300;
 
-    // Centered with max width and margin for spacing
+    // Center block with constrained width for optimal readability
     margin: var(--gap-hero-biography) auto
       calc(var(--gap-hero-biography) + 1.4rem);
-
     max-width: 60%;
 
+    // Responsive full-width on tablets in landscape mode for better use of space
     @include responsive(landscape-tablet) {
       max-width: 100%;
     }
   }
 
   &__actions {
-    // Horizontal flex container to center buttons with spacing
+    // Flex container centers buttons horizontally with consistent spacing
     display: flex;
     justify-content: center;
     gap: var(--gap-hero-actions);

@@ -1,21 +1,20 @@
 $color-text-bold: var(--color-text-bold);
 $color-bg: #161513;
 
-@mixin pseudoHover($per, $deg) {
-  transform: translate3d($per, -1em, 0) rotate($deg);
+// Mixin for hover transform and opacity effect on pseudo-elements
+@mixin pseudoHover($x, $deg) {
+  transform: translate3d($x, -1em, 0) rotate($deg);
   opacity: 1;
 }
 
-@mixin pseudoDiff($per, $t-deg, $b-deg, $alpha) {
-  transform: translate3d($per, 5em, 0) rotate($t-deg);
-  background: linear-gradient($b-deg, rgba(224, 224, 224, $alpha), transparent);
+// Combined mixin for pseudo-element gradient backgrounds and transform
+@mixin pseudoDiffCombined($x, $t-deg, $b-deg, $alpha, $light: false) {
+  transform: translate3d($x, 5em, 0) rotate($t-deg);
+  $color: if($light, rgba(26, 26, 26, $alpha), rgba(224, 224, 224, $alpha));
+  background: linear-gradient($b-deg, $color, transparent);
 }
 
-@mixin pseudoDiffLight($per, $t-deg, $b-deg, $alpha) {
-  transform: translate3d($per, 5em, 0) rotate($t-deg);
-  background: linear-gradient($b-deg, rgba(26, 26, 26, $alpha), transparent);
-}
-
+// Mixin for secondary button styles with smooth transitions
 @mixin secondary($bg, $color) {
   background-color: $bg;
   color: $color;
@@ -23,96 +22,95 @@ $color-bg: #161513;
   transition: background-color 0.3s, color 0.3s, box-shadow 1.2s, transform 0.1s;
 }
 
-// Button base styles with flexible inline layout and rounded shape
+// Placeholder selector for shared styles of pseudo-elements
+%pseudo-shape {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  right: -50%;
+  height: 0;
+  padding-bottom: 150%;
+  border-radius: 39%;
+  opacity: 0;
+  transition: transform 1.2s ease-out, opacity 0.9s ease-out;
+  backface-visibility: hidden;
+  pointer-events: none;
+}
+
 .btn {
-  // type
+  // Layout: inline flex with centered content
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  // positions
+
+  // Positioning and spacing
   position: relative;
-  // spaces — now with responsive clamp()
   padding: clamp(1rem, 3vw, 1.6rem) clamp(2rem, 6vw, 3rem);
   overflow: hidden;
-  // typography
+
+  // Typography and appearance
   font-weight: 600;
   font-size: var(--font-btn);
   text-decoration: none;
-  // borders
   border: 2px solid var(--color-text-bold);
   border-radius: 99999px;
-  // animations
+
+  // Smooth animations
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.25s;
   will-change: transform, opacity;
   cursor: pointer;
 
-  // Pressed state: moves button down slightly
+  // Pressed state: button moves down slightly
   &:visited,
   &:active {
     transform: translateY(0.6rem);
   }
 
-  // Decorative pseudo-elements for subtle animated gradients behind the button
+  // Shared styles for pseudo-elements
   &::before,
   &::after {
-    content: "";
-    // Positions
-    position: absolute;
-    top: 0;
-    left: -50%;
-    right: -50%;
-    z-index: -1;
-    // Dimensions
-    height: 0;
-    padding-bottom: 150%;
-    // Borders
-    border-radius: 39%;
-    // Hidden by default
-    opacity: 0;
-    // Animations
-    transition: transform 1.2s ease-out, opacity 0.9s ease-out;
-    backface-visibility: hidden;
-    pointer-events: none;
+    @extend %pseudo-shape;
   }
 
+  // Light theme pseudo-elements with subtle gradient backgrounds
   &.light {
-    // Left gradient shape, initially below the button and rotated
     &::before {
-      @include pseudoDiffLight(-10%, 330deg, 25deg, 0.15);
+      @include pseudoDiffCombined(-10%, 330deg, 25deg, 0.15, true);
     }
-    // Right gradient shape, initially below the button and rotated
     &::after {
-      @include pseudoDiffLight(10%, 0deg, 70deg, 0.18);
+      @include pseudoDiffCombined(10%, 0deg, 70deg, 0.18, true);
     }
   }
 
+  // Dark theme pseudo-elements with subtle gradient backgrounds
   &.dark {
-    // Left gradient shape, initially below the button and rotated
     &::before {
-      @include pseudoDiff(-10%, 330deg, 25deg, 0.15);
+      @include pseudoDiffCombined(-10%, 330deg, 25deg, 0.15, false);
     }
-    // Right gradient shape, initially below the button and rotated
     &::after {
-      @include pseudoDiff(10%, 0deg, 70deg, 0.18);
+      @include pseudoDiffCombined(10%, 0deg, 70deg, 0.18, false);
     }
   }
 
-  // On hover, gradient shapes move up and become visible, creating a subtle shine effect
-  &:hover::before {
-    @include pseudoHover(-10%, 100deg);
-  }
-  &:hover::after {
-    @include pseudoHover(10%, 180deg);
+  // Hover effect: move gradients upward and increase opacity
+  &:hover {
+    &::before {
+      @include pseudoHover(-10%, 100deg);
+    }
+    &::after {
+      @include pseudoHover(10%, 180deg);
+    }
   }
 
-  // Primary button style: solid background with inverted text color
+  // Primary button styles
   &--primary {
     @include secondary(var(--color-text-bold), var(--color-bg));
 
     &:hover {
       background-color: darken($color-bg, 10%);
       color: var(--color-text-bold);
-      @extend %glow; // glow effect on hover
+      @extend %glow; // Glow effect on hover
 
       &.light {
         color: var(--color-text-bold);
@@ -121,12 +119,12 @@ $color-bg: #161513;
     }
   }
 
-  // Secondary button style: transparent background with bold text color
+  // Secondary button styles
   &--secondary {
     @include secondary(transparent, var(--color-text-bold));
 
     &:hover {
-      @extend %glow; // glow effect on hover
+      @extend %glow; // Glow effect on hover
     }
   }
 }

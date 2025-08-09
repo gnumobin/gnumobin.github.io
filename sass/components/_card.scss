@@ -1,7 +1,6 @@
 .card {
-  // Main card container with max width, rounded corners, and subtle background
+  // Main card container with max width, rounded corners, and subtle background color
   background-color: var(--color-bg-extra-thin);
-
   max-width: 90rem;
   border-radius: var(--rounded-card);
   transition: var(--trans-1x);
@@ -9,22 +8,24 @@
   justify-self: center;
 
   &__img {
-    // Responsive full-width image inside card
+    // Responsive full-width image inside the card
     width: 100%;
     height: auto;
   }
 
   &__content {
+    // Flex container for content with padding
     @include flex;
     padding: 1.4rem 2.3rem;
   }
 
   &__title {
+    // Uppercase title style with font size
     @extend %title-uppercase;
     font-size: var(--font-card-title);
 
     &::before {
-      // Subtitle hint shown above title
+      // Subtitle hint displayed above the title
       content: "click here to visit";
       display: block;
       font-size: var(--font-card-title-sub);
@@ -35,6 +36,7 @@
   }
 
   &__icon {
+    // Icon style with current text color and size
     color: var(--color-text-bold);
     stroke: currentColor;
     fill: currentColor;
@@ -43,7 +45,7 @@
   }
 
   &:hover {
-    // Hover effect: lift card slightly and add shadow
+    // Hover effect: slightly lift the card and add shadow
     background-color: transparent;
     transform: translateY(-0.4rem) scale(1.01);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);

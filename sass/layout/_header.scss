@@ -1,26 +1,29 @@
 .header {
+  // Background with a light translucent layer for subtle depth
   background-color: var(--color-bg-thin);
 
-  // Fix header at top with full width and above other content
+  // Fixed positioning to keep header visible at the top
   position: fixed;
-  z-index: 20;
+  z-index: 20; // Stacks above main content
   width: 100%;
   top: 0;
   left: 0;
 
+  // Smooth transition for background and shadow changes
   transition: var(--trans-2x);
 
   &.sticky {
-    // Add subtle shadow when header becomes sticky
+    // Soft shadow to visually separate header from content on scroll
     box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
   }
 
   &--active {
+    // Slightly transparent white overlay when active for highlight effect
     background-color: rgba(255, 255, 255, 0.577);
   }
 }
 
 .some-space {
-  // Adds top padding to create spacing below the fixed header
+  // Padding equalizes space below fixed header to prevent content overlap
   padding-top: calc(var(--gap-section) - 4rem);
 }

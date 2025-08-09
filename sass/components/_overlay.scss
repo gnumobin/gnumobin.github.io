@@ -1,19 +1,21 @@
 .overlay {
+  // Semi-transparent white overlay background
   background-color: rgba(255, 255, 255, 0.5);
 
-  // Pos
+  // Fixed full-screen positioning
   position: fixed;
   inset: 0;
   z-index: 10;
 
-  // Hidden off-screen initially
+  // Initially hidden off-screen to the right
   transform: translateX(200%);
   visibility: hidden;
 
-  // Set Animations
+  // Smooth transition for transform and visibility
   transition: transform var(--trans-2x), visibility var(--trans-2x) linear;
 
   &--active {
+    // Show overlay by resetting transform and visibility
     transform: translateX(0%);
     visibility: visible;
   }

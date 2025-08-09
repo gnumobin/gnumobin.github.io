@@ -1,27 +1,23 @@
 .profile {
-  // Responsive Width
+  // Responsive width with min and max limits
   width: clamp(18rem, 6vw + 15rem, 25rem);
-  // Spaces
-  margin: 0 auto;
-  // Etc
+  margin: 0 auto; // Center horizontally
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: 50%; // Make container circular
   cursor: zoom-in;
 
   &__img {
-    // Full width, automatic height to keep aspect ratio and radius
+    // Full width image, maintain aspect ratio, circular shape
     width: 100%;
     height: auto;
     border-radius: 50%;
 
-    // Smooth transform transition on hover
+    // Smooth transition for transform changes
     transition: var(--trans-1x);
-
-    // Hint browser for better animation performance
-    will-change: transform;
+    will-change: transform; // Hint for GPU acceleration
   }
 
-  // Scale image on hover for zoom effect
+  // Zoom image on hover
   &:hover &__img {
     transform: scale(1.2);
   }

@@ -1,27 +1,28 @@
 .skills {
-  // Alignment
+  /* Grid layout with responsive column sizes */
   @include grid-columns(clamp(1rem, 2vw, 3rem), clamp(7rem, 10vw, 10rem));
   justify-content: center;
 
-  // Spaces
+  /* Vertical spacing between skill rows */
   margin-top: var(--gap-skills);
   row-gap: 2.5rem;
 
   &__item {
-    // Smooth transition for hover effects
+    /* Smooth transition for hover color change */
     transition: var(--trans-1x);
 
-    // On hover, change text/icon color to bold color
+    /* On hover, highlight text and icon with bold color */
     &:hover {
       color: var(--color-text-bold);
     }
   }
 
   &__icon {
-    // Sizes
+    /* Responsive size for icons */
     width: clamp(3.2rem, 3vw + 1rem, 4.4rem);
     height: clamp(3.2rem, 3vw + 1rem, 4.4rem);
-    // Colors
+
+    /* Inherit current text color */
     fill: currentColor;
   }
 }

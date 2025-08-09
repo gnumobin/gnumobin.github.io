@@ -1,55 +1,68 @@
 .sticky-btn {
-  // Position
+  // Fixed position at bottom-right with proper layering
   position: fixed;
   bottom: 0;
   right: 0;
   z-index: 5;
-  // Colors
+
+  // Background and text color from theme variables
   background-color: var(--color-bg-extra-thin);
   color: var(--color-text);
-  // Dimensions
+
+  // Size and shape (circular)
   width: 6.4rem;
   height: 6.4rem;
-  // Borders
   border: none;
   border-radius: 50%;
-  // Type
+
+  // Flex centering for icon/text inside button
   display: flex;
   justify-content: center;
   align-items: center;
-  // Fonts
+
+  // Font styling for icon or text
   font-size: 5.2rem;
   font-weight: bolder;
-  // Spaces
+
+  // Margin spacing around button
   margin: 3.5rem;
-  // Shadow
+
+  // Subtle shadow for depth
   box-shadow: 0 0 1rem var(--color-bg-thin);
-  // Animations
+
+  // Smooth animations for transform, shadow, visibility, opacity
   transition: box-shadow var(--trans-1x), transform var(--trans-1x),
     opacity var(--trans-2x), visibility var(--trans-2x);
   will-change: box-shadow, transform, visibility, opacity;
+
   cursor: pointer;
-  // Visibility
+
+  // Initially hidden and scaled down
   opacity: 0;
   visibility: hidden;
   transform: scale(0.5);
 
   &__icon {
+    // Icon size inside button
     width: 2.4rem;
     height: 2.4rem;
   }
+
   &__link {
+    // Inherit button text/link color
     &:link,
     &:visited {
       color: inherit;
     }
   }
 
+  // Hover effect: enlarge and brighten shadow
   &:hover {
     box-shadow: 0 0 1rem 1rem var(--color-bg-thin);
     transform: scale(1.2);
   }
 
+  // When active: fully visible and normal scale
   &.active {
     opacity: 1;
     visibility: visible;
