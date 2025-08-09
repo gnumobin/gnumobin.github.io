@@ -46,11 +46,7 @@ const toggleShowMenu = (open) => {
 
   const actionsFlag = hamMenuBtn.classList.contains("active");
 
-  if (actionsFlag) {
-    disableScroll();
-  } else {
-    enableScroll();
-  }
+  actionsFlag ? disableScroll() : enableScroll();
 };
 
 // Disable contextMenu on chain of elements
@@ -60,14 +56,6 @@ const disableContextMenuOnChainElements = (els) => {
       e.preventDefault();
     });
   });
-};
-
-// Unset longPress on mobiles (annoying vibrate)
-const preventLongPress = (e) => {
-  if (e.touches.length > 1) {
-    e.preventDefault();
-  }
-  this.longPressTimer = setTimeout(() => e.preventDefault(), 500);
 };
 
 // Change Theme
@@ -147,21 +135,6 @@ stickyBtn.addEventListener("click", () => window.scrollTo({ top: 0 }));
 disableContextMenuOnChainElements(allImagesEl);
 // Disable RightClick menu on button just for smaller screens
 window.innerWidth < 480 && disableContextMenuOnChainElements(allBtnEl);
-
-// When Site not focus: just blur everything!
-// window.addEventListener("blur", () => document.body.classList.add("blurred"));
-// window.addEventListener("focus", () =>
-//   document.body.classList.remove("blurred")
-// );
-
-// if screen are touchable just disable longPress
-document.addEventListener(
-  "touchstart",
-  (e) => {
-    if (e.touches.length > 1) e.preventDefault();
-  },
-  { passive: false }
-);
 
 // Change Theme
 toggleThemeBtn.addEventListener("change", (e) => {
@@ -298,24 +271,3 @@ function enableScroll() {
   window.removeEventListener("touchmove", preventDefault, wheelOpt);
   window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
 }
-
-// Disable Inspector
-let devtoolsOpen = false;
-
-setInterval(() => {
-  const threshold = 160;
-  const widthDiff = window.outerWidth - window.innerWidth;
-  const heightDiff = window.outerHeight - window.innerHeight;
-
-  if (widthDiff > threshold || heightDiff > threshold) {
-    if (!devtoolsOpen) {
-      devtoolsOpen = true;
-      window.location.href = "about:blank";
-      alert(
-        "🔍How beautiful the sky is! 🌌 With stars ✨ or without stars? Ummm 🤔, does it make a difference?"
-      );
-    }
-  } else {
-    devtoolsOpen = false;
-  }
-}, 500);
