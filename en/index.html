@@ -1,62 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Character encoding for the document -->
-    <meta charset="UTF-8" />
-
-    <!-- Disable Translate -->
-    <meta name="google" content="notranslate" />
-
-    <!-- Viewport for responsive design -->
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
-    />
-    <!-- Languages -->
-    <link
-      rel="alternate"
-      href="https://gnumobin.netlify.app/en/"
-      hreflang="en"
-    />
-    <link
-      rel="alternate"
-      href="https://gnumobin.netlify.app/fa/"
-      hreflang="fa"
-    />
-    <link
-      rel="alternate"
-      href="https://gnumobin.netlify.app/"
-      hreflang="x-default"
-    />
-
-    <!-- Document Title -->
-    <title>Mobin Ghaemi</title>
-
-    <!-- Preload important images for faster page load -->
-    <!-- <link rel="preload" as="image" href="./../assets/imgs/logo/logo.webp" />
-    <link rel="preload" as="image" href="/assets/imgs/me.webp" /> -->
-
-    <!-- Link PWA -->
-    <link rel="manifest" href="./../manifest.json" />
-
-    <!-- Link to main CSS stylesheet -->
-    <link rel="stylesheet" href="./../styles/style.prefixed.css" />
-
-    <!-- Favicon for the browser tab -->
-    <link
-      rel="shortcut icon"
-      href="./../assets/imgs/logo/logo-1x.webp"
-      type="image/x-icon"
-    />
-
-    <!-- Load JavaScript file with defer to execute after parsing HTML -->
-    <script src="/sw.js" defer></script>
-    <script defer src="/js/lang.js"></script>
-    <script src="./../js/app.js" defer></script>
-
-    <!-- Structured data using JSON-LD for SEO (Person schema) -->
-    <script type="application/ld+json">
-      {
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<meta name=google content=notranslate>
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<link rel=alternate href=https://gnumobin.netlify.app/en/ hreflang=en>
+<link rel=alternate href=https://gnumobin.netlify.app/fa/ hreflang=fa>
+<link rel=alternate href=https://gnumobin.netlify.app/ hreflang=x-default>
+<title>Mobin Ghaemi</title>
+<link rel=manifest href=./../manifest.json>
+<link rel=stylesheet href=./../styles/style.prefixed.css>
+<link rel="shortcut icon" href=./../assets/imgs/logo/logo-1x.webp type=image/x-icon>
+<script src=/sw.js defer></script>
+<script defer src=/js/lang.js></script>
+<script src=./../js/app.js defer></script>
+<script type=application/ld+json>
+{
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Mobin Ghaemi",
@@ -68,1118 +27,376 @@
         ],
         "image": "https://gnumobin.netlify.app/assets/imgs/author/me-1x.webp"
       }
-    </script>
-
-    <!-- Meta tags for search engine optimization -->
-    <meta
-      name="description"
-      content="Mobin Ghaemi — Full Stack Developer & Arch Linux power user. Building clean, fast, and minimal experiences from backend to frontend."
-    />
-
-    <meta
-      name="keywords"
-      content="Mobin Ghaemi, Full Stack Developer, Web Developer, Backend Developer, Frontend Developer, JavaScript Developer, Node.js, React Developer, Mobile App Developer, Desktop App Developer, Progressive Web Apps, Gorgan, Golestan, Iran, Arch Linux, Open Source Contributor, UI/UX, Responsive Web Design, Software Engineer, YouTube Content Creator, Tech Blogger"
-    />
-
-    <meta name="author" content="Mobin Ghaemi" />
-
-    <!-- Open Graph meta tags for social media sharing -->
-    <meta property="og:title" content="Mobin Ghaemi | Full-Stack Engineer" />
-    <meta
-      property="og:description"
-      content="Mobin Ghaemi — Full Stack Developer & Arch Linux power user. Building clean, fast, and minimal experiences from backend to frontend."
-    />
-    <meta
-      property="og:image"
-      content="https://gnumobin.netlify.app/assets/imgs/author/me-1x.webp"
-    />
-    <meta property="og:url" content="https://gnumobin.netlify.app" />
-    <meta property="og:type" content="website" />
-
-    <!-- Twitter Card meta tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Mobin Ghaemi | Full-Stack Developer" />
-    <meta
-      name="twitter:description"
-      content="Mobin Ghaemi — Full Stack Developer & Arch Linux power user. Building clean, fast, and minimal experiences from backend to frontend."
-    />
-    <meta
-      name="twitter:image"
-      content="https://gnumobin.netlify.app/assets/imgs/author/me-1x.webp"
-    />
-
-    <!-- Canonical link to avoid duplicate content issues -->
-    <link rel="canonical" href="https://gnumobin.netlify.app/en/" />
-
-    <!-- Preconnect and DNS prefetch for faster external requests -->
-    <link rel="preconnect" href="https://youtube.com" crossorigin />
-    <link rel="dns-prefetch" href="https://t.me" />
-  </head>
-
-  <body translate="no">
-    <!-- SVG Sprite -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <!-- Arrow Up -->
-      <symbol
-        id="arrow-up"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path d="m5 12 7-7 7 7" />
-        <path d="M12 19V5" />
-      </symbol>
-
-      <!-- Arrow Right -->
-      <symbol id="arrow-right" viewBox="0 0 12 12" fill="none">
-        <path
-          fill="currentColor"
-          d="M.77 1.608c0-.274.114-.537.317-.731s.478-.303.764-.303h8.67c.287 0 .561.109.764.303s.317.457.317.73V9.9c-.01.268-.128.521-.33.708a1.1 1.1 0 0 1-.751.29c-.28 0-.55-.104-.751-.29a1.02 1.02 0 0 1-.33-.708V4.105L1.85 11.363a1.1 1.1 0 0 1-.765.303c-.287 0-.562-.11-.765-.303a1.01 1.01 0 0 1-.317-.732c0-.274.114-.537.317-.731L7.91 2.642H1.85c-.286 0-.561-.11-.764-.303a1.01 1.01 0 0 1-.317-.731"
-        />
-      </symbol>
-
-      <!-- Mail -->
-      <symbol
-        id="mail"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
-        <rect x="2" y="4" width="20" height="16" rx="2" />
-      </symbol>
-
-      <!-- Apple Logo -->
-      <symbol id="apple-logo" viewBox="0 0 24 24">
-        <defs>
-          <linearGradient
-            id="apple-gradient"
-            x1="0%"
-            x2="100%"
-            y1="0%"
-            y2="100%"
-          >
-            <stop offset="0%" stop-color="#d1d1d1" />
-            <stop offset="50%" stop-color="#8e8e8e" />
-            <stop offset="100%" stop-color="#f2f2f2" />
-          </linearGradient>
-        </defs>
-        <path
-          fill="url(#apple-gradient)"
-          d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"
-        />
-      </symbol>
-
-      <!-- Telegram Logo -->
-      <symbol id="telegram-logo" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="12" fill="#26A5E4" />
-        <path
-          fill="#FFF"
-          d="M16.906 7.364c.1-.002.321.023.465.14a.5.5 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024q-.159.037-5.061 3.345-.72.495-1.302.48c-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789q.04-.324.893-.663 5.247-2.286 6.998-3.014c3.332-1.386 4.025-1.627 4.476-1.635"
-        />
-      </symbol>
-
-      <!-- Youtube Logo -->
-      <symbol id="youtube-logo" viewBox="0 0 24 24">
-        <rect width="24" height="24" fill="#FF0000" rx="4" ry="4" />
-        <path fill="#FFFFFF" d="M9.545 15.568V8.432L15.818 12z" />
-      </symbol>
-
-      <!-- CSS icon -->
-      <symbol
-        id="css-icon"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M0 0v20.16A3.84 3.84 0 0 0 3.84 24h16.32A3.84 3.84 0 0 0 24 20.16V3.84A3.84 3.84 0 0 0 20.16 0Zm14.256 13.08c1.56 0 2.28 1.08 2.304 2.64h-1.608c.024-.288-.048-.6-.144-.84-.096-.192-.288-.264-.552-.264-.456 0-.696.264-.696.84-.024.576.288.888.768 1.08.72.288 1.608.744 1.92 1.296q.432.648.432 1.656c0 1.608-.912 2.592-2.496 2.592-1.656 0-2.4-1.032-2.424-2.688h1.68c0 .792.264 1.176.792 1.176.264 0 .456-.072.552-.24.192-.312.24-1.176-.048-1.512-.312-.408-.912-.6-1.32-.816q-.828-.396-1.224-.936c-.24-.36-.36-.888-.36-1.536 0-1.44.936-2.472 2.424-2.448m5.4 0c1.584 0 2.304 1.08 2.328 2.64h-1.608c0-.288-.048-.6-.168-.84-.096-.192-.264-.264-.528-.264-.48 0-.72.264-.72.84s.288.888.792 1.08c.696.288 1.608.744 1.92 1.296.264.432.408.984.408 1.656.024 1.608-.888 2.592-2.472 2.592-1.68 0-2.424-1.056-2.448-2.688h1.68c0 .744.264 1.176.792 1.176.264 0 .456-.072.552-.24.216-.312.264-1.176-.048-1.512-.288-.408-.888-.6-1.32-.816-.552-.264-.96-.576-1.2-.936s-.36-.888-.36-1.536c-.024-1.44.912-2.472 2.4-2.448m-11.031.018c.711-.006 1.419.198 1.839.63.432.432.672 1.128.648 1.992H9.336c.024-.456-.096-.792-.432-.96-.312-.144-.768-.048-.888.24-.12.264-.192.576-.168.864v3.504c0 .744.264 1.128.768 1.128a.65.65 0 0 0 .552-.264c.168-.24.192-.552.168-.84h1.776c.096 1.632-.984 2.712-2.568 2.688-1.536 0-2.496-.864-2.472-2.472v-4.032c0-.816.24-1.44.696-1.848.432-.408 1.146-.624 1.857-.63"
-        />
-      </symbol>
-
-      <!-- Express.js icon -->
-      <symbol
-        id="express-icon"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M24 18.588a1.53 1.53 0 0 1-1.895-.72l-3.45-4.771-.5-.667-4.003 5.444a1.466 1.466 0 0 1-1.802.708l5.158-6.92-4.798-6.251a1.595 1.595 0 0 1 1.9.666l3.576 4.83 3.596-4.81a1.435 1.435 0 0 1 1.788-.668L21.708 7.9l-2.522 3.283a.666.666 0 0 0 0 .994l4.804 6.412zM.002 11.576l.42-2.075c1.154-4.103 5.858-5.81 9.094-3.27 1.895 1.489 2.368 3.597 2.275 5.973H1.116C.943 16.447 4.005 19.009 7.92 17.7a4.08 4.08 0 0 0 2.582-2.876c.207-.666.548-.78 1.174-.588a5.42 5.42 0 0 1-2.589 3.957 6.27 6.27 0 0 1-7.306-.933 6.58 6.58 0 0 1-1.64-3.858c0-.235-.08-.455-.134-.666A88 88 0 0 1 0 11.577zm1.127-.286h9.654c-.06-3.076-2.001-5.258-4.59-5.278-2.882-.04-4.944 2.094-5.071 5.264z"
-        />
-      </symbol>
-
-      <!-- HTML icon -->
-      <symbol
-        id="html-icon"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438zm7.031 9.75-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157z"
-        />
-      </symbol>
-
-      <!-- JS icon -->
-      <symbol
-        id="javascript-icon"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M0 0h24v24H0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179z"
-        />
-      </symbol>
-
-      <!-- Linux icon -->
-      <symbol
-        id="linux-icon"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12.504 0q-.232 0-.48.021c-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.4.4 0 0 0-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.132 1.884 1.071s1.592-.536 2.257-1.306c.631-.765 1.683-1.084 2.378-1.503.348-.199.629-.469.649-.853.023-.4-.2-.811-.714-1.376v-.097l-.003-.003c-.17-.2-.25-.535-.338-.926-.085-.401-.182-.786-.492-1.046h-.003c-.059-.054-.123-.067-.188-.135a.36.36 0 0 0-.19-.064c.431-1.278.264-2.55-.173-3.694-.533-1.41-1.465-2.638-2.175-3.483-.796-1.005-1.576-1.957-1.56-3.368.026-2.152.236-6.133-3.544-6.139m.529 3.405h.013c.213 0 .396.062.584.198.19.135.33.332.438.533.105.259.158.459.166.724 0-.02.006-.04.006-.06v.105l-.004-.021-.004-.024a1.8 1.8 0 0 1-.15.706.95.95 0 0 1-.213.335 1 1 0 0 0-.088-.042c-.104-.045-.198-.064-.284-.133a1.3 1.3 0 0 0-.22-.066c.05-.06.146-.133.183-.198q.08-.193.088-.402v-.02a1.2 1.2 0 0 0-.061-.4c-.045-.134-.101-.2-.183-.333-.084-.066-.167-.132-.267-.132h-.016c-.093 0-.176.03-.262.132a.8.8 0 0 0-.205.334 1.2 1.2 0 0 0-.09.4v.019q.002.134.02.267c-.193-.067-.438-.135-.607-.202a2 2 0 0 1-.018-.2v-.02a1.8 1.8 0 0 1 .15-.768 1.08 1.08 0 0 1 .43-.533 1 1 0 0 1 .594-.2zm-2.962.059h.036c.142 0 .27.048.399.135.146.129.264.288.344.465.09.199.14.4.153.667v.004c.007.134.006.2-.002.266v.08c-.03.007-.056.018-.083.024-.152.055-.274.135-.393.2q.018-.136.003-.267v-.015c-.012-.133-.04-.2-.082-.333a.6.6 0 0 0-.166-.267.25.25 0 0 0-.183-.064h-.021c-.071.006-.13.04-.186.132a.55.55 0 0 0-.12.27 1 1 0 0 0-.023.33v.015c.012.135.037.2.08.334.046.134.098.2.166.268q.014.014.034.024c-.07.057-.117.07-.176.136a.3.3 0 0 1-.131.068 2.6 2.6 0 0 1-.275-.402 1.8 1.8 0 0 1-.155-.667 1.8 1.8 0 0 1 .08-.668 1.4 1.4 0 0 1 .283-.535c.128-.133.26-.2.418-.2m1.37 1.706c.332 0 .733.065 1.216.399.293.2.523.269 1.052.468h.003c.255.136.405.266.478.399v-.131a.57.57 0 0 1 .016.47c-.123.31-.516.643-1.063.842v.002c-.268.135-.501.333-.775.465-.276.135-.588.292-1.012.267a1.1 1.1 0 0 1-.448-.067 4 4 0 0 1-.322-.198c-.195-.135-.363-.332-.612-.465v-.005h-.005c-.4-.246-.616-.512-.686-.71q-.104-.403.193-.6c.224-.135.38-.271.483-.336.104-.074.143-.102.176-.131h.002v-.003c.169-.202.436-.47.839-.601.139-.036.294-.065.466-.065zm2.8 2.142c.358 1.417 1.196 3.475 1.735 4.473.286.534.855 1.659 1.102 3.024.156-.005.33.018.513.064.646-1.671-.546-3.467-1.089-3.966-.22-.2-.232-.335-.123-.335.59.534 1.365 1.572 1.646 2.757.13.535.16 1.104.021 1.67.067.028.135.06.205.067 1.032.534 1.413.938 1.23 1.537v-.043c-.06-.003-.12 0-.18 0h-.016c.151-.467-.182-.825-1.065-1.224-.915-.4-1.646-.336-1.77.465-.008.043-.013.066-.018.135-.068.023-.139.053-.209.064-.43.268-.662.669-.793 1.187-.13.533-.17 1.156-.205 1.869v.003c-.02.334-.17.838-.319 1.35-1.5 1.072-3.58 1.538-5.348.334a2.7 2.7 0 0 0-.402-.533 1.5 1.5 0 0 0-.275-.333c.182 0 .338-.03.465-.067a.62.62 0 0 0 .314-.334c.108-.267 0-.697-.345-1.163s-.931-.995-1.788-1.521c-.63-.4-.986-.87-1.15-1.396-.165-.534-.143-1.085-.015-1.645.245-1.07.873-2.11 1.274-2.763.107-.065.037.135-.408.974-.396.751-1.14 2.497-.122 3.854a8.1 8.1 0 0 1 .647-2.876c.564-1.278 1.743-3.504 1.836-5.268.048.036.217.135.289.202.218.133.38.333.59.465.21.201.477.335.876.335q.058.005.11.006c.412 0 .73-.134.997-.268.29-.134.52-.334.74-.4h.005c.467-.135.835-.402 1.044-.7zm2.185 8.958c.037.6.343 1.245.882 1.377.588.134 1.434-.333 1.791-.765l.211-.01c.315-.007.577.01.847.268l.003.003c.208.199.305.53.391.876.085.4.154.78.409 1.066.486.527.645.906.636 1.14l.003-.007v.018l-.003-.012c-.015.262-.185.396-.498.595-.63.401-1.746.712-2.457 1.57-.618.737-1.37 1.14-2.036 1.191-.664.053-1.237-.2-1.574-.898l-.005-.003c-.21-.4-.12-1.025.056-1.69.176-.668.428-1.344.463-1.897.037-.714.076-1.335.195-1.814.12-.465.308-.797.641-.984l.045-.022zm-10.814.049h.01q.08 0 .157.014c.376.055.706.333 1.023.752l.91 1.664.003.003c.243.533.754 1.064 1.189 1.637.434.598.77 1.131.729 1.57v.006c-.057.744-.48 1.148-1.125 1.294-.645.135-1.52.002-2.395-.464-.968-.536-2.118-.469-2.857-.602q-.553-.1-.723-.4c-.11-.2-.113-.602.123-1.23v-.004l.002-.003c.117-.334.03-.752-.027-1.118-.055-.401-.083-.71.043-.94.16-.334.396-.4.69-.533.294-.135.64-.202.915-.47h.002v-.002c.256-.268.445-.601.668-.838.19-.201.38-.336.663-.336m7.159-9.074c-.435.201-.945.535-1.488.535-.542 0-.97-.267-1.28-.466-.154-.134-.28-.268-.373-.335-.164-.134-.144-.333-.074-.333.109.016.129.134.199.2.096.066.215.2.36.333.292.2.68.467 1.167.467.485 0 1.053-.267 1.398-.466.195-.135.445-.334.648-.467.156-.136.149-.267.279-.267.128.016.034.134-.147.332a8 8 0 0 1-.69.468zm-1.082-1.583V5.64c-.006-.02.013-.042.029-.05.074-.043.18-.027.26.004.063 0 .16.067.15.135-.006.049-.085.066-.135.066-.055 0-.092-.043-.141-.068-.052-.018-.146-.008-.163-.065m-.551 0c-.02.058-.113.049-.166.066-.047.025-.086.068-.14.068-.05 0-.13-.02-.136-.068-.01-.066.088-.133.15-.133.08-.031.184-.047.259-.005.019.009.036.03.03.05v.02h.003z"
-        />
-      </symbol>
-
-      <!-- MongoDB -->
-      <symbol
-        id="mongodb-icon"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A74 74 0 0 1 11.91 24h.481a29 29 0 0 1 .51-3.07c.417-.296.604-.463.85-.693a11.34 11.34 0 0 0 3.639-8.464c.01-.814-.103-1.662-.197-2.218m-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695-.381-.045-.765-1.76-.765-2.405"
-        />
-      </symbol>
-
-      <!-- Node.js icon -->
-      <symbol
-        id="nodejs-icon"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M11.998 24c-.321 0-.641-.084-.922-.247L8.14 22.016c-.438-.245-.224-.332-.08-.383.585-.203.703-.25 1.328-.604.065-.037.151-.023.218.017l2.256 1.339a.29.29 0 0 0 .272 0l8.795-5.076a.28.28 0 0 0 .134-.238V6.921a.28.28 0 0 0-.137-.242l-8.791-5.072a.28.28 0 0 0-.271 0L3.075 6.68a.28.28 0 0 0-.139.241v10.15a.27.27 0 0 0 .139.235l2.409 1.392c1.307.654 2.108-.116 2.108-.89V7.787c0-.142.114-.253.256-.253h1.115c.139 0 .255.112.255.253v10.021c0 1.745-.95 2.745-2.604 2.745-.508 0-.909 0-2.026-.551L2.28 18.675a1.86 1.86 0 0 1-.922-1.604V6.921c0-.659.353-1.275.922-1.603L11.075.236a1.93 1.93 0 0 1 1.848 0l8.794 5.082c.57.329.924.944.924 1.603v10.15a1.86 1.86 0 0 1-.924 1.604l-8.794 5.078c-.28.163-.599.247-.925.247m7.101-10.007c0-1.9-1.284-2.406-3.987-2.763-2.731-.361-3.009-.548-3.009-1.187 0-.528.235-1.233 2.258-1.233 1.807 0 2.473.389 2.747 1.607a.254.254 0 0 0 .247.199h1.141a.26.26 0 0 0 .186-.081.26.26 0 0 0 .067-.196c-.177-2.098-1.571-3.076-4.388-3.076-2.508 0-4.004 1.058-4.004 2.833 0 1.925 1.488 2.457 3.895 2.695 2.88.282 3.103.703 3.103 1.269 0 .983-.789 1.402-2.642 1.402-2.327 0-2.839-.584-3.011-1.742a.255.255 0 0 0-.253-.215h-1.137a.25.25 0 0 0-.254.253c0 1.482.806 3.248 4.655 3.248 2.788.001 4.386-1.096 4.386-3.013"
-        />
-      </symbol>
-
-      <!-- React.js icon -->
-      <symbol
-        id="react-icon"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236m2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38a2.17 2.17 0 0 0-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44a23.5 23.5 0 0 0-3.107-.534A24 24 0 0 0 12.769 4.7c1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442a23 23 0 0 0-3.113.538 15 15 0 0 1-.254-1.42c-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05q.684.704 1.36 1.564c-.44-.02-.89-.034-1.345-.034q-.691-.001-1.36.034c.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093q.61.874 1.183 1.86.557.961 1.018 1.946c-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87a25.6 25.6 0 0 1-4.412.005 27 27 0 0 1-1.183-1.86q-.557-.961-1.018-1.946a25 25 0 0 1 1.013-1.954c.38-.66.773-1.286 1.18-1.868A25 25 0 0 1 12 8.098zm-3.635.254c-.24.377-.48.763-.704 1.16q-.336.585-.635 1.174c-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0q1.044.153 2.006.387c-.18.632-.405 1.282-.66 1.933a25.952 25.952 0 0 0-1.345-2.32zm3.063.675q.727.226 1.375.498c1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493a24 24 0 0 0-1.1-2.98c.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98a23 23 0 0 0-1.086 2.964c-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474s1.12-1.742 2.852-2.476c.42-.18.88-.342 1.356-.494m11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39a26 26 0 0 0 1.341-2.338zm-9.945.02c.2.392.41.783.64 1.175q.345.586.705 1.143a22 22 0 0 1-2.006-.386c.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295a1.2 1.2 0 0 1-.553-.132c-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64q.661.032 1.345.034.691.001 1.36-.034c-.44.572-.895 1.095-1.345 1.565q-.684-.706-1.36-1.565"
-        />
-      </symbol>
-
-      <!-- Sass icon -->
-      <symbol
-        id="sass-icon"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0M9.615 15.998c.175.645.156 1.248-.024 1.792l-.065.18q-.037.092-.078.176-.21.435-.555.81c-.698.759-1.672 1.047-2.09.805-.45-.262-.226-1.335.584-2.19.871-.918 2.12-1.509 2.12-1.509v-.003zm9.911-10.861c-.542-2.133-4.077-2.834-7.422-1.645-1.989.707-4.144 1.818-5.693 3.267C4.568 8.48 4.275 9.98 4.396 10.607c.427 2.211 3.457 3.657 4.703 4.73v.006c-.367.18-3.056 1.529-3.686 2.925-.675 1.47.105 2.521.615 2.655 1.575.436 3.195-.36 4.065-1.649.84-1.261.766-2.881.404-3.676.496-.135 1.08-.195 1.83-.104 2.101.24 2.521 1.56 2.43 2.1-.09.539-.523.854-.674.944-.15.091-.195.12-.181.181.015.09.091.09.21.075.165-.03 1.096-.45 1.141-1.471.045-1.29-1.186-2.729-3.375-2.7-.9.016-1.471.091-1.875.256a.4.4 0 0 0-.105-.105c-1.35-1.455-3.855-2.475-3.75-4.41.03-.705.285-2.564 4.8-4.814 3.705-1.846 6.661-1.335 7.171-.21.733 1.604-1.576 4.59-5.431 5.024-1.47.165-2.235-.404-2.431-.615-.209-.225-.239-.24-.314-.194-.12.06-.045.255 0 .375.12.3.585.825 1.396 1.095.704.225 2.43.359 4.5-.45 2.324-.899 4.139-3.405 3.614-5.505z"
-        />
-      </symbol>
-
-      <!-- TailwindCSS icon -->
-      <symbol
-        id="tailwind-icon"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12.001 4.8q-4.8 0-6 4.8 1.8-2.4 4.2-1.8c.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12q4.8 0 6-4.8-1.8 2.4-4.2 1.8c-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8m-6 7.2q-4.8 0-6 4.8 1.8-2.4 4.2-1.8c.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576q4.8 0 6-4.8-1.8 2.4-4.2 1.8c-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12"
-        />
-      </symbol>
-
-      <!-- Github icon -->
-      <symbol
-        id="github-icon"
-        viewBox="0 0 24 24"
-        role="img"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>GitHub</title>
-        <path
-          d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-        />
-      </symbol>
-    </svg>
-
-    <!-- Overlay element for modals or menus, initially hidden -->
-    <div class="overlay" id="overlay">&nbsp;</div>
-
-    <!-- Spacer to offset fixed header height for proper layout -->
-    <div class="some-space" aria-hidden="true">&nbsp;</div>
-
-    <!-- Hidden Easter Egg quote, only visible when printing -->
-    <blockquote class="print" aria-hidden="true">
-      <q class="print__text">
-        Miss. Drakulich has a book in which it is written <br />
-        Communism went, we stayed and laughed.
-      </q>
-    </blockquote>
-
-    <!-- Sticky button for scrolling back to the top -->
-    <button
-      class="sticky-btn"
-      aria-label="back to top of page btn"
-      id="stickyBtn"
-    >
-      <svg class="sticky-btn__icon" aria-hidden="true" role="img">
-        <!-- Using SVG symbol for arrow up icon -->
-        <use href="#arrow-up" xlink:href="#arrow-up"></use>
-      </svg>
-    </button>
-
-    <!-- Header section containing site navigation -->
-    <header class="header">
-      <div class="container">
-        <nav
-          class="header-nav"
-          id="primaryNav"
-          aria-label="Main Navigation"
-          role="navigation"
-        >
-          <!-- Website logo with responsive images using <picture> -->
-          <div class="logo">
-            <picture>
-              <!-- WebP images for modern browsers -->
-              <source
-                type="image/webp"
-                srcset="
-                  ./../assets/imgs/logo/logo-1x.webp 1x,
-                  ./../assets/imgs/logo/logo-2x.webp 2x
-                "
-              />
-              <!-- PNG fallback for older browsers -->
-              <source
-                type="image/png"
-                srcset="
-                  ./../assets/imgs/logo/logo-1x.png 1x,
-                  ./../assets/imgs/logo/logo-2x.png 2x
-                "
-              />
-              <!-- Fallback img tag with alt and async decoding -->
-              <img
-                src="./../assets/imgs/logo/logo-1x.png"
-                alt="Website Logo"
-                width="100"
-                height="100"
-                decoding="async"
-                class="logo__img"
-              />
-            </picture>
-          </div>
-
-          <!-- Navigation menu list -->
-          <ul class="header-nav__list" id="hamMenu">
-            <!-- Active navigation item (Home) with ARIA for current page -->
-            <li class="header-nav__item header-nav__item--active">
-              <a
-                href="#heroSection"
-                class="header-nav__link"
-                aria-current="page"
-                aria-label="Internal link to Hero Section"
-                >Home</a
-              >
-            </li>
-            <!-- Other navigation items -->
-            <li class="header-nav__item">
-              <a
-                href="#projectsSection"
-                class="header-nav__link"
-                aria-label="Internal link to Projects Section"
-                >Projects</a
-              >
-            </li>
-            <li class="header-nav__item">
-              <a
-                href="#experienceSection"
-                class="header-nav__link"
-                aria-label="Internal link to Experiences Section"
-                >Experience</a
-              >
-            </li>
-            <li class="header-nav__item">
-              <a
-                href="#contactSection"
-                class="header-nav__link"
-                aria-label="Internal link to Contact Section"
-                >Contact</a
-              >
-            </li>
-
-            <!-- Theme toggle and language selection grouped here -->
-            <li class="header-nav__some">
-              <!-- Hidden SVG symbols for theme icons -->
-              <svg
-                display="none"
-                class="toggle-theme"
-                role="button"
-                aria-label="toggle theme"
-              >
-                <!-- Light theme icon -->
-                <symbol id="light" viewBox="0 0 24 24">
-                  <g
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  >
-                    <!-- Sun rays rotated at different angles -->
-                    <line
-                      x1="12"
-                      y1="17"
-                      x2="12"
-                      y2="20"
-                      transform="rotate(0,12,12)"
-                    />
-                    <line
-                      x1="12"
-                      y1="17"
-                      x2="12"
-                      y2="20"
-                      transform="rotate(45,12,12)"
-                    />
-                    <line
-                      x1="12"
-                      y1="17"
-                      x2="12"
-                      y2="20"
-                      transform="rotate(90,12,12)"
-                    />
-                    <line
-                      x1="12"
-                      y1="17"
-                      x2="12"
-                      y2="20"
-                      transform="rotate(135,12,12)"
-                    />
-                    <line
-                      x1="12"
-                      y1="17"
-                      x2="12"
-                      y2="20"
-                      transform="rotate(180,12,12)"
-                    />
-                    <line
-                      x1="12"
-                      y1="17"
-                      x2="12"
-                      y2="20"
-                      transform="rotate(225,12,12)"
-                    />
-                    <line
-                      x1="12"
-                      y1="17"
-                      x2="12"
-                      y2="20"
-                      transform="rotate(270,12,12)"
-                    />
-                    <line
-                      x1="12"
-                      y1="17"
-                      x2="12"
-                      y2="20"
-                      transform="rotate(315,12,12)"
-                    />
-                  </g>
-                  <circle fill="currentColor" cx="12" cy="12" r="5" />
-                </symbol>
-
-                <!-- Dark theme icon -->
-                <symbol id="dark" viewBox="0 0 24 24">
-                  <path
-                    fill="currentColor"
-                    d="M15.1,14.9c-3-0.5-5.5-3-6-6C8.8,7.1,9.1,5.4,9.9,4c0.4-0.8-0.4-1.7-1.2-1.4C4.6,4,1.8,7.9,2,12.5c0.2,5.1,4.4,9.3,9.5,9.5c4.5,0.2,8.5-2.6,9.9-6.6c0.3-0.8-0.6-1.7-1.4-1.2C18.6,14.9,16.9,15.2,15.1,14.9z"
-                  />
-                </symbol>
-              </svg>
-
-              <!-- Theme toggle switch with accessible label and icons -->
-              <label class="switch">
-                <input
-                  class="switch__input"
-                  type="checkbox"
-                  role="switch"
-                  name="dark"
-                  id="toggleThemeBtn"
-                  checked
-                />
-                <svg
-                  class="switch__icon"
-                  width="24px"
-                  height="24px"
-                  aria-hidden="true"
-                >
-                  <use href="#light" />
-                </svg>
-                <svg
-                  class="switch__icon"
-                  width="24px"
-                  height="24px"
-                  aria-hidden="true"
-                >
-                  <use href="#dark" />
-                </svg>
-                <span class="switch__inner"></span>
-                <span class="switch__inner-icons">
-                  <svg
-                    class="switch__icon"
-                    width="24px"
-                    height="24px"
-                    aria-hidden="true"
-                  >
-                    <use href="#light" />
-                  </svg>
-                  <svg
-                    class="switch__icon"
-                    width="24px"
-                    height="24px"
-                    aria-hidden="true"
-                  >
-                    <use href="#dark" />
-                  </svg>
-                </span>
-                <span class="switch__sr" role="text">Dark Mode</span>
-              </label>
-
-              <!-- Language selector with visually hidden label for accessibility -->
-              <label for="langSelect" class="sr-only">Select Languages</label>
-              <select id="langSelect" aria-label="Select language">
-                <option value="en">English</option>
-                <option value="fa">Persian</option>
-              </select>
-            </li>
-          </ul>
-
-          <!-- Hamburger button for toggling mobile menu -->
-          <svg
-            class="ham ham6"
-            viewBox="0 0 80 100"
-            width="45"
-            id="hamMenuBtn"
-            aria-expanded="false"
-            role="button"
-            aria-label="Toggle menu"
-          >
-            <path
-              class="line top"
-              d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272"
-            />
-            <path
-              class="line middle"
-              d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272"
-            />
-            <path
-              class="line bottom"
-              d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272"
-            />
-          </svg>
-        </nav>
-      </div>
-    </header>
-
-    <main class="container" role="main">
-      <!-- Hero Section: Personal introduction and key actions -->
-      <section
-        class="section-hero"
-        id="heroSection"
-        aria-label="Simple profile introduction of Mobin Ghaemi"
-      >
-        <!-- Profile image with responsive sources and fallback -->
-        <div class="profile">
-          <picture>
-            <!-- Use modern WebP images first for better compression -->
-            <source
-              srcset="
-                ./../assets/imgs/author/me-0.5x.webp 0.5x,
-                ./../assets/imgs/author/me-1x.webp   1x,
-                ./../assets/imgs/author/me-2x.webp   2x
-              "
-              type="image/webp"
-            />
-            <!-- JPEG fallback for browsers without WebP support -->
-            <source
-              srcset="
-                ./../assets/imgs/author/me-0.5x.jpg 0.5x,
-                ./../assets/imgs/author/me-1x.jpg   1x,
-                ./../assets/imgs/author/me-2x.jpg   2x
-              "
-              type="image/jpeg"
-            />
-            <!-- Default image with alt text for accessibility -->
-            <img
-              src="./../assets/imgs/author/me-1x.jpg"
-              alt="Portrait of Mobin Ghaemi"
-              width="512"
-              height="512"
-              class="profile__img"
-              decoding="async"
-              loading="lazy"
-            />
-          </picture>
-        </div>
-
-        <!-- Main heading: introduction with semantic clarity -->
-        <h1 class="heading-primary mg-t-lg" data-i18n="primaryHeading">
-          I do code and <br class="word-wrap" />
-          make content <span class="gradient-purple">about it!</span>
-        </h1>
-
-        <!-- Brief biography paragraph with friendly, personal tone -->
-        <p class="section-hero__biography">
-          Hey, I'm Mobin — a curious full-stack developer from Gorgan 🇮🇷 who
-          started this coding journey in the world of Android apps with Java.
-          These days, I craft modern web apps using React, Node.js, and Express,
-          and I’m totally hooked on clean architecture. Also, yes... I run Arch
-          Linux (btw 😎). Let’s build something cool!
-        </p>
-
-        <!-- Call-to-action buttons for contact and CV download -->
-        <div class="section-hero__actions">
-          <a
-            href="https://t.me/gnuMobin"
-            class="btn btn--primary dark"
-            target="_self"
-            aria-label="Contact via Telegram"
-          >
-            Get In Touch
-          </a>
-          <a
-            href="./../assets/etc/cv.pdf"
-            class="btn btn--secondary dark"
-            download
-            aria-label="Download CV"
-            role="button"
-          >
-            Download CV
-          </a>
-        </div>
-      </section>
-
-      <!-- Technologies Section: showcasing skills and tools used -->
-      <section
-        class="section-technologies"
-        aria-label="What technologies I use"
-      >
-        <!-- Section subtitle for semantic clarity -->
-        <h2 class="heading-sub">EXPERIENCE WITH</h2>
-
-        <!-- Skills list as a grid of icons with clear roles and labels for accessibility -->
-        <ul class="skills">
-          <!-- Each skill item with role and label to help screen readers -->
-          <li class="skills__item jelly" role="listitem">
-            <svg
-              class="skills__icon"
-              role="img"
-              aria-label="HTML5 Logo"
-              title="HTML5"
-            >
-              <use href="#html-icon" xlink:href="#html-icon"></use>
-            </svg>
-          </li>
-          <li class="skills__item jelly" role="listitem">
-            <svg
-              class="skills__icon"
-              role="img"
-              aria-label="CSS Logo"
-              title="CSS"
-            >
-              <use href="#css-icon" xlink:href="#css-icon"></use>
-            </svg>
-          </li>
-          <li class="skills__item jelly" role="listitem">
-            <svg
-              class="skills__icon"
-              role="img"
-              aria-label="Sass Logo"
-              title="Sass"
-            >
-              <use href="#sass-icon" xlink:href="#sass-icon"></use>
-            </svg>
-          </li>
-          <li class="skills__item jelly" role="listitem">
-            <svg
-              class="skills__icon"
-              role="img"
-              aria-label="TailwindCSS Logo"
-              title="TailwindCSS"
-            >
-              <use href="#tailwind-icon" xlink:href="#tailwind-icon"></use>
-            </svg>
-          </li>
-          <li class="skills__item jelly" role="listitem">
-            <svg
-              class="skills__icon"
-              role="img"
-              aria-label="JavaScript Logo"
-              title="JavaScript"
-            >
-              <use href="#javascript-icon" xlink:href="#javascript-icon"></use>
-            </svg>
-          </li>
-          <li class="skills__item jelly" role="listitem">
-            <svg
-              class="skills__icon"
-              role="img"
-              aria-label="React.js Logo"
-              title="React.js"
-            >
-              <use href="#react-icon" xlink:href="#react-icon"></use>
-            </svg>
-          </li>
-          <li class="skills__item jelly" role="listitem">
-            <svg
-              class="skills__icon"
-              role="img"
-              aria-label="Node.js Logo"
-              title="Node.js"
-            >
-              <use href="#nodejs-icon" xlink:href="#nodejs-icon"></use>
-            </svg>
-          </li>
-          <li class="skills__item jelly" role="listitem">
-            <svg
-              class="skills__icon"
-              role="img"
-              aria-label="Express.js Logo"
-              title="Express.js"
-            >
-              <use href="#express-icon" xlink:href="#express-icon"></use>
-            </svg>
-          </li>
-          <li class="skills__item jelly" role="listitem">
-            <svg
-              class="skills__icon"
-              role="img"
-              aria-label="MongoDB Logo"
-              title="MongoDB"
-            >
-              <use href="#mongodb-icon" xlink:href="#mongodb-icon"></use>
-            </svg>
-          </li>
-          <li class="skills__item jelly" role="listitem">
-            <svg
-              class="skills__icon"
-              role="img"
-              aria-label="Linux Logo"
-              title="Linux"
-            >
-              <use href="#linux-icon" xlink:href="#linux-icon"></use>
-            </svg>
-          </li>
-        </ul>
-      </section>
-
-      <!-- Projects Section -->
-      <!-- Projects Section: showcases completed projects with accessible links -->
-      <section
-        class="section-projects"
-        id="projectsSection"
-        aria-label="List of completed projects"
-      >
-        <!-- Section heading with gradient accent -->
-        <h2 class="heading-secondary gradient-orange">Projects</h2>
-
-        <!-- Container for all project cards -->
-        <div class="section-projects__cards">
-          <!-- Individual Project Card: external link opens in new tab safely -->
-          <a
-            href="https://mobin-vpn.netlify.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="External link to MobinVPN project"
-          >
-            <figure class="card">
-              <picture>
-                <!-- Responsive images: serve smaller images for mobile devices -->
-
-                <!-- WebP sources for mobile -->
-                <source
-                  media="(max-width: 480px)"
-                  type="image/webp"
-                  srcset="
-                    ./../assets/imgs/projects/project-1/project-thumbnail-1-0.5x.webp 1x,
-                    ./../assets/imgs/projects/project-1/project-thumbnail-1-1x.webp   2x
-                  "
-                />
-                <!-- JPEG fallback for mobile -->
-                <source
-                  media="(max-width: 480px)"
-                  type="image/jpeg"
-                  srcset="
-                    ./../assets/imgs/projects/project-1/project-thumbnail-1-0.5x.jpg 1x,
-                    ./../assets/imgs/projects/project-1/project-thumbnail-1-1x.jpg   2x
-                  "
-                />
-
-                <!-- WebP sources for tablets -->
-                <source
-                  media="(max-width: 900px)"
-                  type="image/webp"
-                  srcset="
-                    ./../assets/imgs/projects/project-1/project-thumbnail-1-1x.webp 1x,
-                    ./../assets/imgs/projects/project-1/project-thumbnail-1-2x.webp 2x
-                  "
-                />
-                <!-- JPEG fallback for tablets -->
-                <source
-                  media="(max-width: 900px)"
-                  type="image/jpeg"
-                  srcset="
-                    ./../assets/imgs/projects/project-1/project-thumbnail-1-1x.jpg 1x,
-                    ./../assets/imgs/projects/project-1/project-thumbnail-1-2x.jpg 2x
-                  "
-                />
-
-                <!-- WebP for desktops -->
-                <source
-                  type="image/webp"
-                  srcset="
-                    ./../assets/imgs/projects/project-1/project-thumbnail-1-2x.webp
-                  "
-                />
-                <!-- JPEG fallback for desktops -->
-                <source
-                  type="image/jpeg"
-                  srcset="
-                    ./../assets/imgs/projects/project-1/project-thumbnail-1-2x.jpg
-                  "
-                />
-
-                <!-- Fallback image with alt text for accessibility -->
-                <img
-                  src="./../assets/imgs/projects/project-1/project-thumbnail-1-1x.webp"
-                  alt="Screenshot of Mobin VPN project"
-                  class="card__img"
-                  loading="lazy"
-                  width="1920"
-                  height="1080"
-                  decoding="async"
-                />
-              </picture>
-
-              <!-- Project title and icon to indicate link -->
-              <figcaption class="card__content">
-                <h3 class="card__title">Mobin VPN</h3>
-                <svg
-                  class="card__icon"
-                  aria-hidden="true"
-                  role="img"
-                  focusable="false"
-                >
-                  <use href="#arrow-right" xlink:href="#arrow-right"></use>
-                </svg>
-              </figcaption>
-            </figure>
-          </a>
-
-          <!-- Repeat project card for another project -->
-          <a
-            href="https://gnumobin.netlify.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="External link to Mobin Folio portfolio"
-          >
-            <figure class="card">
-              <picture>
-                <!-- Mobile WebP -->
-                <source
-                  media="(max-width: 480px)"
-                  type="image/webp"
-                  srcset="
-                    ./../assets/imgs/projects/project-2/project-thumbnail-2-0.5x.webp 1x,
-                    ./../assets/imgs/projects/project-2/project-thumbnail-2-1x.webp   2x
-                  "
-                />
-                <!-- Mobile JPEG -->
-                <source
-                  media="(max-width: 480px)"
-                  type="image/jpeg"
-                  srcset="
-                    ./../assets/imgs/projects/project-2/project-thumbnail-2-0.5x.jpg 1x,
-                    ./../assets/imgs/projects/project-2/project-thumbnail-2-1x.jpg   2x
-                  "
-                />
-
-                <!-- Tablet WebP -->
-                <source
-                  media="(max-width: 900px)"
-                  type="image/webp"
-                  srcset="
-                    ./../assets/imgs/projects/project-2/project-thumbnail-2-1x.webp 1x,
-                    ./../assets/imgs/projects/project-2/project-thumbnail-2-2x.webp 2x
-                  "
-                />
-                <!-- Tablet JPEG -->
-                <source
-                  media="(max-width: 900px)"
-                  type="image/jpeg"
-                  srcset="
-                    ./../assets/imgs/projects/project-2/project-thumbnail-2-1x.jpg 1x,
-                    ./../assets/imgs/projects/project-2/project-thumbnail-2-2x.jpg 2x
-                  "
-                />
-
-                <!-- Desktop WebP -->
-                <source
-                  type="image/webp"
-                  srcset="
-                    ./../assets/imgs/projects/project-2/project-thumbnail-2-2x.webp
-                  "
-                />
-                <!-- Desktop JPEG -->
-                <source
-                  type="image/jpeg"
-                  srcset="
-                    ./../assets/imgs/projects/project-2/project-thumbnail-2-2x.jpg
-                  "
-                />
-
-                <!-- Fallback image -->
-                <img
-                  src="./../assets/imgs/projects/project-2/project-thumbnail-2-1x.webp"
-                  alt="Screenshot of Mobin Folio portfolio"
-                  class="card__img"
-                  loading="lazy"
-                  width="1920"
-                  height="1080"
-                  decoding="async"
-                />
-              </picture>
-
-              <!-- Project title and arrow icon -->
-              <figcaption class="card__content">
-                <h3 class="card__title">Mobin Folio</h3>
-                <svg
-                  class="card__icon"
-                  aria-hidden="true"
-                  role="img"
-                  focusable="false"
-                >
-                  <use href="#arrow-right" xlink:href="#arrow-right"></use>
-                </svg>
-              </figcaption>
-            </figure>
-          </a>
-
-          <!-- Additional project cards can be added here following the same pattern -->
-        </div>
-      </section>
-
-      <!-- Experience Section -->
-      <!-- Experience Section: highlights professional work history -->
-      <section
-        class="section-experience"
-        id="experienceSection"
-        aria-label="All my work experiences"
-      >
-        <!-- Section heading centered with blue gradient -->
-        <h2 class="heading-secondary gradient-blue text-center">Experience</h2>
-
-        <!-- Container wrapping individual experience entries -->
-        <div class="experiences">
-          <!-- Single experience card: Google -->
-          <article
-            class="experience"
-            role="region"
-            aria-label="Lead Software Engineer at Google"
-          >
-            <!-- Company logo for visual identification -->
-            <figure class="experience__logo">
-              <img
-                class="experience__icon"
-                src="./../assets/companies/google.svg"
-                alt="Google Logo"
-                decoding="async"
-                loading="lazy"
-                width="64"
-                height="64"
-              />
-            </figure>
-
-            <!-- Job title -->
-            <h3 class="experience__title">Lead Software Engineer at Google</h3>
-
-            <!-- Employment period with machine-readable date -->
-            <time class="experience__time" datetime="2021-01">
-              Jan 2021 - Present
-            </time>
-
-            <!-- Description of role and contributions -->
-            <p class="experience__text">
-              As a Senior Software Engineer at Google, I played a pivotal role
-              in developing innovative solutions for Google's core search
-              algorithms. Collaborating with a dynamic team of engineers, I
-              contributed to the enhancement of search accuracy and efficiency,
-              optimizing user experiences for millions of users worldwide.
-            </p>
-          </article>
-
-          <!-- Single experience card: Apple -->
-          <article
-            class="experience"
-            role="region"
-            aria-label="Senior Developer at Apple"
-          >
-            <figure class="experience__logo">
-              <img
-                class="experience__icon"
-                src="./../assets/companies/apple.svg"
-                alt="Apple Logo"
-                decoding="async"
-                loading="lazy"
-                width="64"
-                height="64"
-              />
-            </figure>
-
-            <h3 class="experience__title">Senior Developer at Apple</h3>
-            <time class="experience__time" datetime="2018-05">
-              May 2018 - Dec 2020
-            </time>
-
-            <p class="experience__text">
-              During my tenure at Apple, I held the role of Software Architect,
-              where I played a key role in shaping the architecture of
-              mission-critical software projects. Responsible for designing
-              scalable and efficient systems, I provided technical leadership to
-              a cross-functional team.
-            </p>
-          </article>
-
-          <!-- Single experience card: Meta -->
-          <article
-            class="experience"
-            role="region"
-            aria-label="Software Engineer at Meta"
-          >
-            <figure class="experience__logo">
-              <img
-                class="experience__icon"
-                src="./../assets/companies/meta.svg"
-                alt="Meta Logo"
-                decoding="async"
-                loading="lazy"
-                width="64"
-                height="64"
-              />
-            </figure>
-
-            <h3 class="experience__title">Software Engineer at Meta</h3>
-            <time class="experience__time" datetime="2015-03">
-              Mar 2015 - Apr 2018
-            </time>
-
-            <p class="experience__text">
-              At Meta, I worked on large-scale social networking infrastructure,
-              improving backend performance and scalability for billions of
-              users. My role involved optimizing APIs, database queries, and
-              integrating new features while maintaining system stability.
-            </p>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer with contact and social links -->
-    <!-- Footer Section: contact info and social links -->
-    <footer
-      class="footer"
-      id="contactSection"
-      aria-label="How to contact with Me?"
-    >
-      <div class="container">
-        <!-- Section heading with tertiary style -->
-        <h2 class="heading-tertiary">Contact</h2>
-
-        <!-- Personal, friendly intro text — بیان شخصی و جذاب -->
-        <p class="footer__text">
-          Full-stack wizard 🧙‍♂️ with 5+ years of coding magic ✨ — started
-          casting spells in Java ☕ for Android, now conjuring sleek web apps
-          with React ⚛️, Node.js 🌐, and Express 🚀. Arch Linux fanboy 🐧 by
-          day, clean code ninja 🥷 by night. Ready to build cool stuff? Let’s
-          chat! 💬
-        </p>
-
-        <!-- Contact info wrapped in <address> for semantics -->
-        <address class="footer__links">
-          <!-- Email link with icon, aria-label for screen readers -->
-          <a
-            href="mailto:gnumobin@gmail.com"
-            class="footer__link neon"
-            aria-label="Send email to Mobin"
-          >
-            <svg
-              class="footer__icon"
-              aria-hidden="true"
-              role="img"
-              focusable="false"
-            >
-              <use href="#mail" xlink:href="#mail"></use>
-            </svg>
-            <span>gnumobin@gmail.com</span>
-          </a>
-
-          <!-- Github profile link -->
-          <a
-            href="https://github.com/gnumobin"
-            class="footer__link neon"
-            aria-label="GitHub profile of Mobin"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg
-              class="footer__icon"
-              aria-hidden="true"
-              role="img"
-              focusable="false"
-            >
-              <use href="#github-icon" xlink:href="#github-icon"></use>
-            </svg>
-            <span>github.com/gnumobin</span>
-          </a>
-        </address>
-
-        <!-- Social media icons container -->
-        <div class="footer__socials">
-          <!-- YouTube channel link -->
-          <a
-            href="https://youtube.com/@catplantasmr"
-            class="jelly"
-            aria-label="YouTube channel"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg class="icon" aria-hidden="true" role="img" focusable="false">
-              <use href="#youtube-logo" xlink:href="#youtube-logo"></use>
-            </svg>
-          </a>
-
-          <!-- Telegram profile link -->
-          <a
-            href="https://t.me/gnuMobin"
-            class="jelly"
-            aria-label="Telegram profile"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg class="icon" aria-hidden="true" role="img" focusable="false">
-              <use href="#telegram-logo" xlink:href="#telegram-logo"></use>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </footer>
-  </body>
+</script>
+<meta name=description content="Mobin Ghaemi — Full Stack Developer & Arch Linux power user. Building clean, fast, and minimal experiences from backend to frontend.">
+<meta name=keywords content="Mobin Ghaemi, Full Stack Developer, Web Developer, Backend Developer, Frontend Developer, JavaScript Developer, Node.js, React Developer, Mobile App Developer, Desktop App Developer, Progressive Web Apps, Gorgan, Golestan, Iran, Arch Linux, Open Source Contributor, UI/UX, Responsive Web Design, Software Engineer, YouTube Content Creator, Tech Blogger">
+<meta name=author content="Mobin Ghaemi">
+<meta property=og:title content="Mobin Ghaemi | Full-Stack Engineer">
+<meta property=og:description content="Mobin Ghaemi — Full Stack Developer & Arch Linux power user. Building clean, fast, and minimal experiences from backend to frontend.">
+<meta property=og:image content=https://gnumobin.netlify.app/assets/imgs/author/me-1x.webp>
+<meta property=og:url content=https://gnumobin.netlify.app>
+<meta property=og:type content=website>
+<meta name=twitter:card content=summary_large_image>
+<meta name=twitter:title content="Mobin Ghaemi | Full-Stack Developer">
+<meta name=twitter:description content="Mobin Ghaemi — Full Stack Developer & Arch Linux power user. Building clean, fast, and minimal experiences from backend to frontend.">
+<meta name=twitter:image content=https://gnumobin.netlify.app/assets/imgs/author/me-1x.webp>
+<link rel=canonical href=https://gnumobin.netlify.app/en/ >
+<link rel=preconnect href=https://youtube.com crossorigin>
+<link rel=dns-prefetch href=https://t.me>
+</head>
+<body translate=no>
+<svg xmlns=http://www.w3.org/2000/svg style=display:none>
+<symbol id=arrow-up viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round>
+<path d="m5 12 7-7 7 7"/>
+<path d="M12 19V5"/>
+</symbol>
+<symbol id=arrow-right viewBox="0 0 12 12" fill=none>
+<path fill=currentColor d="M.77 1.608c0-.274.114-.537.317-.731s.478-.303.764-.303h8.67c.287 0 .561.109.764.303s.317.457.317.73V9.9c-.01.268-.128.521-.33.708a1.1 1.1 0 0 1-.751.29c-.28 0-.55-.104-.751-.29a1.02 1.02 0 0 1-.33-.708V4.105L1.85 11.363a1.1 1.1 0 0 1-.765.303c-.287 0-.562-.11-.765-.303a1.01 1.01 0 0 1-.317-.732c0-.274.114-.537.317-.731L7.91 2.642H1.85c-.286 0-.561-.11-.764-.303a1.01 1.01 0 0 1-.317-.731"/>
+</symbol>
+<symbol id=mail viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round>
+<path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/>
+<rect x=2 y=4 width=20 height=16 rx=2 />
+</symbol>
+<symbol id=apple-logo viewBox="0 0 24 24">
+<defs>
+<linearGradient id=apple-gradient x1=0% x2=100% y1=0% y2=100%>
+<stop offset=0% stop-color=#d1d1d1 />
+<stop offset=50% stop-color=#8e8e8e />
+<stop offset=100% stop-color=#f2f2f2 />
+</linearGradient>
+</defs>
+<path fill=url(#apple-gradient) d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/>
+</symbol>
+<symbol id=telegram-logo viewBox="0 0 24 24">
+<circle cx=12 cy=12 r=12 fill=#26A5E4 />
+<path fill=#FFF d="M16.906 7.364c.1-.002.321.023.465.14a.5.5 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024q-.159.037-5.061 3.345-.72.495-1.302.48c-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789q.04-.324.893-.663 5.247-2.286 6.998-3.014c3.332-1.386 4.025-1.627 4.476-1.635"/>
+</symbol>
+<symbol id=youtube-logo viewBox="0 0 24 24">
+<rect width=24 height=24 fill=#FF0000 rx=4 ry=4 />
+<path fill=#FFFFFF d="M9.545 15.568V8.432L15.818 12z"/>
+</symbol>
+<symbol id=css-icon viewBox="0 0 24 24" xmlns=http://www.w3.org/2000/svg>
+<path d="M0 0v20.16A3.84 3.84 0 0 0 3.84 24h16.32A3.84 3.84 0 0 0 24 20.16V3.84A3.84 3.84 0 0 0 20.16 0Zm14.256 13.08c1.56 0 2.28 1.08 2.304 2.64h-1.608c.024-.288-.048-.6-.144-.84-.096-.192-.288-.264-.552-.264-.456 0-.696.264-.696.84-.024.576.288.888.768 1.08.72.288 1.608.744 1.92 1.296q.432.648.432 1.656c0 1.608-.912 2.592-2.496 2.592-1.656 0-2.4-1.032-2.424-2.688h1.68c0 .792.264 1.176.792 1.176.264 0 .456-.072.552-.24.192-.312.24-1.176-.048-1.512-.312-.408-.912-.6-1.32-.816q-.828-.396-1.224-.936c-.24-.36-.36-.888-.36-1.536 0-1.44.936-2.472 2.424-2.448m5.4 0c1.584 0 2.304 1.08 2.328 2.64h-1.608c0-.288-.048-.6-.168-.84-.096-.192-.264-.264-.528-.264-.48 0-.72.264-.72.84s.288.888.792 1.08c.696.288 1.608.744 1.92 1.296.264.432.408.984.408 1.656.024 1.608-.888 2.592-2.472 2.592-1.68 0-2.424-1.056-2.448-2.688h1.68c0 .744.264 1.176.792 1.176.264 0 .456-.072.552-.24.216-.312.264-1.176-.048-1.512-.288-.408-.888-.6-1.32-.816-.552-.264-.96-.576-1.2-.936s-.36-.888-.36-1.536c-.024-1.44.912-2.472 2.4-2.448m-11.031.018c.711-.006 1.419.198 1.839.63.432.432.672 1.128.648 1.992H9.336c.024-.456-.096-.792-.432-.96-.312-.144-.768-.048-.888.24-.12.264-.192.576-.168.864v3.504c0 .744.264 1.128.768 1.128a.65.65 0 0 0 .552-.264c.168-.24.192-.552.168-.84h1.776c.096 1.632-.984 2.712-2.568 2.688-1.536 0-2.496-.864-2.472-2.472v-4.032c0-.816.24-1.44.696-1.848.432-.408 1.146-.624 1.857-.63"/>
+</symbol>
+<symbol id=express-icon viewBox="0 0 24 24" xmlns=http://www.w3.org/2000/svg>
+<path d="M24 18.588a1.53 1.53 0 0 1-1.895-.72l-3.45-4.771-.5-.667-4.003 5.444a1.466 1.466 0 0 1-1.802.708l5.158-6.92-4.798-6.251a1.595 1.595 0 0 1 1.9.666l3.576 4.83 3.596-4.81a1.435 1.435 0 0 1 1.788-.668L21.708 7.9l-2.522 3.283a.666.666 0 0 0 0 .994l4.804 6.412zM.002 11.576l.42-2.075c1.154-4.103 5.858-5.81 9.094-3.27 1.895 1.489 2.368 3.597 2.275 5.973H1.116C.943 16.447 4.005 19.009 7.92 17.7a4.08 4.08 0 0 0 2.582-2.876c.207-.666.548-.78 1.174-.588a5.42 5.42 0 0 1-2.589 3.957 6.27 6.27 0 0 1-7.306-.933 6.58 6.58 0 0 1-1.64-3.858c0-.235-.08-.455-.134-.666A88 88 0 0 1 0 11.577zm1.127-.286h9.654c-.06-3.076-2.001-5.258-4.59-5.278-2.882-.04-4.944 2.094-5.071 5.264z"/>
+</symbol>
+<symbol id=html-icon viewBox="0 0 24 24" xmlns=http://www.w3.org/2000/svg>
+<path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438zm7.031 9.75-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157z"/>
+</symbol>
+<symbol id=javascript-icon viewBox="0 0 24 24" xmlns=http://www.w3.org/2000/svg>
+<path d="M0 0h24v24H0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179z"/>
+</symbol>
+<symbol id=linux-icon viewBox="0 0 24 24" xmlns=http://www.w3.org/2000/svg>
+<path d="M12.504 0q-.232 0-.48.021c-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.4.4 0 0 0-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.132 1.884 1.071s1.592-.536 2.257-1.306c.631-.765 1.683-1.084 2.378-1.503.348-.199.629-.469.649-.853.023-.4-.2-.811-.714-1.376v-.097l-.003-.003c-.17-.2-.25-.535-.338-.926-.085-.401-.182-.786-.492-1.046h-.003c-.059-.054-.123-.067-.188-.135a.36.36 0 0 0-.19-.064c.431-1.278.264-2.55-.173-3.694-.533-1.41-1.465-2.638-2.175-3.483-.796-1.005-1.576-1.957-1.56-3.368.026-2.152.236-6.133-3.544-6.139m.529 3.405h.013c.213 0 .396.062.584.198.19.135.33.332.438.533.105.259.158.459.166.724 0-.02.006-.04.006-.06v.105l-.004-.021-.004-.024a1.8 1.8 0 0 1-.15.706.95.95 0 0 1-.213.335 1 1 0 0 0-.088-.042c-.104-.045-.198-.064-.284-.133a1.3 1.3 0 0 0-.22-.066c.05-.06.146-.133.183-.198q.08-.193.088-.402v-.02a1.2 1.2 0 0 0-.061-.4c-.045-.134-.101-.2-.183-.333-.084-.066-.167-.132-.267-.132h-.016c-.093 0-.176.03-.262.132a.8.8 0 0 0-.205.334 1.2 1.2 0 0 0-.09.4v.019q.002.134.02.267c-.193-.067-.438-.135-.607-.202a2 2 0 0 1-.018-.2v-.02a1.8 1.8 0 0 1 .15-.768 1.08 1.08 0 0 1 .43-.533 1 1 0 0 1 .594-.2zm-2.962.059h.036c.142 0 .27.048.399.135.146.129.264.288.344.465.09.199.14.4.153.667v.004c.007.134.006.2-.002.266v.08c-.03.007-.056.018-.083.024-.152.055-.274.135-.393.2q.018-.136.003-.267v-.015c-.012-.133-.04-.2-.082-.333a.6.6 0 0 0-.166-.267.25.25 0 0 0-.183-.064h-.021c-.071.006-.13.04-.186.132a.55.55 0 0 0-.12.27 1 1 0 0 0-.023.33v.015c.012.135.037.2.08.334.046.134.098.2.166.268q.014.014.034.024c-.07.057-.117.07-.176.136a.3.3 0 0 1-.131.068 2.6 2.6 0 0 1-.275-.402 1.8 1.8 0 0 1-.155-.667 1.8 1.8 0 0 1 .08-.668 1.4 1.4 0 0 1 .283-.535c.128-.133.26-.2.418-.2m1.37 1.706c.332 0 .733.065 1.216.399.293.2.523.269 1.052.468h.003c.255.136.405.266.478.399v-.131a.57.57 0 0 1 .016.47c-.123.31-.516.643-1.063.842v.002c-.268.135-.501.333-.775.465-.276.135-.588.292-1.012.267a1.1 1.1 0 0 1-.448-.067 4 4 0 0 1-.322-.198c-.195-.135-.363-.332-.612-.465v-.005h-.005c-.4-.246-.616-.512-.686-.71q-.104-.403.193-.6c.224-.135.38-.271.483-.336.104-.074.143-.102.176-.131h.002v-.003c.169-.202.436-.47.839-.601.139-.036.294-.065.466-.065zm2.8 2.142c.358 1.417 1.196 3.475 1.735 4.473.286.534.855 1.659 1.102 3.024.156-.005.33.018.513.064.646-1.671-.546-3.467-1.089-3.966-.22-.2-.232-.335-.123-.335.59.534 1.365 1.572 1.646 2.757.13.535.16 1.104.021 1.67.067.028.135.06.205.067 1.032.534 1.413.938 1.23 1.537v-.043c-.06-.003-.12 0-.18 0h-.016c.151-.467-.182-.825-1.065-1.224-.915-.4-1.646-.336-1.77.465-.008.043-.013.066-.018.135-.068.023-.139.053-.209.064-.43.268-.662.669-.793 1.187-.13.533-.17 1.156-.205 1.869v.003c-.02.334-.17.838-.319 1.35-1.5 1.072-3.58 1.538-5.348.334a2.7 2.7 0 0 0-.402-.533 1.5 1.5 0 0 0-.275-.333c.182 0 .338-.03.465-.067a.62.62 0 0 0 .314-.334c.108-.267 0-.697-.345-1.163s-.931-.995-1.788-1.521c-.63-.4-.986-.87-1.15-1.396-.165-.534-.143-1.085-.015-1.645.245-1.07.873-2.11 1.274-2.763.107-.065.037.135-.408.974-.396.751-1.14 2.497-.122 3.854a8.1 8.1 0 0 1 .647-2.876c.564-1.278 1.743-3.504 1.836-5.268.048.036.217.135.289.202.218.133.38.333.59.465.21.201.477.335.876.335q.058.005.11.006c.412 0 .73-.134.997-.268.29-.134.52-.334.74-.4h.005c.467-.135.835-.402 1.044-.7zm2.185 8.958c.037.6.343 1.245.882 1.377.588.134 1.434-.333 1.791-.765l.211-.01c.315-.007.577.01.847.268l.003.003c.208.199.305.53.391.876.085.4.154.78.409 1.066.486.527.645.906.636 1.14l.003-.007v.018l-.003-.012c-.015.262-.185.396-.498.595-.63.401-1.746.712-2.457 1.57-.618.737-1.37 1.14-2.036 1.191-.664.053-1.237-.2-1.574-.898l-.005-.003c-.21-.4-.12-1.025.056-1.69.176-.668.428-1.344.463-1.897.037-.714.076-1.335.195-1.814.12-.465.308-.797.641-.984l.045-.022zm-10.814.049h.01q.08 0 .157.014c.376.055.706.333 1.023.752l.91 1.664.003.003c.243.533.754 1.064 1.189 1.637.434.598.77 1.131.729 1.57v.006c-.057.744-.48 1.148-1.125 1.294-.645.135-1.52.002-2.395-.464-.968-.536-2.118-.469-2.857-.602q-.553-.1-.723-.4c-.11-.2-.113-.602.123-1.23v-.004l.002-.003c.117-.334.03-.752-.027-1.118-.055-.401-.083-.71.043-.94.16-.334.396-.4.69-.533.294-.135.64-.202.915-.47h.002v-.002c.256-.268.445-.601.668-.838.19-.201.38-.336.663-.336m7.159-9.074c-.435.201-.945.535-1.488.535-.542 0-.97-.267-1.28-.466-.154-.134-.28-.268-.373-.335-.164-.134-.144-.333-.074-.333.109.016.129.134.199.2.096.066.215.2.36.333.292.2.68.467 1.167.467.485 0 1.053-.267 1.398-.466.195-.135.445-.334.648-.467.156-.136.149-.267.279-.267.128.016.034.134-.147.332a8 8 0 0 1-.69.468zm-1.082-1.583V5.64c-.006-.02.013-.042.029-.05.074-.043.18-.027.26.004.063 0 .16.067.15.135-.006.049-.085.066-.135.066-.055 0-.092-.043-.141-.068-.052-.018-.146-.008-.163-.065m-.551 0c-.02.058-.113.049-.166.066-.047.025-.086.068-.14.068-.05 0-.13-.02-.136-.068-.01-.066.088-.133.15-.133.08-.031.184-.047.259-.005.019.009.036.03.03.05v.02h.003z"/>
+</symbol>
+<symbol id=mongodb-icon viewBox="0 0 24 24" xmlns=http://www.w3.org/2000/svg>
+<path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A74 74 0 0 1 11.91 24h.481a29 29 0 0 1 .51-3.07c.417-.296.604-.463.85-.693a11.34 11.34 0 0 0 3.639-8.464c.01-.814-.103-1.662-.197-2.218m-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695-.381-.045-.765-1.76-.765-2.405"/>
+</symbol>
+<symbol id=nodejs-icon viewBox="0 0 24 24" xmlns=http://www.w3.org/2000/svg>
+<path d="M11.998 24c-.321 0-.641-.084-.922-.247L8.14 22.016c-.438-.245-.224-.332-.08-.383.585-.203.703-.25 1.328-.604.065-.037.151-.023.218.017l2.256 1.339a.29.29 0 0 0 .272 0l8.795-5.076a.28.28 0 0 0 .134-.238V6.921a.28.28 0 0 0-.137-.242l-8.791-5.072a.28.28 0 0 0-.271 0L3.075 6.68a.28.28 0 0 0-.139.241v10.15a.27.27 0 0 0 .139.235l2.409 1.392c1.307.654 2.108-.116 2.108-.89V7.787c0-.142.114-.253.256-.253h1.115c.139 0 .255.112.255.253v10.021c0 1.745-.95 2.745-2.604 2.745-.508 0-.909 0-2.026-.551L2.28 18.675a1.86 1.86 0 0 1-.922-1.604V6.921c0-.659.353-1.275.922-1.603L11.075.236a1.93 1.93 0 0 1 1.848 0l8.794 5.082c.57.329.924.944.924 1.603v10.15a1.86 1.86 0 0 1-.924 1.604l-8.794 5.078c-.28.163-.599.247-.925.247m7.101-10.007c0-1.9-1.284-2.406-3.987-2.763-2.731-.361-3.009-.548-3.009-1.187 0-.528.235-1.233 2.258-1.233 1.807 0 2.473.389 2.747 1.607a.254.254 0 0 0 .247.199h1.141a.26.26 0 0 0 .186-.081.26.26 0 0 0 .067-.196c-.177-2.098-1.571-3.076-4.388-3.076-2.508 0-4.004 1.058-4.004 2.833 0 1.925 1.488 2.457 3.895 2.695 2.88.282 3.103.703 3.103 1.269 0 .983-.789 1.402-2.642 1.402-2.327 0-2.839-.584-3.011-1.742a.255.255 0 0 0-.253-.215h-1.137a.25.25 0 0 0-.254.253c0 1.482.806 3.248 4.655 3.248 2.788.001 4.386-1.096 4.386-3.013"/>
+</symbol>
+<symbol id=react-icon viewBox="0 0 24 24" xmlns=http://www.w3.org/2000/svg>
+<path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236m2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38a2.17 2.17 0 0 0-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44a23.5 23.5 0 0 0-3.107-.534A24 24 0 0 0 12.769 4.7c1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442a23 23 0 0 0-3.113.538 15 15 0 0 1-.254-1.42c-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05q.684.704 1.36 1.564c-.44-.02-.89-.034-1.345-.034q-.691-.001-1.36.034c.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093q.61.874 1.183 1.86.557.961 1.018 1.946c-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87a25.6 25.6 0 0 1-4.412.005 27 27 0 0 1-1.183-1.86q-.557-.961-1.018-1.946a25 25 0 0 1 1.013-1.954c.38-.66.773-1.286 1.18-1.868A25 25 0 0 1 12 8.098zm-3.635.254c-.24.377-.48.763-.704 1.16q-.336.585-.635 1.174c-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0q1.044.153 2.006.387c-.18.632-.405 1.282-.66 1.933a25.952 25.952 0 0 0-1.345-2.32zm3.063.675q.727.226 1.375.498c1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493a24 24 0 0 0-1.1-2.98c.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98a23 23 0 0 0-1.086 2.964c-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474s1.12-1.742 2.852-2.476c.42-.18.88-.342 1.356-.494m11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39a26 26 0 0 0 1.341-2.338zm-9.945.02c.2.392.41.783.64 1.175q.345.586.705 1.143a22 22 0 0 1-2.006-.386c.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295a1.2 1.2 0 0 1-.553-.132c-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64q.661.032 1.345.034.691.001 1.36-.034c-.44.572-.895 1.095-1.345 1.565q-.684-.706-1.36-1.565"/>
+</symbol>
+<symbol id=sass-icon viewBox="0 0 24 24" xmlns=http://www.w3.org/2000/svg>
+<path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0M9.615 15.998c.175.645.156 1.248-.024 1.792l-.065.18q-.037.092-.078.176-.21.435-.555.81c-.698.759-1.672 1.047-2.09.805-.45-.262-.226-1.335.584-2.19.871-.918 2.12-1.509 2.12-1.509v-.003zm9.911-10.861c-.542-2.133-4.077-2.834-7.422-1.645-1.989.707-4.144 1.818-5.693 3.267C4.568 8.48 4.275 9.98 4.396 10.607c.427 2.211 3.457 3.657 4.703 4.73v.006c-.367.18-3.056 1.529-3.686 2.925-.675 1.47.105 2.521.615 2.655 1.575.436 3.195-.36 4.065-1.649.84-1.261.766-2.881.404-3.676.496-.135 1.08-.195 1.83-.104 2.101.24 2.521 1.56 2.43 2.1-.09.539-.523.854-.674.944-.15.091-.195.12-.181.181.015.09.091.09.21.075.165-.03 1.096-.45 1.141-1.471.045-1.29-1.186-2.729-3.375-2.7-.9.016-1.471.091-1.875.256a.4.4 0 0 0-.105-.105c-1.35-1.455-3.855-2.475-3.75-4.41.03-.705.285-2.564 4.8-4.814 3.705-1.846 6.661-1.335 7.171-.21.733 1.604-1.576 4.59-5.431 5.024-1.47.165-2.235-.404-2.431-.615-.209-.225-.239-.24-.314-.194-.12.06-.045.255 0 .375.12.3.585.825 1.396 1.095.704.225 2.43.359 4.5-.45 2.324-.899 4.139-3.405 3.614-5.505z"/>
+</symbol>
+<symbol id=tailwind-icon viewBox="0 0 24 24" xmlns=http://www.w3.org/2000/svg>
+<path d="M12.001 4.8q-4.8 0-6 4.8 1.8-2.4 4.2-1.8c.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12q4.8 0 6-4.8-1.8 2.4-4.2 1.8c-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8m-6 7.2q-4.8 0-6 4.8 1.8-2.4 4.2-1.8c.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576q4.8 0 6-4.8-1.8 2.4-4.2 1.8c-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12"/>
+</symbol>
+<symbol id=github-icon viewBox="0 0 24 24" role=img xmlns=http://www.w3.org/2000/svg>
+<title>GitHub</title>
+<path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+</symbol>
+</svg>
+<div class=overlay id=overlay>&nbsp;</div>
+<div class=some-space aria-hidden=true>&nbsp;</div>
+<blockquote class=print aria-hidden=true>
+<q class=print__text>
+Miss. Drakulich has a book in which it is written <br>
+Communism went, we stayed and laughed.
+</q>
+</blockquote>
+<button class=sticky-btn aria-label="back to top of page btn" id=stickyBtn>
+<svg class=sticky-btn__icon aria-hidden=true role=img>
+<use href=#arrow-up xlink:href=#arrow-up></use>
+</svg>
+</button>
+<header class=header>
+<div class=container>
+<nav class=header-nav id=primaryNav aria-label="Main Navigation">
+<div class=logo>
+<picture>
+<source type=image/webp srcset="./../assets/imgs/logo/logo-1x.webp, ./../assets/imgs/logo/logo-2x.webp 2x">
+<source type=image/png srcset="./../assets/imgs/logo/logo-1x.png, ./../assets/imgs/logo/logo-2x.png 2x">
+<img src=./../assets/imgs/logo/logo-1x.png alt="Website Logo" width=100 height=100 decoding=async class=logo__img>
+</picture>
+</div>
+<ul class=header-nav__list id=hamMenu>
+<li class="header-nav__item header-nav__item--active">
+<a href=#heroSection class=header-nav__link aria-current=page aria-label="Internal link to Hero Section">Home</a>
+</li>
+<li class=header-nav__item>
+<a href=#projectsSection class=header-nav__link aria-label="Internal link to Projects Section">Projects</a>
+</li>
+<li class=header-nav__item>
+<a href=#experienceSection class=header-nav__link aria-label="Internal link to Experiences Section">Experience</a>
+</li>
+<li class=header-nav__item>
+<a href=#contactSection class=header-nav__link aria-label="Internal link to Contact Section">Contact</a>
+</li>
+<li class=header-nav__some>
+<svg display=none class=toggle-theme role=button aria-label="toggle theme">
+<symbol id=light viewBox="0 0 24 24">
+<g stroke=currentColor stroke-width=2 stroke-linecap=round>
+<line x1=12 y1=17 x2=12 y2=20 transform=rotate(0,12,12) />
+<line x1=12 y1=17 x2=12 y2=20 transform=rotate(45,12,12) />
+<line x1=12 y1=17 x2=12 y2=20 transform=rotate(90,12,12) />
+<line x1=12 y1=17 x2=12 y2=20 transform=rotate(135,12,12) />
+<line x1=12 y1=17 x2=12 y2=20 transform=rotate(180,12,12) />
+<line x1=12 y1=17 x2=12 y2=20 transform=rotate(225,12,12) />
+<line x1=12 y1=17 x2=12 y2=20 transform=rotate(270,12,12) />
+<line x1=12 y1=17 x2=12 y2=20 transform=rotate(315,12,12) />
+</g>
+<circle fill=currentColor cx=12 cy=12 r=5 />
+</symbol>
+<symbol id=dark viewBox="0 0 24 24">
+<path fill=currentColor d=M15.1,14.9c-3-0.5-5.5-3-6-6C8.8,7.1,9.1,5.4,9.9,4c0.4-0.8-0.4-1.7-1.2-1.4C4.6,4,1.8,7.9,2,12.5c0.2,5.1,4.4,9.3,9.5,9.5c4.5,0.2,8.5-2.6,9.9-6.6c0.3-0.8-0.6-1.7-1.4-1.2C18.6,14.9,16.9,15.2,15.1,14.9z />
+</symbol>
+</svg>
+<label class=switch>
+<input class=switch__input type=checkbox role=switch name=dark id=toggleThemeBtn checked>
+<svg class=switch__icon width=24px height=24px aria-hidden=true>
+<use href=#light />
+</svg>
+<svg class=switch__icon width=24px height=24px aria-hidden=true>
+<use href=#dark />
+</svg>
+<span class=switch__inner></span>
+<span class=switch__inner-icons>
+<svg class=switch__icon width=24px height=24px aria-hidden=true>
+<use href=#light />
+</svg>
+<svg class=switch__icon width=24px height=24px aria-hidden=true>
+<use href=#dark />
+</svg>
+</span>
+<span class=switch__sr>Dark Mode</span>
+</label>
+<label for=langSelect class=sr-only>Select Languages</label>
+<select id=langSelect aria-label="Select language">
+<option value=en>English</option>
+<option value=fa>Persian</option>
+</select>
+</li>
+</ul>
+<svg class="ham ham6" viewBox="0 0 80 100" width=45 id=hamMenuBtn aria-expanded=false role=button aria-label="Toggle menu">
+<path class="line top" d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272"/>
+<path class="line middle" d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272"/>
+<path class="line bottom" d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272"/>
+</svg>
+</nav>
+</div>
+</header>
+<main class=container>
+<section class=section-hero id=heroSection aria-label="Simple profile introduction of Mobin Ghaemi">
+<div class=profile>
+<picture>
+<source srcset="./../assets/imgs/author/me-0.5x.webp 0.5x, ./../assets/imgs/author/me-1x.webp, ./../assets/imgs/author/me-2x.webp 2x" type=image/webp>
+<source srcset="./../assets/imgs/author/me-0.5x.jpg 0.5x, ./../assets/imgs/author/me-1x.jpg, ./../assets/imgs/author/me-2x.jpg 2x" type=image/jpeg>
+<img src=./../assets/imgs/author/me-1x.jpg alt="Portrait of Mobin Ghaemi" width=512 height=512 class=profile__img decoding=async loading=lazy>
+</picture>
+</div>
+<h1 class="heading-primary mg-t-lg" data-i18n=primaryHeading>
+I do code and <br class=word-wrap>
+make content <span class=gradient-purple>about it!</span>
+</h1>
+<p class=section-hero__biography>
+Hey, I'm Mobin — a curious full-stack developer from Gorgan 🇮🇷 who started this coding journey in the world of Android apps with Java. These days, I craft modern web apps using React, Node.js, and Express, and I’m totally hooked on clean architecture. Also, yes... I run Arch Linux (btw 😎). Let’s build something cool!
+</p>
+<div class=section-hero__actions>
+<a href=https://t.me/gnuMobin class="btn btn--primary dark" target=_self aria-label="Contact via Telegram">
+Get In Touch
+</a>
+<a href=./../assets/etc/cv.pdf class="btn btn--secondary dark" download aria-label="Download CV" role=button>
+Download CV
+</a>
+</div>
+</section>
+<section class=section-technologies aria-label="What technologies I use">
+<h2 class=heading-sub>EXPERIENCE WITH</h2>
+<ul class=skills>
+<li class="skills__item jelly">
+<svg class=skills__icon role=img aria-label="HTML5 Logo">
+<use href=#html-icon xlink:href=#html-icon></use>
+</svg>
+</li>
+<li class="skills__item jelly">
+<svg class=skills__icon role=img aria-label="CSS Logo">
+<use href=#css-icon xlink:href=#css-icon></use>
+</svg>
+</li>
+<li class="skills__item jelly">
+<svg class=skills__icon role=img aria-label="Sass Logo">
+<use href=#sass-icon xlink:href=#sass-icon></use>
+</svg>
+</li>
+<li class="skills__item jelly">
+<svg class=skills__icon role=img aria-label="TailwindCSS Logo">
+<use href=#tailwind-icon xlink:href=#tailwind-icon></use>
+</svg>
+</li>
+<li class="skills__item jelly">
+<svg class=skills__icon role=img aria-label="JavaScript Logo">
+<use href=#javascript-icon xlink:href=#javascript-icon></use>
+</svg>
+</li>
+<li class="skills__item jelly">
+<svg class=skills__icon role=img aria-label="React.js Logo">
+<use href=#react-icon xlink:href=#react-icon></use>
+</svg>
+</li>
+<li class="skills__item jelly">
+<svg class=skills__icon role=img aria-label="Node.js Logo">
+<use href=#nodejs-icon xlink:href=#nodejs-icon></use>
+</svg>
+</li>
+<li class="skills__item jelly">
+<svg class=skills__icon role=img aria-label="Express.js Logo">
+<use href=#express-icon xlink:href=#express-icon></use>
+</svg>
+</li>
+<li class="skills__item jelly">
+<svg class=skills__icon role=img aria-label="MongoDB Logo">
+<use href=#mongodb-icon xlink:href=#mongodb-icon></use>
+</svg>
+</li>
+<li class="skills__item jelly">
+<svg class=skills__icon role=img aria-label="Linux Logo">
+<use href=#linux-icon xlink:href=#linux-icon></use>
+</svg>
+</li>
+</ul>
+</section>
+<section class=section-projects id=projectsSection aria-label="List of completed projects">
+<h2 class="heading-secondary gradient-orange">Projects</h2>
+<div class=section-projects__cards>
+<a href=https://mobin-vpn.netlify.app target=_blank rel="noopener noreferrer" aria-label="External link to MobinVPN project">
+<figure class=card>
+<picture>
+<source media="(max-width: 480px)" type=image/webp srcset="./../assets/imgs/projects/project-1/project-thumbnail-1-0.5x.webp, ./../assets/imgs/projects/project-1/project-thumbnail-1-1x.webp 2x">
+<source media="(max-width: 480px)" type=image/jpeg srcset="./../assets/imgs/projects/project-1/project-thumbnail-1-0.5x.jpg, ./../assets/imgs/projects/project-1/project-thumbnail-1-1x.jpg 2x">
+<source media="(max-width: 900px)" type=image/webp srcset="./../assets/imgs/projects/project-1/project-thumbnail-1-1x.webp, ./../assets/imgs/projects/project-1/project-thumbnail-1-2x.webp 2x">
+<source media="(max-width: 900px)" type=image/jpeg srcset="./../assets/imgs/projects/project-1/project-thumbnail-1-1x.jpg, ./../assets/imgs/projects/project-1/project-thumbnail-1-2x.jpg 2x">
+<source type=image/webp srcset=./../assets/imgs/projects/project-1/project-thumbnail-1-2x.webp>
+<source type=image/jpeg srcset=./../assets/imgs/projects/project-1/project-thumbnail-1-2x.jpg>
+<img src=./../assets/imgs/projects/project-1/project-thumbnail-1-1x.webp alt="Screenshot of Mobin VPN project" class=card__img loading=lazy width=1920 height=1080 decoding=async>
+</picture>
+<figcaption class=card__content>
+<h3 class=card__title>Mobin VPN</h3>
+<svg class=card__icon aria-hidden=true role=img focusable=false>
+<use href=#arrow-right xlink:href=#arrow-right></use>
+</svg>
+</figcaption>
+</figure>
+</a>
+<a href=https://gnumobin.netlify.app target=_blank rel="noopener noreferrer" aria-label="External link to Mobin Folio portfolio">
+<figure class=card>
+<picture>
+<source media="(max-width: 480px)" type=image/webp srcset="./../assets/imgs/projects/project-2/project-thumbnail-2-0.5x.webp, ./../assets/imgs/projects/project-2/project-thumbnail-2-1x.webp 2x">
+<source media="(max-width: 480px)" type=image/jpeg srcset="./../assets/imgs/projects/project-2/project-thumbnail-2-0.5x.jpg, ./../assets/imgs/projects/project-2/project-thumbnail-2-1x.jpg 2x">
+<source media="(max-width: 900px)" type=image/webp srcset="./../assets/imgs/projects/project-2/project-thumbnail-2-1x.webp, ./../assets/imgs/projects/project-2/project-thumbnail-2-2x.webp 2x">
+<source media="(max-width: 900px)" type=image/jpeg srcset="./../assets/imgs/projects/project-2/project-thumbnail-2-1x.jpg, ./../assets/imgs/projects/project-2/project-thumbnail-2-2x.jpg 2x">
+<source type=image/webp srcset=./../assets/imgs/projects/project-2/project-thumbnail-2-2x.webp>
+<source type=image/jpeg srcset=./../assets/imgs/projects/project-2/project-thumbnail-2-2x.jpg>
+<img src=./../assets/imgs/projects/project-2/project-thumbnail-2-1x.webp alt="Screenshot of Mobin Folio portfolio" class=card__img loading=lazy width=1920 height=1080 decoding=async>
+</picture>
+<figcaption class=card__content>
+<h3 class=card__title>Mobin Folio</h3>
+<svg class=card__icon aria-hidden=true role=img focusable=false>
+<use href=#arrow-right xlink:href=#arrow-right></use>
+</svg>
+</figcaption>
+</figure>
+</a>
+</div>
+</section>
+<section class=section-experience id=experienceSection aria-label="All my work experiences">
+<h2 class="heading-secondary gradient-blue text-center">Experience</h2>
+<div class=experiences>
+<article class=experience role=region aria-label="Lead Software Engineer at Google">
+<figure class=experience__logo>
+<img class=experience__icon src=./../assets/companies/google.svg alt="Google Logo" decoding=async loading=lazy width=64 height=64>
+</figure>
+<h3 class=experience__title>Lead Software Engineer at Google</h3>
+<time class=experience__time datetime=2021-01>
+Jan 2021 - Present
+</time>
+<p class=experience__text>
+As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.
+</p>
+</article>
+<article class=experience role=region aria-label="Senior Developer at Apple">
+<figure class=experience__logo>
+<img class=experience__icon src=./../assets/companies/apple.svg alt="Apple Logo" decoding=async loading=lazy width=64 height=64>
+</figure>
+<h3 class=experience__title>Senior Developer at Apple</h3>
+<time class=experience__time datetime=2018-05>
+May 2018 - Dec 2020
+</time>
+<p class=experience__text>
+During my tenure at Apple, I held the role of Software Architect, where I played a key role in shaping the architecture of mission-critical software projects. Responsible for designing scalable and efficient systems, I provided technical leadership to a cross-functional team.
+</p>
+</article>
+<article class=experience role=region aria-label="Software Engineer at Meta">
+<figure class=experience__logo>
+<img class=experience__icon src=./../assets/companies/meta.svg alt="Meta Logo" decoding=async loading=lazy width=64 height=64>
+</figure>
+<h3 class=experience__title>Software Engineer at Meta</h3>
+<time class=experience__time datetime=2015-03>
+Mar 2015 - Apr 2018
+</time>
+<p class=experience__text>
+At Meta, I worked on large-scale social networking infrastructure, improving backend performance and scalability for billions of users. My role involved optimizing APIs, database queries, and integrating new features while maintaining system stability.
+</p>
+</article>
+</div>
+</section>
+</main>
+<footer class=footer id=contactSection aria-label="How to contact with Me?">
+<div class=container>
+<h2 class=heading-tertiary>Contact</h2>
+<p class=footer__text>
+Full-stack wizard 🧙‍♂️ with 5+ years of coding magic ✨ — started casting spells in Java ☕ for Android, now conjuring sleek web apps with React ⚛️, Node.js 🌐, and Express 🚀. Arch Linux fanboy 🐧 by day, clean code ninja 🥷 by night. Ready to build cool stuff? Let’s chat! 💬
+</p>
+<address class=footer__links>
+<a href=mailto:gnumobin@gmail.com class="footer__link neon" aria-label="Send email to Mobin">
+<svg class=footer__icon aria-hidden=true role=img focusable=false>
+<use href=#mail xlink:href=#mail></use>
+</svg>
+<span>gnumobin@gmail.com</span>
+</a>
+<a href=https://github.com/gnumobin class="footer__link neon" aria-label="GitHub profile of Mobin" target=_blank rel="noopener noreferrer">
+<svg class=footer__icon aria-hidden=true role=img focusable=false>
+<use href=#github-icon xlink:href=#github-icon></use>
+</svg>
+<span>github.com/gnumobin</span>
+</a>
+</address>
+<div class=footer__socials>
+<a href=https://youtube.com/@catplantasmr class=jelly aria-label="YouTube channel" target=_blank rel="noopener noreferrer">
+<svg class=icon aria-hidden=true role=img focusable=false>
+<use href=#youtube-logo xlink:href=#youtube-logo></use>
+</svg>
+</a>
+<a href=https://t.me/gnuMobin class=jelly aria-label="Telegram profile" target=_blank rel="noopener noreferrer">
+<svg class=icon aria-hidden=true role=img focusable=false>
+<use href=#telegram-logo xlink:href=#telegram-logo></use>
+</svg>
+</a>
+</div>
+</div>
+</footer>
+</body>
 </html>
