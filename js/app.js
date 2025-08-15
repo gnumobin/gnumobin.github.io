@@ -1,1 +1,116 @@
-"use strict";const $=(e,t=!1)=>t?document.querySelectorAll(e):document.querySelector(e),els={hamMenuBtn:$("#hamMenuBtn"),hamMenu:$("#hamMenu"),overlay:$("#overlay"),header:$(".header"),stickyBtn:$("#stickyBtn"),heroSection:$(".section-hero"),allImages:$("img",!0),allBtns:$(".btn",!0),toggleThemeBtn:$("#toggleThemeBtn")};let darkMode=JSON.parse(localStorage.getItem("darkTheme"))??!0;const setCSSVars=e=>Object.entries(e).forEach(([e,t])=>document.documentElement.style.setProperty(e,t)),disableContextMenu=e=>e.forEach(e=>e.addEventListener("contextmenu",e=>e.preventDefault())),preventDefault=e=>e.preventDefault(),preventDefaultForScrollKeys=e=>{[37,38,39,40].includes(e.keyCode)&&preventDefault(e)},supportsPassive=(()=>{let e=!1;try{window.addEventListener("test",null,Object.defineProperty({},"passive",{get:()=>e=!0}))}catch{}return e})(),wheelOpt=!!supportsPassive&&{passive:!1},wheelEvent="onwheel"in document.createElement("div")?"wheel":"mousewheel",disableScroll=()=>{[["DOMMouseScroll",preventDefault],[wheelEvent,preventDefault],["touchmove",preventDefault],["keydown",preventDefaultForScrollKeys],].forEach(([e,t])=>window.addEventListener(e,t,wheelOpt))},enableScroll=()=>{[["DOMMouseScroll",preventDefault],[wheelEvent,preventDefault],["touchmove",preventDefault],["keydown",preventDefaultForScrollKeys],].forEach(([e,t])=>window.removeEventListener(e,t,wheelOpt))},toggleMenu=e=>{els.hamMenuBtn.classList.toggle("active"),els.hamMenu.classList.toggle("header-nav__list--active"),els.overlay.classList.toggle("overlay--active"),setTimeout(()=>els.header.classList.toggle("header--active"),e?180:0),els.hamMenuBtn.classList.contains("active")?disableScroll():enableScroll()},updateTheme=()=>{els.toggleThemeBtn.checked=darkMode,setCSSVars({"--color-bg":darkMode?"#161513":"#f9f9f9","--color-bg-dark":darkMode?"#191919":"#f3f3f3","--color-bg-thin":darkMode?"#222":"#cccccc","--color-bg-extra-thin":darkMode?"#2a2a2a":"#e2e2e2","--color-text":darkMode?"#c5c5c5":"#1a1a1a","--color-grey":darkMode?"#8491a0":"#5a5a5a","--color-text-bold":darkMode?"#fff":"#000","--color-neon":darkMode?"#e0e0e0":"#7a7a7a","--color-neon-tint":darkMode?"#e3e3e3":"#888888","--color-neon-tinter":darkMode?"#e6e6e6":"#999999"}),els.allBtns.forEach(e=>e.classList.toggle("dark",darkMode)||e.classList.toggle("light",!darkMode))};els.hamMenuBtn.addEventListener("click",()=>toggleMenu(!1)),els.overlay.addEventListener("click",()=>toggleMenu(!0)),els.stickyBtn.addEventListener("click",()=>window.scrollTo({top:0})),disableContextMenu(els.allImages),window.innerWidth<480&&disableContextMenu(els.allBtns),els.toggleThemeBtn.addEventListener("change",e=>{darkMode=e.target.checked,localStorage.setItem("darkTheme",darkMode),updateTheme()}),updateTheme(),document.addEventListener("keydown",e=>{let t=[(e.ctrlKey||e.metaKey)&&["KeyS","KeyU"].includes(e.code),"F12"===e.code,(e.ctrlKey||e.metaKey)&&e.shiftKey&&["KeyI","KeyJ","KeyC"].includes(e.code),];t.some(Boolean)&&(e.preventDefault(),alert("Do you work with the browser or with us? \uD83D\uDE42"))}),new IntersectionObserver(([e])=>{els.header.classList.toggle("sticky",!e.isIntersecting),els.stickyBtn.classList.toggle("active",!e.isIntersecting)},{rootMargin:"-80px"}).observe(els.heroSection),"serviceWorker"in navigator&&window.addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").then(e=>console.log("✅ Service Worker registered:",e.scope)).catch(e=>console.error("❌ SW registration failed:",e)));const blockList=["translate.googleusercontent.com","translatetheweb.com","bing.com","translate.yandex.com",];(blockList.some(e=>location.hostname.includes(e))||window.top!==window.self)&&(document.body.innerHTML="<h2 style='text-align:center;margin-top:50px;'>Why do you want translate that?</h2>");
+"use strict";
+
+// ########## Elements ##########
+const $ = (sel, all = false) =>
+  all ? document.querySelectorAll(sel) : document.querySelector(sel);
+
+const els = {
+  hamMenuBtn: $("#hamMenuBtn"),
+  hamMenu: $("#hamMenu"),
+  overlay: $("#overlay"),
+  header: $(".header"),
+  stickyBtn: $("#stickyBtn"),
+  heroSection: $(".section-hero"),
+  allImages: $("img", true),
+  allBtns: $(".btn", true),
+};
+
+// ########## State ##########
+
+// ########## Helpers ##########
+
+const disableContextMenu = (elements) =>
+  elements.forEach((el) =>
+    el.addEventListener("contextmenu", (e) => e.preventDefault())
+  );
+
+const preventDefault = (e) => e.preventDefault();
+
+const preventDefaultForScrollKeys = (e) => {
+  if ([37, 38, 39, 40].includes(e.keyCode)) preventDefault(e);
+};
+
+const supportsPassive = (() => {
+  let passive = false;
+  try {
+    window.addEventListener(
+      "test",
+      null,
+      Object.defineProperty({}, "passive", {
+        get: () => (passive = true),
+      })
+    );
+  } catch {}
+  return passive;
+})();
+
+const wheelOpt = supportsPassive ? { passive: false } : false;
+const wheelEvent =
+  "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
+
+// ########## Scroll Lock ##########
+const disableScroll = () => {
+  [
+    ["DOMMouseScroll", preventDefault],
+    [wheelEvent, preventDefault],
+    ["touchmove", preventDefault],
+    ["keydown", preventDefaultForScrollKeys],
+  ].forEach(([ev, fn]) => window.addEventListener(ev, fn, wheelOpt));
+};
+
+const enableScroll = () => {
+  [
+    ["DOMMouseScroll", preventDefault],
+    [wheelEvent, preventDefault],
+    ["touchmove", preventDefault],
+    ["keydown", preventDefaultForScrollKeys],
+  ].forEach(([ev, fn]) => window.removeEventListener(ev, fn, wheelOpt));
+};
+
+// ########## UI Actions ##########
+const toggleMenu = (close) => {
+  els.hamMenuBtn.classList.toggle("active");
+  els.hamMenu.classList.toggle("header-nav__list--active");
+  els.overlay.classList.toggle("overlay--active");
+
+  setTimeout(
+    () => els.header.classList.toggle("header--active"),
+    close ? 180 : 0
+  );
+
+  els.hamMenuBtn.classList.contains("active")
+    ? disableScroll()
+    : enableScroll();
+};
+
+// ########## Events ##########
+els.hamMenuBtn.addEventListener("click", () => toggleMenu(false));
+els.overlay.addEventListener("click", () => toggleMenu(true));
+els.stickyBtn.addEventListener("click", () => window.scrollTo({ top: 0 }));
+
+disableContextMenu(els.allImages);
+if (window.innerWidth < 480) disableContextMenu(els.allBtns);
+
+// Disable default Ctrl+S, Ctrl+U, F12, DevTools shortcuts
+document.addEventListener("keydown", (e) => {
+  const blockKeys = [
+    (e.ctrlKey || e.metaKey) && ["KeyS", "KeyU"].includes(e.code),
+    e.code === "F12",
+    (e.ctrlKey || e.metaKey) &&
+      e.shiftKey &&
+      ["KeyI", "KeyJ", "KeyC"].includes(e.code),
+  ];
+  if (blockKeys.some(Boolean)) {
+    e.preventDefault();
+    alert("Do you work with the browser or with us? 🙂");
+  }
+});
+
+// ########## Sticky Header ##########
+new IntersectionObserver(
+  ([entry]) => {
+    els.header.classList.toggle("sticky", !entry.isIntersecting);
+    els.stickyBtn.classList.toggle("active", !entry.isIntersecting);
+  },
+  { rootMargin: "-80px" }
+).observe(els.heroSection);

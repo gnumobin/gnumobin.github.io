@@ -35,18 +35,3 @@ $colors: purple, orange, blue;
   white-space: nowrap;
   border: 0;
 }
-
-// Hide elements on landscape tablet screens and smaller
-.word-wrap {
-  @include responsive(tablet) {
-    // display: none;
-  }
-}
-
-.blurred {
-  filter: blur(0.8rem);
-  transition: 0.25s;
-  will-change: filter;
-  overflow-x: hidden;
-  pointer-events: none;
-}

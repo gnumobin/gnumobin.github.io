@@ -9,11 +9,16 @@
 
   &__item {
     /* Smooth transition for hover color change */
-    transition: var(--trans-1x);
+    transition: color var(--trans-1x);
+    will-change: color;
 
     /* On hover, highlight text and icon with bold color */
     &:hover {
       color: var(--color-text-bold);
+
+      & > * {
+        filter: invert(1);
+      }
     }
   }
 
@@ -23,6 +28,6 @@
     height: clamp(3.2rem, 3vw + 1rem, 4.4rem);
 
     /* Inherit current text color */
-    fill: currentColor;
+    filter: invert(83%) sepia(0%) saturate(0%) hue-rotate(0deg);
   }
 }

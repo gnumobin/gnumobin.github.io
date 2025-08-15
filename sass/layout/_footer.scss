@@ -13,9 +13,9 @@
 
   &__icon {
     // Icon size with slight scale down for subtlety
-    width: 2.4rem;
-    height: 2.4rem;
-    transform: scale(0.8);
+    width: 1.8rem;
+    height: 1.8rem;
+    filter: invert(83%) sepia(0%) saturate(0%) hue-rotate(0deg);
   }
 
   &__text {
@@ -36,7 +36,8 @@
   &__link {
     // Each link layout with gap and color transition on hover/focus
     display: flex;
-    gap: 0.55rem;
+    align-items: center;
+    gap: 1rem;
     color: var(--color-grey);
     transition: color var(--trans-1x), box-shadow var(--trans-1x);
     will-change: color, box-shadow;

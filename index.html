@@ -1,15 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Character encoding for the document -->
     <meta charset="UTF-8" />
-    <title>Select Language</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
+
+    <!-- Disable Translate -->
+    <meta name="google" content="notranslate" />
+
+    <!-- Viewport for responsive design -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+    />
+
+    <!-- Document Title -->
+    <title>Mobin Ghaemi</title>
+
+    <!-- Link to main CSS stylesheet -->
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <!-- Favicon for the browser tab -->
     <link
       rel="shortcut icon"
       href="./assets/imgs/logo/logo-1x.webp"
       type="image/x-icon"
     />
+
+    <!-- Load JavaScript file with defer to execute after parsing HTML -->
+    <script src="./js/app.js" defer></script>
+
+    <!-- Structured data using JSON-LD for SEO (Person schema) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mobin Ghaemi",
+        "jobTitle": "Full Stack Developer",
+        "url": "https://gnumobin.netlify.app",
+        "sameAs": [
+          "https://t.me/gnuMobin",
+          "https://youtube.com/@catplantasmr"
+        ],
+        "image": "https://gnumobin.netlify.app/assets/imgs/author/me-1x.webp"
+      }
+    </script>
+
+    <!-- Meta tags for search engine optimization -->
+    <meta
+      name="description"
+      content="Mobin Ghaemi — Full Stack Developer & Arch Linux power user. Building clean, fast, and minimal experiences from backend to frontend."
+    />
+
+    <meta
+      name="keywords"
+      content="Mobin Ghaemi, Full Stack Developer, Web Developer, Backend Developer, Frontend Developer, JavaScript Developer, Node.js, React Developer, Mobile App Developer, Desktop App Developer, Progressive Web Apps, Gorgan, Golestan, Iran, Arch Linux, Open Source Contributor, UI/UX, Responsive Web Design, Software Engineer, YouTube Content Creator, Tech Blogger"
+    />
+
+    <meta name="author" content="Mobin Ghaemi" />
+
     <!-- Open Graph meta tags for social media sharing -->
     <meta property="og:title" content="Mobin Ghaemi | Full-Stack Engineer" />
     <meta
@@ -34,10 +82,731 @@
       name="twitter:image"
       content="https://gnumobin.netlify.app/assets/imgs/author/me-1x.webp"
     />
-    <script defer src="/js/lang.js"></script>
+
+    <!-- Canonical link to avoid duplicate content issues -->
+    <link rel="canonical" href="https://gnumobin.netlify.app/en/" />
+
+    <!-- Preconnect and DNS prefetch for faster external requests -->
+    <link rel="preconnect" href="https://youtube.com" crossorigin />
+    <link rel="dns-prefetch" href="https://t.me" />
   </head>
-  <body>
-    <p>Please select your language:</p>
-    <a href="/en/">English</a> | <a href="/fa/">فارسی</a>
+
+  <body translate="no">
+    <!-- Overlay element for modals or menus, initially hidden -->
+    <div class="overlay" id="overlay">&nbsp;</div>
+
+    <!-- Spacer to offset fixed header height for proper layout -->
+    <div class="some-space" aria-hidden="true">&nbsp;</div>
+
+    <!-- Hidden Easter Egg quote, only visible when printing -->
+    <blockquote class="print" aria-hidden="true">
+      <q class="print__text">
+        Miss. Drakulich has a book in which it is written <br />
+        Communism went, we stayed and laughed.
+      </q>
+    </blockquote>
+
+    <!-- Sticky button for scrolling back to the top -->
+    <button
+      class="sticky-btn"
+      aria-label="back to top of page btn"
+      id="stickyBtn"
+    >
+      <img
+        src="./assets/icons/arrow-up.svg"
+        alt="arrow up"
+        aria-hidden="true"
+        class="sticky-btn__icon"
+      />
+    </button>
+
+    <!-- Header section containing site navigation -->
+    <header class="header">
+      <div class="container">
+        <nav
+          class="header-nav"
+          id="primaryNav"
+          aria-label="Main Navigation"
+          role="navigation"
+        >
+          <!-- Website logo with responsive images using <picture> -->
+          <div class="logo">
+            <picture>
+              <!-- WebP images for modern browsers -->
+              <source
+                type="image/webp"
+                srcset="
+                  ./assets/imgs/logo/logo-1x.webp 1x,
+                  ./assets/imgs/logo/logo-2x.webp 2x
+                "
+              />
+              <!-- PNG fallback for older browsers -->
+              <source
+                type="image/png"
+                srcset="
+                  ./assets/imgs/logo/logo-1x.png 1x,
+                  ./assets/imgs/logo/logo-2x.png 2x
+                "
+              />
+              <!-- Fallback img tag with alt and async decoding -->
+              <img
+                src="./assets/imgs/logo/logo-1x.png"
+                alt="Website Logo"
+                width="100"
+                height="100"
+                decoding="async"
+                class="logo__img"
+              />
+            </picture>
+          </div>
+
+          <!-- Navigation menu list -->
+          <ul class="header-nav__list" id="hamMenu">
+            <!-- Active navigation item (Home) with ARIA for current page -->
+            <li class="header-nav__item header-nav__item--active">
+              <a
+                href="#heroSection"
+                class="header-nav__link"
+                aria-current="page"
+                aria-label="Internal link to Hero Section"
+                >Home</a
+              >
+            </li>
+            <!-- Other navigation items -->
+            <li class="header-nav__item">
+              <a
+                href="#projectsSection"
+                class="header-nav__link"
+                aria-label="Internal link to Projects Section"
+                >Projects</a
+              >
+            </li>
+            <li class="header-nav__item">
+              <a
+                href="#experienceSection"
+                class="header-nav__link"
+                aria-label="Internal link to Experiences Section"
+                >Experience</a
+              >
+            </li>
+            <li class="header-nav__item">
+              <a
+                href="#contactSection"
+                class="header-nav__link"
+                aria-label="Internal link to Contact Section"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <!-- Hamburger button for toggling mobile menu -->
+          <svg
+            class="ham ham6"
+            viewBox="0 0 80 100"
+            width="45"
+            id="hamMenuBtn"
+            aria-expanded="false"
+            role="button"
+            aria-label="Toggle menu"
+          >
+            <path
+              class="line top"
+              d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272"
+            />
+            <path
+              class="line middle"
+              d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272"
+            />
+            <path
+              class="line bottom"
+              d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272"
+            />
+          </svg>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" role="main">
+      <!-- Hero Section: Personal introduction and key actions -->
+      <section
+        class="section-hero"
+        id="heroSection"
+        aria-label="Simple profile introduction of Mobin Ghaemi"
+      >
+        <!-- Profile image with responsive sources and fallback -->
+        <div class="profile">
+          <picture>
+            <!-- Use modern WebP images first for better compression -->
+            <source
+              srcset="
+                ./assets/imgs/author/me-0.5x.webp 0.5x,
+                ./assets/imgs/author/me-1x.webp   1x,
+                ./assets/imgs/author/me-2x.webp   2x
+              "
+              type="image/webp"
+            />
+            <!-- JPEG fallback for browsers without WebP support -->
+            <source
+              srcset="
+                ./assets/imgs/author/me-0.5x.jpg 0.5x,
+                ./assets/imgs/author/me-1x.jpg   1x,
+                ./assets/imgs/author/me-2x.jpg   2x
+              "
+              type="image/jpeg"
+            />
+            <!-- Default image with alt text for accessibility -->
+            <img
+              src="./assets/imgs/author/me-1x.jpg"
+              alt="Portrait of Mobin Ghaemi"
+              width="512"
+              height="512"
+              class="profile__img"
+              decoding="async"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+
+        <!-- Main heading: introduction with semantic clarity -->
+        <h1 class="heading-primary mg-t-lg" data-i18n="primaryHeading">
+          I do code and <br class="word-wrap" />
+          make content <span class="gradient-purple">about it!</span>
+        </h1>
+
+        <!-- Brief biography paragraph with friendly, personal tone -->
+        <p class="section-hero__biography">
+          Hey, I'm Mobin — a curious full-stack developer from Gorgan 🇮🇷 who
+          started this coding journey in the world of Android apps with Java.
+          These days, I craft modern web apps using React, Node.js, and Express,
+          and I’m totally hooked on clean architecture. Also, yes... I run Arch
+          Linux (btw 😎). Let’s build something cool!
+        </p>
+
+        <!-- Call-to-action buttons for contact and CV download -->
+        <div class="section-hero__actions">
+          <a
+            href="https://t.me/gnuMobin"
+            class="btn btn--primary dark"
+            target="_self"
+            aria-label="Contact via Telegram"
+          >
+            Get In Touch
+          </a>
+          <a
+            href="./assets/etc/cv.pdf"
+            class="btn btn--secondary dark"
+            download
+            aria-label="Download CV"
+            role="button"
+          >
+            Download CV
+          </a>
+        </div>
+      </section>
+
+      <!-- Technologies Section: showcasing skills and tools used -->
+      <section
+        class="section-technologies"
+        aria-label="What technologies I use"
+      >
+        <!-- Section subtitle for semantic clarity -->
+        <h2 class="heading-sub">EXPERIENCE WITH</h2>
+
+        <!-- Skills list as a grid of icons with clear roles and labels for accessibility -->
+        <ul class="skills">
+          <!-- Each skill item with role and label to help screen readers -->
+          <li class="skills__item jelly">
+            <img
+              class="skills__icon"
+              src="./assets/technologies/html.svg"
+              alt="HTML5 Logo"
+              aria-label="HTML5 Logo"
+              title="HTML5"
+            />
+          </li>
+          <li class="skills__item jelly">
+            <img
+              class="skills__icon"
+              src="./assets/technologies/css.svg"
+              alt="CSS Logo"
+              aria-label="CSS Logo"
+              title="CSS"
+            />
+          </li>
+          <li class="skills__item jelly">
+            <img
+              class="skills__icon"
+              src="./assets/technologies/sass.svg"
+              alt="Sass Logo"
+              aria-label="Sass Logo"
+              title="Sass"
+            />
+          </li>
+          <li class="skills__item jelly">
+            <img
+              class="skills__icon"
+              src="./assets/technologies/tailwindcss.svg"
+              alt="TailwindCSS Logo"
+              aria-label="TailwindCSS Logo"
+              title="TailwindCSS"
+            />
+          </li>
+          <li class="skills__item jelly">
+            <img
+              class="skills__icon"
+              src="./assets/technologies/js.svg"
+              alt="JavaScript Logo"
+              aria-label="JavaScript Logo"
+              title="JavaScript"
+            />
+          </li>
+          <li class="skills__item jelly">
+            <img
+              class="skills__icon"
+              src="./assets/technologies/react.svg"
+              alt="React.js Logo"
+              aria-label="React.js Logo"
+              title="React.js"
+            />
+          </li>
+          <li class="skills__item jelly">
+            <img
+              class="skills__icon"
+              src="./assets/technologies/nodejs.svg"
+              alt="Node.js Logo"
+              aria-label="Node.js Logo"
+              title="Node.js"
+            />
+          </li>
+          <li class="skills__item jelly">
+            <img
+              class="skills__icon"
+              src="./assets/technologies/express.svg"
+              alt="Express.js Logo"
+              aria-label="Express.js Logo"
+              title="Express.js"
+            />
+          </li>
+          <li class="skills__item jelly">
+            <img
+              class="skills__icon"
+              src="./assets/technologies/mongodb.svg"
+              alt="MongoDB Logo"
+              aria-label="MongoDB Logo"
+              title="MongoDB"
+            />
+          </li>
+          <li class="skills__item jelly">
+            <img
+              class="skills__icon"
+              src="./assets/technologies/linux.svg"
+              alt="Linux"
+              aria-label="Linux Logo"
+              title="Linux"
+            />
+          </li>
+        </ul>
+      </section>
+
+      <!-- Projects Section: showcases completed projects with accessible links -->
+      <section
+        class="section-projects"
+        id="projectsSection"
+        aria-label="List of completed projects"
+      >
+        <!-- Section heading with gradient accent -->
+        <h2 class="heading-secondary gradient-orange">Projects</h2>
+
+        <!-- Container for all project cards -->
+        <div class="section-projects__cards">
+          <!-- Individual Project Card: external link opens in new tab safely -->
+          <a
+            href="https://mobin-vpn.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="External link to MobinVPN project"
+          >
+            <figure class="card">
+              <picture>
+                <!-- Responsive images: serve smaller images for mobile devices -->
+
+                <!-- WebP sources for mobile -->
+                <source
+                  media="(max-width: 480px)"
+                  type="image/webp"
+                  srcset="
+                    ./assets/imgs/projects/project-1/project-thumbnail-1-0.5x.webp 1x,
+                    ./assets/imgs/projects/project-1/project-thumbnail-1-1x.webp   2x
+                  "
+                />
+                <!-- JPEG fallback for mobile -->
+                <source
+                  media="(max-width: 480px)"
+                  type="image/jpeg"
+                  srcset="
+                    ./assets/imgs/projects/project-1/project-thumbnail-1-0.5x.jpg 1x,
+                    ./assets/imgs/projects/project-1/project-thumbnail-1-1x.jpg   2x
+                  "
+                />
+
+                <!-- WebP sources for tablets -->
+                <source
+                  media="(max-width: 900px)"
+                  type="image/webp"
+                  srcset="
+                    ./assets/imgs/projects/project-1/project-thumbnail-1-1x.webp 1x,
+                    ./assets/imgs/projects/project-1/project-thumbnail-1-2x.webp 2x
+                  "
+                />
+                <!-- JPEG fallback for tablets -->
+                <source
+                  media="(max-width: 900px)"
+                  type="image/jpeg"
+                  srcset="
+                    ./assets/imgs/projects/project-1/project-thumbnail-1-1x.jpg 1x,
+                    ./assets/imgs/projects/project-1/project-thumbnail-1-2x.jpg 2x
+                  "
+                />
+
+                <!-- WebP for desktops -->
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./assets/imgs/projects/project-1/project-thumbnail-1-2x.webp
+                  "
+                />
+                <!-- JPEG fallback for desktops -->
+                <source
+                  type="image/jpeg"
+                  srcset="
+                    ./assets/imgs/projects/project-1/project-thumbnail-1-2x.jpg
+                  "
+                />
+
+                <!-- Fallback image with alt text for accessibility -->
+                <img
+                  src="./assets/imgs/projects/project-1/project-thumbnail-1-1x.webp"
+                  alt="Screenshot of Mobin VPN project"
+                  class="card__img"
+                  loading="lazy"
+                  width="1920"
+                  height="1080"
+                  decoding="async"
+                />
+              </picture>
+
+              <!-- Project title and icon to indicate link -->
+              <figcaption class="card__content">
+                <h3 class="card__title">Mobin VPN</h3>
+                <img
+                  src="./assets/icons/chevron.svg"
+                  alt="Arrow Up-Right"
+                  focusable="false"
+                  aria-hidden="true"
+                  class="card__icon"
+                />
+              </figcaption>
+            </figure>
+          </a>
+
+          <!-- Repeat project card for another project -->
+          <a
+            href="https://gnumobin.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="External link to Mobin Folio portfolio"
+          >
+            <figure class="card">
+              <picture>
+                <!-- Mobile WebP -->
+                <source
+                  media="(max-width: 480px)"
+                  type="image/webp"
+                  srcset="
+                    ./assets/imgs/projects/project-2/project-thumbnail-2-0.5x.webp 1x,
+                    ./assets/imgs/projects/project-2/project-thumbnail-2-1x.webp   2x
+                  "
+                />
+                <!-- Mobile JPEG -->
+                <source
+                  media="(max-width: 480px)"
+                  type="image/jpeg"
+                  srcset="
+                    ./assets/imgs/projects/project-2/project-thumbnail-2-0.5x.jpg 1x,
+                    ./assets/imgs/projects/project-2/project-thumbnail-2-1x.jpg   2x
+                  "
+                />
+
+                <!-- Tablet WebP -->
+                <source
+                  media="(max-width: 900px)"
+                  type="image/webp"
+                  srcset="
+                    ./assets/imgs/projects/project-2/project-thumbnail-2-1x.webp 1x,
+                    ./assets/imgs/projects/project-2/project-thumbnail-2-2x.webp 2x
+                  "
+                />
+                <!-- Tablet JPEG -->
+                <source
+                  media="(max-width: 900px)"
+                  type="image/jpeg"
+                  srcset="
+                    ./assets/imgs/projects/project-2/project-thumbnail-2-1x.jpg 1x,
+                    ./assets/imgs/projects/project-2/project-thumbnail-2-2x.jpg 2x
+                  "
+                />
+
+                <!-- Desktop WebP -->
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./assets/imgs/projects/project-2/project-thumbnail-2-2x.webp
+                  "
+                />
+                <!-- Desktop JPEG -->
+                <source
+                  type="image/jpeg"
+                  srcset="
+                    ./assets/imgs/projects/project-2/project-thumbnail-2-2x.jpg
+                  "
+                />
+
+                <!-- Fallback image -->
+                <img
+                  src="./assets/imgs/projects/project-2/project-thumbnail-2-1x.webp"
+                  alt="Screenshot of Mobin Folio portfolio"
+                  class="card__img"
+                  loading="lazy"
+                  width="1920"
+                  height="1080"
+                  decoding="async"
+                />
+              </picture>
+
+              <!-- Project title and arrow icon -->
+              <figcaption class="card__content">
+                <h3 class="card__title">Mobin Folio</h3>
+                <img
+                  src="./assets/icons/chevron.svg"
+                  alt="Arrow Up-Right"
+                  focusable="false"
+                  aria-hidden="true"
+                  class="card__icon"
+                />
+              </figcaption>
+            </figure>
+          </a>
+
+          <!-- Additional project cards can be added here following the same pattern -->
+        </div>
+      </section>
+
+      <!-- Experience Section: highlights professional work history -->
+      <section
+        class="section-experience"
+        id="experienceSection"
+        aria-label="All my work experiences"
+      >
+        <!-- Section heading centered with blue gradient -->
+        <h2 class="heading-secondary gradient-blue text-center">Experience</h2>
+
+        <!-- Container wrapping individual experience entries -->
+        <div class="experiences">
+          <!-- Single experience card: Google -->
+          <article
+            class="experience"
+            role="region"
+            aria-label="Lead Software Engineer at Google"
+          >
+            <!-- Company logo for visual identification -->
+            <figure class="experience__logo">
+              <img
+                class="experience__icon"
+                src="./assets/companies/google.svg"
+                alt="Google Logo"
+                decoding="async"
+                loading="lazy"
+                width="64"
+                height="64"
+              />
+            </figure>
+
+            <!-- Job title -->
+            <h3 class="experience__title">Lead Software Engineer at Google</h3>
+
+            <!-- Employment period with machine-readable date -->
+            <time class="experience__time" datetime="2021-01">
+              Jan 2021 - Present
+            </time>
+
+            <!-- Description of role and contributions -->
+            <p class="experience__text">
+              As a Senior Software Engineer at Google, I played a pivotal role
+              in developing innovative solutions for Google's core search
+              algorithms. Collaborating with a dynamic team of engineers, I
+              contributed to the enhancement of search accuracy and efficiency,
+              optimizing user experiences for millions of users worldwide.
+            </p>
+          </article>
+
+          <!-- Single experience card: Apple -->
+          <article
+            class="experience"
+            role="region"
+            aria-label="Senior Developer at Apple"
+          >
+            <figure class="experience__logo">
+              <img
+                class="experience__icon"
+                src="./assets/companies/apple.svg"
+                alt="Apple Logo"
+                decoding="async"
+                loading="lazy"
+                width="64"
+                height="64"
+              />
+            </figure>
+
+            <h3 class="experience__title">Senior Developer at Apple</h3>
+            <time class="experience__time" datetime="2018-05">
+              May 2018 - Dec 2020
+            </time>
+
+            <p class="experience__text">
+              During my tenure at Apple, I held the role of Software Architect,
+              where I played a key role in shaping the architecture of
+              mission-critical software projects. Responsible for designing
+              scalable and efficient systems, I provided technical leadership to
+              a cross-functional team.
+            </p>
+          </article>
+
+          <!-- Single experience card: Meta -->
+          <article
+            class="experience"
+            role="region"
+            aria-label="Software Engineer at Meta"
+          >
+            <figure class="experience__logo">
+              <img
+                class="experience__icon"
+                src="./assets/companies/meta.svg"
+                alt="Meta Logo"
+                decoding="async"
+                loading="lazy"
+                width="64"
+                height="64"
+              />
+            </figure>
+
+            <h3 class="experience__title">Software Engineer at Meta</h3>
+            <time class="experience__time" datetime="2015-03">
+              Mar 2015 - Apr 2018
+            </time>
+
+            <p class="experience__text">
+              At Meta, I worked on large-scale social networking infrastructure,
+              improving backend performance and scalability for billions of
+              users. My role involved optimizing APIs, database queries, and
+              integrating new features while maintaining system stability.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section: contact info and social links -->
+    <footer
+      class="footer"
+      id="contactSection"
+      aria-label="How to contact with Me?"
+    >
+      <div class="container">
+        <!-- Section heading with tertiary style -->
+        <h2 class="heading-tertiary">Contact</h2>
+
+        <!-- Personal, friendly intro text — بیان شخصی و جذاب -->
+        <p class="footer__text">
+          Full-stack wizard 🧙‍♂️ with 5+ years of coding magic ✨ — started
+          casting spells in Java ☕ for Android, now conjuring sleek web apps
+          with React ⚛️, Node.js 🌐, and Express 🚀. Arch Linux fanboy 🐧 by
+          day, clean code ninja 🥷 by night. Ready to build cool stuff? Let’s
+          chat! 💬
+        </p>
+
+        <!-- Contact info wrapped in <address> for semantics -->
+        <address class="footer__links">
+          <!-- Email link with icon, aria-label for screen readers -->
+          <a
+            href="mailto:gnumobin@gmail.com"
+            class="footer__link neon"
+            aria-label="Send email to Mobin"
+          >
+            <img
+              src="./assets/icons/email.svg"
+              alt="Email icon"
+              focusable="false"
+              aria-hidden="true"
+              class="footer__icon"
+            />
+            <span>gnumobin@gmail.com</span>
+          </a>
+
+          <!-- Github profile link -->
+          <a
+            href="https://github.com/gnumobin"
+            class="footer__link neon"
+            aria-label="GitHub profile of Mobin"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="./assets/companies/github.svg"
+              alt="Email icon"
+              focusable="false"
+              aria-hidden="true"
+              class="footer__icon"
+            />
+            <span>github.com/gnumobin</span>
+          </a>
+        </address>
+
+        <!-- Social media icons container -->
+        <div class="footer__socials">
+          <!-- YouTube channel link -->
+          <a
+            href="https://youtube.com/@catplantasmr"
+            class="jelly"
+            aria-label="YouTube channel"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="./assets/companies/youtube.svg"
+              alt="Email icon"
+              focusable="false"
+              aria-hidden="true"
+              class="icon"
+            />
+          </a>
+
+          <!-- Telegram profile link -->
+          <a
+            href="https://t.me/gnuMobin"
+            class="jelly"
+            aria-label="Telegram profile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="./assets/companies/telegram.svg"
+              alt="Email icon"
+              focusable="false"
+              aria-hidden="true"
+              class="icon"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

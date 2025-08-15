@@ -35,15 +35,6 @@
     }
   }
 
-  &__icon {
-    // Icon style with current text color and size
-    color: var(--color-text-bold);
-    stroke: currentColor;
-    fill: currentColor;
-    inline-size: 1.5rem;
-    block-size: 1.4rem;
-  }
-
   &:hover {
     // Hover effect: slightly lift the card and add shadow
     background-color: transparent;
