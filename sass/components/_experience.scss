@@ -28,6 +28,7 @@
     @include responsive(large-mobile) {
       grid-column: 1 / -1;
       user-select: none;
+      margin-top: -1.5rem;
     }
   }
 
@@ -41,6 +42,7 @@
   &__text {
     // Text content spans the full grid width for better readability
     grid-column: 1 / -1;
+    line-height: 2;
   }
 
   &__icon {

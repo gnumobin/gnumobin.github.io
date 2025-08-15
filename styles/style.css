@@ -26,7 +26,7 @@
   --font-header-nav: clamp(1.2rem, 1.2vw + 0.5rem, 1.5rem);
   --font-hero-biography: clamp(1.4rem, 1.5vw + 0.4rem, 1.8rem);
   --font-btn: clamp(1rem, 4vw, 2.3rem);
-  --font-card-title: clamp(1.4rem, 1.2vw + 0.4rem, 1.9rem);
+  --font-card-title: clamp(1.5rem, 1.2vw + 0.4rem, 1.9rem);
   --font-card-title-sub: clamp(0.8rem, 0.8vw + 0.2rem, 1rem);
   --font-experience-title: clamp(1.2rem, 3vw + 0.3rem, 2.174rem);
   --font-experience-text: clamp(1.2rem, 1.2vw + 0.2rem, 1.449rem);
@@ -585,6 +585,7 @@ h2.heading-secondary {
   font-weight: 700;
   color: var(--color-text);
   text-align: left;
+  margin-bottom: 0.1rem;
 }
 .card:hover {
   background-color: transparent;
@@ -611,6 +612,7 @@ h2.heading-secondary {
   .experience__time {
     grid-column: 1/-1;
     user-select: none;
+    margin-top: -1.5rem;
   }
 }
 @media screen and (max-width: 20em) {
@@ -620,6 +622,7 @@ h2.heading-secondary {
 }
 .experience__text {
   grid-column: 1/-1;
+  line-height: 2;
 }
 .experience__icon {
   color: var(--color-text-bold);
@@ -710,14 +713,14 @@ h2.heading-secondary {
   align-items: center;
   font-size: 5.2rem;
   font-weight: bolder;
-  margin: 3.5rem;
+  margin: 3rem;
   box-shadow: 0 0 1rem var(--color-bg-thin);
   transition: box-shadow var(--trans-1x), transform var(--trans-1x), opacity var(--trans-2x), visibility var(--trans-2x);
   will-change: box-shadow, transform, visibility, opacity;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  transform: scale(0.5);
+  transform: translateX(100%);
 }
 .sticky-btn__icon {
   width: 2.4rem;
@@ -734,7 +737,7 @@ h2.heading-secondary {
 .sticky-btn.active {
   opacity: 1;
   visibility: visible;
-  transform: scale(1);
+  transform: translateX(0);
 }
 
 .print {
@@ -834,6 +837,7 @@ h2.heading-secondary {
 }
 .footer__text {
   font-weight: 300;
+  line-height: 2;
   margin: 3.4rem 0 2.2rem;
 }
 .footer__links {
